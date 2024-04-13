@@ -21,13 +21,9 @@ jobs:
       - name: Install dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache-version: 2
           packages: |
             any::knitr
             any::rmarkdown
-            any::tidyverse
-            any::patchwork
-            any::magrittr
             
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
