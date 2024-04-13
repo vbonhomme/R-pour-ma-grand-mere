@@ -1,4 +1,7 @@
-.output {
-  color: green;
-  background-color: black;
+
+
+blockquote {
+  margin: 0 0 9rem;
+  padding: .625rem 1.25rem;
+  border-left: 1rem solid #ecf0f1;
 }
