@@ -1,0 +1,231 @@
+## Préambule
+
+-   Qu'est-ce que R ?
+
+-   Installer un environnement R
+
+-   R, R GUI, RStudio
+
+-   Forces et faiblesses de R
+
+    -   Frustration is typical and temporary. (Hadley Wickham)
+
+    -   Pente d'apprentissage mais amortissement : skill \~ time
+
+    -   Console but R-Studio
+
+    -   Plus que gratuit, c'est libre
+
+    -   Amazing ressources and support (si pb dans les 3 premières années c'est à 99.9% que la question est mal posée)
+
+    -   Reproducible research
+
+    -   6000+ packages (1000+ yr-1) (drinkR + "Gourmet R library")
+
+    -   Apprendre R c'est apprendre les statistiques
+
+    -   Apprendre R c'est apprendre à programmer
+
+    -   It's not only about doing fancy things with a computer, it's a matter of your freedom as scientists.
+
+    -   R console header
+
+## Un avant-goût en 3 minutes
+
+```{r}
+
+# dependencies
+library(tidyverse)
+
+# data tidying
+iris2 <- iris %>% 
+  as_tibble() %>% 
+  select(pl=Petal.Length, pw=Petal.Width, sp=Species)
+iris2
+
+# a quick graph
+ggplot(iris2) + 
+  aes(pl, pw, col=sp) + 
+  geom_jitter() + 
+  geom_smooth(method="lm", formula="y~x") + 
+  theme_minimal()
+
+# a little helper function to get adjusted R2 of a linear model
+lm_adj_r2 <- function(x) summary(lm(pl~pw, data=x))$adj.r.squared
+  
+# group-wise statistics
+iris2 %>%
+  nest(data=c(pl, pw)) %>% 
+  mutate(adj_r2=map_dbl(data, lm_adj_r2))
+
+```
+
+## Premiers pas avec R
+
+### R comme calculette
+
+En premier lieu, R est une calculette :
+
+```{r}
+# back to school
+1+1
+3-4
+2/3
+2*2
+
+# beyond +, -, /, *
+2^4 
+sqrt(9) # equivalent to 9^(1/2)
+7%%3
+
+# precedence rules apply
+(1.5-2)*4
+1.5-2*4
+
+```
+
+Tous les opérateurs arithmétiques courants sont disponibles :
+
+-   `+`, `-`, `*`, `/` pour l'arithmétique de base
+-   `^` pour élever au carré et `sqrt` pour la racine carrée
+-   `%%` pour le \[modulo\](https://fr.wikipedia.org/wiki/Modulo\_(op%C3%A9ration), etc.
+
+Vous pouvez également utiliser des parenthèses pour "emboiter" des opérations dans le bon ordre. Les règles de précédence classiques s'appliquent : une multiplication sera calculée avant une addition\^{plop}. Les principales constantes, comme `pi` - R GUI / Console - Premiers concepts - R comme une calculette - variable - assignation `<-` - function : `c` - recyclage - indexation : `[ ]` - notion d'objet : `numeric`, `character`, `logical` - les espaces (`< -` vs `<-`), la casse - aller à la ligne : "+" - Vecteurs de nombres - `c` - `function` : tout est fonction - Raccourcis : `<Haut>`, `<Tab>`, effacer console - Séquences de nombres régulières - Golden rule : si tu as la sensation de faire un truc bête et/ou répétitif, il y a sans doute une façon plus intelligente de faire - `rep` - `seq` - Functions 101 - notion d'argument - `?`, pages d'aide, `example`, `help.search`+ rseek + SO + Google is your friend - Back to `seq` - `:` - exercices - Nombres aléatoires et distribution - `rnorm`, `runif`, etc. - `hist` - `sample` - Opérations de base - `round`, `signif`, `floor`, `ceiling` - `sum`, `cumsum`, `prod`, `cumprod` - `length` - `sum`/`length` - Stats descriptives - `mean`, `logical` - `var`, `sd` - `median`, `quantile`, `range`, `min` et `max` - `summary` - `>`, `logical`, `sum` (! typage) - `for`, premier control flow - `hist` + `abline`, (mean +/- sd)
+
+## R-Studio (1/2h)
+
+-   R Studio
+    -   Premier contact
+    -   Script
+    -   Run, Source
+    -   Apparence
+    -   `<Tab>`
+-   Bonnes pratiques
+    -   Indentation
+    -   Commentaires
+    -   Sauvegarde versus reproductibilité
+
+## Matrices et data frames (2h)
+
+-   Première matrice
+    -   `?matrix`
+    -   exercices
+-   Indexation 1d+
+    -   `rownames`, `colnames`
+    -   `dim`, `nrow`, `ncol`
+    -   `paste`, `paste0`
+    -   `rbind`, `cbind`
+    -   `apply`
+    -   `colSums`, `rowSums`
+    -   indexation 2d, 3d, etc.
+-   Data frames
+    -   `data.frame` création
+    -   `data(iris)`
+    -   `iris`, `?iris`, `?datasets`
+    -   `$`
+    -   `head`, `tail`
+    -   `apply`, `summary`
+-   `NA`, `na.omit`
+-   Un mot sur les listes
+
+## Stats inférentielles 101 (2h)
+
+-   `cov`, `cor`
+-   Variance : $s^{2}$ ou $V(x)$ et se calcule avec $\frac{1}{n} \sum_{i=1}^n(x_i-\bar{x})^2$. Cet estimateur est biaisé ; une version non-biaisée est obtenue est divisant par $\frac{1}{n-1}$ et se note généralement $\sigma^{2}$.
+-   Écart-type est la racine-carrée de la variance, soit $\sqrt{\sigma^{2}}$.
+-   Covariance : mesure du *sens* de variation de deux variables aléatoire. Si positive, quand l'une augment, l'autre aussi, et vice-versa. Dépend de la variance des deux variables. Elle se calcule par : $\operatorname{cov}(x,y)\equiv \mathbb E[(x-\mathbb E[x])\,(y-\mathbb E[y])]$. L'espérance utilisée par R est non biaisée, et n'est pas exactement équivalente à la moyenne. Pour l'obtenir, il faut prendre la somme des valeurs, divisée par leur nombre moins un($\sum_{i=1}^n([x_i-\bar{x})(y_i-\bar{y})] / (n-1)$).
+-   Corrélation : covariance normalisée par les variances des deux variables. Le coefficient de corrélation, est ainsi compris entre -1 et 1 et indique (imparfaitement) quelle proportion de la variance de l'une des deux variables peut être expliquée par l'autre. Il se calcule par : $\rho = \frac{cov_{xy}}{ \sigma_x \sigma_y}$.
+
+```         
+plot(Sepal.Length ~ Petal.Length, data=iris, xlim=c(0, 8), ylim=c(0, 8))
+mod1 <- lm(Sepal.Length ~ Petal.Length, data=iris)
+summary(mod1)
+abline(mod1)
+
+mod2 <- lm(Sepal.Length ~ Petal.Length - 1, data=iris)
+summary(mod2)
+abline(mod2, col="red")
+
+
+mod3 <- lm(Sepal.Length ~ Petal.Length %in% Species - 1, data=iris)
+summary(mod3)
+abline(a=0, b=coefficients(mod3)[1])
+```
+
+## Graphics (base) (3h)
+
+-   `plot` and `pairs`
+-   `example`
+-   `plot`, `boxplot`, `hist`, `barplot` + `formula`
+-   `plot(iris)`
+    -   `pch`, `col`, `cex`
+    -   `plot` on iris
+    -   `xlim`, `ylim`, `asp`, `log`
+    -   `xlab`, `ylab`, `main`, `sub`
+    -   `axes`, `axis`
+-   Colors, `colorRampPalette`
+-   `legend`
+-   Primitives graphiques : `lines`, `segments`, `arrows`, `points`, `text`
+-   `las`, `lg`, `mar`, `mfrow`, `?par`
+-   `layout`
+-   `dev.off`
+-   `pdf`
+
+## Graphics (ggplot2) (2h)
+
+-   `ggplot2`
+    -   grammaire graphes + objects
+    -   `qplot(Sepal.Length, Sepal.Width, col=Species, data=iris)`
+    -   `ggplot`, `data`, `aes`
+    -   `ggplot(iris, aes(x=Petal.Length, y=Petal.Width, col=Species)) + geom_point() +  stat_smooth(method="lm")`
+
+## Survivre à ses données (2h)
+
+-   `apply`, `lapply`, `tapply`, `sapply`
+-   `by`, `with`
+-   pure indicing, `subset`, `dplyr`
+-   Logicals : `==`, `!=`, `>`, `>=`, `<=`, `<`, `&`, `|`, `%in%`
+-   Exercises
+-   Packages
+    -   kézaco
+    -   exemples: `rgl`
+    -   `library(dplyr)`
+    -   `select`, `starts_with()`
+    -   `filter`
+    -   `arrange`
+    -   `mutate`
+    -   `summarize`, `group_by`
+-   `magrittr`
+-   Import/Export de données
+    -   Préparation données\
+    -   `read.table`, `write.table`
+    -   Import datasets avec RStudio
+    -   `NA` handling
+    -   `na.rm`, `is.na`, `na.omit`
+
+## Eléments de programmation (3h)
+
+-   `function()`, `function`
+-   `standardize`
+-   `arguments`
+-   Control flow
+    -   `if`, `else`
+    -   `{ }`
+    -   `ifelse`
+    -   intern variables, environment
+    -   `cat`
+    -   `append`, `c`vs. `declaration`
+-   `return`
+-   `for`
+-   `while`
+
+## Packages (1/2h)
+
+-   Packages \* Kézaco ? \* CRAN's [Task Views](http://r-pkgs.had.co.nz/) \* CRAN's [repository](http://cran.r-project.org/) \* GitHub
+
+## One step beyond (1/2h)
+
+-   Bonnes pratiques \* scripts, projets, portabilité et reproductibilité, folder unique \* coder générique, fonctions, ne pas se répéter, `source` \* style code, commenter \* écrire un package [r-pkgs](http://r-pkgs.had.co.nz/)
+-   Progresser : lire, pratiquer, échouer mille fois, échanger
+-   Documents dynamiques
+-   Applications Shiny

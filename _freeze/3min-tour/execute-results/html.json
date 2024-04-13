@@ -1,0 +1,16 @@
+{
+  "hash": "70a64ac36838f16c1812767a3d9e4167",
+  "result": {
+    "markdown": "# Une introduction en 3 minutes\n\nLe bloc de code ci-dessous combine tous les aspects que nous allons aborder dans ce document : utilisation de packages, du pipe `%>%`, préparation de données issues d'un tableau, production et customisation d'un graphe, création d'une fonction, calculs combinés sur listes de données, etc.\n\n::: {.cell}\n\n```{.r .cell-code}\n# dependencies\nlibrary(tidyverse)\n\n# data tidying\niris2 <- iris %>% \n  as_tibble() %>% \n  select(pl=Petal.Length, pw=Petal.Width, sp=Species)\niris2\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 150 × 3\n      pl    pw sp    \n   <dbl> <dbl> <fct> \n 1   1.4   0.2 setosa\n 2   1.4   0.2 setosa\n 3   1.3   0.2 setosa\n 4   1.5   0.2 setosa\n 5   1.4   0.2 setosa\n 6   1.7   0.4 setosa\n 7   1.4   0.3 setosa\n 8   1.5   0.2 setosa\n 9   1.4   0.2 setosa\n10   1.5   0.1 setosa\n# ℹ 140 more rows\n```\n:::\n\n```{.r .cell-code}\n# a quick graph\nggplot(iris2) + \n  aes(pl, pw, col=sp) + \n  geom_jitter() + \n  geom_smooth(method=\"lm\", formula=\"y~x\") + \n  scale_color_viridis_d() +\n  guides(colour=guide_legend(\"Species\")) +\n  xlab(\"Petal length (mm)\") + ylab(\"Petal width (mm)\") +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](3min-tour_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n\n```{.r .cell-code}\n# a little helper function to get adjusted R2 of a linear model\nlm_adj_r2 <- function(x) summary(lm(pl~pw, data=x))$adj.r.squared\n  \n# group-wise statistics\niris2 %>%\n  nest(data=c(pl, pw)) %>% \n  mutate(adj_r2=map_dbl(data, lm_adj_r2))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 3 × 3\n  sp         data              adj_r2\n  <fct>      <list>             <dbl>\n1 setosa     <tibble [50 × 2]> 0.0914\n2 versicolor <tibble [50 × 2]> 0.611 \n3 virginica  <tibble [50 × 2]> 0.0851\n```\n:::\n:::\n",
+    "supporting": [
+      "3min-tour_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

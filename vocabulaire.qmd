@@ -1,0 +1,186 @@
+# Dictionnaire
+
+Ci-dessous, le vocabulaire de base pour bien démarrer en R. Nous n'avons pas tout vu mais vous savez comment trouver de l'aide pas vrai ?
+
+## Environnement
+* `<-`, `assign` : assigne une valeur
+* `%>%`/`|>` : _forward pipe_ `g(f(x))` devient `x %>% f %>% g`
+* `get/setwd` : accède et changer l'emplacement de travail
+* `here::here` est une alternative plus générique
+* `ls` : liste les objets dans l'environnement
+* `rm(list=ls())` : efface tous les objets mais votre ordinateur peut prendre feu[^jenny]
+* `object.size` : taille d'un objet
+* `install.packages`/`library` : installe et charge des packages
+* `citation` : citer les gentils gens
+* `sessionInfo` : informations de session, notamment le versionnage
+
+[^jenny]: https://twitter.com/hadleywickham/status/940021008764846080
+
+## Arithmétique
+opérateur | signification
+--------- | -------------
+`+`       | addition
+`-`       | soustraction
+`/`       | division
+`*`       | multiplication
+`%%`      | modulo 
+`%/%`     | division euclidienne
+`^`       | puissance
+
+## Mathématiques
+
+fonction | signification
+--------- | -------------
+`log`       | logarithme (népérien)
+`log10`     | logarithme (décimal)
+`exp`       | exponentielle
+`sum`       | somme
+`min`       | minimum
+`max`       | maximum
+`range`     | étendue, raccourci pour `c(min(x), max(x))` 
+`median`    | médiane
+`quantile`  | quantile (voir l'argument `probs`)
+`summary`   | un peu de tout ce qui précède
+`round`   | arrondi classique
+`signif`    | garde `n` chiffres 
+`floor`     | arrondi inférieur
+`ceiling`   | arrondi supérieur
+`var`       | variance
+`sd`        | écart-type
+`cor(x, y)`     | corrélation
+`cov(x, y)`     | covariance
+`cos` et al.  | trigonométrie
+`?Complex` | pour la gestion des complexes
+
+## Valeurs spéciales 
+* `NA` pour les valeurs manquantes. `na.omit` et les arguments `na.rm` aident à filtrer ces valeurs.
+* `NULL` : ensemble vide
+* `-Inf/Inf` : ±∞ 
+* `pi` et autres constantes (`?Constants`), `letters`
+* Beaucoup de jeux de données disponibles nativement, voir `?datasets`
+## Arithmétique
+
+## Comparaison
+opérateur | signification
+--------- | -------------
+`<`       | strictement inférieur
+`<=`      | inférieur ou égal
+`>`       | strictement supérieur
+`>=`      | supérieur ou égal
+`==`      | égal 
+`!=`      | différent
+`%in%`    | dans l'ensemble
+
+## Tests logiques
+opérateur | signification
+--------- | -------------
+`!`       | NOT
+`&`       | AND (élément par élément)
+`&&`      | AND
+`|`       | OR (élément par élément)
+`||`      | OR
+`xor(x, y)`  | OR (exclusif)
+`all`     | teste si uniquement des TRUE
+`any`     | teste si l'une des conditions au moins est TRUE
+
+## Control flow
+* Toute la clique habituelle (`?Control`) : `if`, `else`, `ifelse`, `for`, `while`, `next`, `break`, etc.
+
+## Fonctions
+```
+nom_fonction <- function(arg1=default1, arg2=default2, ...) {
+  # instructions
+  return()
+}
+```
+* Les arguments et leurs valeurs par défaut sont optionnels.
+* `return` n'est pas obligatoire, la dernière ligne est renvoyée. Ne rien retourner est possible
+* `list()` pour des retours de plus d'une valeur
+* fonctions anonymes, souvent créées à la volée: `function(.x) .x*2` ou `\.x .x+2`. Souvent passé en `formula` à `map` (argument `.f`), par exemple : `~x+3`
+
+## Vecteurs
+* `[i]/[i]<-` : accède et modifie les i-ème(s) position d'un vecteur
+* `c` : concatène des valeurs et crée un vecteur
+* `names/names<-` : accède et change les noms d'un vecteur
+* `sort` : ordonne un vecteur
+* `order` : ordonne un vecteur mais retourne les indices
+* `rev` : retourne un vecteur du dernier au premier élément
+* `unique` : retourne les valeurs distinctes
+* `table` : compte les valeurs d'un ou de plusieurs vecteurs
+
+## Séquences régulières et aléatoires
+* `seq` : séquences régulières
+* `a:b` : raccourci pour `seq(a, b)`
+* `rep` : répète un vecteur ou ses éléments
+* `runif/rnorm/rbinom` : nombres aléatoires issus d'une distribution uniforme, normale, binomiale. Voir `?Distributions`
+
+## Matrices
+
+* `[i, j]` + `[i, j]<-` : accède et modifie les valeurs aux `i`-ième(s) et `j`-ième(s) indices (lignes puis colonnes)
+* `matrix/data.frame` : création
+* `is/as.matrix` et `is/as.data.frame` : test et conversion de type
+* `col/rownames` et `col/rownames<-` : accéder et définir row/colnames
+* `t` : transposition
+* `%*%` : multiplication matricielle (`matrix` only)
+* `apply` : opération marginale
+* `row/colSums` : raccourci pour `apply(m, 1/2, sum)`
+
+## Listes
+
+## `dplyr` : Manipulation de data.frame
+* RStudio : `Help > Cheatsheets > dplyr` : très bonne adresse
+* `vignette(package="dplyr")`, par ex. `vignette("dplyr")`
+* on préférera les tibbles qui apportent des améliorations cosmétiques aux data.frame (`as_tibble`)
+* `tibble` et `tribble` pour le constructeur
+* `slice` : filtre sur les lignes avec des indices
+* `filter` : filtre sur les lignes avec des tests logiques
+* `select` : sélectionner et réordonne les colonnes
+* `starts_with` et autres helpers de `tidyselect`
+* `rename` : renomme les colonnes
+* `mutate` : crée de nouvelles colonnes
+* `group_by`/`ungroup` : groupe, déproupe par colonnes
+* `summarise` : résume en 1 ligne ou 1 ligne par groupe, des colonnes
+* `group_split` : tranche une tibble par groupe
+* `bind_rows/cols` : colle par lignes ou colonnes
+* `*_join` : opérations de join sur deux tables partageant un index
+
+## `stringr` : manipulation de chaines de caractères
+* `vignette(package="stringr")`, par ex. `vignette("stringr")`
+
+## `ggplot2` : un grammaire pour les graphes
+* `vignette(package="ggplot2")`, par ex. `vignette("ggplot2")`
+* RStudio : `Help > Cheatsheets > ggplot2` : très bonne adresse
+
+## `forcats` : manipulation de facteurs
+* `vignette(package="forcats")`, par ex. `vignette("forcats")`
+
+## `purrr` : travailler avec des listes
+* `vignette(package="purrr")`, par ex. `vignette("purrr")`
+* RStudio : `Help > Cheatsheets > purrr` : très bonne adresse
+* `map(liste, function)` : travaille sur une liste, retourne une liste
+* `map(liste, ~.x %>% ...)` : accepte les fonctions anonymes
+* `map_{dbl, chr, lgl, df, dfr, dfc}` : idem mais retourne des numeric, character, logical, data.frame, data.frame collés par lignes/colonnes
+* `map2_*(liste1, liste2, ...)` : idem pour deux listes
+* `pmap_*` : généralisation à N listes
+
+## Import/Export
+* texte brut : `readLines`
+* lire des tables : `read.table`, `readr::read_csv`, `xlsx::read.xlsx`.
+* `Import dataset` dans RStudio est moins pénible de prime abord
+* écrire des tables : `write.table`, `readr::write_csv`, `xlsx::write.xlsx`
+* `save/load` : sauve et charge un objet R/`.rda`
+* pour les plots de `graphics` : `pdf(...) {...} dev.off()`
+* pour les ggplot de `ggplot2` : `ggsave`
+
+## Interactions audio-visuelles
+* bips : package `beepr`
+* barres de progression : package `progress`
+* invite de commande : `readline`
+* logs : `sink`
+* `Sys.sleep`, `Sys.time`, `Sys.*` : pause, horodatage, autres interactions
+
+
+
+
+
+

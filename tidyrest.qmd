@@ -1,0 +1,6 @@
+# Le reste du tidyverse au pas de course : `forcats`, `stringr`, `lubridate` et `readr`
+
+## `forcats`
+## `stringr`
+## `lubridate`
+## `readr`

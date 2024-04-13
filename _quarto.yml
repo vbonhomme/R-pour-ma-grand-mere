@@ -1,0 +1,37 @@
+project:
+  type: book
+
+book:
+  title: "R pour ma grand-mère"
+  author: "Vincent Bonhomme"
+  date: "13/04/2024"
+  chapters:
+    - index.qmd
+    - toc.qmd
+    - 3min-tour.qmd
+    - premiers-pas.qmd
+    - programmation.qmd
+    - magrittr.qmd
+    - dplyr.qmd
+    - ggplot2.qmd
+    - purrr.qmd
+    - tidyrest.qmd
+    - vocabulaire.qmd
+    - ressources.qmd
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-expand: 3
+    include-after-body: footer.html
+    toc-title: "Au menu"
+    code-link: true
+  pdf:
+    documentclass: scrreprt
+
+editor: source
+
+execute:
+  freeze: auto
+  

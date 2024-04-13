@@ -1,0 +1,33 @@
+# Une introduction en 3 minutes
+
+Le bloc de code ci-dessous combine tous les aspects que nous allons aborder dans ce document : utilisation de packages, du pipe `%>%`, préparation de données issues d'un tableau, production et customisation d'un graphe, création d'une fonction, calculs combinés sur listes de données, etc.
+```{r, message=FALSE, results='markup'}
+
+# dependencies
+library(tidyverse)
+
+# data tidying
+iris2 <- iris %>% 
+  as_tibble() %>% 
+  select(pl=Petal.Length, pw=Petal.Width, sp=Species)
+iris2
+
+# a quick graph
+ggplot(iris2) + 
+  aes(pl, pw, col=sp) + 
+  geom_jitter() + 
+  geom_smooth(method="lm", formula="y~x") + 
+  scale_color_viridis_d() +
+  guides(colour=guide_legend("Species")) +
+  xlab("Petal length (mm)") + ylab("Petal width (mm)") +
+  theme_minimal()
+
+# a little helper function to get adjusted R2 of a linear model
+lm_adj_r2 <- function(x) summary(lm(pl~pw, data=x))$adj.r.squared
+  
+# group-wise statistics
+iris2 %>%
+  nest(data=c(pl, pw)) %>% 
+  mutate(adj_r2=map_dbl(data, lm_adj_r2))
+
+```
