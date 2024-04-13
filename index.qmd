@@ -34,7 +34,7 @@ Ce document est placé par l'auteur sous licence CC0, ce qui signifie que vous p
 
 ## Conventions
 
-Les ```blocs de code``` ressemblent à ceci et, généralement, le résultat s'affiche à proximité. Vous pouvez copier-coller ce code dans R et obtenir le même résultat.
+Le code en ligne utilisera ```une police de ce type```; les blocs ressemblent à celui ci-dessous. Généralement, le résultat s'affiche à proximité et vous pouvez copier-coller ce code dans R et obtenir le même résultat sur votre machine.
 
 ```{r}
 3+4
