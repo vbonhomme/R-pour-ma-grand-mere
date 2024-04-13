@@ -22,6 +22,7 @@ book:
 format:
   html:
     theme: flatly
+    css: styles.css
     toc: true
     toc-expand: 3
     include-after-body: footer.html
