@@ -21,7 +21,8 @@ jobs:
       - name: Install dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages:
+          cache-version: 2
+          packages: |
             any::knitr
             any::rmarkdown
             any::tidyverse
