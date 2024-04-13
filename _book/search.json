@@ -11,7 +11,7 @@
     "href": "index.html#à-propos-de-louvrage",
     "title": "R pour ma grand-mère",
     "section": "À propos de l’ouvrage",
-    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usage de R, un environnement complet et open-source pour l’analyse de données.\nIl sert de support de formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées."
+    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usage de R, un environnement complet et open-source pour l’analyse de données.\nIl sert de support de formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées.\nLe titre est un double hommage à : i) ma grand-mère, certes plus intarissable sur la sociologie provençale des années 1950 que sur la coercion de classe à la volée et à ii) Jérôme Bonaldi sur lequel je suis moi-même plus intarissable que sur la coercion de classe à la volée."
   },
   {
     "objectID": "index.html#à-propos-de-lauteur",
@@ -25,7 +25,7 @@
     "href": "index.html#code-source",
     "title": "R pour ma grand-mère",
     "section": "Code source",
-    "text": "Code source\nCe document Quarto est écrit en Rmarkdown et hébergé par Github.\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”."
+    "text": "Code source\nCe document Quarto est écrit en Rmarkdown et hébergé par Github.\nAu cas où vous ne le liriez pas déjà en ligne, il est également ici, et on ne peut plus à jour : https://vbonhomme.github.io/R-pour-ma-grand-mere.\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”."
   },
   {
     "objectID": "index.html#licence",
@@ -39,7 +39,7 @@
     "href": "index.html#conventions",
     "title": "R pour ma grand-mère",
     "section": "Conventions",
-    "text": "Conventions\nLes blocs de code ressemblent à ceci et, généralement, le résultat s’affiche à proximité. Vous pouvez copier-coller ce code dans R et obtenir le même résultat.\n\n3+4\n\n[1] 7\n\n\nLes mots en gras disposent d’une entrée dans le glossaire.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
+    "text": "Conventions\nLes blocs de code ressemblent à ceci et, généralement, le résultat s’affiche à proximité. Vous pouvez copier-coller ce code dans R et obtenir le même résultat.\n\n3+4\n\n[1] 7\n\n\nTout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
   },
   {
     "objectID": "toc.html#premiers-pas-avec-r",
