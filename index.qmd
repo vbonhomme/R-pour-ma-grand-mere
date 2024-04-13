@@ -36,7 +36,7 @@ Les ```blocs de code``` ressemblent à ceci et, généralement, le résultat s'a
 3+4
 ```
 
-Les mots en **gras** disposent d'une entrée dans le glossaire.
+Tout ce qui suit un `#` est un commentaire - lisez-les ! - et est ignoré par R.
 
 Parfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.
 
