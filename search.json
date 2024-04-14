@@ -39,7 +39,7 @@
     "href": "index.html#conventions",
     "title": "R pour ma grand-mère",
     "section": "Conventions",
-    "text": "Conventions\nLes blocs de code ressemblent à ceci et, généralement, le résultat s’affiche à proximité. Vous pouvez copier-coller ce code dans R et obtenir le même résultat.\n\n3+4\n\n[1] 7\n\n\nTout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
+    "text": "Conventions\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci-dessous. Généralement, le résultat s’affiche à proximité et vous pouvez copier-coller ce code dans R et obtenir le même résultat sur votre machine.\n\n3+4\n\n[1] 7\n\n\nTout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
   },
   {
     "objectID": "toc.html#premiers-pas-avec-r",
