@@ -21,7 +21,11 @@ book:
     - tidyrest.qmd
     - vocabulaire.qmd
     - ressources.qmd
-
+  repo-url: https://www.rstudio.com/   
+  search: 
+    location: sidebar
+    type: textbox
+  downloads: [pdf, epub]
 
     
 format:
