@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.433">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>R pour ma grand-mère - 7&nbsp; Graphiques avec ggplot2</title>
+<title>R pour ma grand-mère - 10&nbsp; Graphiques avec ggplot2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./purrr.html" rel="next">
-<link href="./dplyr.html" rel="prev">
+<link href="./tidyr.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -98,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ggplot2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec `ggplot2`</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ggplot2.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec `ggplot2`</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,8 +127,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./toc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Préambule</span></span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,44 +151,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vocabulaire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
   </div>
 </li>
     </ul>
@@ -196,30 +214,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Au menu</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Dans ce chapitre</h2>
    
   <ul>
-<li><a href="#rationale" id="toc-rationale" class="nav-link active" data-scroll-target="#rationale"><span class="header-section-number">7.1</span> Rationale</a></li>
-  <li><a href="#un-premier-graphe" id="toc-un-premier-graphe" class="nav-link" data-scroll-target="#un-premier-graphe"><span class="header-section-number">7.2</span> Un premier graphe</a></li>
-  <li><a href="#un-deuxi%C3%A8me-geom-et-un-sacrifice" id="toc-un-deuxième-geom-et-un-sacrifice" class="nav-link" data-scroll-target="#un-deuxi%C3%A8me-geom-et-un-sacrifice"><span class="header-section-number">7.3</span> Un deuxième <code>geom</code> et un sacrifice</a></li>
-  <li><a href="#aes-dautres-variables-sur-le-m%C3%AAme-graphe" id="toc-aes-dautres-variables-sur-le-même-graphe" class="nav-link" data-scroll-target="#aes-dautres-variables-sur-le-m%C3%AAme-graphe"><span class="header-section-number">7.4</span> <code>aes</code> : d’autres variables sur le même graphe</a></li>
-  <li><a href="#tendances-et-mod%C3%A8les-statistiques" id="toc-tendances-et-modèles-statistiques" class="nav-link" data-scroll-target="#tendances-et-mod%C3%A8les-statistiques"><span class="header-section-number">7.5</span> Tendances et modèles statistiques</a></li>
-  <li><a href="#interlude-cosm%C3%A9tique-labs-theme-et-scale_" id="toc-interlude-cosmétique-labs-theme-et-scale_" class="nav-link" data-scroll-target="#interlude-cosm%C3%A9tique-labs-theme-et-scale_"><span class="header-section-number">7.6</span> Interlude cosmétique : <code>labs</code>, <code>theme</code> et <code>scale_</code></a></li>
-  <li><a href="#geom-suite-deux-variables-continues" id="toc-geom-suite-deux-variables-continues" class="nav-link" data-scroll-target="#geom-suite-deux-variables-continues"><span class="header-section-number">7.7</span> <code>geom</code> (suite) : deux variables continues</a></li>
-  <li><a href="#geom-suite-une-seule-variable-continue" id="toc-geom-suite-une-seule-variable-continue" class="nav-link" data-scroll-target="#geom-suite-une-seule-variable-continue"><span class="header-section-number">7.8</span> <code>geom</code> (suite) : une seule variable continue</a></li>
-  <li><a href="#geom-suite-une-variable-continue-et-un-facteur" id="toc-geom-suite-une-variable-continue-et-un-facteur" class="nav-link" data-scroll-target="#geom-suite-une-variable-continue-et-un-facteur"><span class="header-section-number">7.9</span> <code>geom</code> (suite) : une variable continue et un facteur</a></li>
-  <li><a href="#les-sous-graphes-avec-facet_" id="toc-les-sous-graphes-avec-facet_" class="nav-link" data-scroll-target="#les-sous-graphes-avec-facet_"><span class="header-section-number">7.10</span> Les sous-graphes avec <code>facet_</code></a></li>
-  <li><a href="#interlude-cosm%C3%A9tique-scale_-suite-et-guides" id="toc-interlude-cosmétique-scale_-suite-et-guides" class="nav-link" data-scroll-target="#interlude-cosm%C3%A9tique-scale_-suite-et-guides"><span class="header-section-number">7.11</span> Interlude cosmétique : <code>scale_</code> (suite) et <code>guides</code></a></li>
-  <li><a href="#une-fabrique-%C3%A0-graphes" id="toc-une-fabrique-à-graphes" class="nav-link" data-scroll-target="#une-fabrique-%C3%A0-graphes"><span class="header-section-number">7.12</span> <code>%+%</code> : une fabrique à graphes</a></li>
-  <li><a href="#un-package-bien-utile-patchwork" id="toc-un-package-bien-utile-patchwork" class="nav-link" data-scroll-target="#un-package-bien-utile-patchwork"><span class="header-section-number">7.13</span> Un package bien utile : <code>patchwork</code></a></li>
-  <li><a href="#sauvez-vos-cr%C3%A9ations-avec-ggsave" id="toc-sauvez-vos-créations-avec-ggsave" class="nav-link" data-scroll-target="#sauvez-vos-cr%C3%A9ations-avec-ggsave"><span class="header-section-number">7.14</span> Sauvez vos créations avec <code>ggsave</code></a></li>
-  <li><a href="#consid%C3%A9rations-post-liminaires" id="toc-considérations-post-liminaires" class="nav-link" data-scroll-target="#consid%C3%A9rations-post-liminaires"><span class="header-section-number">7.15</span> Considérations post-liminaires</a></li>
+<li><a href="#rationale" id="toc-rationale" class="nav-link active" data-scroll-target="#rationale"><span class="header-section-number">10.1</span> Rationale</a></li>
+  <li><a href="#un-premier-graphe" id="toc-un-premier-graphe" class="nav-link" data-scroll-target="#un-premier-graphe"><span class="header-section-number">10.2</span> Un premier graphe</a></li>
+  <li><a href="#un-deuxi%C3%A8me-geom-et-un-sacrifice" id="toc-un-deuxième-geom-et-un-sacrifice" class="nav-link" data-scroll-target="#un-deuxi%C3%A8me-geom-et-un-sacrifice"><span class="header-section-number">10.3</span> Un deuxième <code>geom</code> et un sacrifice</a></li>
+  <li><a href="#aes-dautres-variables-sur-le-m%C3%AAme-graphe" id="toc-aes-dautres-variables-sur-le-même-graphe" class="nav-link" data-scroll-target="#aes-dautres-variables-sur-le-m%C3%AAme-graphe"><span class="header-section-number">10.4</span> <code>aes</code> : d’autres variables sur le même graphe</a></li>
+  <li><a href="#tendances-et-mod%C3%A8les-statistiques" id="toc-tendances-et-modèles-statistiques" class="nav-link" data-scroll-target="#tendances-et-mod%C3%A8les-statistiques"><span class="header-section-number">10.5</span> Tendances et modèles statistiques</a></li>
+  <li><a href="#interlude-cosm%C3%A9tique-labs-theme-et-scale_" id="toc-interlude-cosmétique-labs-theme-et-scale_" class="nav-link" data-scroll-target="#interlude-cosm%C3%A9tique-labs-theme-et-scale_"><span class="header-section-number">10.6</span> Interlude cosmétique : <code>labs</code>, <code>theme</code> et <code>scale_</code></a></li>
+  <li><a href="#geom-suite-deux-variables-continues" id="toc-geom-suite-deux-variables-continues" class="nav-link" data-scroll-target="#geom-suite-deux-variables-continues"><span class="header-section-number">10.7</span> <code>geom</code> (suite) : deux variables continues</a></li>
+  <li><a href="#geom-suite-une-seule-variable-continue" id="toc-geom-suite-une-seule-variable-continue" class="nav-link" data-scroll-target="#geom-suite-une-seule-variable-continue"><span class="header-section-number">10.8</span> <code>geom</code> (suite) : une seule variable continue</a></li>
+  <li><a href="#geom-suite-une-variable-continue-et-un-facteur" id="toc-geom-suite-une-variable-continue-et-un-facteur" class="nav-link" data-scroll-target="#geom-suite-une-variable-continue-et-un-facteur"><span class="header-section-number">10.9</span> <code>geom</code> (suite) : une variable continue et un facteur</a></li>
+  <li><a href="#les-sous-graphes-avec-facet_" id="toc-les-sous-graphes-avec-facet_" class="nav-link" data-scroll-target="#les-sous-graphes-avec-facet_"><span class="header-section-number">10.10</span> Les sous-graphes avec <code>facet_</code></a></li>
+  <li><a href="#interlude-cosm%C3%A9tique-scale_-suite-et-guides" id="toc-interlude-cosmétique-scale_-suite-et-guides" class="nav-link" data-scroll-target="#interlude-cosm%C3%A9tique-scale_-suite-et-guides"><span class="header-section-number">10.11</span> Interlude cosmétique : <code>scale_</code> (suite) et <code>guides</code></a></li>
+  <li><a href="#une-fabrique-%C3%A0-graphes" id="toc-une-fabrique-à-graphes" class="nav-link" data-scroll-target="#une-fabrique-%C3%A0-graphes"><span class="header-section-number">10.12</span> <code>%+%</code> : une fabrique à graphes</a></li>
+  <li><a href="#un-package-bien-utile-patchwork" id="toc-un-package-bien-utile-patchwork" class="nav-link" data-scroll-target="#un-package-bien-utile-patchwork"><span class="header-section-number">10.13</span> Un package bien utile : <code>patchwork</code></a></li>
+  <li><a href="#sauvez-vos-cr%C3%A9ations-avec-ggsave" id="toc-sauvez-vos-créations-avec-ggsave" class="nav-link" data-scroll-target="#sauvez-vos-cr%C3%A9ations-avec-ggsave"><span class="header-section-number">10.14</span> Sauvez vos créations avec <code>ggsave</code></a></li>
+  <li><a href="#consid%C3%A9rations-post-liminaires" id="toc-considérations-post-liminaires" class="nav-link" data-scroll-target="#consid%C3%A9rations-post-liminaires"><span class="header-section-number">10.15</span> Considérations post-liminaires</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span>
+<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span>
 </h1>
 </div>
 
@@ -233,15 +251,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-</header><section id="rationale" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="rationale">
-<span class="header-section-number">7.1</span> Rationale</h2>
-<p>Il est peu dire que le package <code>ggplot2</code> a changé la face de la représentation graphique en R. Le package de base, <code>graphics</code> permet certes de tout faire mais laborieusement. D’autres packages (<code>lattice</code> par exemple) permettent une création plus proche de l’utilisateur·trice, moins proches des “primitives” (segments, points, etc.) graphiques.</p>
+</header><section id="rationale" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="rationale">
+<span class="header-section-number">10.1</span> Rationale</h2>
+<p>Il est peu dire que le package <code>ggplot2</code> a changé la face de la représentation graphique en R.</p>
+<p>Le package de base, <code>graphics</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> permet certes de tout faire mais laborieusement. D’autres packages (<code>lattice</code> par exemple) permettent une création plus proche de l’utilisateur·trice, moins proches des “primitives” (segments, points, etc.) graphiques.</p>
 <p>La force de <code>ggplot2</code>, d’abord écrit par Hadley Wickham, est d’implémenter la <em>Grammar of Graphics</em> de Leland Wilkinson qui dissocie les données de leurs représentations, de façon déclarative. Nous déclarerons ainsi à un jeu de données, des modes de représentation (des <code>geom_</code>) qui s’appuieront eux-mêmes sur des déclarations d’axes des abscisses, des ordonées, des couleurs, des tailles etc. (via <code>aes</code>), nous préciserons les axes (<code>coord_</code>), les paramètres de style <code>theme</code>.</p>
 <p>Nous obtiendrons finalement un graphe que nous pourrons modifier à soit et qui sera même, en soit, une machine à faire d’autres graphes.</p>
 <p><code>ggplot2</code> s’installe classiquement avec <code>install.packages("ggplot2")</code> mais il est compris dans le tidyverse que vous avez du installer précédemment avec <code>install.packages("tidyverse")</code>.</p>
 <p>Pour charger <code>ggplot2</code>, il suffit de taper <code><a href="https://ggplot2.tidyverse.org">library(ggplot2)</a></code> ou encore <code><a href="https://tidyverse.tidyverse.org">library(tidyverse)</a></code>.</p>
-</section><section id="un-premier-graphe" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="un-premier-graphe">
-<span class="header-section-number">7.2</span> Un premier graphe</h2>
+</section><section id="un-premier-graphe" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="un-premier-graphe">
+<span class="header-section-number">10.2</span> Un premier graphe</h2>
 <p><code>ggplot2</code> travaille sur des <code>data.frame</code>s (ou des <code>tibble</code>s mais c’est la même chose). Tout jeu de données qui n’est pas un <code>data.frame</code> sera converti ou tenté de l’être avec <code>fortify</code>. Le plus simple pour ne pas avoir de surprises étant de convertir vos données en un <code>data.frame</code> en bonne et due forme, vous-mêmes.</p>
 <p>Nous allons utiliser <code>iris</code> qui est déjà un <code>data.frame</code> mais que nous allons, pour la cosmétique, convertir en <code>tibble</code> et en renommer les colonnes</p>
 <div class="cell">
@@ -287,8 +306,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Vous trouverez parfois la déclaration du <code>data.frame</code> <code>aes</code> au sein de <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> comme cela : <code>ggplot(iris2, aes(x=pw, y=pl))</code>. J’ai tendance à tout éclater comme ci-dessus, mais à vous de voir.</p>
-</section><section id="un-deuxième-geom-et-un-sacrifice" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="un-deuxième-geom-et-un-sacrifice">
-<span class="header-section-number">7.3</span> Un deuxième <code>geom</code> et un sacrifice</h2>
+</section><section id="un-deuxième-geom-et-un-sacrifice" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="un-deuxième-geom-et-un-sacrifice">
+<span class="header-section-number">10.3</span> Un deuxième <code>geom</code> et un sacrifice</h2>
 <p>Si vous vous amusiez à compter le nombre de points représentés, ou plus intelligemment <code>iris2 %&gt;% select(pl, pw) %&gt;% unique() %&gt;% nrow()</code>, vous réaliseriez que 42 points ne sont pas visibles. La faute n’en incombe nullement à <code>ggplot2</code> mais à la précision des instruments de mesure au moment de l’acquisition de données ! Plus exactement, ils sont visibles mais superposés.</p>
 <p>Cette mise en garde nous donne l’occasion de présenter un deuxième <code>geom</code> qui introduit suffisamment de bruit dans les données pour que tous les points soient représentés tout en gardant la relation générale entre les deux variables <code>pw</code> et <code>pl</code>. En d’autres termes, nous sacrifions l’exactitude pour gagner en fidélité du nombre de points effectivements présents.</p>
 <p>La représentation visuelle de l’information quantitative est souvent affaire de sacrifices et elle est un domaine de recherche à part entière. Offrez-vous ou faites vous offrir la bibliographie complète d’Edward Tufte !</p>
@@ -302,8 +321,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="aes-dautres-variables-sur-le-même-graphe" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="aes-dautres-variables-sur-le-même-graphe">
-<span class="header-section-number">7.4</span> <code>aes</code> : d’autres variables sur le même graphe</h2>
+</section><section id="aes-dautres-variables-sur-le-même-graphe" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="aes-dautres-variables-sur-le-même-graphe">
+<span class="header-section-number">10.4</span> <code>aes</code> : d’autres variables sur le même graphe</h2>
 <p><code>aes</code> règle les <em>aesthetics</em> de votre <code>ggplot</code>. Si par exemple vous voulez associer chaque espèce à une couleur, il vous suffit de rajouter <code>col=sp</code> dans <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> et la légende est automatiquement générée :</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">iris2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
@@ -322,8 +341,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="tendances-et-modèles-statistiques" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="tendances-et-modèles-statistiques">
-<span class="header-section-number">7.5</span> Tendances et modèles statistiques</h2>
+</section><section id="tendances-et-modèles-statistiques" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="tendances-et-modèles-statistiques">
+<span class="header-section-number">10.5</span> Tendances et modèles statistiques</h2>
 <p>La production de graphes est centrale dans l’exploration de données et <code>ggplot2</code> en fait une tâche simple. <code>stat_smooth</code> va ajouter une courbe de tendance aux données représentées.</p>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">&lt;-</span> <span class="va">iris2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">pl</span>, <span class="va">pw</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> 
@@ -432,8 +451,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="interlude-cosmétique-labs-theme-et-scale_" class="level2" data-number="7.6"><h2 data-number="7.6" class="anchored" data-anchor-id="interlude-cosmétique-labs-theme-et-scale_">
-<span class="header-section-number">7.6</span> Interlude cosmétique : <code>labs</code>, <code>theme</code> et <code>scale_</code>
+</section><section id="interlude-cosmétique-labs-theme-et-scale_" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="interlude-cosmétique-labs-theme-et-scale_">
+<span class="header-section-number">10.6</span> Interlude cosmétique : <code>labs</code>, <code>theme</code> et <code>scale_</code>
 </h2>
 <p>Puisque je sens que vous commencez à tomber éperdument amoureux·se de <code>ggplot2</code>, il est temps d’enfoncer le clou avec un peu de cosmétique.</p>
 <p>Le nom des axes ainsi que les titres et sous-titres sont faciles à modifier :</p>
@@ -479,7 +498,7 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Les régressions sont moins flatteuses <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> mais on a bel et bien un plan euclidien.</p>
+<p>Les régressions sont moins flatteuses <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> mais on a bel et bien un plan euclidien.</p>
 <p>Enfin, vous pétez les plombs et vous vous lancez dans l’étude des vents, ou quoique ce soit d’autre avec des coordonées polaires. La famille <code>coord_*</code> vous permet de changer carrément le système de coordonées :</p>
 <div class="cell">
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -488,8 +507,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p><code>coord_flip</code> vous sera aussi utile si vous désirez culbuter le graphe et passer les <code>x</code> en <code>y</code> et vice-versa.</p>
-</section><section id="geom-suite-deux-variables-continues" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="geom-suite-deux-variables-continues">
-<span class="header-section-number">7.7</span> <code>geom</code> (suite) : deux variables continues</h2>
+</section><section id="geom-suite-deux-variables-continues" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="geom-suite-deux-variables-continues">
+<span class="header-section-number">10.7</span> <code>geom</code> (suite) : deux variables continues</h2>
 <p>Moult autres <code>geom</code>s sont disponibles dans <code>ggplot2</code> et sont présentés graphiquement <a href="https://ggplot2.tidyverse.org/reference/#layers">ici</a>.</p>
 <p>Pour continuer sur deux variables continues, on pourra rajouter facilement des courbes ou autres éléments de densité. Toutes les opérations kernel sont faites pour vous donc vous n’avez pas vraiment à vous en soucier. 150 points c’est un peu limite pour ces fonctions mais restons fidèles à <code>iris</code> :</p>
 <div class="cell">
@@ -511,8 +530,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>Classieux n’est-ce pas ?</p>
-</section><section id="geom-suite-une-seule-variable-continue" class="level2" data-number="7.8"><h2 data-number="7.8" class="anchored" data-anchor-id="geom-suite-une-seule-variable-continue">
-<span class="header-section-number">7.8</span> <code>geom</code> (suite) : une seule variable continue</h2>
+</section><section id="geom-suite-une-seule-variable-continue" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="geom-suite-une-seule-variable-continue">
+<span class="header-section-number">10.8</span> <code>geom</code> (suite) : une seule variable continue</h2>
 <p>Quand vous n’avez qu’une seule variable continue c’est vraisemblablement que vous vous intéressez à sa distribution, c’est à dire que vous voulez un histogramme ou sa densité, selon que vous vouliez binner vos données ou les garder continues. Quelques exemples ci-dessous et je vous laisse explorer en autonomie.</p>
 <div class="cell">
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">&lt;-</span> <span class="va">iris2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">pl</span><span class="op">)</span>
@@ -539,8 +558,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <blockquote class="blockquote">
 <p>Quand <code>ggplot2</code> et plus généralement <code>R</code> vous enquiquine avec un message c’est souvent pour votre bien.</p>
 </blockquote>
-</section><section id="geom-suite-une-variable-continue-et-un-facteur" class="level2" data-number="7.9"><h2 data-number="7.9" class="anchored" data-anchor-id="geom-suite-une-variable-continue-et-un-facteur">
-<span class="header-section-number">7.9</span> <code>geom</code> (suite) : une variable continue et un facteur</h2>
+</section><section id="geom-suite-une-variable-continue-et-un-facteur" class="level2" data-number="10.9"><h2 data-number="10.9" class="anchored" data-anchor-id="geom-suite-une-variable-continue-et-un-facteur">
+<span class="header-section-number">10.9</span> <code>geom</code> (suite) : une variable continue et un facteur</h2>
 <p><code>ggplot2</code> a tout ce qu’il vous faut pour représenter des boxplots et variantes :</p>
 <div class="cell">
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">&lt;-</span> <span class="va">iris2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">sp</span>, y<span class="op">=</span><span class="va">pl</span>, fill<span class="op">=</span><span class="va">sp</span><span class="op">)</span>
@@ -553,8 +572,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="les-sous-graphes-avec-facet_" class="level2" data-number="7.10"><h2 data-number="7.10" class="anchored" data-anchor-id="les-sous-graphes-avec-facet_">
-<span class="header-section-number">7.10</span> Les sous-graphes avec <code>facet_</code>
+</section><section id="les-sous-graphes-avec-facet_" class="level2" data-number="10.10"><h2 data-number="10.10" class="anchored" data-anchor-id="les-sous-graphes-avec-facet_">
+<span class="header-section-number">10.10</span> Les sous-graphes avec <code>facet_</code>
 </h2>
 <p>Une famille de fonction très puissante en <code>ggplot2</code> est celle des <code>facet_</code> qui vous permettent de faire des <code>sous-graphes</code> facilement. Pour que l’exemple soit encore plus aiguisé, nous allons créer une autre colonne facteur dans <code>iris2</code> simulant cinq sessions de terrain, de mesure de 10 iris par espèce par session. Puis nous allons créer un graphe de base, l’occasion de montrer l’utilisation de <code>shape</code>.</p>
 <div class="cell">
@@ -583,7 +602,7 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Pratique ! Notez que quand vous ne voulez qu’une dimension, vou spouvez omettre l’un des membres à gauche ou à droite et le remplacer par un <code>.</code>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Pratique ! Notez que quand vous ne voulez qu’une dimension, vou spouvez omettre l’un des membres à gauche ou à droite et le remplacer par un <code>.</code>. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p><code>facet_wrap</code> est plus lâche dans sa définition et ne veut qu’une seule colonne, dont les sous-graphes correspondant seront simplement enroulés selon des dimensions plaisantes, que vous pouvez spécifier :</p>
 <div class="cell">
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">session</span>, nrow<span class="op">=</span><span class="fl">2</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -591,8 +610,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="interlude-cosmétique-scale_-suite-et-guides" class="level2" data-number="7.11"><h2 data-number="7.11" class="anchored" data-anchor-id="interlude-cosmétique-scale_-suite-et-guides">
-<span class="header-section-number">7.11</span> Interlude cosmétique : <code>scale_</code> (suite) et <code>guides</code>
+</section><section id="interlude-cosmétique-scale_-suite-et-guides" class="level2" data-number="10.11"><h2 data-number="10.11" class="anchored" data-anchor-id="interlude-cosmétique-scale_-suite-et-guides">
+<span class="header-section-number">10.11</span> Interlude cosmétique : <code>scale_</code> (suite) et <code>guides</code>
 </h2>
 <p>Si vous ne vous pâmez pas devant les couleurs par défaut, il est naturellement possible de les changer avec une des fonctions <code>scale_color_*</code>. Il en va de même pour les autres modes de représentation définis dans <code>aes</code>.</p>
 <div class="cell">
@@ -611,9 +630,9 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="une-fabrique-à-graphes" class="level2" data-number="7.12"><h2 data-number="7.12" class="anchored" data-anchor-id="une-fabrique-à-graphes">
-<span class="header-section-number">7.12</span> <code>%+%</code> : une fabrique à graphes</h2>
-<p>Plus haut, je vous ai promis que les graphes <code>ggplot2</code> étaient en soit des machines à faire des graphes<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Imaginons que nous disposions d’un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un <code>ggplot</code> que vous auriez construit avec amour et simplicité :</p>
+</section><section id="une-fabrique-à-graphes" class="level2" data-number="10.12"><h2 data-number="10.12" class="anchored" data-anchor-id="une-fabrique-à-graphes">
+<span class="header-section-number">10.12</span> <code>%+%</code> : une fabrique à graphes</h2>
+<p>Plus haut, je vous ai promis que les graphes <code>ggplot2</code> étaient en soit des machines à faire des graphes<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Imaginons que nous disposions d’un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un <code>ggplot</code> que vous auriez construit avec amour et simplicité :</p>
 <div class="cell">
 <div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">gg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris2</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">pl</span>, <span class="va">pw</span>, col<span class="op">=</span><span class="va">sp</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">gg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -629,16 +648,16 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre><code># A tibble: 150 × 6
       sl    sw    pl      pw sp     session
    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;  
- 1   5.1   3.5 1.63   0.0196 setosa A      
- 2   4.9   3   0.854  0.289  setosa A      
- 3   4.7   3.2 0.320  0.0690 setosa A      
- 4   4.6   3.1 0.904 -0.497  setosa A      
- 5   5     3.6 0.857 -0.387  setosa A      
- 6   5.4   3.9 0.384  0.438  setosa A      
- 7   4.6   3.4 1.39  -0.112  setosa A      
- 8   5     3.4 1.35   0.120  setosa A      
- 9   4.4   2.9 1.85   0.216  setosa A      
-10   4.9   3.1 0.881 -0.980  setosa A      
+ 1   5.1   3.5 1.05   0.247  setosa A      
+ 2   4.9   3   1.53   0.621  setosa A      
+ 3   4.7   3.2 1.28   0.167  setosa A      
+ 4   4.6   3.1 1.93   0.830  setosa A      
+ 5   5     3.6 0.972 -0.917  setosa A      
+ 6   5.4   3.9 1.47  -0.410  setosa A      
+ 7   4.6   3.4 1.38   0.667  setosa A      
+ 8   5     3.4 1.40   0.861  setosa A      
+ 9   4.4   2.9 0.997  0.0324 setosa A      
+10   4.9   3.1 2.01  -0.285  setosa A      
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -659,8 +678,8 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="un-package-bien-utile-patchwork" class="level2" data-number="7.13"><h2 data-number="7.13" class="anchored" data-anchor-id="un-package-bien-utile-patchwork">
-<span class="header-section-number">7.13</span> Un package bien utile : <code>patchwork</code>
+</section><section id="un-package-bien-utile-patchwork" class="level2" data-number="10.13"><h2 data-number="10.13" class="anchored" data-anchor-id="un-package-bien-utile-patchwork">
+<span class="header-section-number">10.13</span> Un package bien utile : <code>patchwork</code>
 </h2>
 <p>Quantité de packages existent pour étendre encore les fonctionnalités de <code>ggplot2</code>. Nous pouvons citer :</p>
 <ul>
@@ -703,25 +722,27 @@ F-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="sauvez-vos-créations-avec-ggsave" class="level2" data-number="7.14"><h2 data-number="7.14" class="anchored" data-anchor-id="sauvez-vos-créations-avec-ggsave">
-<span class="header-section-number">7.14</span> Sauvez vos créations avec <code>ggsave</code>
+</section><section id="sauvez-vos-créations-avec-ggsave" class="level2" data-number="10.14"><h2 data-number="10.14" class="anchored" data-anchor-id="sauvez-vos-créations-avec-ggsave">
+<span class="header-section-number">10.14</span> Sauvez vos créations avec <code>ggsave</code>
 </h2>
 <p>Une fois que vous êtes satisfait·e de votre <code>ggplot</code>, vous pouvez le sauver vers un <code>pdf</code>, <code>eps</code>, <code>jpg</code>, <code>png</code>, etc. facilement avec la fonction <code>ggsave</code>.</p>
 <p>Il vous suffit d’appeller <code>ggsave</code> avec le nom de fichier et son extension correspondant au format que vous voulez sauver. Vous pouvez aussi spécifier la largeur et la hauteur de sortie. Par défaut <code>ggsave</code> sauve le dernier graphe produit mais vous pouvez spécifier l’argument <code>plot</code> de <code>ggsave</code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"my_plot_1.pdf"</span>, <span class="va">gg</span>, width<span class="op">=</span><span class="fl">12</span>, height<span class="op">=</span><span class="fl">8</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="considérations-post-liminaires" class="level2" data-number="7.15"><h2 data-number="7.15" class="anchored" data-anchor-id="considérations-post-liminaires">
-<span class="header-section-number">7.15</span> Considérations post-liminaires</h2>
+</section><section id="considérations-post-liminaires" class="level2" data-number="10.15"><h2 data-number="10.15" class="anchored" data-anchor-id="considérations-post-liminaires">
+<span class="header-section-number">10.15</span> Considérations post-liminaires</h2>
 <p><code>ggplot2</code> peut-être frustrant dans les premiers temps. Comme vous le savez la frustration est typique mais temporaire. <code>ggplot2</code> mérite définitivement de s’y accrocher et les larmes de hargne seront bientôt remplacées par des cris de joie et des apéros en terrasse grâce au temps gagné.</p>
 
 
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
-<li id="fn1"><p>petite filouterie : si vous voulez convaincre visuellement, arrangez vous pour que vos regressions aient un angle de 45°<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>et <code>~sp</code> sans point à gauche fonctionnerait aussi.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>on pourrait parler de fonctions, et même de <em>functionnals</em>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/vbonhomme">❤ R pour les gens pressés</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a> est placé dans le domaine public sous licence <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a></p> 
+<li id="fn1"><p><code><a href="https://rdrr.io/r/graphics/graphics-package.html">?graphics</a></code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>petite filouterie : si vous voulez convaincre visuellement, arrangez vous pour que vos regressions aient un angle de 45°<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>et <code>~sp</code> sans point à gauche fonctionnerait aussi.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>on pourrait parler de fonctions, voire de fonction factories<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a></p> 
+ 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -955,13 +976,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./dplyr.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span>
+      <a href="./tidyr.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./purrr.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

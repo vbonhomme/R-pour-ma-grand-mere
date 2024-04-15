@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R pour ma grand-mère - 6&nbsp; Ceci n’est pas qu’un opérateur : %&gt;% et magrittr</title>
+<title>R pour ma grand-mère - 7&nbsp; Importer ses données</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./import.html" rel="next">
-<link href="./modelling.html" rel="prev">
+<link href="./dplyr.html" rel="next">
+<link href="./magrittr.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./magrittr.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n'est pas qu'un opérateur : `%&gt;%` et `magrittr`</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./import.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -138,13 +138,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./magrittr.html" class="sidebar-item-text sidebar-link active">
+  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./import.html" class="sidebar-item-text sidebar-link">
+  <a href="./import.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
@@ -196,14 +196,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Dans ce chapitre</h2>
+   
+  <ul>
+  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link active" data-scroll-target="#bonnes-pratiques"><span class="header-section-number">7.1</span> Bonnes pratiques</a></li>
+  <li><a href="#import" id="toc-import" class="nav-link" data-scroll-target="#import"><span class="header-section-number">7.2</span> Import</a>
+  <ul class="collapse">
+  <li><a href="#read.table" id="toc-read.table" class="nav-link" data-scroll-target="#read.table"><span class="header-section-number">7.2.1</span> <code>read.table</code></a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">7.2.2</span> <code>Rstudio</code></a></li>
+  <li><a href="#readr" id="toc-readr" class="nav-link" data-scroll-target="#readr"><span class="header-section-number">7.2.3</span> <code>readr</code></a></li>
+  <li><a href="#load" id="toc-load" class="nav-link" data-scroll-target="#load"><span class="header-section-number">7.2.4</span> <code>load</code></a></li>
+  </ul></li>
+  <li><a href="#exports" id="toc-exports" class="nav-link" data-scroll-target="#exports"><span class="header-section-number">7.3</span> Exports</a>
+  <ul class="collapse">
+  <li><a href="#write.table" id="toc-write.table" class="nav-link" data-scroll-target="#write.table"><span class="header-section-number">7.3.1</span> write.table</a></li>
+  <li><a href="#write_csv-etc." id="toc-write_csv-etc." class="nav-link" data-scroll-target="#write_csv-etc."><span class="header-section-number">7.3.2</span> write_csv, etc.</a></li>
+  <li><a href="#save" id="toc-save" class="nav-link" data-scroll-target="#save"><span class="header-section-number">7.3.3</span> <code>save</code></a></li>
+  </ul></li>
+  <li><a href="#autres-ios" id="toc-autres-ios" class="nav-link" data-scroll-target="#autres-ios"><span class="header-section-number">7.4</span> Autres I/Os</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></h1>
 </div>
 
 
@@ -218,9 +238,47 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Plop</p>
+<section id="bonnes-pratiques" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="bonnes-pratiques"><span class="header-section-number">7.1</span> Bonnes pratiques</h2>
+</section>
+<section id="import" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="import"><span class="header-section-number">7.2</span> Import</h2>
+<section id="read.table" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="read.table"><span class="header-section-number">7.2.1</span> <code>read.table</code></h3>
+</section>
+<section id="rstudio" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">7.2.2</span> <code>Rstudio</code></h3>
+</section>
+<section id="readr" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="readr"><span class="header-section-number">7.2.3</span> <code>readr</code></h3>
+</section>
+<section id="load" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="load"><span class="header-section-number">7.2.4</span> <code>load</code></h3>
+</section>
+</section>
+<section id="exports" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="exports"><span class="header-section-number">7.3</span> Exports</h2>
+<section id="write.table" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="write.table"><span class="header-section-number">7.3.1</span> write.table</h3>
+</section>
+<section id="write_csv-etc." class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="write_csv-etc."><span class="header-section-number">7.3.2</span> write_csv, etc.</h3>
+</section>
+<section id="save" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="save"><span class="header-section-number">7.3.3</span> <code>save</code></h3>
+</section>
+</section>
+<section id="autres-ios" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="autres-ios"><span class="header-section-number">7.4</span> Autres I/Os</h2>
+<ul>
+<li>readlines</li>
+<li>httr</li>
+<li>yaml</li>
+<li>xlsx</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a><br></p> 
@@ -460,13 +518,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./modelling.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span>
+      <a href="./magrittr.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./import.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./dplyr.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

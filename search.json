@@ -11,7 +11,7 @@
     "href": "index.html#à-propos-de-louvrage",
     "title": "R pour ma grand-mère",
     "section": "À propos de l’ouvrage",
-    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usage de R, un environnement complet et open-source pour l’analyse de données.\nIl sert de support de formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées.\nLe titre est un double hommage à : i) ma grand-mère, certes plus intarissable sur la sociologie provençale des années 1950 que sur la coercion de classe à la volée et à ii) Jérôme Bonaldi sur lequel je suis moi-même plus intarissable que sur la coercion de classe à la volée."
+    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées.\nIl sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.\nLe titre est un hommage à ma grand-mère, certes plus intarissable sur la sociologie provençale des années 1950 que sur la coercion de classe à la volée."
   },
   {
     "objectID": "index.html#à-propos-de-lauteur",
@@ -25,7 +25,7 @@
     "href": "index.html#code-source",
     "title": "R pour ma grand-mère",
     "section": "Code source",
-    "text": "Code source\nCe document Quarto est écrit en Rmarkdown et hébergé par Github.\nAu cas où vous ne le liriez pas déjà en ligne, il est également ici, et on ne peut plus à jour : https://vbonhomme.github.io/R-pour-ma-grand-mere.\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”."
+    "text": "Code source\n\nSi vous le lisez en pdf, il est disponible en ligne ici : https://vbonhomme.github.io/R-pour-ma-grand-mere.\nSi vous le lisez en ligne, il est disponible en pdf ici\n\nCe document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”."
   },
   {
     "objectID": "index.html#licence",
@@ -39,77 +39,35 @@
     "href": "index.html#conventions",
     "title": "R pour ma grand-mère",
     "section": "Conventions",
-    "text": "Conventions\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci-dessous. Généralement, le résultat s’affiche à proximité et vous pouvez copier-coller ce code dans R et obtenir le même résultat sur votre machine.\n\n3+4\n\n[1] 7\n\n\nTout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
+    "text": "Conventions\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci :\n\n# this is a comment\n3+4\n\n[1] 7\n\n\nGénéralement, le résultat s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
   },
   {
-    "objectID": "toc.html#premiers-pas-avec-r",
-    "href": "toc.html#premiers-pas-avec-r",
-    "title": "1  Préambule",
-    "section": "1.1 Premiers pas avec R",
-    "text": "1.1 Premiers pas avec R"
+    "objectID": "install.html#r",
+    "href": "install.html#r",
+    "title": "1  Installer un environnement R",
+    "section": "1.1 R",
+    "text": "1.1 R\nL’installation de R se passe généralement sans encombres, en quelques minutes.\nLe plus simple est de choisir votre système d’exploitation depuis la page officielle :\n\nhttps://cran.rstudio.com/.\n\nPour Windows et Mac, il suffit de télécharger et d’installer l’archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré."
   },
   {
-    "objectID": "toc.html#r-studio-12h",
-    "href": "toc.html#r-studio-12h",
-    "title": "1  Préambule",
-    "section": "1.2 R-Studio (1/2h)",
-    "text": "1.2 R-Studio (1/2h)\n\nR Studio\n\nPremier contact\nScript\nRun, Source\nApparence\n&lt;Tab&gt;\n\nBonnes pratiques\n\nIndentation\nCommentaires\nSauvegarde versus reproductibilité\n\n\nUn mot à propos de l’anglais : R cause anglais et je vous conseille deux choses : i) de le laisser en anglais, pour pouvoir plus facilement chercher de l’aide le cas échéant et ii) pour pouvoir collaborer plus facilement. Nous y reviendrons."
+    "objectID": "install.html#rstudio",
+    "href": "install.html#rstudio",
+    "title": "1  Installer un environnement R",
+    "section": "1.2 RStudio",
+    "text": "1.2 RStudio\nPour installer RStudio, version bureau, récupérez l’installeur depuis sa page d’accueil et laissez vous porter :\n\nhttps://posit.co/download/rstudio-desktop/"
   },
   {
-    "objectID": "toc.html#matrices-et-data-frames-2h",
-    "href": "toc.html#matrices-et-data-frames-2h",
-    "title": "1  Préambule",
-    "section": "1.3 Matrices et data frames (2h)",
-    "text": "1.3 Matrices et data frames (2h)\n\nPremière matrice\n\n?matrix\nexercices\n\nIndexation 1d+\n\nrownames, colnames\ndim, nrow, ncol\npaste, paste0\nrbind, cbind\napply\ncolSums, rowSums\nindexation 2d, 3d, etc.\n\nData frames\n\ndata.frame création\ndata(iris)\niris, ?iris, ?datasets\n$\nhead, tail\napply, summary\n\nNA, na.omit\nUn mot sur les listes"
+    "objectID": "install.html#vérifier-votre-installation",
+    "href": "install.html#vérifier-votre-installation",
+    "title": "1  Installer un environnement R",
+    "section": "1.3 Vérifier votre installation",
+    "text": "1.3 Vérifier votre installation\nUne fois que vous avez installé R puis RStudio, ouvrez RStudio.\nDans la fenêtre “console”, là où vous voyez une invite de commande &gt; tapez 1+1 puis &lt;Entrée&gt;. Voilà, vous avez une installation de R+RStudio qui fonctionne."
   },
   {
-    "objectID": "toc.html#stats-inférentielles-101-2h",
-    "href": "toc.html#stats-inférentielles-101-2h",
-    "title": "1  Préambule",
-    "section": "1.4 Stats inférentielles 101 (2h)",
-    "text": "1.4 Stats inférentielles 101 (2h)\n\ncov, cor\nVariance : \\(s^{2}\\) ou \\(V(x)\\) et se calcule avec \\(\\frac{1}{n} \\sum_{i=1}^n(x_i-\\bar{x})^2\\). Cet estimateur est biaisé ; une version non-biaisée est obtenue est divisant par \\(\\frac{1}{n-1}\\) et se note généralement \\(\\sigma^{2}\\).\nÉcart-type est la racine-carrée de la variance, soit \\(\\sqrt{\\sigma^{2}}\\).\nCovariance : mesure du sens de variation de deux variables aléatoire. Si positive, quand l’une augment, l’autre aussi, et vice-versa. Dépend de la variance des deux variables. Elle se calcule par : \\(\\operatorname{cov}(x,y)\\equiv \\mathbb E[(x-\\mathbb E[x])\\,(y-\\mathbb E[y])]\\). L’espérance utilisée par R est non biaisée, et n’est pas exactement équivalente à la moyenne. Pour l’obtenir, il faut prendre la somme des valeurs, divisée par leur nombre moins un(\\(\\sum_{i=1}^n([x_i-\\bar{x})(y_i-\\bar{y})] / (n-1)\\)).\nCorrélation : covariance normalisée par les variances des deux variables. Le coefficient de corrélation, est ainsi compris entre -1 et 1 et indique (imparfaitement) quelle proportion de la variance de l’une des deux variables peut être expliquée par l’autre. Il se calcule par : \\(\\rho = \\frac{cov_{xy}}{ \\sigma_x \\sigma_y}\\).\n\nplot(Sepal.Length ~ Petal.Length, data=iris, xlim=c(0, 8), ylim=c(0, 8))\nmod1 &lt;- lm(Sepal.Length ~ Petal.Length, data=iris)\nsummary(mod1)\nabline(mod1)\n\nmod2 &lt;- lm(Sepal.Length ~ Petal.Length - 1, data=iris)\nsummary(mod2)\nabline(mod2, col=\"red\")\n\n\nmod3 &lt;- lm(Sepal.Length ~ Petal.Length %in% Species - 1, data=iris)\nsummary(mod3)\nabline(a=0, b=coefficients(mod3)[1])"
-  },
-  {
-    "objectID": "toc.html#graphics-base-3h",
-    "href": "toc.html#graphics-base-3h",
-    "title": "1  Préambule",
-    "section": "1.5 Graphics (base) (3h)",
-    "text": "1.5 Graphics (base) (3h)\n\nplot and pairs\nexample\nplot, boxplot, hist, barplot + formula\nplot(iris)\n\npch, col, cex\nplot on iris\nxlim, ylim, asp, log\nxlab, ylab, main, sub\naxes, axis\n\nColors, colorRampPalette\nlegend\nPrimitives graphiques : lines, segments, arrows, points, text\nlas, lg, mar, mfrow, ?par\nlayout\ndev.off\npdf"
-  },
-  {
-    "objectID": "toc.html#graphics-ggplot2-2h",
-    "href": "toc.html#graphics-ggplot2-2h",
-    "title": "1  Préambule",
-    "section": "1.6 Graphics (ggplot2) (2h)",
-    "text": "1.6 Graphics (ggplot2) (2h)\n\nggplot2\n\ngrammaire graphes + objects\nqplot(Sepal.Length, Sepal.Width, col=Species, data=iris)\nggplot, data, aes\nggplot(iris, aes(x=Petal.Length, y=Petal.Width, col=Species)) + geom_point() +  stat_smooth(method=\"lm\")"
-  },
-  {
-    "objectID": "toc.html#survivre-à-ses-données-2h",
-    "href": "toc.html#survivre-à-ses-données-2h",
-    "title": "1  Préambule",
-    "section": "1.7 Survivre à ses données (2h)",
-    "text": "1.7 Survivre à ses données (2h)\n\napply, lapply, tapply, sapply\nby, with\npure indicing, subset, dplyr\nLogicals : ==, !=, &gt;, &gt;=, &lt;=, &lt;, &, |, %in%\nExercises\nPackages\n\nkézaco\nexemples: rgl\nlibrary(dplyr)\nselect, starts_with()\nfilter\narrange\nmutate\nsummarize, group_by\n\nmagrittr\nImport/Export de données\n\nPréparation données\n\nread.table, write.table\nImport datasets avec RStudio\nNA handling\nna.rm, is.na, na.omit"
-  },
-  {
-    "objectID": "toc.html#eléments-de-programmation-3h",
-    "href": "toc.html#eléments-de-programmation-3h",
-    "title": "1  Préambule",
-    "section": "1.8 Eléments de programmation (3h)",
-    "text": "1.8 Eléments de programmation (3h)\n\nfunction(), function\nstandardize\narguments\nControl flow\n\nif, else\n{ }\nifelse\nintern variables, environment\ncat\nappend, cvs. declaration\n\nreturn\nfor\nwhile"
-  },
-  {
-    "objectID": "toc.html#packages-12h",
-    "href": "toc.html#packages-12h",
-    "title": "1  Préambule",
-    "section": "1.9 Packages (1/2h)",
-    "text": "1.9 Packages (1/2h)\n\nPackages * Kézaco ? * CRAN’s Task Views * CRAN’s repository * GitHub"
-  },
-  {
-    "objectID": "toc.html#one-step-beyond-12h",
-    "href": "toc.html#one-step-beyond-12h",
-    "title": "1  Préambule",
-    "section": "1.10 One step beyond (1/2h)",
-    "text": "1.10 One step beyond (1/2h)\n\nBonnes pratiques * scripts, projets, portabilité et reproductibilité, folder unique * coder générique, fonctions, ne pas se répéter, source * style code, commenter * écrire un package r-pkgs\nProgresser : lire, pratiquer, échouer mille fois, échanger\nDocuments dynamiques\nApplications Shiny"
+    "objectID": "install.html#installer-les-packages",
+    "href": "install.html#installer-les-packages",
+    "title": "1  Installer un environnement R",
+    "section": "1.4 Installer les packages",
+    "text": "1.4 Installer les packages\nLes besoins de ce document se limitent aux packages du tidyverse que vous pouvez installer en tapant à la console la commande suivante :\n\ninstall.packages(\"tidyverse\")"
   },
   {
     "objectID": "3min-tour.html",
@@ -147,116 +105,123 @@
     "text": "3.4 Séquences régulières\nVous m’avez vu (me) taper “à la main”, des séries de nombres telles que c(1, 2, 3, 4, 5). Même l’esprit le plus endormi constatera une certaine régularité dans cette séquence des premiers entiers naturels. Jusqu’à 5, on peut imaginer - et encore -, la taper à la main, mais imaginons que nous ayons besoin d’aller jusqu’à 100 ou même à 37427. Doit bien y avoir quelqu’un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.\n\nSi tu penses que tu es en train de faire quelque chose de répétitif et/ou stupide, il existe à coup sûr une façon plus intelligente de faire\n\nDe façon plus compacte :\n\nUn·e bon·ne programmeur·se est une grosse feignasse\n\nR possède toutes les fonctions dont on peut rêver pour générer séquences régulières et nombres aléatoires. Commençons par les séquences régulières et la versatile fonction seq qui prend au minimum deux arguments pour le point de départ et le point d’arrivée :\n\nseq(1, 10)\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\nGénérér une séquence d’entiers naturels est une opération si banale en programmation que l’on peut faire encore pus court avec l’opérateur ::\n\n1:5\n\n[1] 1 2 3 4 5\n\n-1:4\n\n[1] -1  0  1  2  3  4\n\n\nDe la même façon, vous pouvez répéter une ou des valeurs avec rep :\n\ntonton &lt;- 1:5\nrep(tonton, 2)\n\n [1] 1 2 3 4 5 1 2 3 4 5\n\nrep(tonton, each=3)\n\n [1] 1 1 1 2 2 2 3 3 3 4 4 4 5 5 5\n\n\nÀ ce point de votre existence, vous devez vous poser les questions suivantes :\n\nfaut-il se rappeler de tout ça ?\nces histoires de paramètres de fonction, attends… ah oui, le Monsieur a dit d’apeller ça des arguments, c’est bien joli mais on les trouve où ?\net d’ailleurs il doit bien y avoir une documentation quelque part pour tout ce bazar ?\nquand est-ce qu’on fait une pause ?\n\nVous vous posez les bonnes questions et il est temps de faire un interlude, et non des moindres, l’interlude : ?"
   },
   {
+    "objectID": "premiers-pas.html#interlude-clavier",
+    "href": "premiers-pas.html#interlude-clavier",
+    "title": "\n3  Premiers pas et concepts-clés\n",
+    "section": "\n3.5 Interlude clavier",
+    "text": "3.5 Interlude clavier\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\n\nUne fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez &lt;Tab&gt; de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.\nDans RStudio, allez à peu près tout tester dans le menu Code. Vous y trouverez des fonctions très utiles (“Reindent lines”, “Reformat code” par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !"
+  },
+  {
     "objectID": "premiers-pas.html#fonctions",
     "href": "premiers-pas.html#fonctions",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.5 Fonctions",
-    "text": "3.5 Fonctions\nLes fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu’elles doivent être démystifiées précocément.\n\n3.5.1 Que sont les fonctions ?\nLes fonctions sont des unités de code qui font quelque chose d’utile. Le plus souvent on envoie une valeur et on en récupère une autre. sqrt() par exemple renvoie la racine carrée de la valeur passée en argument.\nLes arguments, séparés par des virgules, définissent les “options” de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d’argument.\n\n3.5.2 Écrire ses fonctions : function\n\nVous pouvez définir vos propres fonctions avec la fonction function. On va encapsuler une portion de code entre des accolades { et la nommer. Définissons une fonction qui ajoute 3 à un argument que l’on va appeller x (vous pouvez essayer avec y ou toto :\n\nplus3 &lt;- function(x) {\n  x+3\n}\n\nplus3(5)\n\n[1] 8\n\nplus3(1:3)\n\n[1] 4 5 6\n\n\nLes fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d’avoir du code non dupliqué, moins propice à des erreurs de frappes. Aussi, si vous changez d’avis, vous pourrez changer la définition de fonction et, chaque fois qu’elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.\n\n3.5.3 Notions d’environnement\nLa valeur x ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l’environnement de la fonction plus3. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n’existe que durant l’exécution de la fonction.\nAutrement dit, si la variable x est déja assignée dans l’environnement global, c’est à dire en dehors de la fonction, dans la console si on veut, et bien ce x global ne sera ni modifié, ni même utilisé. Un exemple :\n\nx &lt;- 45\nplus3(5)\n\n[1] 8\n\n\nNaturellement vous pouvez tout de même utiliser votre x global comme argument de la fonction plus3. Ce x global va être utilisé localement par la fonction puis vous être retourné :\n\nplus3(x)\n\n[1] 48\n\n\n\n3.5.4 Documentation des fonctions : ?\n\nToute fonction déjà disponible en R ou un package a forcément une page d’aide dédiée à laquelle on accède avec : ?nom_de_la_fonction. Revenons à notre fonction seq bien pratique pour créer des séquences régulières. En tapant ?seq on accède au contenu suivant :\nSequence Generation\n\nDescription\nGenerate regular sequences. seq is a standard generic with a default method. seq.int is a primitive which can be much faster but has a few restrictions. seq_along and seq_len are very fast primitives for two common cases.\n\n## Default S3 method:\nseq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),\n    length.out = NULL, along.with = NULL, ...)\n\nseq.int(from, to, by, length.out, along.with, ...)\n\nseq_along(along.with)\nseq_len(length.out)\n\nArguments\n[...]\n\nDetails\n[...]\n\nValue\n[...]\n\nSee also\n[...]\n\nExamples\n[...]\n\nToutes les pages d’aides ont la même structure, et les sections suivantes :\n\n\nDescription : ce que la fonction fait\n\nUsage : la fonction “déployée” c’est à dire avec tous ses arguments. Parfois plusieurs fonctions sont regroupées dans une même age d’aide, comme c’est le cas pour seq. Ces fonctions peuvent être des variantes avec des noms différents ou des méthodes c’est à dire des fonctions au comportement différent selon le type d’objet sur lequel elles opèrent.\n\nArguments : un descriptif de tous les arguments disponibles. La classe et le format de chacun d’eux est mentionnée.\n\nDetails : souvent un remède à l’insomnie mais les subtilités d’implémentation sont là, souvent cachées au détour d’une phrase.\n\nValue : ce que la fonction retourne.\n\nReferences : où s’en référer si vous n’en avez pas assez\n\nSee Also : fonctions connexes, très pratique pour enrichir son vocabulaire et trouver son bonheur.\n\nExamples : peut être la plus utile de toutes avec ses exemples d’utilisation que vous pouvez copier-coller ou même appeller directement depuis la console avec example(\"nom_de_la_fonction\"). Vous pouvez essayer example(\"plot\") par exemple.\nEn pied de page, vous avez également une information qui sera utile plus tard : le package et sa version dans lequel se trouve être cette fonction. Pour seq, on est dans le package base dont toutes les autres fonctions sont indexées dans le lien “Index”.\n\nCertaines pages d’aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple ?Arithmetic, ?Special, Syntax. D’autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`), par exemple ?`+` ou la mise en abyme de ?`?`. Enfin, il existe d’autres ressources comme les “vignettes”, plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.\nLes pages d’aide sont souvent compactes et obscures mais l’information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d’aide même si à première vue cette littérature n’est guère attrayante.\nEnfin, la variante ??(quoiquoiquoi), raccourci de help.search(\"quoiquoiquoi\") permet de chercher toutes les occurences de quoiquoiquoi dans toutes les pages d’aide de R.\n\n3.5.5 Arguments : noms, positions et valeurs par défaut\nAprès avoir consulté ?seq on peut par exemple préciser le point de départ (from), le point d’arrivée (to), le pas (by) et la longueur totale du vecteur à créer (length.out).\nVous constaterez que from est défini avec une valeur par défaut (from=1). Ainsi, si vous omettez sa valeur et ne spécifiez que to, from prendra sa valeur par défaut. Ces deux commandes sont donc équivalentes :\n\nseq(from=1, to=5)\n\n[1] 1 2 3 4 5\n\nseq(to=5)\n\n[1] 1 2 3 4 5\n\n\nVous pouvez également abréger le nom des arguments, moyennant que l’abbréviation soit univoque, c’est à dire que le nom de l’argument que vous abrégez ne soit pas identique à celui d’un autre argument. Ainsi from et length.out peuvent être abrégés en fr et length:\n\nseq(fr=0, to=2, length=5)\n\n[1] 0.0 0.5 1.0 1.5 2.0\n\n\nCe n’est jamais une bonne idée mais si vous utilisez le nom complet ou une abbréviation des arguments vous pouvez changer leur ordre. Ainsi seq(length=5, to=2, fr=0) sera équivalent à la commande précédente.\nVous pouvez même omettre le nom des arguments comme on l’a fait dans les sections précédentes sans le mentionner. Dans ce cas, les arguments sont passés positionnellement et doivent être renseignés dans l’ordre tel que défini dans la section ‘Usage’ de leur documentation:\n\nseq(-3, 4, 12)\n\n[1] -3"
+    "section": "\n3.6 Fonctions",
+    "text": "3.6 Fonctions\nLes fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu’elles doivent être démystifiées précocément.\n\n3.6.1 Que sont les fonctions ?\nLes fonctions sont des unités de code qui font quelque chose d’utile. Le plus souvent on envoie une valeur et on en récupère une autre. sqrt() par exemple renvoie la racine carrée de la valeur passée en argument.\nLes arguments, séparés par des virgules, définissent les “options” de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d’argument.\n\n3.6.2 Écrire ses fonctions : function\n\nVous pouvez définir vos propres fonctions avec la fonction function. On va encapsuler une portion de code entre des accolades { et la nommer. Définissons une fonction qui ajoute 3 à un argument que l’on va appeller x (vous pouvez essayer avec y ou toto :\n\nplus3 &lt;- function(x) {\n  x+3\n}\n\nplus3(5)\n\n[1] 8\n\nplus3(1:3)\n\n[1] 4 5 6\n\n\nLes fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d’avoir du code non dupliqué, moins propice à des erreurs de frappes. Aussi, si vous changez d’avis, vous pourrez changer la définition de fonction et, chaque fois qu’elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.\n\n3.6.3 Notions d’environnement\nLa valeur x ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l’environnement de la fonction plus3. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n’existe que durant l’exécution de la fonction.\nAutrement dit, si la variable x est déja assignée dans l’environnement global, c’est à dire en dehors de la fonction, dans la console si on veut, et bien ce x global ne sera ni modifié, ni même utilisé. Un exemple :\n\nx &lt;- 45\nplus3(5)\n\n[1] 8\n\n\nNaturellement vous pouvez tout de même utiliser votre x global comme argument de la fonction plus3. Ce x global va être utilisé localement par la fonction puis vous être retourné :\n\nplus3(x)\n\n[1] 48\n\n\n\n3.6.4 Documentation des fonctions : ?\n\nToute fonction déjà disponible en R ou un package a forcément une page d’aide dédiée à laquelle on accède avec : ?nom_de_la_fonction. Revenons à notre fonction seq bien pratique pour créer des séquences régulières. En tapant ?seq on accède au contenu suivant :\nSequence Generation\n\nDescription\nGenerate regular sequences. seq is a standard generic with a default method. seq.int is a primitive which can be much faster but has a few restrictions. seq_along and seq_len are very fast primitives for two common cases.\n\n## Default S3 method:\nseq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),\n    length.out = NULL, along.with = NULL, ...)\n\nseq.int(from, to, by, length.out, along.with, ...)\n\nseq_along(along.with)\nseq_len(length.out)\n\nArguments\n[...]\n\nDetails\n[...]\n\nValue\n[...]\n\nSee also\n[...]\n\nExamples\n[...]\n\nToutes les pages d’aides ont la même structure, et les sections suivantes :\n\n\nDescription : ce que la fonction fait\n\nUsage : la fonction “déployée” c’est à dire avec tous ses arguments. Parfois plusieurs fonctions sont regroupées dans une même age d’aide, comme c’est le cas pour seq. Ces fonctions peuvent être des variantes avec des noms différents ou des méthodes c’est à dire des fonctions au comportement différent selon le type d’objet sur lequel elles opèrent.\n\nArguments : un descriptif de tous les arguments disponibles. La classe et le format de chacun d’eux est mentionnée.\n\nDetails : souvent un remède à l’insomnie mais les subtilités d’implémentation sont là, souvent cachées au détour d’une phrase.\n\nValue : ce que la fonction retourne.\n\nReferences : où s’en référer si vous n’en avez pas assez\n\nSee Also : fonctions connexes, très pratique pour enrichir son vocabulaire et trouver son bonheur.\n\nExamples : peut être la plus utile de toutes avec ses exemples d’utilisation que vous pouvez copier-coller ou même appeller directement depuis la console avec example(\"nom_de_la_fonction\"). Vous pouvez essayer example(\"plot\") par exemple.\nEn pied de page, vous avez également une information qui sera utile plus tard : le package et sa version dans lequel se trouve être cette fonction. Pour seq, on est dans le package base dont toutes les autres fonctions sont indexées dans le lien “Index”.\n\nCertaines pages d’aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple ?Arithmetic, ?Special, Syntax. D’autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`), par exemple ?`+` ou la mise en abyme de ?`?`. Enfin, il existe d’autres ressources comme les “vignettes”, plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.\nLes pages d’aide sont souvent compactes et obscures mais l’information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d’aide même si à première vue cette littérature n’est guère attrayante.\nEnfin, la variante ??(quoiquoiquoi), raccourci de help.search(\"quoiquoiquoi\") permet de chercher toutes les occurences de quoiquoiquoi dans toutes les pages d’aide de R.\n\n3.6.5 Arguments : noms, positions et valeurs par défaut\nAprès avoir consulté ?seq on peut par exemple préciser le point de départ (from), le point d’arrivée (to), le pas (by) et la longueur totale du vecteur à créer (length.out).\nVous constaterez que from est défini avec une valeur par défaut (from=1). Ainsi, si vous omettez sa valeur et ne spécifiez que to, from prendra sa valeur par défaut. Ces deux commandes sont donc équivalentes :\n\nseq(from=1, to=5)\n\n[1] 1 2 3 4 5\n\nseq(to=5)\n\n[1] 1 2 3 4 5\n\n\nVous pouvez également abréger le nom des arguments, moyennant que l’abbréviation soit univoque, c’est à dire que le nom de l’argument que vous abrégez ne soit pas identique à celui d’un autre argument. Ainsi from et length.out peuvent être abrégés en fr et length:\n\nseq(fr=0, to=2, length=5)\n\n[1] 0.0 0.5 1.0 1.5 2.0\n\n\nCe n’est jamais une bonne idée mais si vous utilisez le nom complet ou une abbréviation des arguments vous pouvez changer leur ordre. Ainsi seq(length=5, to=2, fr=0) sera équivalent à la commande précédente.\nVous pouvez même omettre le nom des arguments comme on l’a fait dans les sections précédentes sans le mentionner. Dans ce cas, les arguments sont passés positionnellement et doivent être renseignés dans l’ordre tel que défini dans la section ‘Usage’ de leur documentation:\n\nseq(-3, 4, 12)\n\n[1] -3"
   },
   {
     "objectID": "premiers-pas.html#concept-de-recyclage",
     "href": "premiers-pas.html#concept-de-recyclage",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.6 Concept de recyclage",
-    "text": "3.6 Concept de recyclage\n\ntoto &lt;- 1:5\ntoto*3\n\n[1]  3  6  9 12 15\n\n\nIl n’aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplicatio est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié chaque élément de toto par 3.\nC’est l’idée, omniprésente, de recyclage. Ça ne parait pas grand chose mais c’est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c’est à dire ni de même longueur, ni multiples l’un de l’autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés.\n\ntoto &lt;- c(1, 2, 3, 4)\ntata &lt;- c(5, 4, 3)\ntoto*tata\n\nWarning in toto * tata: longer object length is not a multiple of shorter object\nlength\n\n\n[1]  5  8  9 20\n\n\nDe nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n’y comprenez goutte, copiez-collez le message dans un moteur de recherche."
+    "section": "\n3.7 Concept de recyclage",
+    "text": "3.7 Concept de recyclage\n\ntoto &lt;- 1:5\ntoto*3\n\n[1]  3  6  9 12 15\n\n\nIl n’aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplicatio est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié chaque élément de toto par 3.\nC’est l’idée, omniprésente, de recyclage. Ça ne parait pas grand chose mais c’est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c’est à dire ni de même longueur, ni multiples l’un de l’autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés.\n\ntoto &lt;- c(1, 2, 3, 4)\ntata &lt;- c(5, 4, 3)\ntoto*tata\n\nWarning in toto * tata: longer object length is not a multiple of shorter object\nlength\n\n\n[1]  5  8  9 20\n\n\nDe nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n’y comprenez goutte, copiez-collez le message dans un moteur de recherche."
   },
   {
     "objectID": "premiers-pas.html#indexation-saisir-et-changer-des-valeurs",
     "href": "premiers-pas.html#indexation-saisir-et-changer-des-valeurs",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.7 Indexation [ : saisir et changer des valeurs",
-    "text": "3.7 Indexation [ : saisir et changer des valeurs\nIndexer une ou des valeurs c’est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.\nL’opérateur d’indexation est le crochet droit : [, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l’intérieur l’indice ou les indices.\n\ntutu &lt;- c(7, 12, 2, 5, 4)\ntutu[1]\n\n[1] 7\n\ntutu[3]\n\n[1] 2\n\ntutu[length(tutu)] # take the last value of tutu, no matter tutu' length\n\n[1] 4\n\ntutu[c(2, 4)]\n\n[1] 12  5\n\n\nL’indexation peut se combiner avec l’assignation si on ne veut pas seulement saisir les données mais en faire quelque chose :\n\ntutu\n\n[1]  7 12  2  5  4\n\ntutu[c(2, 3)] &lt;- c(-1, -3)\ntutu\n\n[1]  7 -1 -3  5  4\n\ntutu[c(2, 3)] &lt;- 0.5  # indexing, assignation and recycling combined!\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\n\nCe type d’indexation est dit “positive” : l’indice réfère aux positions que l’on veut.\nBien pratique, l’opération d’indexation “négative” sélectionne ce que l’on ne veut pas.\n\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\ntutu[-1]\n\n[1] 0.5 0.5 5.0 4.0\n\ntutu[-c(1, 3)] &lt;- pi\ntutu\n\n[1] 7.000000 3.141593 0.500000 3.141593 3.141593\n\n\nEt comme vous vous en doutiez, on peut également utiliser une variable pour indexer :\n\ntoto &lt;- c(6, 5, 4, 3)\ntata &lt;- c(2, 3)\ntoto[tata]\n\n[1] 5 4\n\ntoto[-tata]\n\n[1] 6 3\n\n\nLe concept d’indexation est absolument central en R, et en programmation en général.\nL’indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (iris[2, 3]), voire même des doubles crochets ([[), mais le comportement présenté ici reste invariable. Youpi !"
+    "section": "\n3.8 Indexation [ : saisir et changer des valeurs",
+    "text": "3.8 Indexation [ : saisir et changer des valeurs\nIndexer une ou des valeurs c’est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.\nL’opérateur d’indexation est le crochet droit : [, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l’intérieur l’indice ou les indices.\n\ntutu &lt;- c(7, 12, 2, 5, 4)\ntutu[1]\n\n[1] 7\n\ntutu[3]\n\n[1] 2\n\ntutu[length(tutu)] # take the last value of tutu, no matter tutu' length\n\n[1] 4\n\ntutu[c(2, 4)]\n\n[1] 12  5\n\n\nL’indexation peut se combiner avec l’assignation si on ne veut pas seulement saisir les données mais en faire quelque chose :\n\ntutu\n\n[1]  7 12  2  5  4\n\ntutu[c(2, 3)] &lt;- c(-1, -3)\ntutu\n\n[1]  7 -1 -3  5  4\n\ntutu[c(2, 3)] &lt;- 0.5  # indexing, assignation and recycling combined!\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\n\nCe type d’indexation est dit “positive” : l’indice réfère aux positions que l’on veut.\nBien pratique, l’opération d’indexation “négative” sélectionne ce que l’on ne veut pas.\n\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\ntutu[-1]\n\n[1] 0.5 0.5 5.0 4.0\n\ntutu[-c(1, 3)] &lt;- pi\ntutu\n\n[1] 7.000000 3.141593 0.500000 3.141593 3.141593\n\n\nEt comme vous vous en doutiez, on peut également utiliser une variable pour indexer :\n\ntoto &lt;- c(6, 5, 4, 3)\ntata &lt;- c(2, 3)\ntoto[tata]\n\n[1] 5 4\n\ntoto[-tata]\n\n[1] 6 3\n\n\nLe concept d’indexation est absolument central en R, et en programmation en général.\nL’indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (iris[2, 3]), voire même des doubles crochets ([[), mais le comportement présenté ici reste invariable. Youpi !"
   },
   {
     "objectID": "premiers-pas.html#opérateurs-de-comparaison-et-logiques",
     "href": "premiers-pas.html#opérateurs-de-comparaison-et-logiques",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.8 Opérateurs de comparaison et logiques",
-    "text": "3.8 Opérateurs de comparaison et logiques\nL’indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L’idée est qu’on teste d’abord une condition dont on peut se servir pour indexer\n\ntonton &lt;- c(4, 8, 2, 9, 1, 3, 5)\ntest &lt;- tonton &lt; 5  # tests a condition\ntest\n\n[1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE\n\nwhich(test) # returns indices of TRUE\n\n[1] 1 3 5 6\n\n# this can be used to index\ntonton[which(test)]\n\n[1] 4 2 1 3\n\n# or more directly\ntonton[test] # filter elements of tonton lower than 5\n\n[1] 4 2 1 3\n\n# conditions can be combined\ntonton[tonton &lt; 5 & tonton &gt;=2] # same with lower than 5 AND higher or equal to 2\n\n[1] 4 2 3\n\ntata &lt;- c(7:1)\ntonton[tata %in% c(3, 4, 5)] # takes the elements of tonton for which those of that are in 3:5\n\n[1] 2 9 1\n\n\nVoilà une liste de tous les opérateurs de comparaison (?Comparison) :\n\n\nopérateur\nsignification\n\n\n\n&lt;\nstrictement inférieur\n\n\n&lt;=\ninférieur ou égal\n\n\n&gt;\nstrictement supérieur\n\n\n&gt;=\nsupérieur ou égal\n\n\n==\négal\n\n\n!=\ndifférent\n\n\n%in%\ndans l’ensemble\n\n\n\nEt à y être celle pour les opérateurs logiques (?Logic) sur lesquels nous reviendrons :\n\n\nopérateur\nsignification\n\n\n\n!\nNOT\n\n\n&\nAND (élément par élément)\n\n\n&&\nAND\n\n\n|\nOR (élément par élément)\n\n\n||\nOR\n\n\nxor(x, y)\nOR (exclusif)\n\n\n\nParfois on peut également avoir besoin de any, all5."
+    "section": "\n3.9 Opérateurs de comparaison et logiques",
+    "text": "3.9 Opérateurs de comparaison et logiques\nL’indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L’idée est qu’on teste d’abord une condition dont on peut se servir pour indexer\n\ntonton &lt;- c(4, 8, 2, 9, 1, 3, 5)\ntest &lt;- tonton &lt; 5  # tests a condition\ntest\n\n[1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE\n\nwhich(test) # returns indices of TRUE\n\n[1] 1 3 5 6\n\n# this can be used to index\ntonton[which(test)]\n\n[1] 4 2 1 3\n\n# or more directly\ntonton[test] # filter elements of tonton lower than 5\n\n[1] 4 2 1 3\n\n# conditions can be combined\ntonton[tonton &lt; 5 & tonton &gt;=2] # same with lower than 5 AND higher or equal to 2\n\n[1] 4 2 3\n\ntata &lt;- c(7:1)\ntonton[tata %in% c(3, 4, 5)] # takes the elements of tonton for which those of that are in 3:5\n\n[1] 2 9 1\n\n\nVoilà une liste de tous les opérateurs de comparaison (?Comparison) :\n\n\nopérateur\nsignification\n\n\n\n&lt;\nstrictement inférieur\n\n\n&lt;=\ninférieur ou égal\n\n\n&gt;\nstrictement supérieur\n\n\n&gt;=\nsupérieur ou égal\n\n\n==\négal\n\n\n!=\ndifférent\n\n\n%in%\ndans l’ensemble\n\n\n\nEt à y être celle pour les opérateurs logiques (?Logic) sur lesquels nous reviendrons :\n\n\nopérateur\nsignification\n\n\n\n!\nNOT\n\n\n&\nAND (élément par élément)\n\n\n&&\nAND\n\n\n|\nOR (élément par élément)\n\n\n||\nOR\n\n\nxor(x, y)\nOR (exclusif)\n\n\n\nParfois on peut également avoir besoin de any, all5."
   },
   {
     "objectID": "premiers-pas.html#classes-dobjets",
     "href": "premiers-pas.html#classes-dobjets",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.9 Classes d’objets",
-    "text": "3.9 Classes d’objets\n\n3.9.1 class\n\nAccrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu’ici nous n’avons manipulé que des nombres, avec ou sans assignation à une variable. D’autres classes d’objets existent en R.\nOn peut accéder à la classe d’un vecteur avec la fonction class. On voit que les chaînes de caractères sont des character pour R:\n\nclass(toto)\n\n[1] \"numeric\"\n\n\nImaginons que nous mesurions des individus et que nous enregistrions leurs prénoms, sexe, stature et si, oui ou non, ils ont subi une formation à R. Ces quatres variables auront des natures différents :\n\n\nprenom : sera plutôt des lettres\n\nstature : sera un nombre décrivant leur taille\n\nsexe : sera une étiquette pouvant prendre une et une seule des valeurs suivantes {femme/homme/autre}\n\n\nformation : sera un descripteur de type vrai/faux que l’on traduira en TRUE/FALSE.\n\nNous avons déja enregistré trois individus :\nprenom        stature   genre     formation\nHildegarde    178       femme     TRUE\nJean-Jacques  163       homme     FALSE\nVictor        184       autre     TRUE\n\n3.9.2 character\n\nTentons de créer la première variable, c’est à dire la première colonne, à la main :\n\nprenom &lt;- c(\"Hildegarde\", \"Jean-Jacques\", \"Victor\")\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n\nR ne fait pas d’histoires et nous a crée un vecteur de chaînes de caractères !\n\n3.9.3 numeric\n\nCréons maintenant le vecteur stature, on sait faire :\n\nstature &lt;- c(178, 163, 184)\nstature\n\n[1] 178 163 184\n\nclass(stature)\n\n[1] \"numeric\"\n\n\nTous les vecteurs que nous avons crée jusqu’ici, prenom mis à part, était donc des numeric. Précisions que des variantes de numeric existent : double, integer, etc. mais vous n’aurez peut être jamais à vous en soucier.\n\n3.9.4 factor\n\nLa colonne genre est un peu particulière puisque elle est une chaîne de caractères mais elle ne peut prendre que des valeurs définies, à savoir une et une seule valeur de l’ensemble : {homme, femme, autre}. La classe factor est là pour ça et la fonction factor permet de créer notre variable sexe :\n\ngenre &lt;- factor(c(\"femme\", \"homme\", \"autre\"))\nclass(genre)\n\n[1] \"factor\"\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\n\nVotre œil aiguisé aura détecté deux différences par rapport à prenom : l’absence de guillemets autour de chaque valeur et une ligne supplémentaire qui indique les valeurs possibles, les levels de ce vecteur.\nPetite digression : les facteurs en R sont très pratiques mais assez piégeux. Nous aurons l’occasion d’y revenir mais avant ça, évacuons les dernier·e·s informaticien·ne·s pur sang de la salle. Imaginons qu’un nouveau level, une nouvelle catégorie, doive être créée pour la variable genre, disons licorne. Tentons l’opération candidement :\n\ngenre2 &lt;- c(genre, \"licorne\")\ngenre2\n\n[1] \"2\"       \"3\"       \"1\"       \"licorne\"\n\nclass(genre2)\n\n[1] \"character\"\n\n\nMalédiction (apparente)6 que nous expliquerons plus tard.\n\n3.9.5 logical\n\nLaissons reposer les facteurs pour l’instant et continuons notre création de variable avec la colonne formation:\n\nformation &lt;- c(TRUE, FALSE, TRUE)\nclass(formation)\n\n[1] \"logical\"\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nVoici une classe très utile, les logical, souvent issus de tests et de comparaisons logiques, comme survolé précédemmet par exemple :\n\nstature &gt; 180\n\n[1] FALSE FALSE  TRUE\n\n\nNous avons donc crée nos quatre colonnes :\n\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\nstature\n\n[1] 178 163 184\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nNous avons vu autant de classes différentes (character, numeric, factor, logical respectivement) et, bonne nouvelle, on a quasiment fait le tour des classes ! Il nous en reste deux, très voisines : list et data.frame.\n\n3.9.6 list\n\nUne liste est un vecteur dont les éléments peuvent être de classes et de longueurs différentes, dont d’autres listes. Autrement dit, c’est la structure de données universelle en R :\n\nlist(toto=\"A\", tata=c(1, 3))\n\n$toto\n[1] \"A\"\n\n$tata\n[1] 1 3\n\nlist(prenom, stature)\n\n[[1]]\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n[[2]]\n[1] 178 163 184\n\n\nVous pouvez comparer le résultat à c(prenom, stature). Observez aussi au passage les doubles crochets droits ([[), dont vous n’aurez bien plus peur.\n\n3.9.7 data.frame\n\nUn type de liste bien pratique, devenu archi central en R moderne, est le data.frame qui est une liste dont la double particularité est que tous ses éléments sont nommés et de même longueur. Une façon un peu alambiquée de dire qu’il nous aura fallu tout cela pour réinventer en R le tableau excel !7. Nous y reviendrons abondamment.\nComme vous pouvez vous en douter, personne n’importe les données comme cela, on préférera lire directement une table .csv ou .xlsx. Minute papillon, on y vient.\n\ndata &lt;- data.frame(prenom=prenom,\n                   stature=stature,\n                   genre=genre,\n                   formation=formation)\ndata\n\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n\nclass(data)\n\n[1] \"data.frame\"\n\n\n\n3.9.8 is.* et as.*\n\nLes fonctions is.* permettent de tester les classes :\n\nis.logical(formation)\n\n[1] TRUE\n\nis.factor(prenom)\n\n[1] FALSE\n\nis.data.frame(data)\n\n[1] TRUE\n\n\nEt les fonctions as.* permettent de convertir les classes, lorsque la conversion est pertinente :\n\nas.factor(prenom)\n\n[1] Hildegarde   Jean-Jacques Victor      \nLevels: Hildegarde Jean-Jacques Victor\n\nas.character(genre)\n\n[1] \"femme\" \"homme\" \"autre\""
+    "section": "\n3.10 Classes d’objets",
+    "text": "3.10 Classes d’objets\n\n3.10.1 class\n\nAccrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu’ici nous n’avons manipulé que des nombres, avec ou sans assignation à une variable. D’autres classes d’objets existent en R.\nOn peut accéder à la classe d’un vecteur avec la fonction class. On voit que les chaînes de caractères sont des character pour R:\n\nclass(toto)\n\n[1] \"numeric\"\n\n\nImaginons que nous mesurions des individus et que nous enregistrions leurs prénoms, sexe, stature et si, oui ou non, ils ont subi une formation à R. Ces quatres variables auront des natures différents :\n\n\nprenom : sera plutôt des lettres\n\nstature : sera un nombre décrivant leur taille\n\nsexe : sera une étiquette pouvant prendre une et une seule des valeurs suivantes {femme/homme/autre}\n\n\nformation : sera un descripteur de type vrai/faux que l’on traduira en TRUE/FALSE.\n\nNous avons déja enregistré trois individus :\nprenom        stature   genre     formation\nHildegarde    178       femme     TRUE\nJean-Jacques  163       homme     FALSE\nVictor        184       autre     TRUE\n\n3.10.2 character\n\nTentons de créer la première variable, c’est à dire la première colonne, à la main :\n\nprenom &lt;- c(\"Hildegarde\", \"Jean-Jacques\", \"Victor\")\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n\nR ne fait pas d’histoires et nous a crée un vecteur de chaînes de caractères !\n\n3.10.3 numeric\n\nCréons maintenant le vecteur stature, on sait faire :\n\nstature &lt;- c(178, 163, 184)\nstature\n\n[1] 178 163 184\n\nclass(stature)\n\n[1] \"numeric\"\n\n\nTous les vecteurs que nous avons crée jusqu’ici, prenom mis à part, était donc des numeric. Précisions que des variantes de numeric existent : double, integer, etc. mais vous n’aurez peut être jamais à vous en soucier.\n\n3.10.4 factor\n\nLa colonne genre est un peu particulière puisque elle est une chaîne de caractères mais elle ne peut prendre que des valeurs définies, à savoir une et une seule valeur de l’ensemble : {homme, femme, autre}. La classe factor est là pour ça et la fonction factor permet de créer notre variable sexe :\n\ngenre &lt;- factor(c(\"femme\", \"homme\", \"autre\"))\nclass(genre)\n\n[1] \"factor\"\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\n\nVotre œil aiguisé aura détecté deux différences par rapport à prenom : l’absence de guillemets autour de chaque valeur et une ligne supplémentaire qui indique les valeurs possibles, les levels de ce vecteur.\nPetite digression : les facteurs en R sont très pratiques mais assez piégeux. Nous aurons l’occasion d’y revenir mais avant ça, évacuons les dernier·e·s informaticien·ne·s pur sang de la salle. Imaginons qu’un nouveau level, une nouvelle catégorie, doive être créée pour la variable genre, disons licorne. Tentons l’opération candidement :\n\ngenre2 &lt;- c(genre, \"licorne\")\ngenre2\n\n[1] \"2\"       \"3\"       \"1\"       \"licorne\"\n\nclass(genre2)\n\n[1] \"character\"\n\n\nMalédiction (apparente)6 que nous expliquerons plus tard.\n\n3.10.5 logical\n\nLaissons reposer les facteurs pour l’instant et continuons notre création de variable avec la colonne formation:\n\nformation &lt;- c(TRUE, FALSE, TRUE)\nclass(formation)\n\n[1] \"logical\"\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nVoici une classe très utile, les logical, souvent issus de tests et de comparaisons logiques, comme survolé précédemmet par exemple :\n\nstature &gt; 180\n\n[1] FALSE FALSE  TRUE\n\n\nNous avons donc crée nos quatre colonnes :\n\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\nstature\n\n[1] 178 163 184\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nNous avons vu autant de classes différentes (character, numeric, factor, logical respectivement) et, bonne nouvelle, on a quasiment fait le tour des classes ! Il nous en reste deux, très voisines : list et data.frame.\n\n3.10.6 list\n\nUne liste est un vecteur dont les éléments peuvent être de classes et de longueurs différentes, dont d’autres listes. Autrement dit, c’est la structure de données universelle en R :\n\nlist(toto=\"A\", tata=c(1, 3))\n\n$toto\n[1] \"A\"\n\n$tata\n[1] 1 3\n\nlist(prenom, stature)\n\n[[1]]\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n[[2]]\n[1] 178 163 184\n\n\nVous pouvez comparer le résultat à c(prenom, stature). Observez aussi au passage les doubles crochets droits ([[), dont vous n’aurez bien plus peur.\n\n3.10.7 data.frame\n\nUn type de liste bien pratique, devenu archi central en R moderne, est le data.frame qui est une liste dont la double particularité est que tous ses éléments sont nommés et de même longueur. Une façon un peu alambiquée de dire qu’il nous aura fallu tout cela pour réinventer en R le tableau excel !7. Nous y reviendrons abondamment.\nComme vous pouvez vous en douter, personne n’importe les données comme cela, on préférera lire directement une table .csv ou .xlsx. Minute papillon, on y vient.\n\ndata &lt;- data.frame(prenom=prenom,\n                   stature=stature,\n                   genre=genre,\n                   formation=formation)\ndata\n\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n\nclass(data)\n\n[1] \"data.frame\"\n\n\n\n3.10.8 is.* et as.*\n\nLes fonctions is.* permettent de tester les classes :\n\nis.logical(formation)\n\n[1] TRUE\n\nis.factor(prenom)\n\n[1] FALSE\n\nis.data.frame(data)\n\n[1] TRUE\n\n\nEt les fonctions as.* permettent de convertir les classes, lorsque la conversion est pertinente :\n\nas.factor(prenom)\n\n[1] Hildegarde   Jean-Jacques Victor      \nLevels: Hildegarde Jean-Jacques Victor\n\nas.character(genre)\n\n[1] \"femme\" \"homme\" \"autre\""
   },
   {
     "objectID": "premiers-pas.html#indexation-multiple",
     "href": "premiers-pas.html#indexation-multiple",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.10 Indexation multiple [,\n",
-    "text": "3.10 Indexation multiple [,\n\nRevenons à notre data.frame data, un objet en deux dimensions : il possède des lignes et des colonnes. L’indexation vue précédemment sur des vecteurs, des objets en une seule dimension, fonctionne dans le même esprit mais il nous faut renseigner les indices pour chaque dimension. Si l’un des indices n’est pas renseigné, toutes les positions concernées sont retournées mais il ne faut pas oublier pour autant la virgule !\nPar convention la première dimension est celle des lignes, la deuxième celle des colonnes. Quelques exemples ci-dessous qui ne font qu’extraire les données. Nous pourrions aussi les modifier avec l’opérateur d’assignation &lt;- comme vu précédemment.\n\ndata[1, ] # first row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n\ndata[, 1] # first column\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\ndata[-2, ] # everything but the second row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n3     Victor     184 autre      TRUE\n\ndata[c(1, 3), -3] # first and third row, all columns but the third\n\n      prenom stature formation\n1 Hildegarde     178      TRUE\n3     Victor     184      TRUE\n\n\nVous aurez noté qu’en ne sélectionnant qu’une colonne, par exemple data[, 1] ci-dessus, on perd la nature de data.frame pour revenir à la classe d’origine de la colonne. Souvent pratique, parfois glissant. Pour ne pas perdre la classe d’origine, il suffit d’ajouter drop=FALSE à votre opération d’indexation, après tous les indices :\n\ndata[, 2, drop=FALSE]\n\n  stature\n1     178\n2     163\n3     184\n\n\nLes colonnes uniques peuvent aussi se sélectionner avec l’opérateur $ qui permet d’accéder à un élément de liste, pourvu qu’il soit nommé. Les data.frames étant des listes nommées, cela fonctionne :\n\ndata$stature\n\n[1] 178 163 184\n\n\nLes doubles crochets droits [[ permettent eux aussi de sélectionner positionnellement, ou nominativement, l’élément de liste concerné. Les deux commandes ci-dessous seront équivalentes :\n\ndata[[3]]\n\n[1] femme homme autre\nLevels: autre femme homme\n\ndata[[\"genre\"]]\n\n[1] femme homme autre\nLevels: autre femme homme"
+    "section": "\n3.11 Indexation multiple [,\n",
+    "text": "3.11 Indexation multiple [,\n\nRevenons à notre data.frame data, un objet en deux dimensions : il possède des lignes et des colonnes. L’indexation vue précédemment sur des vecteurs, des objets en une seule dimension, fonctionne dans le même esprit mais il nous faut renseigner les indices pour chaque dimension. Si l’un des indices n’est pas renseigné, toutes les positions concernées sont retournées mais il ne faut pas oublier pour autant la virgule !\nPar convention la première dimension est celle des lignes, la deuxième celle des colonnes. Quelques exemples ci-dessous qui ne font qu’extraire les données. Nous pourrions aussi les modifier avec l’opérateur d’assignation &lt;- comme vu précédemment.\n\ndata[1, ] # first row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n\ndata[, 1] # first column\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\ndata[-2, ] # everything but the second row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n3     Victor     184 autre      TRUE\n\ndata[c(1, 3), -3] # first and third row, all columns but the third\n\n      prenom stature formation\n1 Hildegarde     178      TRUE\n3     Victor     184      TRUE\n\n\nVous aurez noté qu’en ne sélectionnant qu’une colonne, par exemple data[, 1] ci-dessus, on perd la nature de data.frame pour revenir à la classe d’origine de la colonne. Souvent pratique, parfois glissant. Pour ne pas perdre la classe d’origine, il suffit d’ajouter drop=FALSE à votre opération d’indexation, après tous les indices :\n\ndata[, 2, drop=FALSE]\n\n  stature\n1     178\n2     163\n3     184\n\n\nLes colonnes uniques peuvent aussi se sélectionner avec l’opérateur $ qui permet d’accéder à un élément de liste, pourvu qu’il soit nommé. Les data.frames étant des listes nommées, cela fonctionne :\n\ndata$stature\n\n[1] 178 163 184\n\n\nLes doubles crochets droits [[ permettent eux aussi de sélectionner positionnellement, ou nominativement, l’élément de liste concerné. Les deux commandes ci-dessous seront équivalentes :\n\ndata[[3]]\n\n[1] femme homme autre\nLevels: autre femme homme\n\ndata[[\"genre\"]]\n\n[1] femme homme autre\nLevels: autre femme homme"
   },
   {
     "objectID": "premiers-pas.html#indexation-de-liste-versus",
     "href": "premiers-pas.html#indexation-de-liste-versus",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.11 Indexation de liste : [ versus [[\n",
-    "text": "3.11 Indexation de liste : [ versus [[\n\nL’indexation avec une simple ou une double paire de crochets est souvent source d’incompréhension d’autant que sur des vecteurs le résultat est le même :\n\ntoto &lt;- 5:3\ntoto\n\n[1] 5 4 3\n\ntoto[2]\n\n[1] 4\n\ntoto[[2]]\n\n[1] 4\n\n\nGardez à l’esprit que la double paire de crochets droits ([[) ne s’utilise que sur des listes (data.frame y compris donc).\nPour expliquer simplement la différence entre [ et [[, disons qu’une liste est un train de marchandise sans locomotive avec un ou plusieurs wagons.\n\n\n[ permet de sélectionner un wagon, le résultat est toujours un train, certes minimaliste\n\n\n[[ permet de sélectionner le contenu du wagon qui n’est donc plus un train mais une vache, une palette ou des voyageurs :\n\n\ntata &lt;- list(wagon1=\"a\", wagon2=1:3)\n# [ picks a list element\ntata[2]\n\n$wagon2\n[1] 1 2 3\n\nclass(tata[2])\n\n[1] \"list\"\n\n# [[ picks a list element AND drops the list\ntata[[2]]\n\n[1] 1 2 3\n\nclass(tata[[2]])\n\n[1] \"integer\"\n\n\nNotons que $ est équivalent à [[:\n\ntata$wagon2\n\n[1] 1 2 3"
+    "section": "\n3.12 Indexation de liste : [ versus [[\n",
+    "text": "3.12 Indexation de liste : [ versus [[\n\nL’indexation avec une simple ou une double paire de crochets est souvent source d’incompréhension d’autant que sur des vecteurs le résultat est le même :\n\ntoto &lt;- 5:3\ntoto\n\n[1] 5 4 3\n\ntoto[2]\n\n[1] 4\n\ntoto[[2]]\n\n[1] 4\n\n\nGardez à l’esprit que la double paire de crochets droits ([[) ne s’utilise que sur des listes (data.frame y compris donc).\nPour expliquer simplement la différence entre [ et [[, disons qu’une liste est un train de marchandise sans locomotive avec un ou plusieurs wagons.\n\n\n[ permet de sélectionner un wagon, le résultat est toujours un train, certes minimaliste\n\n\n[[ permet de sélectionner le contenu du wagon qui n’est donc plus un train mais une vache, une palette ou des voyageurs :\n\n\ntata &lt;- list(wagon1=\"a\", wagon2=1:3)\n# [ picks a list element\ntata[2]\n\n$wagon2\n[1] 1 2 3\n\nclass(tata[2])\n\n[1] \"list\"\n\n# [[ picks a list element AND drops the list\ntata[[2]]\n\n[1] 1 2 3\n\nclass(tata[[2]])\n\n[1] \"integer\"\n\n\nNotons que $ est équivalent à [[:\n\ntata$wagon2\n\n[1] 1 2 3"
   },
   {
     "objectID": "premiers-pas.html#matrix",
     "href": "premiers-pas.html#matrix",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.12 matrix\n",
-    "text": "3.12 matrix\n\nPar souci de complétude, mentionnons les matrices qui sont des tableaux rectangulaires de nombres. Elles se créent avec la fonction matrix et en spécifiant les valeurs de remplissage et le nombre de lignes et/ou de colonnes :\n\nm &lt;- matrix(c(3, 1, 9.2, 6, 7, 0), nrow=2)\nm\n\n     [,1] [,2] [,3]\n[1,]    3  9.2    7\n[2,]    1  6.0    0\n\n\nLes matrix et les data.frame possèdent de nombreux points communs. On peut notamment accéder à leurs dimensions, noms de lignes et colonnes avec les mêmes fonctions :\n\ndim(m)\n\n[1] 2 3\n\nnrow(m)\n\n[1] 2\n\nncol(m)\n\n[1] 3\n\nrownames(m) &lt;- c(\"plop\", \"plip\")\nrownames(m) # idem for colnames\n\n[1] \"plop\" \"plip\"\n\n\nUne opération courante sur des matrices consiste à faire des calculs marginaux, par exemple calculer la somme par colonnes. La famille apply permet ce type de calcul. On va renseigner trois arguments (voir ?apply et ses exemples) : l’objet sur lequel travailler; la dimension sur laquelle calculer (1 pour les lignes, 2 pour les colonnes); et enfin la fonction à appliquer, sans parenthèses :\n\napply(m, 2, sum)\n\n[1]  4.0 15.2  7.0"
+    "section": "\n3.13 matrix\n",
+    "text": "3.13 matrix\n\nPar souci de complétude, mentionnons les matrices qui sont des tableaux rectangulaires de nombres. Elles se créent avec la fonction matrix et en spécifiant les valeurs de remplissage et le nombre de lignes et/ou de colonnes :\n\nm &lt;- matrix(c(3, 1, 9.2, 6, 7, 0), nrow=2)\nm\n\n     [,1] [,2] [,3]\n[1,]    3  9.2    7\n[2,]    1  6.0    0\n\n\nLes matrix et les data.frame possèdent de nombreux points communs. On peut notamment accéder à leurs dimensions, noms de lignes et colonnes avec les mêmes fonctions :\n\ndim(m)\n\n[1] 2 3\n\nnrow(m)\n\n[1] 2\n\nncol(m)\n\n[1] 3\n\nrownames(m) &lt;- c(\"plop\", \"plip\")\nrownames(m) # idem for colnames\n\n[1] \"plop\" \"plip\"\n\n\nUne opération courante sur des matrices consiste à faire des calculs marginaux, par exemple calculer la somme par colonnes. La famille apply permet ce type de calcul. On va renseigner trois arguments (voir ?apply et ses exemples) : l’objet sur lequel travailler; la dimension sur laquelle calculer (1 pour les lignes, 2 pour les colonnes); et enfin la fonction à appliquer, sans parenthèses :\n\napply(m, 2, sum)\n\n[1]  4.0 15.2  7.0"
   },
   {
     "objectID": "premiers-pas.html#array",
     "href": "premiers-pas.html#array",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.13 array\n",
-    "text": "3.13 array\n\nPar souci de complétude, l’idée de matrice se généralise dans des dimensions supérieures à 2. Pour le dire autrement, une matrix est un array à deux dimensions.\nLes array se créent dans le même esprit : les valeurs de remplissage d’abord, puis on précise les dimensions. Ci-dessous, un array de deux tranches de matrices de 2x3.\n\na &lt;- array(data=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), dim=c(2, 3, 2))\na\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]    7    9   11\n[2,]    8   10   12\n\n\nL’indexation fonctionne ici aussi. Par exemple si l’on veut la valeur de la première ligne, troisième colonne, deuxième tranche :\n\na[1, 3, 2]\n\n[1] 11"
+    "section": "\n3.14 array\n",
+    "text": "3.14 array\n\nPar souci de complétude, l’idée de matrice se généralise dans des dimensions supérieures à 2. Pour le dire autrement, une matrix est un array à deux dimensions.\nLes array se créent dans le même esprit : les valeurs de remplissage d’abord, puis on précise les dimensions. Ci-dessous, un array de deux tranches de matrices de 2x3.\n\na &lt;- array(data=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), dim=c(2, 3, 2))\na\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]    7    9   11\n[2,]    8   10   12\n\n\nL’indexation fonctionne ici aussi. Par exemple si l’on veut la valeur de la première ligne, troisième colonne, deuxième tranche :\n\na[1, 3, 2]\n\n[1] 11"
   },
   {
     "objectID": "premiers-pas.html#fonctions-utiles",
     "href": "premiers-pas.html#fonctions-utiles",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.14 Fonctions utiles",
-    "text": "3.14 Fonctions utiles\n\n3.14.1 Sur numeric\n\nQuelques fonctions utiles pour décrire des vecteurs numériques (numeric) :\n\nx &lt;- c(5, 4, 3, 2, 1)\nlength(x) \nmin(x)\nmax(x)\nrange(x)  # shortcut for c(min(x), max(x))\nmedian(x) # shortcut for quantile(x, probs=0.5)\nsum(x)\nmean(x)   # average\nsd(x)     # standard deviation\nvar(x)    # variance\n\n[1] 5\n[1] 1\n[1] 5\n[1] 1 5\n[1] 3\n[1] 15\n[1] 3\n[1] 1.581139\n[1] 2.5\n\n\n\n3.14.2 Sur factor\n\n\nf1 &lt;- factor(c(\"apple\", \"banana\", \"banana\", \"pear\", \"grape\", \"grape\"))\nf2 &lt;- factor(c(\"yellow\", \"yellow\", \"yellow\", \"green\", \"red\", \"green\"))\n\nlength(f1)  # length\nlevels(f1)  # levels, as character\nnlevels(f1) # number of levels, shortcut for length(level(f1))\ntable(f1)   # count occurences\ntable(f1, f2) # cross-tabulate factors\n\n[1] 6\n[1] \"apple\"  \"banana\" \"grape\"  \"pear\"  \n[1] 4\nf1\n apple banana  grape   pear \n     1      2      2      1 \n        f2\nf1       green red yellow\n  apple      0   0      1\n  banana     0   0      2\n  grape      1   1      0\n  pear       1   0      0\n\n\n\n3.14.3 Sur character\n\n\nbla1 &lt;- \"tonton\"\nbla2 &lt;- \"tata\"\n\nnchar(bla1) # count characters\npaste(bla1, bla2, sep=\" et \") # see also paste0\ntoupper(bla1) # convert to upper case. see also tolower()\ngsub(\"o\", \"i\", bla1) # replace all 'o' with 'i' in bla1. see ?grep\nsubstr(bla1, 2, 4) # character from positions 2 to 4\nabbreviate(bla1) # abbreviate\n\n[1] 6\n[1] \"tonton et tata\"\n[1] \"TONTON\"\n[1] \"tintin\"\n[1] \"ont\"\ntonton \n\"tntn\" \n\n\nLes derniers exemples montrent des manipulations de chaînes de caractères. Le package stringr remplace avantageusement ces approches “historiques”. Nous y reviendrons.\n\n3.14.4 Sur data.frame\n\n\ndim(data)\nnrow(data)\nncol(data) # equivalent to length(data)\nsummary(data) # a summary, column-wise\nhead(data) # show only the first rows\ntail(data) # show only the last rows\n# View(data) # show an interactive viewer for your data.frame\nstr(data)  # show the structure of your data.frame\n\n[1] 3 4\n[1] 3\n[1] 4\n    prenom             stature        genre   formation      \n Length:3           Min.   :163.0   autre:1   Mode :logical  \n Class :character   1st Qu.:170.5   femme:1   FALSE:1        \n Mode  :character   Median :178.0   homme:1   TRUE :2        \n                    Mean   :175.0                            \n                    3rd Qu.:181.0                            \n                    Max.   :184.0                            \n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n'data.frame':   3 obs. of  4 variables:\n $ prenom   : chr  \"Hildegarde\" \"Jean-Jacques\" \"Victor\"\n $ stature  : num  178 163 184\n $ genre    : Factor w/ 3 levels \"autre\",\"femme\",..: 2 3 1\n $ formation: logi  TRUE FALSE TRUE\n\n\ngraphics:::plot.data.frame\n\nset.seed(2329)\nrunif(10, -1, 1)\n\n [1]  0.34341687 -0.89818619  0.86519883  0.05414381 -0.95204424  0.42169961\n [7]  0.09957463  0.27190793 -0.84168929  0.72023581"
+    "section": "\n3.15 Fonctions utiles",
+    "text": "3.15 Fonctions utiles\n\n3.15.1 Sur numeric\n\nQuelques fonctions utiles pour décrire des vecteurs numériques (numeric) :\n\nx &lt;- c(5, 4, 3, 2, 1)\nlength(x) \nmin(x)\nmax(x)\nrange(x)  # shortcut for c(min(x), max(x))\nmedian(x) # shortcut for quantile(x, probs=0.5)\nsum(x)\nmean(x)   # average\nsd(x)     # standard deviation\nvar(x)    # variance\n\n[1] 5\n[1] 1\n[1] 5\n[1] 1 5\n[1] 3\n[1] 15\n[1] 3\n[1] 1.581139\n[1] 2.5\n\n\n\n3.15.2 Sur factor\n\n\nf1 &lt;- factor(c(\"apple\", \"banana\", \"banana\", \"pear\", \"grape\", \"grape\"))\nf2 &lt;- factor(c(\"yellow\", \"yellow\", \"yellow\", \"green\", \"red\", \"green\"))\n\nlength(f1)  # length\nlevels(f1)  # levels, as character\nnlevels(f1) # number of levels, shortcut for length(level(f1))\ntable(f1)   # count occurences\ntable(f1, f2) # cross-tabulate factors\n\n[1] 6\n[1] \"apple\"  \"banana\" \"grape\"  \"pear\"  \n[1] 4\nf1\n apple banana  grape   pear \n     1      2      2      1 \n        f2\nf1       green red yellow\n  apple      0   0      1\n  banana     0   0      2\n  grape      1   1      0\n  pear       1   0      0\n\n\n\n3.15.3 Sur character\n\n\nbla1 &lt;- \"tonton\"\nbla2 &lt;- \"tata\"\n\nnchar(bla1) # count characters\npaste(bla1, bla2, sep=\" et \") # see also paste0\ntoupper(bla1) # convert to upper case. see also tolower()\ngsub(\"o\", \"i\", bla1) # replace all 'o' with 'i' in bla1. see ?grep\nsubstr(bla1, 2, 4) # character from positions 2 to 4\nabbreviate(bla1) # abbreviate\n\n[1] 6\n[1] \"tonton et tata\"\n[1] \"TONTON\"\n[1] \"tintin\"\n[1] \"ont\"\ntonton \n\"tntn\" \n\n\nLes derniers exemples montrent des manipulations de chaînes de caractères. Le package stringr remplace avantageusement ces approches “historiques”. Nous y reviendrons.\n\n3.15.4 Sur data.frame\n\n\ndim(data)\nnrow(data)\nncol(data) # equivalent to length(data)\nsummary(data) # a summary, column-wise\nhead(data) # show only the first rows\ntail(data) # show only the last rows\n# View(data) # show an interactive viewer for your data.frame\nstr(data)  # show the structure of your data.frame\n\n[1] 3 4\n[1] 3\n[1] 4\n    prenom             stature        genre   formation      \n Length:3           Min.   :163.0   autre:1   Mode :logical  \n Class :character   1st Qu.:170.5   femme:1   FALSE:1        \n Mode  :character   Median :178.0   homme:1   TRUE :2        \n                    Mean   :175.0                            \n                    3rd Qu.:181.0                            \n                    Max.   :184.0                            \n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n'data.frame':   3 obs. of  4 variables:\n $ prenom   : chr  \"Hildegarde\" \"Jean-Jacques\" \"Victor\"\n $ stature  : num  178 163 184\n $ genre    : Factor w/ 3 levels \"autre\",\"femme\",..: 2 3 1\n $ formation: logi  TRUE FALSE TRUE\n\n\ngraphics:::plot.data.frame\n\nset.seed(2329)\nrunif(10, -1, 1)\n\n [1]  0.34341687 -0.89818619  0.86519883  0.05414381 -0.95204424  0.42169961\n [7]  0.09957463  0.27190793 -0.84168929  0.72023581"
   },
   {
     "objectID": "premiers-pas.html#générer-des-nombres-aléatoires",
     "href": "premiers-pas.html#générer-des-nombres-aléatoires",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.15 Générer des nombres aléatoires",
-    "text": "3.15 Générer des nombres aléatoires\n\n3.15.1 Au sein d’une séquence existante\nLa fonction sample permet d’échantillonner au sein d’un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.\nSi vous n’avez pas de dé, en voilà un :\n\nsample(1:6, size=1)\n\n[1] 6\n\n\nAvec size=3, replace=TRUE vous pouvez même jouer au 421. Ou encore générer un tirage de loto sans les boules qui s’agitent :\n\nsample(1:49, size=6, replace=FALSE)\n\n[1]  9 47 36 14  4 34\n\n\nChaque élément du vecteur a autant de chance de sortir qu’un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser sample mais en calibrant l’argument probs sur la fréquence des lettres dans la langue française. N’allez donc pas vous taper l’alphabet à la main, jeter un oeil à letters et LETTERS.\n\n3.15.2 Distributions existantes\nAu delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d’une distribution. Toutes les distributions disponibles sont listées dans la bien nommée ?Distriutions.\nCes fonctions sont nommées de la façon suivante {r, p, q, d}nom_abregé_distrib. La première lettre désigne la variante désirée des différentes fonctions pour une distribution donnée, selon que l’on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.\nPour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :\n\nrunif(10, 0, 1) # see ?runif\n\n [1] 0.1193610 0.4918118 0.7741212 0.3069952 0.7218488 0.4027434 0.4372506\n [8] 0.8760479 0.8498670 0.4134920\n\n\nDans le même esprit on peut tirer 1000 nombres issus d’une distribution normale de moyenne 5 et d’écart-type 3 avec la commande suivante :\n\nx &lt;- rnorm(1e3, 5, 3)\nmean(x)\n\n[1] 5.028203\n\nsd(x)\n\n[1] 3.014893\n\n\n1e3 est la notation dite “ingénieur” parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit 10^3 soit 1000. Vous constaterez également que la moyenne est à peu près de 5 et l’écart type à peu près égal à 3.\nSi vous réexécutez cette commande, vous aurez un autre vecteur avec des valeurs différentes mais également à peu près centré sur 5.\n\ny &lt;- rnorm(1e3, 5, 3)\nmean(x) - mean(y)\n\n[1] -0.01312834\n\n\nSi vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d’une session à l’autre ou (c’est la même chose) sur l’ordinateur de votre collègue, c’est possible avec la fonction set.seed."
+    "section": "\n3.16 Générer des nombres aléatoires",
+    "text": "3.16 Générer des nombres aléatoires\n\n3.16.1 Au sein d’une séquence existante\nLa fonction sample permet d’échantillonner au sein d’un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.\nSi vous n’avez pas de dé, en voilà un :\n\nsample(1:6, size=1)\n\n[1] 6\n\n\nAvec size=3, replace=TRUE vous pouvez même jouer au 421. Ou encore générer un tirage de loto sans les boules qui s’agitent :\n\nsample(1:49, size=6, replace=FALSE)\n\n[1]  9 47 36 14  4 34\n\n\nChaque élément du vecteur a autant de chance de sortir qu’un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser sample mais en calibrant l’argument probs sur la fréquence des lettres dans la langue française. N’allez donc pas vous taper l’alphabet à la main, jeter un oeil à letters et LETTERS.\n\n3.16.2 Distributions existantes\nAu delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d’une distribution. Toutes les distributions disponibles sont listées dans la bien nommée ?Distriutions.\nCes fonctions sont nommées de la façon suivante {r, p, q, d}nom_abregé_distrib. La première lettre désigne la variante désirée des différentes fonctions pour une distribution donnée, selon que l’on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.\nPour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :\n\nrunif(10, 0, 1) # see ?runif\n\n [1] 0.1193610 0.4918118 0.7741212 0.3069952 0.7218488 0.4027434 0.4372506\n [8] 0.8760479 0.8498670 0.4134920\n\n\nDans le même esprit on peut tirer 1000 nombres issus d’une distribution normale de moyenne 5 et d’écart-type 3 avec la commande suivante :\n\nx &lt;- rnorm(1e3, 5, 3)\nmean(x)\n\n[1] 5.028203\n\nsd(x)\n\n[1] 3.014893\n\n\n1e3 est la notation dite “ingénieur” parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit 10^3 soit 1000. Vous constaterez également que la moyenne est à peu près de 5 et l’écart type à peu près égal à 3.\nSi vous réexécutez cette commande, vous aurez un autre vecteur avec des valeurs différentes mais également à peu près centré sur 5.\n\ny &lt;- rnorm(1e3, 5, 3)\nmean(x) - mean(y)\n\n[1] -0.01312834\n\n\nSi vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d’une session à l’autre ou (c’est la même chose) sur l’ordinateur de votre collègue, c’est possible avec la fonction set.seed."
   },
   {
     "objectID": "premiers-pas.html#premiers-graphes",
     "href": "premiers-pas.html#premiers-graphes",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.16 Premiers graphes",
-    "text": "3.16 Premiers graphes\nDécrire un vecteur de nombres avec mean et sd mais faire des jolis graphes c’est mieux. La commande plot est la fonction de base pour ce faire :\n\nplot(x)\n\n\n\n\nR a compris que chaque valeur du vecteur x devait être plottée sur l’axe de ordonnées et en a déduit que l’axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :\n\nhist(y)\n\n\n\n\nOn voit qu’il est bien centré sur 5. Si l’on augmente le nombre de valeurs générées ainsi que le nombres d’intervalles (breaks en anglais), on retrouve une bien belle gaussienne :\n\nhist(rnorm(1e5, 5, 3), breaks=50, main=\"Un histogramme\")\n\n\n\n\nLes graphiques de base de R sont un peu surannés depuis l’avènement de gpplot2 que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s’il ne s’exprimeront pas longuement ici.\nVoyons tout de même ce que l’on peut faire avec iris, l’un des nombreux jeux de données livrés avec R8.\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nplot(Petal.Length~Petal.Width, data=iris, col=Species,\n     xlab=\"Largeur de pétale (cm)\", ylab=\"Longueur de pétale (cm)\",\n     main=\"Les fameux iris de Fisher (voire d'Anderson)\")\n\n\n\n\nEn petit aguichage ggplot2 voilà ce qu’on peut obtenir dans le même temps :\n\nlibrary(ggplot2)\nggplot(iris) + \n  aes(x=Petal.Width, y=Petal.Length, col=Species) + \n  geom_jitter(alpha=0.5) +\n  geom_smooth(method=\"lm\", formula=\"y~x\") +\n  facet_grid(~Species) +\n  xlab(\"Largeur de pétale (cm)\") + \n  ylab(\"Longueur de pétale (cm)\") +\n  ggtitle(\"Les fameux iris de Fisher (voire d'Anderson)\") +\n  theme_linedraw()"
+    "section": "\n3.17 Premiers graphes",
+    "text": "3.17 Premiers graphes\nDécrire un vecteur de nombres avec mean et sd mais faire des jolis graphes c’est mieux. La commande plot est la fonction de base pour ce faire :\n\nplot(x)\n\n\n\n\nR a compris que chaque valeur du vecteur x devait être plottée sur l’axe de ordonnées et en a déduit que l’axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :\n\nhist(y)\n\n\n\n\nOn voit qu’il est bien centré sur 5. Si l’on augmente le nombre de valeurs générées ainsi que le nombres d’intervalles (breaks en anglais), on retrouve une bien belle gaussienne :\n\nhist(rnorm(1e5, 5, 3), breaks=50, main=\"Un histogramme\")\n\n\n\n\nLes graphiques de base de R sont un peu surannés depuis l’avènement de gpplot2 que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s’il ne s’exprimeront pas longuement ici.\nVoyons tout de même ce que l’on peut faire avec iris, l’un des nombreux jeux de données livrés avec R8.\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nplot(Petal.Length~Petal.Width, data=iris, col=Species,\n     xlab=\"Largeur de pétale (cm)\", ylab=\"Longueur de pétale (cm)\",\n     main=\"Les fameux iris de Fisher (voire d'Anderson)\")\n\n\n\n\nEn petit aguichage ggplot2 voilà ce qu’on peut obtenir dans le même temps :\n\nlibrary(ggplot2)\nggplot(iris) + \n  aes(x=Petal.Width, y=Petal.Length, col=Species) + \n  geom_jitter(alpha=0.5) +\n  geom_smooth(method=\"lm\", formula=\"y~x\") +\n  facet_grid(~Species) +\n  xlab(\"Largeur de pétale (cm)\") + \n  ylab(\"Longueur de pétale (cm)\") +\n  ggtitle(\"Les fameux iris de Fisher (voire d'Anderson)\") +\n  theme_linedraw()"
   },
   {
     "objectID": "premiers-pas.html#un-mot-sur-les-packages",
     "href": "premiers-pas.html#un-mot-sur-les-packages",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.17 Un mot sur les packages",
-    "text": "3.17 Un mot sur les packages"
+    "section": "\n3.18 Un mot sur les packages",
+    "text": "3.18 Un mot sur les packages"
   },
   {
     "objectID": "premiers-pas.html#lopérateur-pipe",
     "href": "premiers-pas.html#lopérateur-pipe",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.18 L’opérateur pipe %>%\n",
-    "text": "3.18 L’opérateur pipe %&gt;%\n\nIl est peu dire que cet opérateur9 a révolutionné R, lorsqu’il y a été importé, d’abord dans le package magrittr sous sa forme %&gt;%. Il est désormais inclus dans le R de “base” sous sa forme |&gt; mais nous n’utiliserons que la version historique %&gt;%, que je trouve plus lisible, plus facile à taper (&lt;Maj&gt; + &lt;Ctrl/Cmd&gt; + &lt;M&gt; dans RStudio) et parce que les années aidant, je deviens conservateur.\nL’idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d’écrire :\nh(g(f(x))) on peut déplier cet emboitement de fonctions et écrire (h ∘ g ∘ f)(x)\nEn langage R, plutôt que d’écrire h(g(f(x))) on écrira : x %&gt;% f() %&gt;% g() %&gt;% h()10. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.\nComparez ces deux lignes pourtant strictement équivalentes:\n\nplot(sqrt(sample(seq(1:100), 6)))              # road to burnout\n\n\n\nseq(1:100) %&gt;% sample(6) %&gt;% sqrt() %&gt;% plot() # let's breathe\n\n\n\n\nLes packages du R moderne, en premier lieu ceux du tidyverse en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours."
+    "section": "\n3.19 L’opérateur pipe %>%\n",
+    "text": "3.19 L’opérateur pipe %&gt;%\n\nIl est peu dire que cet opérateur9 a révolutionné R, lorsqu’il y a été importé, d’abord dans le package magrittr sous sa forme %&gt;%. Il est désormais inclus dans le R de “base” sous sa forme |&gt; mais nous n’utiliserons que la version historique %&gt;%, que je trouve plus lisible, plus facile à taper (&lt;Maj&gt; + &lt;Ctrl/Cmd&gt; + &lt;M&gt; dans RStudio) et parce que les années aidant, je deviens conservateur.\nL’idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d’écrire :\nh(g(f(x))) on peut déplier cet emboitement de fonctions et écrire (h ∘ g ∘ f)(x)\nEn langage R, plutôt que d’écrire h(g(f(x))) on écrira : x %&gt;% f() %&gt;% g() %&gt;% h()10. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.\nComparez ces deux lignes pourtant strictement équivalentes:\n\nplot(sqrt(sample(seq(1:100), 6)))              # road to burnout\n\n\n\nseq(1:100) %&gt;% sample(6) %&gt;% sqrt() %&gt;% plot() # let's breathe\n\n\n\n\nLes packages du R moderne, en premier lieu ceux du tidyverse en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours."
   },
   {
     "objectID": "premiers-pas.html#trucs-et-astuces-pour-r-et-rstudio",
     "href": "premiers-pas.html#trucs-et-astuces-pour-r-et-rstudio",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.19 Trucs et astuces pour R et RStudio",
-    "text": "3.19 Trucs et astuces pour R et RStudio\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\n\n\nLe flux classique de travail est le suivant :\n\nVous voulez faire quelque chose\nVous bidouillez dans la console\nVous êtes satisfait·e de votre commande\nVous la sauvez dans un script\nRepartez à 1.\n\nAu fur et à mesure de votre avancée, votre script va se remplir. Demain, dans 6 mois, ou sur un autre ordinateur, vous pourrez refaire “tourner” vos analyses et avoir strictement les mêmes résultats. On parle de reproductibilité. Gage de science sérieuse et, pour vous, de sérenité. Pour ces raisons, je vous conseille de ne pas enregistrer votre environnement de travail quand vous fermez R ou RStudio.\nUn script peut être un fichier texte ou .R. RStudio gère bien les différents scripts en affichant dans la même fenêtre votre console, vos scripts, vos graphes, etc.\n\nDe temps à autre, faites tout “retourner”. RStudio a un raccourci pour cela : Run &gt; Restart R and run all.\nVous pouvez également faire tourner un autre script depuis le script en cours avant source. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.\n\nRStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (Code &gt; Reformat Code) ou simplement pour réindenter proprement votre code. L’indentation est le décalage par rapport à la marge gauche du script. Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui est déconseillé."
+    "section": "\n3.20 Trucs et astuces pour R et RStudio",
+    "text": "3.20 Trucs et astuces pour R et RStudio\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\n\n\nLe flux classique de travail est le suivant :\n\nVous voulez faire quelque chose\nVous bidouillez dans la console\nVous êtes satisfait·e de votre commande\nVous la sauvez dans un script\nRepartez à 1.\n\nAu fur et à mesure de votre avancée, votre script va se remplir. Demain, dans 6 mois, ou sur un autre ordinateur, vous pourrez refaire “tourner” vos analyses et avoir strictement les mêmes résultats. On parle de reproductibilité. Gage de science sérieuse et, pour vous, de sérenité. Pour ces raisons, je vous conseille de ne pas enregistrer votre environnement de travail quand vous fermez R ou RStudio.\nUn script peut être un fichier texte ou .R. RStudio gère bien les différents scripts en affichant dans la même fenêtre votre console, vos scripts, vos graphes, etc.\n\nDe temps à autre, faites tout “retourner”. RStudio a un raccourci pour cela : Run &gt; Restart R and run all.\nVous pouvez également faire tourner un autre script depuis le script en cours avant source. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.\n\nRStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (Code &gt; Reformat Code) ou simplement pour réindenter proprement votre code. L’indentation est le décalage par rapport à la marge gauche du script. Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui est déconseillé."
   },
   {
     "objectID": "premiers-pas.html#pour-la-suite",
     "href": "premiers-pas.html#pour-la-suite",
     "title": "\n3  Premiers pas et concepts-clés\n",
-    "section": "\n3.20 Pour la suite",
-    "text": "3.20 Pour la suite\nSi vous lisez ces lignes c’est que vous avez survécu jusqu’ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Bien sûr, votre vocabulaire va s’enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.\nBien sûr, vous aurez envie de mettre le feu à l’ordinateur, votre bureau et l’intégralité du monde open-source. N’en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :\n\nFrustration is typical and temporary\n\nL’échec, l’incompréhension, la frustration sont la matérialisation de l’apprentissage. Restez calmes, gardez votre sang-froid, tapez votre problème dans Google, lisez Stack Overflow et faites vous confiance. Perséverez. Je crois en vous."
+    "section": "\n3.21 Pour la suite",
+    "text": "3.21 Pour la suite\nSi vous lisez ces lignes c’est que vous avez survécu jusqu’ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Bien sûr, votre vocabulaire va s’enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.\nBien sûr, vous aurez envie de mettre le feu à l’ordinateur, votre bureau et l’intégralité du monde open-source. N’en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :\n\nFrustration is typical and temporary\n\nL’échec, l’incompréhension, la frustration sont la matérialisation de l’apprentissage. Restez calmes, gardez votre sang-froid, tapez votre problème dans Google, lisez Stack Overflow et faites vous confiance. Perséverez. Je crois en vous."
   },
   {
     "objectID": "premiers-pas.html#footnotes",
@@ -329,374 +294,535 @@
     "text": "ou plus probablement vous n’avez tout exploré ici :-)↩︎\npour donner un ordre de grandeur, sur mes cinq derniers projets de consulting, tous les scripts finaux dépassent les 500 lignes mais sourcent des scripts qui font plus de 1000 lignes, dont presque la moitié de commentaires !↩︎\nJe vous laisse avec Hadley, et chercher du paracétamol↩︎"
   },
   {
+    "objectID": "modelling.html",
+    "href": "modelling.html",
+    "title": "\n5  Modélisation statistique : lm\n",
+    "section": "",
+    "text": "Ce document introduit l’aspect le plus basique de modélisation mais qui inspire ou dont dérivent tous les autres : le modèle linéaire aka lm.\nNous allons nous contenter du jeu de données iris et en particulier d’analyser la relation, si elle existe, entre la longueur et la largeur des pétales.\n\nAvant de faire des modèles, faites des graphes !\n\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nplot(Petal.Width ~ Petal.Length, data=iris, \n     main=\"is petal width ~ petal length ?\")\n\n\n\n\n\nmod &lt;- lm(Petal.Width ~ Petal.Length, data=iris)\nmod\n\n\nCall:\nlm(formula = Petal.Width ~ Petal.Length, data = iris)\n\nCoefficients:\n (Intercept)  Petal.Length  \n     -0.3631        0.4158  \n\n\n\n5.0.1 formula\n\nplot(mod)\n\n\n\n\n\n\n\n\n\n\n\n\n#predict()"
+  },
+  {
     "objectID": "magrittr.html",
     "href": "magrittr.html",
-    "title": "5  Ceci n’est pas qu’un opérateur : %>% et magrittr",
+    "title": "6  Ceci n’est pas qu’un opérateur : %>% et magrittr",
     "section": "",
     "text": "Plop"
   },
   {
-    "objectID": "dplyr.html",
-    "href": "dplyr.html",
-    "title": "6  Manipulation de données avec dplyr",
-    "section": "",
-    "text": "Plop"
+    "objectID": "import.html#bonnes-pratiques",
+    "href": "import.html#bonnes-pratiques",
+    "title": "7  Importer ses données",
+    "section": "7.1 Bonnes pratiques",
+    "text": "7.1 Bonnes pratiques"
+  },
+  {
+    "objectID": "import.html#import",
+    "href": "import.html#import",
+    "title": "7  Importer ses données",
+    "section": "7.2 Import",
+    "text": "7.2 Import\n\n7.2.1 read.table\n\n\n7.2.2 Rstudio\n\n\n7.2.3 readr\n\n\n7.2.4 load"
+  },
+  {
+    "objectID": "import.html#exports",
+    "href": "import.html#exports",
+    "title": "7  Importer ses données",
+    "section": "7.3 Exports",
+    "text": "7.3 Exports\n\n7.3.1 write.table\n\n\n7.3.2 write_csv, etc.\n\n\n7.3.3 save"
+  },
+  {
+    "objectID": "import.html#autres-ios",
+    "href": "import.html#autres-ios",
+    "title": "7  Importer ses données",
+    "section": "7.4 Autres I/Os",
+    "text": "7.4 Autres I/Os\n\nreadlines\nhttr\nyaml\nxlsx"
+  },
+  {
+    "objectID": "dplyr.html#tibble",
+    "href": "dplyr.html#tibble",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.1 tibble",
+    "text": "8.1 tibble"
+  },
+  {
+    "objectID": "dplyr.html#rename",
+    "href": "dplyr.html#rename",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.2 rename",
+    "text": "8.2 rename"
+  },
+  {
+    "objectID": "dplyr.html#select",
+    "href": "dplyr.html#select",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.3 select",
+    "text": "8.3 select"
+  },
+  {
+    "objectID": "dplyr.html#tidyselect",
+    "href": "dplyr.html#tidyselect",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.4 tidyselect",
+    "text": "8.4 tidyselect"
+  },
+  {
+    "objectID": "dplyr.html#filter",
+    "href": "dplyr.html#filter",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.5 filter",
+    "text": "8.5 filter"
+  },
+  {
+    "objectID": "dplyr.html#mutate",
+    "href": "dplyr.html#mutate",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.6 mutate",
+    "text": "8.6 mutate"
+  },
+  {
+    "objectID": "dplyr.html#transmute",
+    "href": "dplyr.html#transmute",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.7 transmute",
+    "text": "8.7 transmute"
+  },
+  {
+    "objectID": "dplyr.html#summarise",
+    "href": "dplyr.html#summarise",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.8 summarise",
+    "text": "8.8 summarise"
+  },
+  {
+    "objectID": "dplyr.html#group_by",
+    "href": "dplyr.html#group_by",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.9 group_by",
+    "text": "8.9 group_by"
+  },
+  {
+    "objectID": "dplyr.html#rowwise",
+    "href": "dplyr.html#rowwise",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.10 rowwise",
+    "text": "8.10 rowwise"
+  },
+  {
+    "objectID": "dplyr.html#join",
+    "href": "dplyr.html#join",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.11 join",
+    "text": "8.11 join"
+  },
+  {
+    "objectID": "dplyr.html#nest",
+    "href": "dplyr.html#nest",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.12 nest",
+    "text": "8.12 nest"
+  },
+  {
+    "objectID": "dplyr.html#cheat-sheet",
+    "href": "dplyr.html#cheat-sheet",
+    "title": "8  Manipulation de données avec dplyr",
+    "section": "8.13 cheat sheet",
+    "text": "8.13 cheat sheet"
   },
   {
     "objectID": "ggplot2.html#rationale",
     "href": "ggplot2.html#rationale",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.1 Rationale",
-    "text": "7.1 Rationale\nIl est peu dire que le package ggplot2 a changé la face de la représentation graphique en R. Le package de base, graphics permet certes de tout faire mais laborieusement. D’autres packages (lattice par exemple) permettent une création plus proche de l’utilisateur·trice, moins proches des “primitives” (segments, points, etc.) graphiques.\nLa force de ggplot2, d’abord écrit par Hadley Wickham, est d’implémenter la Grammar of Graphics de Leland Wilkinson qui dissocie les données de leurs représentations, de façon déclarative. Nous déclarerons ainsi à un jeu de données, des modes de représentation (des geom_) qui s’appuieront eux-mêmes sur des déclarations d’axes des abscisses, des ordonées, des couleurs, des tailles etc. (via aes), nous préciserons les axes (coord_), les paramètres de style theme.\nNous obtiendrons finalement un graphe que nous pourrons modifier à soit et qui sera même, en soit, une machine à faire d’autres graphes.\nggplot2 s’installe classiquement avec install.packages(\"ggplot2\") mais il est compris dans le tidyverse que vous avez du installer précédemment avec install.packages(\"tidyverse\").\nPour charger ggplot2, il suffit de taper library(ggplot2) ou encore library(tidyverse)."
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.1 Rationale",
+    "text": "10.1 Rationale\nIl est peu dire que le package ggplot2 a changé la face de la représentation graphique en R.\nLe package de base, graphics1 permet certes de tout faire mais laborieusement. D’autres packages (lattice par exemple) permettent une création plus proche de l’utilisateur·trice, moins proches des “primitives” (segments, points, etc.) graphiques.\nLa force de ggplot2, d’abord écrit par Hadley Wickham, est d’implémenter la Grammar of Graphics de Leland Wilkinson qui dissocie les données de leurs représentations, de façon déclarative. Nous déclarerons ainsi à un jeu de données, des modes de représentation (des geom_) qui s’appuieront eux-mêmes sur des déclarations d’axes des abscisses, des ordonées, des couleurs, des tailles etc. (via aes), nous préciserons les axes (coord_), les paramètres de style theme.\nNous obtiendrons finalement un graphe que nous pourrons modifier à soit et qui sera même, en soit, une machine à faire d’autres graphes.\nggplot2 s’installe classiquement avec install.packages(\"ggplot2\") mais il est compris dans le tidyverse que vous avez du installer précédemment avec install.packages(\"tidyverse\").\nPour charger ggplot2, il suffit de taper library(ggplot2) ou encore library(tidyverse)."
   },
   {
     "objectID": "ggplot2.html#un-premier-graphe",
     "href": "ggplot2.html#un-premier-graphe",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.2 Un premier graphe",
-    "text": "7.2 Un premier graphe\nggplot2 travaille sur des data.frames (ou des tibbles mais c’est la même chose). Tout jeu de données qui n’est pas un data.frame sera converti ou tenté de l’être avec fortify. Le plus simple pour ne pas avoir de surprises étant de convertir vos données en un data.frame en bonne et due forme, vous-mêmes.\nNous allons utiliser iris qui est déjà un data.frame mais que nous allons, pour la cosmétique, convertir en tibble et en renommer les colonnes\n\nlibrary(tidyverse)\n\n\niris2 &lt;- iris %&gt;% \n  as_tibble() %&gt;% \n  rename(pl=Petal.Length, pw=Petal.Width,\n         sl=Sepal.Length, sw=Sepal.Width, sp=Species)\niris2 # iris, as tibble and with more compact column names\n\n# A tibble: 150 × 5\n      sl    sw    pl    pw sp    \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; \n 1   5.1   3.5   1.4   0.2 setosa\n 2   4.9   3     1.4   0.2 setosa\n 3   4.7   3.2   1.3   0.2 setosa\n 4   4.6   3.1   1.5   0.2 setosa\n 5   5     3.6   1.4   0.2 setosa\n 6   5.4   3.9   1.7   0.4 setosa\n 7   4.6   3.4   1.4   0.3 setosa\n 8   5     3.4   1.5   0.2 setosa\n 9   4.4   2.9   1.4   0.2 setosa\n10   4.9   3.1   1.5   0.1 setosa\n# ℹ 140 more rows\n\n\nLes étapes suivantes sont toujours les mêmes :\n\ndéclarer le data.frameà utiliser (iris2 ici)\ndéclarer quelles colonnes doivent être utilisées (nous voulons la largeur de pétale pw en fonction, en y en somme, de la longueur de pétale pw).\ndéclarer le mode de représentation (ici un nuage de points geom_point, mais quantité d’autres geom existent comme les histogrammes, les boxplots, etc.)\n\nggplot2 utilise l’opérateur + pour assembler ces différentes couches, après la fonction ggplot() qui initie le graphe.\n\niris2 %&gt;% \n  ggplot() + \n  aes(x=pl, y=pw) + \n  geom_point()\n\n\n\n\nVous trouverez parfois la déclaration du data.frame aes au sein de ggplot() comme cela : ggplot(iris2, aes(x=pw, y=pl)). J’ai tendance à tout éclater comme ci-dessus, mais à vous de voir."
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.2 Un premier graphe",
+    "text": "10.2 Un premier graphe\nggplot2 travaille sur des data.frames (ou des tibbles mais c’est la même chose). Tout jeu de données qui n’est pas un data.frame sera converti ou tenté de l’être avec fortify. Le plus simple pour ne pas avoir de surprises étant de convertir vos données en un data.frame en bonne et due forme, vous-mêmes.\nNous allons utiliser iris qui est déjà un data.frame mais que nous allons, pour la cosmétique, convertir en tibble et en renommer les colonnes\n\nlibrary(tidyverse)\n\n\niris2 &lt;- iris %&gt;% \n  as_tibble() %&gt;% \n  rename(pl=Petal.Length, pw=Petal.Width,\n         sl=Sepal.Length, sw=Sepal.Width, sp=Species)\niris2 # iris, as tibble and with more compact column names\n\n# A tibble: 150 × 5\n      sl    sw    pl    pw sp    \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; \n 1   5.1   3.5   1.4   0.2 setosa\n 2   4.9   3     1.4   0.2 setosa\n 3   4.7   3.2   1.3   0.2 setosa\n 4   4.6   3.1   1.5   0.2 setosa\n 5   5     3.6   1.4   0.2 setosa\n 6   5.4   3.9   1.7   0.4 setosa\n 7   4.6   3.4   1.4   0.3 setosa\n 8   5     3.4   1.5   0.2 setosa\n 9   4.4   2.9   1.4   0.2 setosa\n10   4.9   3.1   1.5   0.1 setosa\n# ℹ 140 more rows\n\n\nLes étapes suivantes sont toujours les mêmes :\n\ndéclarer le data.frameà utiliser (iris2 ici)\ndéclarer quelles colonnes doivent être utilisées (nous voulons la largeur de pétale pw en fonction, en y en somme, de la longueur de pétale pw).\ndéclarer le mode de représentation (ici un nuage de points geom_point, mais quantité d’autres geom existent comme les histogrammes, les boxplots, etc.)\n\nggplot2 utilise l’opérateur + pour assembler ces différentes couches, après la fonction ggplot() qui initie le graphe.\n\niris2 %&gt;% \n  ggplot() + \n  aes(x=pl, y=pw) + \n  geom_point()\n\n\n\n\nVous trouverez parfois la déclaration du data.frame aes au sein de ggplot() comme cela : ggplot(iris2, aes(x=pw, y=pl)). J’ai tendance à tout éclater comme ci-dessus, mais à vous de voir."
   },
   {
     "objectID": "ggplot2.html#un-deuxième-geom-et-un-sacrifice",
     "href": "ggplot2.html#un-deuxième-geom-et-un-sacrifice",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.3 Un deuxième geom et un sacrifice",
-    "text": "7.3 Un deuxième geom et un sacrifice\nSi vous vous amusiez à compter le nombre de points représentés, ou plus intelligemment iris2 %&gt;% select(pl, pw) %&gt;% unique() %&gt;% nrow(), vous réaliseriez que 42 points ne sont pas visibles. La faute n’en incombe nullement à ggplot2 mais à la précision des instruments de mesure au moment de l’acquisition de données ! Plus exactement, ils sont visibles mais superposés.\nCette mise en garde nous donne l’occasion de présenter un deuxième geom qui introduit suffisamment de bruit dans les données pour que tous les points soient représentés tout en gardant la relation générale entre les deux variables pw et pl. En d’autres termes, nous sacrifions l’exactitude pour gagner en fidélité du nombre de points effectivements présents.\nLa représentation visuelle de l’information quantitative est souvent affaire de sacrifices et elle est un domaine de recherche à part entière. Offrez-vous ou faites vous offrir la bibliographie complète d’Edward Tufte !\nVoilà un iris2 avec ses 150 iris :\n\niris2 %&gt;% \n  ggplot() + \n  aes(pl, pw) + \n  geom_jitter()"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.3 Un deuxième geom et un sacrifice",
+    "text": "10.3 Un deuxième geom et un sacrifice\nSi vous vous amusiez à compter le nombre de points représentés, ou plus intelligemment iris2 %&gt;% select(pl, pw) %&gt;% unique() %&gt;% nrow(), vous réaliseriez que 42 points ne sont pas visibles. La faute n’en incombe nullement à ggplot2 mais à la précision des instruments de mesure au moment de l’acquisition de données ! Plus exactement, ils sont visibles mais superposés.\nCette mise en garde nous donne l’occasion de présenter un deuxième geom qui introduit suffisamment de bruit dans les données pour que tous les points soient représentés tout en gardant la relation générale entre les deux variables pw et pl. En d’autres termes, nous sacrifions l’exactitude pour gagner en fidélité du nombre de points effectivements présents.\nLa représentation visuelle de l’information quantitative est souvent affaire de sacrifices et elle est un domaine de recherche à part entière. Offrez-vous ou faites vous offrir la bibliographie complète d’Edward Tufte !\nVoilà un iris2 avec ses 150 iris :\n\niris2 %&gt;% \n  ggplot() + \n  aes(pl, pw) + \n  geom_jitter()"
   },
   {
     "objectID": "ggplot2.html#aes-dautres-variables-sur-le-même-graphe",
     "href": "ggplot2.html#aes-dautres-variables-sur-le-même-graphe",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.4 aes : d’autres variables sur le même graphe",
-    "text": "7.4 aes : d’autres variables sur le même graphe\naes règle les aesthetics de votre ggplot. Si par exemple vous voulez associer chaque espèce à une couleur, il vous suffit de rajouter col=sp dans aes() et la légende est automatiquement générée :\n\niris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_jitter()\n\n\n\n\nDans le même esprit, si vous vouliez rajouter les dimensions des sépales comme encodage des tailles de point, c’est dans aes() que ça se passe. Vous pouvez même créer à la volée, dans aes même, des opérations sur les colonnes de iris2. Une “pseudo-aire”, faisant fi de la forme mais intégrant la longueur et la largeur des sépales peut se créer comme suit :\n\niris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp, size=sw*sl) +\n  geom_jitter()"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.4 aes : d’autres variables sur le même graphe",
+    "text": "10.4 aes : d’autres variables sur le même graphe\naes règle les aesthetics de votre ggplot. Si par exemple vous voulez associer chaque espèce à une couleur, il vous suffit de rajouter col=sp dans aes() et la légende est automatiquement générée :\n\niris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_jitter()\n\n\n\n\nDans le même esprit, si vous vouliez rajouter les dimensions des sépales comme encodage des tailles de point, c’est dans aes() que ça se passe. Vous pouvez même créer à la volée, dans aes même, des opérations sur les colonnes de iris2. Une “pseudo-aire”, faisant fi de la forme mais intégrant la longueur et la largeur des sépales peut se créer comme suit :\n\niris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp, size=sw*sl) +\n  geom_jitter()"
   },
   {
     "objectID": "ggplot2.html#tendances-et-modèles-statistiques",
     "href": "ggplot2.html#tendances-et-modèles-statistiques",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.5 Tendances et modèles statistiques",
-    "text": "7.5 Tendances et modèles statistiques\nLa production de graphes est centrale dans l’exploration de données et ggplot2 en fait une tâche simple. stat_smooth va ajouter une courbe de tendance aux données représentées.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw) + geom_point() \ngg + stat_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nDeux choses. D’abord, ggplot2 vous avertit que la courbe ajoutée utilise loess, c’est à dire un ajustement polynomial local calé sur y~x. Si ces messages vous ennuient, il vous suffit de préciser à geom_smooth d’utiliser ces modèles (geom_smooth(method=\"loess\", formula=\"y~x\")). Ensuite, peut être vous aviez plutôt en tête un bon vieux modèle linéaire avec lm plutôt que ce loess certes flatteur mais qui ne sied peut-être pas à votre esprit naturellement parcimonieux. Bonne nouvelle, c’est très simple :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x\")\n\n\n\n\nAprès avoir contemplé ce graphe, vous vous dites que ce modèle linéaire, moyennant que la longueur de pétale soit inférieure à 2 vous prédirait des largeurs de pétales négatives. Ce qui vous en conviendrez n’a guère de sens, ni pour un·e biologiste, ni même pour un·e statisticien·ne (c’est dire !).\nVous l’avez deviné si vous avez déjà utilisé lm(), ça se passe dans dans la spécification de la formula. Pour forcer le modèle à ne pas avoir d’intercept (ou plutôt un intercept égal à 0), vous pouvez spécifier -1 dans la formule. Je sais que ce n’est pas très intuitif mais vous consulterez avec volupté ?formula pour plus d’informations.\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x-1\")\n\n\n\n\nDans le même esprit si nous voulions forcer la relation à être quadratique, nous aurions pu :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~I(x^2)+x-1\")\n\n\n\n\nLa couleur de la droite (ou de la courbe) de régression, ainsi que la présence ou non d’un intervalle de confiance peuvent se préciser, toujours dans geom_smooth. Par exemple :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x-1\", se=FALSE, col=\"red\", linetype=\"dashed\")\n\n\n\n\nCes paramètres se et colour sont documentés dans ?geom_smooth et ne s’appliquent qu’à ce geom, pas à l’échelle globale du ggplot ni même des autres geoms. Par exemple :\n\ngg + \n  geom_smooth(method=\"lm\", formula=\"y~x\", col=\"green\", se=FALSE) +\n  geom_smooth(method=\"lm\", formula=\"y~x-1\", col=\"purple\") # no intercept\n\n\n\n\nUn petit rappel à la doxa ne faisant jamais de mal :\n\nce n’est pas parce que produire des droites/courbes de tendance est facile que vous êtes autorisé·e à le faire\n\nSi votre modèle n’est pas “significatif”, vous n’êtes pas vraiment autorisé·e à le représenter. Naturellement vous pouvez le faire en cachette mais dans un article vous allez vous faire tomber dessus par le·a post-doc qui se tape la review !\nIl n’y a aucun moyen à ma connaissance de le faire avec ggplot2, ni même de récupérer les modèles créés en interne par ce dernier mais vous aurez, quoiqu’il en soit, besoin de les explorer par ailleurs. Recréeons le modèle sans intercept :\n\nmod &lt;- lm(pw~pl-1, data=iris2)\nmod\n\n\nCall:\nlm(formula = pw ~ pl - 1, data = iris2)\n\nCoefficients:\n    pl  \n0.3365  \n\nsummary(mod)\n\n\nCall:\nlm(formula = pw ~ pl - 1, data = iris2)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.48446 -0.24366 -0.13699  0.08642  0.68379 \n\nCoefficients:\n   Estimate Std. Error t value Pr(&gt;|t|)    \npl 0.336511   0.005063   66.46   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2573 on 149 degrees of freedom\nMultiple R-squared:  0.9674,    Adjusted R-squared:  0.9672 \nF-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16\n\n\nSans surprise, le modèle linéaire est “significatif” et le(s) R2 excellents. Vous pouvez donc représenter ces modèles.\nLe clou du spectacle désormais : si nous avons déclaré une couleur par espèce d’iris, le reste suit. Le reste ici étant un modèle linéaire. Tadan !\n\ngg &lt;- iris2 %&gt;% \n  ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_point() +\n  geom_smooth(method=\"lm\", formula=\"y~x\")\n\nNotons que si vous ne voulez PAS que le reste suive, en termes plus formels que geom_smooth() n’hérite pas des paramètres globaux de aes, il vous suffit de déclarer un aes local au paramètre mapping, le premier argument de tous les geom :\n\niris2 %&gt;% \n  ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_point() +\n  geom_smooth(mapping = aes(col=NULL), method=\"lm\", formula=\"y~x\")"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.5 Tendances et modèles statistiques",
+    "text": "10.5 Tendances et modèles statistiques\nLa production de graphes est centrale dans l’exploration de données et ggplot2 en fait une tâche simple. stat_smooth va ajouter une courbe de tendance aux données représentées.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw) + geom_point() \ngg + stat_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nDeux choses. D’abord, ggplot2 vous avertit que la courbe ajoutée utilise loess, c’est à dire un ajustement polynomial local calé sur y~x. Si ces messages vous ennuient, il vous suffit de préciser à geom_smooth d’utiliser ces modèles (geom_smooth(method=\"loess\", formula=\"y~x\")). Ensuite, peut être vous aviez plutôt en tête un bon vieux modèle linéaire avec lm plutôt que ce loess certes flatteur mais qui ne sied peut-être pas à votre esprit naturellement parcimonieux. Bonne nouvelle, c’est très simple :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x\")\n\n\n\n\nAprès avoir contemplé ce graphe, vous vous dites que ce modèle linéaire, moyennant que la longueur de pétale soit inférieure à 2 vous prédirait des largeurs de pétales négatives. Ce qui vous en conviendrez n’a guère de sens, ni pour un·e biologiste, ni même pour un·e statisticien·ne (c’est dire !).\nVous l’avez deviné si vous avez déjà utilisé lm(), ça se passe dans dans la spécification de la formula. Pour forcer le modèle à ne pas avoir d’intercept (ou plutôt un intercept égal à 0), vous pouvez spécifier -1 dans la formule. Je sais que ce n’est pas très intuitif mais vous consulterez avec volupté ?formula pour plus d’informations.\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x-1\")\n\n\n\n\nDans le même esprit si nous voulions forcer la relation à être quadratique, nous aurions pu :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~I(x^2)+x-1\")\n\n\n\n\nLa couleur de la droite (ou de la courbe) de régression, ainsi que la présence ou non d’un intervalle de confiance peuvent se préciser, toujours dans geom_smooth. Par exemple :\n\ngg + geom_smooth(method=\"lm\", formula=\"y~x-1\", se=FALSE, col=\"red\", linetype=\"dashed\")\n\n\n\n\nCes paramètres se et colour sont documentés dans ?geom_smooth et ne s’appliquent qu’à ce geom, pas à l’échelle globale du ggplot ni même des autres geoms. Par exemple :\n\ngg + \n  geom_smooth(method=\"lm\", formula=\"y~x\", col=\"green\", se=FALSE) +\n  geom_smooth(method=\"lm\", formula=\"y~x-1\", col=\"purple\") # no intercept\n\n\n\n\nUn petit rappel à la doxa ne faisant jamais de mal :\n\nce n’est pas parce que produire des droites/courbes de tendance est facile que vous êtes autorisé·e à le faire\n\nSi votre modèle n’est pas “significatif”, vous n’êtes pas vraiment autorisé·e à le représenter. Naturellement vous pouvez le faire en cachette mais dans un article vous allez vous faire tomber dessus par le·a post-doc qui se tape la review !\nIl n’y a aucun moyen à ma connaissance de le faire avec ggplot2, ni même de récupérer les modèles créés en interne par ce dernier mais vous aurez, quoiqu’il en soit, besoin de les explorer par ailleurs. Recréeons le modèle sans intercept :\n\nmod &lt;- lm(pw~pl-1, data=iris2)\nmod\n\n\nCall:\nlm(formula = pw ~ pl - 1, data = iris2)\n\nCoefficients:\n    pl  \n0.3365  \n\nsummary(mod)\n\n\nCall:\nlm(formula = pw ~ pl - 1, data = iris2)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.48446 -0.24366 -0.13699  0.08642  0.68379 \n\nCoefficients:\n   Estimate Std. Error t value Pr(&gt;|t|)    \npl 0.336511   0.005063   66.46   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2573 on 149 degrees of freedom\nMultiple R-squared:  0.9674,    Adjusted R-squared:  0.9672 \nF-statistic:  4417 on 1 and 149 DF,  p-value: &lt; 2.2e-16\n\n\nSans surprise, le modèle linéaire est “significatif” et le(s) R2 excellents. Vous pouvez donc représenter ces modèles.\nLe clou du spectacle désormais : si nous avons déclaré une couleur par espèce d’iris, le reste suit. Le reste ici étant un modèle linéaire. Tadan !\n\ngg &lt;- iris2 %&gt;% \n  ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_point() +\n  geom_smooth(method=\"lm\", formula=\"y~x\")\n\nNotons que si vous ne voulez PAS que le reste suive, en termes plus formels que geom_smooth() n’hérite pas des paramètres globaux de aes, il vous suffit de déclarer un aes local au paramètre mapping, le premier argument de tous les geom :\n\niris2 %&gt;% \n  ggplot() + \n  aes(pl, pw, col=sp) +\n  geom_point() +\n  geom_smooth(mapping = aes(col=NULL), method=\"lm\", formula=\"y~x\")"
   },
   {
     "objectID": "ggplot2.html#interlude-cosmétique-labs-theme-et-scale_",
     "href": "ggplot2.html#interlude-cosmétique-labs-theme-et-scale_",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.6 Interlude cosmétique : labs, theme et scale_\n",
-    "text": "7.6 Interlude cosmétique : labs, theme et scale_\n\nPuisque je sens que vous commencez à tomber éperdument amoureux·se de ggplot2, il est temps d’enfoncer le clou avec un peu de cosmétique.\nLe nom des axes ainsi que les titres et sous-titres sont faciles à modifier :\n\ngg &lt;- gg + \n  xlab(\"Petal length (mm)\") + \n  ylab(\"Petal width (mm)\") + \n  labs(title=\"Another iris graph\", subtitle = \"beware of those who don't like flowers\")\ngg\n\n\n\n\nLe “thème” général des graphes peut être modifié. Vous pouvez essayer les autres, tapez theme_ puis pressez &lt;Tab&gt;.\n\ngg + theme_minimal()\n\n\n\n\nChaque élément individuel peut être modifié. Sachez que c’est un terrain glissant, susceptible de vous désociabiliser. Avec un peu de sueur on fait exactement ce que l’on veut, y compris pire :\n\ngg + theme(axis.title.x = element_text(face=\"bold\"),\n           axis.text.y = element_text(angle=45),\n           panel.background = element_rect(fill=\"pink\"))\n\n\n\n\nSi l’un des thèmes vous convient et/ou que vous en avez customisé un, vous pouvez le définir pour tous les graphes avec theme_set.\nEnfin, et l’on s’écarte un peu de la pure cosmétique, vous pouvez ajuster les systèmes de représentation des axes, à commencer par leurs limites :\n\ngg + scale_x_continuous(limits=c(0, 8))\n\n\n\n\nPour la seule étendue, on préferera xlim() et ylim() mais la fonction scale_x_continuous fait beaucoup plus.\nVous pouvez même changer le système de coordonnées. Si par exemple vous représentez un plan factoriel d’ACP, vous aurez besoin de contraindre l’aspect y/x de telle façon qu’un centimètre sur x à l’écran, représente également un centimètre sur y.\n\ngg + coord_equal()\n\n\n\n\nLes régressions sont moins flatteuses 1 mais on a bel et bien un plan euclidien.\nEnfin, vous pétez les plombs et vous vous lancez dans l’étude des vents, ou quoique ce soit d’autre avec des coordonées polaires. La famille coord_* vous permet de changer carrément le système de coordonées :\n\ngg + coord_polar()\n\n\n\n\ncoord_flip vous sera aussi utile si vous désirez culbuter le graphe et passer les x en y et vice-versa."
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.6 Interlude cosmétique : labs, theme et scale_\n",
+    "text": "10.6 Interlude cosmétique : labs, theme et scale_\n\nPuisque je sens que vous commencez à tomber éperdument amoureux·se de ggplot2, il est temps d’enfoncer le clou avec un peu de cosmétique.\nLe nom des axes ainsi que les titres et sous-titres sont faciles à modifier :\n\ngg &lt;- gg + \n  xlab(\"Petal length (mm)\") + \n  ylab(\"Petal width (mm)\") + \n  labs(title=\"Another iris graph\", subtitle = \"beware of those who don't like flowers\")\ngg\n\n\n\n\nLe “thème” général des graphes peut être modifié. Vous pouvez essayer les autres, tapez theme_ puis pressez &lt;Tab&gt;.\n\ngg + theme_minimal()\n\n\n\n\nChaque élément individuel peut être modifié. Sachez que c’est un terrain glissant, susceptible de vous désociabiliser. Avec un peu de sueur on fait exactement ce que l’on veut, y compris pire :\n\ngg + theme(axis.title.x = element_text(face=\"bold\"),\n           axis.text.y = element_text(angle=45),\n           panel.background = element_rect(fill=\"pink\"))\n\n\n\n\nSi l’un des thèmes vous convient et/ou que vous en avez customisé un, vous pouvez le définir pour tous les graphes avec theme_set.\nEnfin, et l’on s’écarte un peu de la pure cosmétique, vous pouvez ajuster les systèmes de représentation des axes, à commencer par leurs limites :\n\ngg + scale_x_continuous(limits=c(0, 8))\n\n\n\n\nPour la seule étendue, on préferera xlim() et ylim() mais la fonction scale_x_continuous fait beaucoup plus.\nVous pouvez même changer le système de coordonnées. Si par exemple vous représentez un plan factoriel d’ACP, vous aurez besoin de contraindre l’aspect y/x de telle façon qu’un centimètre sur x à l’écran, représente également un centimètre sur y.\n\ngg + coord_equal()\n\n\n\n\nLes régressions sont moins flatteuses 2 mais on a bel et bien un plan euclidien.\nEnfin, vous pétez les plombs et vous vous lancez dans l’étude des vents, ou quoique ce soit d’autre avec des coordonées polaires. La famille coord_* vous permet de changer carrément le système de coordonées :\n\ngg + coord_polar()\n\n\n\n\ncoord_flip vous sera aussi utile si vous désirez culbuter le graphe et passer les x en y et vice-versa."
   },
   {
     "objectID": "ggplot2.html#geom-suite-deux-variables-continues",
     "href": "ggplot2.html#geom-suite-deux-variables-continues",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.7 geom (suite) : deux variables continues",
-    "text": "7.7 geom (suite) : deux variables continues\nMoult autres geoms sont disponibles dans ggplot2 et sont présentés graphiquement ici.\nPour continuer sur deux variables continues, on pourra rajouter facilement des courbes ou autres éléments de densité. Toutes les opérations kernel sont faites pour vous donc vous n’avez pas vraiment à vous en soucier. 150 points c’est un peu limite pour ces fonctions mais restons fidèles à iris :\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw)\ngg + geom_density2d()\n\n\n\ngg + geom_bin_2d()\n\n\n\n\nNaturellement, vous pouvez rajouter les points. L’ordre de représentation est celui des déclarations. Si vous passez geom_point après geom_density2d, les points seront représentés au-dessus des courbes de densité :\n\ngg + geom_density2d_filled(col=\"grey90\") + geom_point(col=\"white\") + coord_equal()\n\n\n\n\nClassieux n’est-ce pas ?"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.7 geom (suite) : deux variables continues",
+    "text": "10.7 geom (suite) : deux variables continues\nMoult autres geoms sont disponibles dans ggplot2 et sont présentés graphiquement ici.\nPour continuer sur deux variables continues, on pourra rajouter facilement des courbes ou autres éléments de densité. Toutes les opérations kernel sont faites pour vous donc vous n’avez pas vraiment à vous en soucier. 150 points c’est un peu limite pour ces fonctions mais restons fidèles à iris :\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw)\ngg + geom_density2d()\n\n\n\ngg + geom_bin_2d()\n\n\n\n\nNaturellement, vous pouvez rajouter les points. L’ordre de représentation est celui des déclarations. Si vous passez geom_point après geom_density2d, les points seront représentés au-dessus des courbes de densité :\n\ngg + geom_density2d_filled(col=\"grey90\") + geom_point(col=\"white\") + coord_equal()\n\n\n\n\nClassieux n’est-ce pas ?"
   },
   {
     "objectID": "ggplot2.html#geom-suite-une-seule-variable-continue",
     "href": "ggplot2.html#geom-suite-une-seule-variable-continue",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.8 geom (suite) : une seule variable continue",
-    "text": "7.8 geom (suite) : une seule variable continue\nQuand vous n’avez qu’une seule variable continue c’est vraisemblablement que vous vous intéressez à sa distribution, c’est à dire que vous voulez un histogramme ou sa densité, selon que vous vouliez binner vos données ou les garder continues. Quelques exemples ci-dessous et je vous laisse explorer en autonomie.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl)\ngg + geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\ngg + geom_density()\n\n\n\ngg + geom_dotplot()\n\nBin width defaults to 1/30 of the range of the data. Pick better value with\n`binwidth`.\n\n\n\n\n\n\nQuand ggplot2 et plus généralement R vous enquiquine avec un message c’est souvent pour votre bien."
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.8 geom (suite) : une seule variable continue",
+    "text": "10.8 geom (suite) : une seule variable continue\nQuand vous n’avez qu’une seule variable continue c’est vraisemblablement que vous vous intéressez à sa distribution, c’est à dire que vous voulez un histogramme ou sa densité, selon que vous vouliez binner vos données ou les garder continues. Quelques exemples ci-dessous et je vous laisse explorer en autonomie.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl)\ngg + geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\ngg + geom_density()\n\n\n\ngg + geom_dotplot()\n\nBin width defaults to 1/30 of the range of the data. Pick better value with\n`binwidth`.\n\n\n\n\n\n\nQuand ggplot2 et plus généralement R vous enquiquine avec un message c’est souvent pour votre bien."
   },
   {
     "objectID": "ggplot2.html#geom-suite-une-variable-continue-et-un-facteur",
     "href": "ggplot2.html#geom-suite-une-variable-continue-et-un-facteur",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.9 geom (suite) : une variable continue et un facteur",
-    "text": "7.9 geom (suite) : une variable continue et un facteur\nggplot2 a tout ce qu’il vous faut pour représenter des boxplots et variantes :\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(x=sp, y=pl, fill=sp)\ngg + geom_boxplot()\n\n\n\ngg + geom_violin() + geom_jitter() + coord_flip()"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.9 geom (suite) : une variable continue et un facteur",
+    "text": "10.9 geom (suite) : une variable continue et un facteur\nggplot2 a tout ce qu’il vous faut pour représenter des boxplots et variantes :\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(x=sp, y=pl, fill=sp)\ngg + geom_boxplot()\n\n\n\ngg + geom_violin() + geom_jitter() + coord_flip()"
   },
   {
     "objectID": "ggplot2.html#les-sous-graphes-avec-facet_",
     "href": "ggplot2.html#les-sous-graphes-avec-facet_",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.10 Les sous-graphes avec facet_\n",
-    "text": "7.10 Les sous-graphes avec facet_\n\nUne famille de fonction très puissante en ggplot2 est celle des facet_ qui vous permettent de faire des sous-graphes facilement. Pour que l’exemple soit encore plus aiguisé, nous allons créer une autre colonne facteur dans iris2 simulant cinq sessions de terrain, de mesure de 10 iris par espèce par session. Puis nous allons créer un graphe de base, l’occasion de montrer l’utilisation de shape.\n\niris2 &lt;- iris2 %&gt;% mutate(session=factor(rep(rep(LETTERS[1:5], each=10), 3)))\ngg &lt;- iris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp, shape=session) + \n  geom_jitter() + geom_smooth(method=\"lm\", formula=\"y~x-1\", se=FALSE) +\n  theme_linedraw()\ngg\n\n\n\n\nNous conviendrons qu’on y voit goutte. Surtout entre sessions. facet_grid est votre ami. Vous pouvez spécifier qui va en ligne, qui va en colonne et si les échelles doivent être fixes ou peuvent être libres. Quelques exemples :\n\ngg + facet_grid(session~sp)\n\n\n\ngg + facet_grid(.~sp, scales=\"free\")\n\n\n\ngg + facet_grid(session~., scales=\"fixed\")\n\n\n\n\nPratique ! Notez que quand vous ne voulez qu’une dimension, vou spouvez omettre l’un des membres à gauche ou à droite et le remplacer par un .. 2\nfacet_wrap est plus lâche dans sa définition et ne veut qu’une seule colonne, dont les sous-graphes correspondant seront simplement enroulés selon des dimensions plaisantes, que vous pouvez spécifier :\n\ngg + facet_wrap(~session, nrow=2)"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.10 Les sous-graphes avec facet_\n",
+    "text": "10.10 Les sous-graphes avec facet_\n\nUne famille de fonction très puissante en ggplot2 est celle des facet_ qui vous permettent de faire des sous-graphes facilement. Pour que l’exemple soit encore plus aiguisé, nous allons créer une autre colonne facteur dans iris2 simulant cinq sessions de terrain, de mesure de 10 iris par espèce par session. Puis nous allons créer un graphe de base, l’occasion de montrer l’utilisation de shape.\n\niris2 &lt;- iris2 %&gt;% mutate(session=factor(rep(rep(LETTERS[1:5], each=10), 3)))\ngg &lt;- iris2 %&gt;% ggplot() + \n  aes(pl, pw, col=sp, shape=session) + \n  geom_jitter() + geom_smooth(method=\"lm\", formula=\"y~x-1\", se=FALSE) +\n  theme_linedraw()\ngg\n\n\n\n\nNous conviendrons qu’on y voit goutte. Surtout entre sessions. facet_grid est votre ami. Vous pouvez spécifier qui va en ligne, qui va en colonne et si les échelles doivent être fixes ou peuvent être libres. Quelques exemples :\n\ngg + facet_grid(session~sp)\n\n\n\ngg + facet_grid(.~sp, scales=\"free\")\n\n\n\ngg + facet_grid(session~., scales=\"fixed\")\n\n\n\n\nPratique ! Notez que quand vous ne voulez qu’une dimension, vou spouvez omettre l’un des membres à gauche ou à droite et le remplacer par un .. 3\nfacet_wrap est plus lâche dans sa définition et ne veut qu’une seule colonne, dont les sous-graphes correspondant seront simplement enroulés selon des dimensions plaisantes, que vous pouvez spécifier :\n\ngg + facet_wrap(~session, nrow=2)"
   },
   {
     "objectID": "ggplot2.html#interlude-cosmétique-scale_-suite-et-guides",
     "href": "ggplot2.html#interlude-cosmétique-scale_-suite-et-guides",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.11 Interlude cosmétique : scale_ (suite) et guides\n",
-    "text": "7.11 Interlude cosmétique : scale_ (suite) et guides\n\nSi vous ne vous pâmez pas devant les couleurs par défaut, il est naturellement possible de les changer avec une des fonctions scale_color_*. Il en va de même pour les autres modes de représentation définis dans aes.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw, col=sp, size=sl) + geom_point()\ngg + scale_color_viridis_d(option = \"B\") + scale_size(range=c(0.5, 2))\n\n\n\n\nJe vous laisse explorer les scale_ en autonomie. Oui, il y a moyen d’y passer des journées. Le choix des couleurs est un sujet central car il faut penser à tout le monde : les daltoniens, les imprimantes noir et blanc. Et encore plus largement la perception des couleurs par l’œil et le cerveau humains.\nVous pouvez également ne pas vous en réferer à des palettes pré-construites et fixer vos propres couleurs avec un vecteur nommé et l’une des fonctions scale_*_manual :\n\nsp_cols &lt;- c(\"setosa\"=\"navyblue\", \"versicolor\"=\"purple\", \"virginica\"=\"firebrick3\")\ngg + scale_color_manual(values=sp_cols)"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.11 Interlude cosmétique : scale_ (suite) et guides\n",
+    "text": "10.11 Interlude cosmétique : scale_ (suite) et guides\n\nSi vous ne vous pâmez pas devant les couleurs par défaut, il est naturellement possible de les changer avec une des fonctions scale_color_*. Il en va de même pour les autres modes de représentation définis dans aes.\n\ngg &lt;- iris2 %&gt;% ggplot() + aes(pl, pw, col=sp, size=sl) + geom_point()\ngg + scale_color_viridis_d(option = \"B\") + scale_size(range=c(0.5, 2))\n\n\n\n\nJe vous laisse explorer les scale_ en autonomie. Oui, il y a moyen d’y passer des journées. Le choix des couleurs est un sujet central car il faut penser à tout le monde : les daltoniens, les imprimantes noir et blanc. Et encore plus largement la perception des couleurs par l’œil et le cerveau humains.\nVous pouvez également ne pas vous en réferer à des palettes pré-construites et fixer vos propres couleurs avec un vecteur nommé et l’une des fonctions scale_*_manual :\n\nsp_cols &lt;- c(\"setosa\"=\"navyblue\", \"versicolor\"=\"purple\", \"virginica\"=\"firebrick3\")\ngg + scale_color_manual(values=sp_cols)"
   },
   {
     "objectID": "ggplot2.html#une-fabrique-à-graphes",
     "href": "ggplot2.html#une-fabrique-à-graphes",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.12 %+% : une fabrique à graphes",
-    "text": "7.12 %+% : une fabrique à graphes\nPlus haut, je vous ai promis que les graphes ggplot2 étaient en soit des machines à faire des graphes3. Imaginons que nous disposions d’un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un ggplot que vous auriez construit avec amour et simplicité :\n\ngg &lt;- ggplot(iris2) + aes(pl, pw, col=sp) + geom_point()\ngg\n\n\n\n\nEt voilà un autre jeu de données, avec un peu de bruit gaussien pour tout le monde :\n\niris_bis &lt;- iris2 %&gt;% mutate(across(c(pl, pw), ~.x+rnorm(.x, sd=0.5)))\niris_bis\n\n# A tibble: 150 × 6\n      sl    sw    pl      pw sp     session\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;  \n 1   5.1   3.5 1.63   0.0196 setosa A      \n 2   4.9   3   0.854  0.289  setosa A      \n 3   4.7   3.2 0.320  0.0690 setosa A      \n 4   4.6   3.1 0.904 -0.497  setosa A      \n 5   5     3.6 0.857 -0.387  setosa A      \n 6   5.4   3.9 0.384  0.438  setosa A      \n 7   4.6   3.4 1.39  -0.112  setosa A      \n 8   5     3.4 1.35   0.120  setosa A      \n 9   4.4   2.9 1.85   0.216  setosa A      \n10   4.9   3.1 0.881 -0.980  setosa A      \n# ℹ 140 more rows\n\n\nNous pouvons remplacer le jeu de données utilisé initialement par gg (c’est à dire iris2) par votre nouveau jeu de données (c’est à dire iris_bis), en utilisant l’opérateur %+% :\n\ngg %+% iris_bis\n\n\n\n\nVous pouvez même modifier le ggplot ainsi obtenu. Ci-dessous, je pousse le bouchon jusqu’à manipuler au tout dernier moment iris_bis pour ajouter un numéro d’individu séquentiel et ajouter une étiquette avec geom_label, une variante de geom_text, tous deux bien utiles. À y être, je rajouter aussi une petite annotation, alignée à gauche sur le point (1; 2.5).\n\ngg2 &lt;- gg %+% mutate(iris_bis, i=1:n()) + \n  geom_label(aes(label=i)) + \n  annotate(\"text\", x=1, y=2.5, label=\"hello\", hjust=0)\ngg2"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.12 %+% : une fabrique à graphes",
+    "text": "10.12 %+% : une fabrique à graphes\nPlus haut, je vous ai promis que les graphes ggplot2 étaient en soit des machines à faire des graphes4. Imaginons que nous disposions d’un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un ggplot que vous auriez construit avec amour et simplicité :\n\ngg &lt;- ggplot(iris2) + aes(pl, pw, col=sp) + geom_point()\ngg\n\n\n\n\nEt voilà un autre jeu de données, avec un peu de bruit gaussien pour tout le monde :\n\niris_bis &lt;- iris2 %&gt;% mutate(across(c(pl, pw), ~.x+rnorm(.x, sd=0.5)))\niris_bis\n\n# A tibble: 150 × 6\n      sl    sw    pl      pw sp     session\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;  \n 1   5.1   3.5 1.05   0.247  setosa A      \n 2   4.9   3   1.53   0.621  setosa A      \n 3   4.7   3.2 1.28   0.167  setosa A      \n 4   4.6   3.1 1.93   0.830  setosa A      \n 5   5     3.6 0.972 -0.917  setosa A      \n 6   5.4   3.9 1.47  -0.410  setosa A      \n 7   4.6   3.4 1.38   0.667  setosa A      \n 8   5     3.4 1.40   0.861  setosa A      \n 9   4.4   2.9 0.997  0.0324 setosa A      \n10   4.9   3.1 2.01  -0.285  setosa A      \n# ℹ 140 more rows\n\n\nNous pouvons remplacer le jeu de données utilisé initialement par gg (c’est à dire iris2) par votre nouveau jeu de données (c’est à dire iris_bis), en utilisant l’opérateur %+% :\n\ngg %+% iris_bis\n\n\n\n\nVous pouvez même modifier le ggplot ainsi obtenu. Ci-dessous, je pousse le bouchon jusqu’à manipuler au tout dernier moment iris_bis pour ajouter un numéro d’individu séquentiel et ajouter une étiquette avec geom_label, une variante de geom_text, tous deux bien utiles. À y être, je rajouter aussi une petite annotation, alignée à gauche sur le point (1; 2.5).\n\ngg2 &lt;- gg %+% mutate(iris_bis, i=1:n()) + \n  geom_label(aes(label=i)) + \n  annotate(\"text\", x=1, y=2.5, label=\"hello\", hjust=0)\ngg2"
   },
   {
     "objectID": "ggplot2.html#un-package-bien-utile-patchwork",
     "href": "ggplot2.html#un-package-bien-utile-patchwork",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.13 Un package bien utile : patchwork\n",
-    "text": "7.13 Un package bien utile : patchwork\n\nQuantité de packages existent pour étendre encore les fonctionnalités de ggplot2. Nous pouvons citer :\n\n\nplotly : pour des graphes interactifs\n\nggmap : gestion des données spatiales et des projections\n\nggrepel : pour avoir des étiquettes de données non juxtaposées\n\nggdendro: representer des dendrogrammes et autres arbres\netc.\n\nNous ne présenterons que patchwork: qui permet l’assemblage intuitif de graphes. Son fonctionnement est simplissime. Si vous avez plusieurs ggplot vous pouvez les assembler, comme des “méta-facet” en quelque sorte. Les opérateurs + et / construisent un seul ggplot juxta- ou superposés :\n\nlibrary(patchwork)\ngg + gg2\n\n\n\ngg / gg2\n\n\n\n\nplot_layout et plot_annotation sont très utiles pour des compositions plus sophistiquées.\nEnfin, si vous avez non pas deux mais une quantité de graphes, par exemple dans une liste, wrap_plots fait le job.\nImaginons que je vous ai convaincu·e de ne désormais plus faire de terrain et de simuler vos données. Imaginons que vous simuliez K, disons 6, sessions de mesures.\nLe map ci-dessous fera l’objet de tout le chapitre suivant. Ici, un simple aperçu de sa puissance.\n\nK=6\n# simulate data\niris6 &lt;- map(seq_len(6), \n              ~iris2 %&gt;% mutate(across(c(pl, pw), ~.x+rnorm(.x, sd=0.5))))\n# build the ggs\ngg6 &lt;- map(iris6, ~ gg %+% .x)\n# patchwork them\nwrap_plots(gg6, ncol=3) + plot_layout(guides=\"collect\")"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.13 Un package bien utile : patchwork\n",
+    "text": "10.13 Un package bien utile : patchwork\n\nQuantité de packages existent pour étendre encore les fonctionnalités de ggplot2. Nous pouvons citer :\n\n\nplotly : pour des graphes interactifs\n\nggmap : gestion des données spatiales et des projections\n\nggrepel : pour avoir des étiquettes de données non juxtaposées\n\nggdendro: representer des dendrogrammes et autres arbres\netc.\n\nNous ne présenterons que patchwork: qui permet l’assemblage intuitif de graphes. Son fonctionnement est simplissime. Si vous avez plusieurs ggplot vous pouvez les assembler, comme des “méta-facet” en quelque sorte. Les opérateurs + et / construisent un seul ggplot juxta- ou superposés :\n\nlibrary(patchwork)\ngg + gg2\n\n\n\ngg / gg2\n\n\n\n\nplot_layout et plot_annotation sont très utiles pour des compositions plus sophistiquées.\nEnfin, si vous avez non pas deux mais une quantité de graphes, par exemple dans une liste, wrap_plots fait le job.\nImaginons que je vous ai convaincu·e de ne désormais plus faire de terrain et de simuler vos données. Imaginons que vous simuliez K, disons 6, sessions de mesures.\nLe map ci-dessous fera l’objet de tout le chapitre suivant. Ici, un simple aperçu de sa puissance.\n\nK=6\n# simulate data\niris6 &lt;- map(seq_len(6), \n              ~iris2 %&gt;% mutate(across(c(pl, pw), ~.x+rnorm(.x, sd=0.5))))\n# build the ggs\ngg6 &lt;- map(iris6, ~ gg %+% .x)\n# patchwork them\nwrap_plots(gg6, ncol=3) + plot_layout(guides=\"collect\")"
   },
   {
     "objectID": "ggplot2.html#sauvez-vos-créations-avec-ggsave",
     "href": "ggplot2.html#sauvez-vos-créations-avec-ggsave",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.14 Sauvez vos créations avec ggsave\n",
-    "text": "7.14 Sauvez vos créations avec ggsave\n\nUne fois que vous êtes satisfait·e de votre ggplot, vous pouvez le sauver vers un pdf, eps, jpg, png, etc. facilement avec la fonction ggsave.\nIl vous suffit d’appeller ggsave avec le nom de fichier et son extension correspondant au format que vous voulez sauver. Vous pouvez aussi spécifier la largeur et la hauteur de sortie. Par défaut ggsave sauve le dernier graphe produit mais vous pouvez spécifier l’argument plot de ggsave.\n\nggsave(\"my_plot_1.pdf\", gg, width=12, height=8)"
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.14 Sauvez vos créations avec ggsave\n",
+    "text": "10.14 Sauvez vos créations avec ggsave\n\nUne fois que vous êtes satisfait·e de votre ggplot, vous pouvez le sauver vers un pdf, eps, jpg, png, etc. facilement avec la fonction ggsave.\nIl vous suffit d’appeller ggsave avec le nom de fichier et son extension correspondant au format que vous voulez sauver. Vous pouvez aussi spécifier la largeur et la hauteur de sortie. Par défaut ggsave sauve le dernier graphe produit mais vous pouvez spécifier l’argument plot de ggsave.\n\nggsave(\"my_plot_1.pdf\", gg, width=12, height=8)"
   },
   {
     "objectID": "ggplot2.html#considérations-post-liminaires",
     "href": "ggplot2.html#considérations-post-liminaires",
-    "title": "\n7  Graphiques avec ggplot2\n",
-    "section": "\n7.15 Considérations post-liminaires",
-    "text": "7.15 Considérations post-liminaires\nggplot2 peut-être frustrant dans les premiers temps. Comme vous le savez la frustration est typique mais temporaire. ggplot2 mérite définitivement de s’y accrocher et les larmes de hargne seront bientôt remplacées par des cris de joie et des apéros en terrasse grâce au temps gagné."
+    "title": "\n10  Graphiques avec ggplot2\n",
+    "section": "\n10.15 Considérations post-liminaires",
+    "text": "10.15 Considérations post-liminaires\nggplot2 peut-être frustrant dans les premiers temps. Comme vous le savez la frustration est typique mais temporaire. ggplot2 mérite définitivement de s’y accrocher et les larmes de hargne seront bientôt remplacées par des cris de joie et des apéros en terrasse grâce au temps gagné."
   },
   {
     "objectID": "ggplot2.html#footnotes",
     "href": "ggplot2.html#footnotes",
-    "title": "\n7  Graphiques avec ggplot2\n",
+    "title": "\n10  Graphiques avec ggplot2\n",
     "section": "",
-    "text": "petite filouterie : si vous voulez convaincre visuellement, arrangez vous pour que vos regressions aient un angle de 45°↩︎\net ~sp sans point à gauche fonctionnerait aussi.↩︎\non pourrait parler de fonctions, et même de functionnals.↩︎"
+    "text": "?graphics↩︎\npetite filouterie : si vous voulez convaincre visuellement, arrangez vous pour que vos regressions aient un angle de 45°↩︎\net ~sp sans point à gauche fonctionnerait aussi.↩︎\non pourrait parler de fonctions, voire de fonction factories↩︎"
   },
   {
-    "objectID": "purrr.html",
-    "href": "purrr.html",
-    "title": "8  Manipulation de listes avec purrr",
-    "section": "",
-    "text": "Plop"
+    "objectID": "purrr.html#les-listes-cest-la-vie",
+    "href": "purrr.html#les-listes-cest-la-vie",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.1 Les listes c’est la vie",
+    "text": "11.1 Les listes c’est la vie\n\nz &lt;- list(wagon1=\"pomme\", wagon2=1:3, wagon3=c(TRUE, FALSE))\nlength(z)\n\n[1] 3\n\nnames(z)\n\n[1] \"wagon1\" \"wagon2\" \"wagon3\"\n\nstr(z)    # structure of z\n\nList of 3\n $ wagon1: chr \"pomme\"\n $ wagon2: int [1:3] 1 2 3\n $ wagon3: logi [1:2] TRUE FALSE\n\n# View(z) # RStudio Viewer\nz         # simple print method\n\n$wagon1\n[1] \"pomme\"\n\n$wagon2\n[1] 1 2 3\n\n$wagon3\n[1]  TRUE FALSE\n\n\nNe soyez pas effrayé·e par les listes : elles sont simplement des conteneurs pouvant accueillir des objets de classes différentes (ou non) et de longueur différentes (ou non).\nOn peut se figurer une liste comme un train dont les éléments seraient des wagons dont chacun contiendrait des conteneurs plus petits qui eux contiennent des éléments :\n  --  wagon 1  --        --  wagon 2  --       --  wagon 3  --\n[    [\"pomme\"]    ] -- [    [ 1:3 ]     ] - [    [ c(TRUE, FALSE) ]    ]\nUne liste s’indexe de plusieurs façons, positionnellement ou avec le nom de se(s) élément(s)-wagons s’ils sont nommés :\n\nz[2]        # using positionnal index\n\n$wagon2\n[1] 1 2 3\n\nz[\"wagon2\"] # using [\"name\"]\n\n$wagon2\n[1] 1 2 3\n\nclass(z[2])\n\n[1] \"list\"\n\n\nNotons que la syntaxe z$wagon2 fonctionne aussi.\nSi l’on utilise les doubles crochets, on accède directement au contenu des caisses dans les wagons. Ces derniers ont perdu leurs natures de “wagon”, ne sont plus des listes :\n\nz[[2]]        # using positionnal index\n\n[1] 1 2 3\n\nz[[\"wagon2\"]] # using [\"name\"]\n\n[1] 1 2 3\n\nclass(z[[2]])\n\n[1] \"integer\"\n\n\nLes assignations list[index] &lt;- et list[[index]] &lt;- fonctionnent comme à l’acoutumée."
+  },
+  {
+    "objectID": "purrr.html#map-à-la-vanille",
+    "href": "purrr.html#map-à-la-vanille",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.2 map à la vanille",
+    "text": "11.2 map à la vanille\nLe package purrr s’articule autour de la famille map dont il existe plusieurs variantes dont la première à voir est map tout court.\nL’idée est simple : appliquer une fonction à tous les éléments d’une liste et retourner une liste. La liste sera le premier argument de map, la fonction le second. Le nom de fonction est passé sans parenthèses :\n\nmap(z, class)\n\n$wagon1\n[1] \"character\"\n\n$wagon2\n[1] \"integer\"\n\n$wagon3\n[1] \"logical\""
+  },
+  {
+    "objectID": "purrr.html#map_-et-ses-autres-parfums",
+    "href": "purrr.html#map_-et-ses-autres-parfums",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.3 map_* et ses autres parfums",
+    "text": "11.3 map_* et ses autres parfums\nDans l’exemple ci-dessus, si l’on ne veut pas de liste mais un vecteur (quand cela est possible), on peut utiliser unlist :\n\nz %&gt;% map(class) %&gt;% unlist()\n\n     wagon1      wagon2      wagon3 \n\"character\"   \"integer\"   \"logical\" \n\n\nMais quand la classe de sortie d’une fonction map est homogène et connue, on utilisera plutôt les variantes de map de la forme map_*. * pouvant prendre les valeurs int et dbl pour retourner des numeric sous forme d’entiers ou de doubles, lgl pour les vectuers logiques, df, dfr et dfc pour retourner des data.frame, éventuellement combinés par row ou colonnes.\n\nz %&gt;% map_chr(class)\n\n     wagon1      wagon2      wagon3 \n\"character\"   \"integer\"   \"logical\" \n\nlist(1:2, 4:9) %&gt;% map_dbl(length)\n\n[1] 2 6"
+  },
+  {
+    "objectID": "purrr.html#et-x-les-fonctions-anonymes-sont-vos-amies",
+    "href": "purrr.html#et-x-les-fonctions-anonymes-sont-vos-amies",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.4 ~ et \\(x) : les fonctions anonymes sont vos amies",
+    "text": "11.4 ~ et \\(x) : les fonctions anonymes sont vos amies\nDans purrr et plus largement dans le tidyverse, on peut déclarer des fonctions anonymes, “à la volée” c’est à dire qu moment où l’on en a besoin. purrr mobilise l’opérateur ~ et la variable .x.\nR “de base” a repris l’idée dans une saveur un peu différente avec \\(x). Ces trois approches sont équivalentes :\n\nx &lt;- 1:5 # create a vector\n# option 1 : using a named function\nsquare &lt;- function(x) x^2\nmap_dbl(x, square)\n\n[1]  1  4  9 16 25\n\n# option 2 : purrr style anonymous function\nmap(x, ~.x^2)    \n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 9\n\n[[4]]\n[1] 16\n\n[[5]]\n[1] 25\n\n# option 3 : R base anonymous function\nmap(x, \\(x) x^2)  \n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 9\n\n[[4]]\n[1] 16\n\n[[5]]\n[1] 25"
+  },
+  {
+    "objectID": "purrr.html#map2-et-généralisation-pmap",
+    "href": "purrr.html#map2-et-généralisation-pmap",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.5 map2 et généralisation pmap\n",
+    "text": "11.5 map2 et généralisation pmap\n\nImaginons que vous ayez deux listes z1 et z2 et que chaque élément de z1 doivent être élevé à la puissance de chaque élément de z2. purrr généralise map avec deux listes avec les fonctions map2_* :\n\nz1 &lt;- list(4:5, c(3, 2, 4.25), 1:3)\nz2 &lt;- list(2, 1, 3)\nmap2(z1, z2, \\(x, y) x^y)\n\n[[1]]\n[1] 16 25\n\n[[2]]\n[1] 3.00 2.00 4.25\n\n[[3]]\n[1]  1  8 27\n\n\nSi vous avez plus de trois listes, vous pouvez utiliser pmap_, comme suit. Le premier argument sera une liste de toutes vos listes. Imaginons qu’après avoir élevé à la puissance de z2 nous voulions ajouter une valeur dans z3 :\n\nz3 &lt;- list(10, -5, 0)\npmap(list(z1, z2, z3), \\(x, y, z) x^y + z)\n\n[[1]]\n[1] 26 35\n\n[[2]]\n[1] -2.00 -3.00 -0.75\n\n[[3]]\n[1]  1  8 27"
+  },
+  {
+    "objectID": "purrr.html#opérations-sur-listes",
+    "href": "purrr.html#opérations-sur-listes",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.6 Opérations sur listes",
+    "text": "11.6 Opérations sur listes"
+  },
+  {
+    "objectID": "purrr.html#cheat-sheet",
+    "href": "purrr.html#cheat-sheet",
+    "title": "\n11  Manipulation de listes avec purrr\n",
+    "section": "\n11.7 cheat sheet",
+    "text": "11.7 cheat sheet"
   },
   {
     "objectID": "tidyrest.html#forcats",
     "href": "tidyrest.html#forcats",
-    "title": "9  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
-    "section": "9.1 forcats",
-    "text": "9.1 forcats"
+    "title": "12  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
+    "section": "12.1 forcats",
+    "text": "12.1 forcats"
   },
   {
     "objectID": "tidyrest.html#stringr",
     "href": "tidyrest.html#stringr",
-    "title": "9  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
-    "section": "9.2 stringr",
-    "text": "9.2 stringr"
+    "title": "12  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
+    "section": "12.2 stringr",
+    "text": "12.2 stringr"
   },
   {
     "objectID": "tidyrest.html#lubridate",
     "href": "tidyrest.html#lubridate",
-    "title": "9  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
-    "section": "9.3 lubridate",
-    "text": "9.3 lubridate"
+    "title": "12  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
+    "section": "12.3 lubridate",
+    "text": "12.3 lubridate"
   },
   {
     "objectID": "tidyrest.html#readr",
     "href": "tidyrest.html#readr",
-    "title": "9  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
-    "section": "9.4 readr",
-    "text": "9.4 readr"
+    "title": "12  Le reste du tidyverse au pas de course : forcats, stringr, lubridate et readr",
+    "section": "12.4 readr",
+    "text": "12.4 readr"
   },
   {
     "objectID": "vocabulaire.html#environnement",
     "href": "vocabulaire.html#environnement",
-    "title": "10  Dictionnaire",
-    "section": "10.1 Environnement",
-    "text": "10.1 Environnement\n\n&lt;-, assign : assigne une valeur\n%&gt;%/|&gt; : forward pipe g(f(x)) devient x %&gt;% f %&gt;% g\nget/setwd : accède et changer l’emplacement de travail\nhere::here est une alternative plus générique\nls : liste les objets dans l’environnement\nrm(list=ls()) : efface tous les objets mais votre ordinateur peut prendre feu1\nobject.size : taille d’un objet\ninstall.packages/library : installe et charge des packages\ncitation : citer les gentils gens\nsessionInfo : informations de session, notamment le versionnage"
+    "title": "13  Dictionnaire",
+    "section": "13.1 Environnement",
+    "text": "13.1 Environnement\n\n&lt;-, assign : assigne une valeur\n%&gt;%/|&gt; : forward pipe g(f(x)) devient x %&gt;% f %&gt;% g\nget/setwd : accède et changer l’emplacement de travail\nhere::here est une alternative plus générique\nls : liste les objets dans l’environnement\nrm(list=ls()) : efface tous les objets mais votre ordinateur peut prendre feu1\nobject.size : taille d’un objet\ninstall.packages/library : installe et charge des packages\ncitation : citer les gentils gens\nsessionInfo : informations de session, notamment le versionnage"
   },
   {
     "objectID": "vocabulaire.html#arithmétique",
     "href": "vocabulaire.html#arithmétique",
-    "title": "10  Dictionnaire",
-    "section": "10.2 Arithmétique",
-    "text": "10.2 Arithmétique\n\n\n\nopérateur\nsignification\n\n\n\n\n+\naddition\n\n\n-\nsoustraction\n\n\n/\ndivision\n\n\n*\nmultiplication\n\n\n%%\nmodulo\n\n\n%/%\ndivision euclidienne\n\n\n^\npuissance"
+    "title": "13  Dictionnaire",
+    "section": "13.2 Arithmétique",
+    "text": "13.2 Arithmétique\n\n\n\nopérateur\nsignification\n\n\n\n\n+\naddition\n\n\n-\nsoustraction\n\n\n/\ndivision\n\n\n*\nmultiplication\n\n\n%%\nmodulo\n\n\n%/%\ndivision euclidienne\n\n\n^\npuissance"
   },
   {
     "objectID": "vocabulaire.html#mathématiques",
     "href": "vocabulaire.html#mathématiques",
-    "title": "10  Dictionnaire",
-    "section": "10.3 Mathématiques",
-    "text": "10.3 Mathématiques\n\n\n\nfonction\nsignification\n\n\n\n\nlog\nlogarithme (népérien)\n\n\nlog10\nlogarithme (décimal)\n\n\nexp\nexponentielle\n\n\nsum\nsomme\n\n\nmin\nminimum\n\n\nmax\nmaximum\n\n\nrange\nétendue, raccourci pour c(min(x), max(x))\n\n\nmedian\nmédiane\n\n\nquantile\nquantile (voir l’argument probs)\n\n\nsummary\nun peu de tout ce qui précède\n\n\nround\narrondi classique\n\n\nsignif\ngarde n chiffres\n\n\nfloor\narrondi inférieur\n\n\nceiling\narrondi supérieur\n\n\nvar\nvariance\n\n\nsd\nécart-type\n\n\ncor(x, y)\ncorrélation\n\n\ncov(x, y)\ncovariance\n\n\ncos et al.\ntrigonométrie\n\n\n?Complex\npour la gestion des complexes"
+    "title": "13  Dictionnaire",
+    "section": "13.3 Mathématiques",
+    "text": "13.3 Mathématiques\n\n\n\nfonction\nsignification\n\n\n\n\nlog\nlogarithme (népérien)\n\n\nlog10\nlogarithme (décimal)\n\n\nexp\nexponentielle\n\n\nsum\nsomme\n\n\nmin\nminimum\n\n\nmax\nmaximum\n\n\nrange\nétendue, raccourci pour c(min(x), max(x))\n\n\nmedian\nmédiane\n\n\nquantile\nquantile (voir l’argument probs)\n\n\nsummary\nun peu de tout ce qui précède\n\n\nround\narrondi classique\n\n\nsignif\ngarde n chiffres\n\n\nfloor\narrondi inférieur\n\n\nceiling\narrondi supérieur\n\n\nvar\nvariance\n\n\nsd\nécart-type\n\n\ncor(x, y)\ncorrélation\n\n\ncov(x, y)\ncovariance\n\n\ncos et al.\ntrigonométrie\n\n\n?Complex\npour la gestion des complexes"
   },
   {
     "objectID": "vocabulaire.html#valeurs-spéciales",
     "href": "vocabulaire.html#valeurs-spéciales",
-    "title": "10  Dictionnaire",
-    "section": "10.4 Valeurs spéciales",
-    "text": "10.4 Valeurs spéciales\n\nNA pour les valeurs manquantes. na.omit et les arguments na.rm aident à filtrer ces valeurs.\nNULL : ensemble vide\n-Inf/Inf : ±∞\npi et autres constantes (?Constants), letters\nBeaucoup de jeux de données disponibles nativement, voir ?datasets ## Arithmétique"
+    "title": "13  Dictionnaire",
+    "section": "13.4 Valeurs spéciales",
+    "text": "13.4 Valeurs spéciales\n\nNA pour les valeurs manquantes. na.omit et les arguments na.rm aident à filtrer ces valeurs.\nNULL : ensemble vide\n-Inf/Inf : ±∞\npi et autres constantes (?Constants), letters\nBeaucoup de jeux de données disponibles nativement, voir ?datasets ## Arithmétique"
   },
   {
     "objectID": "vocabulaire.html#comparaison",
     "href": "vocabulaire.html#comparaison",
-    "title": "10  Dictionnaire",
-    "section": "10.5 Comparaison",
-    "text": "10.5 Comparaison\n\n\n\nopérateur\nsignification\n\n\n\n\n&lt;\nstrictement inférieur\n\n\n&lt;=\ninférieur ou égal\n\n\n&gt;\nstrictement supérieur\n\n\n&gt;=\nsupérieur ou égal\n\n\n==\négal\n\n\n!=\ndifférent\n\n\n%in%\ndans l’ensemble"
+    "title": "13  Dictionnaire",
+    "section": "13.5 Comparaison",
+    "text": "13.5 Comparaison\n\n\n\nopérateur\nsignification\n\n\n\n\n&lt;\nstrictement inférieur\n\n\n&lt;=\ninférieur ou égal\n\n\n&gt;\nstrictement supérieur\n\n\n&gt;=\nsupérieur ou égal\n\n\n==\négal\n\n\n!=\ndifférent\n\n\n%in%\ndans l’ensemble"
   },
   {
     "objectID": "vocabulaire.html#tests-logiques",
     "href": "vocabulaire.html#tests-logiques",
-    "title": "10  Dictionnaire",
-    "section": "10.6 Tests logiques",
-    "text": "10.6 Tests logiques\n\n\n\nopérateur\nsignification\n\n\n\n\n!\nNOT\n\n\n&\nAND (élément par élément)\n\n\n&&\nAND\n\n\n|\nOR (élément par élément)\n\n\n||\nOR\n\n\nxor(x, y)\nOR (exclusif)\n\n\nall\nteste si uniquement des TRUE\n\n\nany\nteste si l’une des conditions au moins est TRUE"
+    "title": "13  Dictionnaire",
+    "section": "13.6 Tests logiques",
+    "text": "13.6 Tests logiques\n\n\n\nopérateur\nsignification\n\n\n\n\n!\nNOT\n\n\n&\nAND (élément par élément)\n\n\n&&\nAND\n\n\n|\nOR (élément par élément)\n\n\n||\nOR\n\n\nxor(x, y)\nOR (exclusif)\n\n\nall\nteste si uniquement des TRUE\n\n\nany\nteste si l’une des conditions au moins est TRUE"
   },
   {
     "objectID": "vocabulaire.html#control-flow",
     "href": "vocabulaire.html#control-flow",
-    "title": "10  Dictionnaire",
-    "section": "10.7 Control flow",
-    "text": "10.7 Control flow\n\nToute la clique habituelle (?Control) : if, else, ifelse, for, while, next, break, etc."
+    "title": "13  Dictionnaire",
+    "section": "13.7 Control flow",
+    "text": "13.7 Control flow\n\nToute la clique habituelle (?Control) : if, else, ifelse, for, while, next, break, etc."
   },
   {
     "objectID": "vocabulaire.html#fonctions",
     "href": "vocabulaire.html#fonctions",
-    "title": "10  Dictionnaire",
-    "section": "10.8 Fonctions",
-    "text": "10.8 Fonctions\nnom_fonction &lt;- function(arg1=default1, arg2=default2, ...) {\n  # instructions\n  return()\n}\n\nLes arguments et leurs valeurs par défaut sont optionnels.\nreturn n’est pas obligatoire, la dernière ligne est renvoyée. Ne rien retourner est possible\nlist() pour des retours de plus d’une valeur\nfonctions anonymes, souvent créées à la volée: function(.x) .x*2 ou \\.x .x+2. Souvent passé en formula à map (argument .f), par exemple : ~x+3"
+    "title": "13  Dictionnaire",
+    "section": "13.8 Fonctions",
+    "text": "13.8 Fonctions\nnom_fonction &lt;- function(arg1=default1, arg2=default2, ...) {\n  # instructions\n  return()\n}\n\nLes arguments et leurs valeurs par défaut sont optionnels.\nreturn n’est pas obligatoire, la dernière ligne est renvoyée. Ne rien retourner est possible\nlist() pour des retours de plus d’une valeur\nfonctions anonymes, souvent créées à la volée: function(.x) .x*2 ou \\.x .x+2. Souvent passé en formula à map (argument .f), par exemple : ~x+3"
   },
   {
     "objectID": "vocabulaire.html#vecteurs",
     "href": "vocabulaire.html#vecteurs",
-    "title": "10  Dictionnaire",
-    "section": "10.9 Vecteurs",
-    "text": "10.9 Vecteurs\n\n[i]/[i]&lt;- : accède et modifie les i-ème(s) position d’un vecteur\nc : concatène des valeurs et crée un vecteur\nnames/names&lt;- : accède et change les noms d’un vecteur\nsort : ordonne un vecteur\norder : ordonne un vecteur mais retourne les indices\nrev : retourne un vecteur du dernier au premier élément\nunique : retourne les valeurs distinctes\ntable : compte les valeurs d’un ou de plusieurs vecteurs"
+    "title": "13  Dictionnaire",
+    "section": "13.9 Vecteurs",
+    "text": "13.9 Vecteurs\n\n[i]/[i]&lt;- : accède et modifie les i-ème(s) position d’un vecteur\nc : concatène des valeurs et crée un vecteur\nnames/names&lt;- : accède et change les noms d’un vecteur\nsort : ordonne un vecteur\norder : ordonne un vecteur mais retourne les indices\nrev : retourne un vecteur du dernier au premier élément\nunique : retourne les valeurs distinctes\ntable : compte les valeurs d’un ou de plusieurs vecteurs"
   },
   {
     "objectID": "vocabulaire.html#séquences-régulières-et-aléatoires",
     "href": "vocabulaire.html#séquences-régulières-et-aléatoires",
-    "title": "10  Dictionnaire",
-    "section": "10.10 Séquences régulières et aléatoires",
-    "text": "10.10 Séquences régulières et aléatoires\n\nseq : séquences régulières\na:b : raccourci pour seq(a, b)\nrep : répète un vecteur ou ses éléments\nrunif/rnorm/rbinom : nombres aléatoires issus d’une distribution uniforme, normale, binomiale. Voir ?Distributions"
+    "title": "13  Dictionnaire",
+    "section": "13.10 Séquences régulières et aléatoires",
+    "text": "13.10 Séquences régulières et aléatoires\n\nseq : séquences régulières\na:b : raccourci pour seq(a, b)\nrep : répète un vecteur ou ses éléments\nrunif/rnorm/rbinom : nombres aléatoires issus d’une distribution uniforme, normale, binomiale. Voir ?Distributions"
   },
   {
     "objectID": "vocabulaire.html#matrices",
     "href": "vocabulaire.html#matrices",
-    "title": "10  Dictionnaire",
-    "section": "10.11 Matrices",
-    "text": "10.11 Matrices\n\n[i, j] + [i, j]&lt;- : accède et modifie les valeurs aux i-ième(s) et j-ième(s) indices (lignes puis colonnes)\nmatrix/data.frame : création\nis/as.matrix et is/as.data.frame : test et conversion de type\ncol/rownames et col/rownames&lt;- : accéder et définir row/colnames\nt : transposition\n%*% : multiplication matricielle (matrix only)\napply : opération marginale\nrow/colSums : raccourci pour apply(m, 1/2, sum)"
+    "title": "13  Dictionnaire",
+    "section": "13.11 Matrices",
+    "text": "13.11 Matrices\n\n[i, j] + [i, j]&lt;- : accède et modifie les valeurs aux i-ième(s) et j-ième(s) indices (lignes puis colonnes)\nmatrix/data.frame : création\nis/as.matrix et is/as.data.frame : test et conversion de type\ncol/rownames et col/rownames&lt;- : accéder et définir row/colnames\nt : transposition\n%*% : multiplication matricielle (matrix only)\napply : opération marginale\nrow/colSums : raccourci pour apply(m, 1/2, sum)"
   },
   {
     "objectID": "vocabulaire.html#listes",
     "href": "vocabulaire.html#listes",
-    "title": "10  Dictionnaire",
-    "section": "10.12 Listes",
-    "text": "10.12 Listes"
+    "title": "13  Dictionnaire",
+    "section": "13.12 Listes",
+    "text": "13.12 Listes"
   },
   {
     "objectID": "vocabulaire.html#dplyr-manipulation-de-data.frame",
     "href": "vocabulaire.html#dplyr-manipulation-de-data.frame",
-    "title": "10  Dictionnaire",
-    "section": "10.13 dplyr : Manipulation de data.frame",
-    "text": "10.13 dplyr : Manipulation de data.frame\n\nRStudio : Help &gt; Cheatsheets &gt; dplyr : très bonne adresse\nvignette(package=\"dplyr\"), par ex. vignette(\"dplyr\")\non préférera les tibbles qui apportent des améliorations cosmétiques aux data.frame (as_tibble)\ntibble et tribble pour le constructeur\nslice : filtre sur les lignes avec des indices\nfilter : filtre sur les lignes avec des tests logiques\nselect : sélectionner et réordonne les colonnes\nstarts_with et autres helpers de tidyselect\nrename : renomme les colonnes\nmutate : crée de nouvelles colonnes\ngroup_by/ungroup : groupe, déproupe par colonnes\nsummarise : résume en 1 ligne ou 1 ligne par groupe, des colonnes\ngroup_split : tranche une tibble par groupe\nbind_rows/cols : colle par lignes ou colonnes\n*_join : opérations de join sur deux tables partageant un index"
+    "title": "13  Dictionnaire",
+    "section": "13.13 dplyr : Manipulation de data.frame",
+    "text": "13.13 dplyr : Manipulation de data.frame\n\nRStudio : Help &gt; Cheatsheets &gt; dplyr : très bonne adresse\nvignette(package=\"dplyr\"), par ex. vignette(\"dplyr\")\non préférera les tibbles qui apportent des améliorations cosmétiques aux data.frame (as_tibble)\ntibble et tribble pour le constructeur\nslice : filtre sur les lignes avec des indices\nfilter : filtre sur les lignes avec des tests logiques\nselect : sélectionner et réordonne les colonnes\nstarts_with et autres helpers de tidyselect\nrename : renomme les colonnes\nmutate : crée de nouvelles colonnes\ngroup_by/ungroup : groupe, déproupe par colonnes\nsummarise : résume en 1 ligne ou 1 ligne par groupe, des colonnes\ngroup_split : tranche une tibble par groupe\nbind_rows/cols : colle par lignes ou colonnes\n*_join : opérations de join sur deux tables partageant un index"
   },
   {
     "objectID": "vocabulaire.html#stringr-manipulation-de-chaines-de-caractères",
     "href": "vocabulaire.html#stringr-manipulation-de-chaines-de-caractères",
-    "title": "10  Dictionnaire",
-    "section": "10.14 stringr : manipulation de chaines de caractères",
-    "text": "10.14 stringr : manipulation de chaines de caractères\n\nvignette(package=\"stringr\"), par ex. vignette(\"stringr\")"
+    "title": "13  Dictionnaire",
+    "section": "13.14 stringr : manipulation de chaines de caractères",
+    "text": "13.14 stringr : manipulation de chaines de caractères\n\nvignette(package=\"stringr\"), par ex. vignette(\"stringr\")"
   },
   {
     "objectID": "vocabulaire.html#ggplot2-un-grammaire-pour-les-graphes",
     "href": "vocabulaire.html#ggplot2-un-grammaire-pour-les-graphes",
-    "title": "10  Dictionnaire",
-    "section": "10.15 ggplot2 : un grammaire pour les graphes",
-    "text": "10.15 ggplot2 : un grammaire pour les graphes\n\nvignette(package=\"ggplot2\"), par ex. vignette(\"ggplot2\")\nRStudio : Help &gt; Cheatsheets &gt; ggplot2 : très bonne adresse"
+    "title": "13  Dictionnaire",
+    "section": "13.15 ggplot2 : un grammaire pour les graphes",
+    "text": "13.15 ggplot2 : un grammaire pour les graphes\n\nvignette(package=\"ggplot2\"), par ex. vignette(\"ggplot2\")\nRStudio : Help &gt; Cheatsheets &gt; ggplot2 : très bonne adresse"
   },
   {
     "objectID": "vocabulaire.html#forcats-manipulation-de-facteurs",
     "href": "vocabulaire.html#forcats-manipulation-de-facteurs",
-    "title": "10  Dictionnaire",
-    "section": "10.16 forcats : manipulation de facteurs",
-    "text": "10.16 forcats : manipulation de facteurs\n\nvignette(package=\"forcats\"), par ex. vignette(\"forcats\")"
+    "title": "13  Dictionnaire",
+    "section": "13.16 forcats : manipulation de facteurs",
+    "text": "13.16 forcats : manipulation de facteurs\n\nvignette(package=\"forcats\"), par ex. vignette(\"forcats\")"
   },
   {
     "objectID": "vocabulaire.html#purrr-travailler-avec-des-listes",
     "href": "vocabulaire.html#purrr-travailler-avec-des-listes",
-    "title": "10  Dictionnaire",
-    "section": "10.17 purrr : travailler avec des listes",
-    "text": "10.17 purrr : travailler avec des listes\n\nvignette(package=\"purrr\"), par ex. vignette(\"purrr\")\nRStudio : Help &gt; Cheatsheets &gt; purrr : très bonne adresse\nmap(liste, function) : travaille sur une liste, retourne une liste\nmap(liste, ~.x %&gt;% ...) : accepte les fonctions anonymes\nmap_{dbl, chr, lgl, df, dfr, dfc} : idem mais retourne des numeric, character, logical, data.frame, data.frame collés par lignes/colonnes\nmap2_*(liste1, liste2, ...) : idem pour deux listes\npmap_* : généralisation à N listes"
+    "title": "13  Dictionnaire",
+    "section": "13.17 purrr : travailler avec des listes",
+    "text": "13.17 purrr : travailler avec des listes\n\nvignette(package=\"purrr\"), par ex. vignette(\"purrr\")\nRStudio : Help &gt; Cheatsheets &gt; purrr : très bonne adresse\nmap(liste, function) : travaille sur une liste, retourne une liste\nmap(liste, ~.x %&gt;% ...) : accepte les fonctions anonymes\nmap_{dbl, chr, lgl, df, dfr, dfc} : idem mais retourne des numeric, character, logical, data.frame, data.frame collés par lignes/colonnes\nmap2_*(liste1, liste2, ...) : idem pour deux listes\npmap_* : généralisation à N listes"
   },
   {
     "objectID": "vocabulaire.html#importexport",
     "href": "vocabulaire.html#importexport",
-    "title": "10  Dictionnaire",
-    "section": "10.18 Import/Export",
-    "text": "10.18 Import/Export\n\ntexte brut : readLines\nlire des tables : read.table, readr::read_csv, xlsx::read.xlsx.\nImport dataset dans RStudio est moins pénible de prime abord\nécrire des tables : write.table, readr::write_csv, xlsx::write.xlsx\nsave/load : sauve et charge un objet R/.rda\npour les plots de graphics : pdf(...) {...} dev.off()\npour les ggplot de ggplot2 : ggsave"
+    "title": "13  Dictionnaire",
+    "section": "13.18 Import/Export",
+    "text": "13.18 Import/Export\n\ntexte brut : readLines\nlire des tables : read.table, readr::read_csv, xlsx::read.xlsx.\nImport dataset dans RStudio est moins pénible de prime abord\nécrire des tables : write.table, readr::write_csv, xlsx::write.xlsx\nsave/load : sauve et charge un objet R/.rda\npour les plots de graphics : pdf(...) {...} dev.off()\npour les ggplot de ggplot2 : ggsave"
   },
   {
     "objectID": "vocabulaire.html#interactions-audio-visuelles",
     "href": "vocabulaire.html#interactions-audio-visuelles",
-    "title": "10  Dictionnaire",
-    "section": "10.19 Interactions audio-visuelles",
-    "text": "10.19 Interactions audio-visuelles\n\nbips : package beepr\nbarres de progression : package progress\ninvite de commande : readline\nlogs : sink\nSys.sleep, Sys.time, Sys.* : pause, horodatage, autres interactions"
+    "title": "13  Dictionnaire",
+    "section": "13.19 Interactions audio-visuelles",
+    "text": "13.19 Interactions audio-visuelles\n\nbips : package beepr\nbarres de progression : package progress\ninvite de commande : readline\nlogs : sink\nSys.sleep, Sys.time, Sys.* : pause, horodatage, autres interactions"
   },
   {
     "objectID": "vocabulaire.html#footnotes",
     "href": "vocabulaire.html#footnotes",
-    "title": "10  Dictionnaire",
+    "title": "13  Dictionnaire",
     "section": "",
     "text": "https://twitter.com/hadleywickham/status/940021008764846080↩︎"
   },
   {
     "objectID": "ressources.html#must-see",
     "href": "ressources.html#must-see",
-    "title": "11  Ressources",
-    "section": "11.1 Must see",
-    "text": "11.1 Must see\n\n[R] chez Stack Overflow"
+    "title": "14  Ressources",
+    "section": "14.1 Must see",
+    "text": "14.1 Must see\n\n[R] chez Stack Overflow"
   },
   {
     "objectID": "ressources.html#moteur-de-recherche",
     "href": "ressources.html#moteur-de-recherche",
-    "title": "11  Ressources",
-    "section": "11.2 Moteur de recherche",
-    "text": "11.2 Moteur de recherche\n\nRseek dédié à R"
+    "title": "14  Ressources",
+    "section": "14.2 Moteur de recherche",
+    "text": "14.2 Moteur de recherche\n\nRseek dédié à R"
   },
   {
     "objectID": "ressources.html#journaux",
     "href": "ressources.html#journaux",
-    "title": "11  Ressources",
-    "section": "11.3 Journaux",
-    "text": "11.3 Journaux\n\nR-Journal : la gazette de R avec les nouveaux packages, des astuces, des articles techniques. Open access.\nJournal of Statistical Software : officiellement multilangages, en pratique, beaucoup de nouveaux packages R. Open access."
+    "title": "14  Ressources",
+    "section": "14.3 Journaux",
+    "text": "14.3 Journaux\n\nR-Journal : la gazette de R avec les nouveaux packages, des astuces, des articles techniques. Open access.\nJournal of Statistical Software : officiellement multilangages, en pratique, beaucoup de nouveaux packages R. Open access."
   },
   {
     "objectID": "ressources.html#manuels",
     "href": "ressources.html#manuels",
-    "title": "11  Ressources",
-    "section": "11.4 Manuels",
-    "text": "11.4 Manuels\n\nD’excellents tutoriels sont regroupés sur le site du CRAN, en anglais et d’autres langues.\nDocumentation officielle, éditée par la R Development Core Team : introduction à R, définition du langage per se, package authoring, etc. : assez aride et souvent très technique (et pas uniquement pour les novices) mais reste la référence absolue.\nR pour les débutants [fr], [en] : la mère de tous les tutoriels courts sur R, très complete introduction à R, une excellent adresse par Emmanuel Paradis.\nUne introduction à R : une autre excellente ressource, par Julien Barnier.\nAide mémoire de statistique appliquée à la biologie : un document très concis et très utile par Maxime Hervé. Malgré non nom, sa portée est au delà de la biologie et globalement une bon résumé pour l’analyse statistique depuis la préparation jusqu’à l’analyse."
+    "title": "14  Ressources",
+    "section": "14.4 Manuels",
+    "text": "14.4 Manuels\n\nD’excellents tutoriels sont regroupés sur le site du CRAN, en anglais et d’autres langues.\nDocumentation officielle, éditée par la R Development Core Team : introduction à R, définition du langage per se, package authoring, etc. : assez aride et souvent très technique (et pas uniquement pour les novices) mais reste la référence absolue.\nR pour les débutants [fr], [en] : la mère de tous les tutoriels courts sur R, très complete introduction à R, une excellent adresse par Emmanuel Paradis.\nUne introduction à R : une autre excellente ressource, par Julien Barnier.\nAide mémoire de statistique appliquée à la biologie : un document très concis et très utile par Maxime Hervé. Malgré non nom, sa portée est au delà de la biologie et globalement une bon résumé pour l’analyse statistique depuis la préparation jusqu’à l’analyse."
   },
   {
     "objectID": "ressources.html#ouvrages",
     "href": "ressources.html#ouvrages",
-    "title": "11  Ressources",
-    "section": "11.5 Ouvrages",
-    "text": "11.5 Ouvrages\n\nDiscover statistics using R (2012) par Andy Field, Jeremy Miles et Zoë Field (992pp.) chez Sage. Une excellente ressource très complète et vivante.\nThe R Book (2012) Seconde édition par Michael J. Crawley. Une autre bonne ressource, complète, sur R.\n* R for Data Science* LA référence\nUse R! Série (50+ ouvrages) publiée chez Springer. Généralement excellente et focalisée sur une problématique\nAdvanced R par Hadley Wickham. En ligne et en version imprimée. Plongée dans la tambouille interne de R.\nR packages par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l’écriture de packages.\nEfficient R programming par Colin Gillespie et Robin Lovelace. Un cran plus loin, et meilleur, pour les programmeurs avertis.\nS poetry: un livre sur les origines de R, sur l’élégance de S.\nThe R Inferno: le contre-point du précédent, par le même auteur, sur les singularités de R.\nR packages par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l’écriture de packages."
+    "title": "14  Ressources",
+    "section": "14.5 Ouvrages",
+    "text": "14.5 Ouvrages\n\nDiscover statistics using R (2012) par Andy Field, Jeremy Miles et Zoë Field (992pp.) chez Sage. Une excellente ressource très complète et vivante.\nThe R Book (2012) Seconde édition par Michael J. Crawley. Une autre bonne ressource, complète, sur R.\n* R for Data Science* LA référence\nUse R! Série (50+ ouvrages) publiée chez Springer. Généralement excellente et focalisée sur une problématique\nAdvanced R par Hadley Wickham. En ligne et en version imprimée. Plongée dans la tambouille interne de R.\nR packages par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l’écriture de packages.\nEfficient R programming par Colin Gillespie et Robin Lovelace. Un cran plus loin, et meilleur, pour les programmeurs avertis.\nS poetry: un livre sur les origines de R, sur l’élégance de S.\nThe R Inferno: le contre-point du précédent, par le même auteur, sur les singularités de R.\nR packages par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l’écriture de packages."
   },
   {
     "objectID": "ressources.html#sites",
     "href": "ressources.html#sites",
-    "title": "11  Ressources",
-    "section": "11.6 Sites",
-    "text": "11.6 Sites\n\nR-bloggers : aggrégation de blogs qui traitent de R, quelques posts par jour, éclectique, une excellente ressource pour être à la page. tl;dr: un best-of ici\ncrantastic : un site qui récupère toute l’activité sur les dépôts de packages. Permet de reviewer des packages, de chercher par auteur, etc.\nRPubs : sérendipité, me voilà !\nR graph gallery : collection de graphiques, qui ne fera pas oublier la gallerie “addicted to R” qui est en maintenance ou abandonnée depuis un bail\nR-Studio’s blog : par l’équipe de R Studio, dernières actualités du développement de R Studio et des packages par son équipe\nCRAN Views : pour bien commencer avec les packages\nPortail Wikipédia des statistiques [en] : en attendant le bus, le métro, le train, le dodo, une excellente et quasi infinie ressource.\nThe Data and Story Library : des jeux de données célèbres, accompagnés de leurs histoires.\nKarl Broman : tous ses tutoriels sont délicieux et en particulier : préparation de données dans un tableur et rééducation R pour les gens qui l’ont appris avec qu’il ne deviennent cool\nPBIL : Statistiques pour la biologie (mais pas que, loin de là) par l’université de Lyon.\nWikiStats : ressources statistiques par l’INSA et le département de maths de l’université de Toulouse."
+    "title": "14  Ressources",
+    "section": "14.6 Sites",
+    "text": "14.6 Sites\n\nR-bloggers : aggrégation de blogs qui traitent de R, quelques posts par jour, éclectique, une excellente ressource pour être à la page. tl;dr: un best-of ici\ncrantastic : un site qui récupère toute l’activité sur les dépôts de packages. Permet de reviewer des packages, de chercher par auteur, etc.\nRPubs : sérendipité, me voilà !\nR graph gallery : collection de graphiques, qui ne fera pas oublier la gallerie “addicted to R” qui est en maintenance ou abandonnée depuis un bail\nR-Studio’s blog : par l’équipe de R Studio, dernières actualités du développement de R Studio et des packages par son équipe\nCRAN Views : pour bien commencer avec les packages\nPortail Wikipédia des statistiques [en] : en attendant le bus, le métro, le train, le dodo, une excellente et quasi infinie ressource.\nThe Data and Story Library : des jeux de données célèbres, accompagnés de leurs histoires.\nKarl Broman : tous ses tutoriels sont délicieux et en particulier : préparation de données dans un tableur et rééducation R pour les gens qui l’ont appris avec qu’il ne deviennent cool\nPBIL : Statistiques pour la biologie (mais pas que, loin de là) par l’université de Lyon.\nWikiStats : ressources statistiques par l’INSA et le département de maths de l’université de Toulouse."
   },
   {
     "objectID": "ressources.html#cheatsheets",
     "href": "ressources.html#cheatsheets",
-    "title": "11  Ressources",
-    "section": "11.7 Cheatsheets",
-    "text": "11.7 Cheatsheets\n\nRStudio’s, dplyr, shiny, rmarkdown, etc. cheatsheets : génial\nR Vocabulary : back to basics\nMagott et al.’s refcard : ma préférée\nJonathan Baron’s refcard\nTom Short’s refcard\nColors cheatsheet"
+    "title": "14  Ressources",
+    "section": "14.7 Cheatsheets",
+    "text": "14.7 Cheatsheets\n\nRStudio’s, dplyr, shiny, rmarkdown, etc. cheatsheets : génial\nR Vocabulary : back to basics\nMagott et al.’s refcard : ma préférée\nJonathan Baron’s refcard\nTom Short’s refcard\nColors cheatsheet"
   },
   {
     "objectID": "ressources.html#style-guides",
     "href": "ressources.html#style-guides",
-    "title": "11  Ressources",
-    "section": "11.8 Style guides",
-    "text": "11.8 Style guides\n\nGoogle’s R style guide : longtemps la référence\nHadley Wickham’s style guide : plus courte, meilleure à l’usage et dans l’usage"
+    "title": "14  Ressources",
+    "section": "14.8 Style guides",
+    "text": "14.8 Style guides\n\nGoogle’s R style guide : longtemps la référence\nHadley Wickham’s style guide : plus courte, meilleure à l’usage et dans l’usage"
   },
   {
     "objectID": "ressources.html#miscellanées",
     "href": "ressources.html#miscellanées",
-    "title": "11  Ressources",
-    "section": "11.9 Miscellanées",
-    "text": "11.9 Miscellanées\n\nDébug et canard en plastique\nCalculer son alcoolémie avec R\nLa recette des falafels avec R\nUne autre liste de ressources"
+    "title": "14  Ressources",
+    "section": "14.9 Miscellanées",
+    "text": "14.9 Miscellanées\n\nDébug et canard en plastique\nCalculer son alcoolémie avec R\nLa recette des falafels avec R\nUne autre liste de ressources"
   },
   {
     "objectID": "ressources.html#quotes",
     "href": "ressources.html#quotes",
-    "title": "11  Ressources",
-    "section": "11.10 Quotes",
-    "text": "11.10 Quotes\n\nTout ici est délicieux mais on peut rajouter :\n\n\nFrustration is typical and temporary - Hadley Wickham\n\n\nIf the statistics are boring, then you’ve got the wrong numbers. - Edward Tufte\n\n\nAlways code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - John Wood\n\n\nAt their best, graphics are tools for reasonning about quantitative information. - Edward Tufte\n\n\nThere are three types of lies - lies, damn lies, and statistics. ― Benjamin Disraeli\n\n\nLes statistiques sont comme la dentelle des petites culottes : elles révèlent le superflu mais cachent l’essentiel - ?\n\n\nL’analyse statistique n’est vraiment utile qu’à des personnes qui n’en n’ont pas la maîtrise, et n’est maîtrisée que par des personnes qui n’en n’ont pas vraiment l’usage - Daniel Chessel"
+    "title": "14  Ressources",
+    "section": "14.10 Quotes",
+    "text": "14.10 Quotes\n\nTout ici est délicieux mais on peut rajouter :\n\n\nFrustration is typical and temporary - Hadley Wickham\n\n\nIf the statistics are boring, then you’ve got the wrong numbers. - Edward Tufte\n\n\nAlways code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - John Wood\n\n\nAt their best, graphics are tools for reasonning about quantitative information. - Edward Tufte\n\n\nThere are three types of lies - lies, damn lies, and statistics. ― Benjamin Disraeli\n\n\nLes statistiques sont comme la dentelle des petites culottes : elles révèlent le superflu mais cachent l’essentiel - ?\n\n\nL’analyse statistique n’est vraiment utile qu’à des personnes qui n’en n’ont pas la maîtrise, et n’est maîtrisée que par des personnes qui n’en n’ont pas vraiment l’usage - Daniel Chessel"
   }
 ]
