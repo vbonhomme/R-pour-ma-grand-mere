@@ -127,8 +127,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./toc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Préambule</span></span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,44 +151,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vocabulaire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
   </div>
 </li>
     </ul>
@@ -196,64 +214,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Au menu</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Dans ce chapitre</h2>
    
   <ul>
 <li><a href="#arithm%C3%A9tique" id="toc-arithmétique" class="nav-link active" data-scroll-target="#arithm%C3%A9tique"><span class="header-section-number">3.1</span> Arithmétique</a></li>
   <li><a href="#variables-et-assignation" id="toc-variables-et-assignation" class="nav-link" data-scroll-target="#variables-et-assignation"><span class="header-section-number">3.2</span> Variables et assignation</a></li>
   <li><a href="#bien-nommer-ses-variables" id="toc-bien-nommer-ses-variables" class="nav-link" data-scroll-target="#bien-nommer-ses-variables"><span class="header-section-number">3.3</span> Bien nommer ses variables</a></li>
   <li><a href="#s%C3%A9quences-r%C3%A9guli%C3%A8res" id="toc-séquences-régulières" class="nav-link" data-scroll-target="#s%C3%A9quences-r%C3%A9guli%C3%A8res"><span class="header-section-number">3.4</span> Séquences régulières</a></li>
+  <li><a href="#interlude-clavier" id="toc-interlude-clavier" class="nav-link" data-scroll-target="#interlude-clavier"><span class="header-section-number">3.5</span> Interlude clavier</a></li>
   <li>
-<a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">3.5</span> Fonctions</a>
+<a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">3.6</span> Fonctions</a>
   <ul class="collapse">
-<li><a href="#que-sont-les-fonctions" id="toc-que-sont-les-fonctions" class="nav-link" data-scroll-target="#que-sont-les-fonctions"><span class="header-section-number">3.5.1</span> Que sont les fonctions ?</a></li>
-  <li><a href="#%C3%A9crire-ses-fonctions-function" id="toc-écrire-ses-fonctions-function" class="nav-link" data-scroll-target="#%C3%A9crire-ses-fonctions-function"><span class="header-section-number">3.5.2</span> Écrire ses fonctions : <code>function</code></a></li>
-  <li><a href="#notions-denvironnement" id="toc-notions-denvironnement" class="nav-link" data-scroll-target="#notions-denvironnement"><span class="header-section-number">3.5.3</span> Notions d’environnement</a></li>
-  <li><a href="#documentation-des-fonctions" id="toc-documentation-des-fonctions" class="nav-link" data-scroll-target="#documentation-des-fonctions"><span class="header-section-number">3.5.4</span> Documentation des fonctions : <code>?</code></a></li>
-  <li><a href="#arguments-noms-positions-et-valeurs-par-d%C3%A9faut" id="toc-arguments-noms-positions-et-valeurs-par-défaut" class="nav-link" data-scroll-target="#arguments-noms-positions-et-valeurs-par-d%C3%A9faut"><span class="header-section-number">3.5.5</span> Arguments : noms, positions et valeurs par défaut</a></li>
+<li><a href="#que-sont-les-fonctions" id="toc-que-sont-les-fonctions" class="nav-link" data-scroll-target="#que-sont-les-fonctions"><span class="header-section-number">3.6.1</span> Que sont les fonctions ?</a></li>
+  <li><a href="#%C3%A9crire-ses-fonctions-function" id="toc-écrire-ses-fonctions-function" class="nav-link" data-scroll-target="#%C3%A9crire-ses-fonctions-function"><span class="header-section-number">3.6.2</span> Écrire ses fonctions : <code>function</code></a></li>
+  <li><a href="#notions-denvironnement" id="toc-notions-denvironnement" class="nav-link" data-scroll-target="#notions-denvironnement"><span class="header-section-number">3.6.3</span> Notions d’environnement</a></li>
+  <li><a href="#documentation-des-fonctions" id="toc-documentation-des-fonctions" class="nav-link" data-scroll-target="#documentation-des-fonctions"><span class="header-section-number">3.6.4</span> Documentation des fonctions : <code>?</code></a></li>
+  <li><a href="#arguments-noms-positions-et-valeurs-par-d%C3%A9faut" id="toc-arguments-noms-positions-et-valeurs-par-défaut" class="nav-link" data-scroll-target="#arguments-noms-positions-et-valeurs-par-d%C3%A9faut"><span class="header-section-number">3.6.5</span> Arguments : noms, positions et valeurs par défaut</a></li>
   </ul>
 </li>
-  <li><a href="#concept-de-recyclage" id="toc-concept-de-recyclage" class="nav-link" data-scroll-target="#concept-de-recyclage"><span class="header-section-number">3.6</span> Concept de recyclage</a></li>
-  <li><a href="#indexation-saisir-et-changer-des-valeurs" id="toc-indexation-saisir-et-changer-des-valeurs" class="nav-link" data-scroll-target="#indexation-saisir-et-changer-des-valeurs"><span class="header-section-number">3.7</span> Indexation <code>[</code> : saisir et changer des valeurs</a></li>
-  <li><a href="#op%C3%A9rateurs-de-comparaison-et-logiques" id="toc-opérateurs-de-comparaison-et-logiques" class="nav-link" data-scroll-target="#op%C3%A9rateurs-de-comparaison-et-logiques"><span class="header-section-number">3.8</span> Opérateurs de comparaison et logiques</a></li>
+  <li><a href="#concept-de-recyclage" id="toc-concept-de-recyclage" class="nav-link" data-scroll-target="#concept-de-recyclage"><span class="header-section-number">3.7</span> Concept de recyclage</a></li>
+  <li><a href="#indexation-saisir-et-changer-des-valeurs" id="toc-indexation-saisir-et-changer-des-valeurs" class="nav-link" data-scroll-target="#indexation-saisir-et-changer-des-valeurs"><span class="header-section-number">3.8</span> Indexation <code>[</code> : saisir et changer des valeurs</a></li>
+  <li><a href="#op%C3%A9rateurs-de-comparaison-et-logiques" id="toc-opérateurs-de-comparaison-et-logiques" class="nav-link" data-scroll-target="#op%C3%A9rateurs-de-comparaison-et-logiques"><span class="header-section-number">3.9</span> Opérateurs de comparaison et logiques</a></li>
   <li>
-<a href="#classes-dobjets" id="toc-classes-dobjets" class="nav-link" data-scroll-target="#classes-dobjets"><span class="header-section-number">3.9</span> Classes d’objets</a>
+<a href="#classes-dobjets" id="toc-classes-dobjets" class="nav-link" data-scroll-target="#classes-dobjets"><span class="header-section-number">3.10</span> Classes d’objets</a>
   <ul class="collapse">
-<li><a href="#class" id="toc-class" class="nav-link" data-scroll-target="#class"><span class="header-section-number">3.9.1</span> <code>class</code></a></li>
-  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="header-section-number">3.9.2</span> <code>character</code></a></li>
-  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="header-section-number">3.9.3</span> <code>numeric</code></a></li>
-  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="header-section-number">3.9.4</span> <code>factor</code></a></li>
-  <li><a href="#logical" id="toc-logical" class="nav-link" data-scroll-target="#logical"><span class="header-section-number">3.9.5</span> <code>logical</code></a></li>
-  <li><a href="#list" id="toc-list" class="nav-link" data-scroll-target="#list"><span class="header-section-number">3.9.6</span> <code>list</code></a></li>
-  <li><a href="#data.frame" id="toc-data.frame" class="nav-link" data-scroll-target="#data.frame"><span class="header-section-number">3.9.7</span> <code>data.frame</code></a></li>
-  <li><a href="#is.-et-as." id="toc-is.-et-as." class="nav-link" data-scroll-target="#is.-et-as."><span class="header-section-number">3.9.8</span> <code>is.*</code> et <code>as.*</code></a></li>
+<li><a href="#class" id="toc-class" class="nav-link" data-scroll-target="#class"><span class="header-section-number">3.10.1</span> <code>class</code></a></li>
+  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="header-section-number">3.10.2</span> <code>character</code></a></li>
+  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="header-section-number">3.10.3</span> <code>numeric</code></a></li>
+  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="header-section-number">3.10.4</span> <code>factor</code></a></li>
+  <li><a href="#logical" id="toc-logical" class="nav-link" data-scroll-target="#logical"><span class="header-section-number">3.10.5</span> <code>logical</code></a></li>
+  <li><a href="#list" id="toc-list" class="nav-link" data-scroll-target="#list"><span class="header-section-number">3.10.6</span> <code>list</code></a></li>
+  <li><a href="#data.frame" id="toc-data.frame" class="nav-link" data-scroll-target="#data.frame"><span class="header-section-number">3.10.7</span> <code>data.frame</code></a></li>
+  <li><a href="#is.-et-as." id="toc-is.-et-as." class="nav-link" data-scroll-target="#is.-et-as."><span class="header-section-number">3.10.8</span> <code>is.*</code> et <code>as.*</code></a></li>
   </ul>
 </li>
-  <li><a href="#indexation-multiple" id="toc-indexation-multiple" class="nav-link" data-scroll-target="#indexation-multiple"><span class="header-section-number">3.10</span> Indexation multiple <code>[,</code></a></li>
-  <li><a href="#indexation-de-liste-versus" id="toc-indexation-de-liste-versus" class="nav-link" data-scroll-target="#indexation-de-liste-versus"><span class="header-section-number">3.11</span> Indexation de liste : <code>[</code> versus <code>[[</code></a></li>
-  <li><a href="#matrix" id="toc-matrix" class="nav-link" data-scroll-target="#matrix"><span class="header-section-number">3.12</span> <code>matrix</code></a></li>
-  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array"><span class="header-section-number">3.13</span> <code>array</code></a></li>
+  <li><a href="#indexation-multiple" id="toc-indexation-multiple" class="nav-link" data-scroll-target="#indexation-multiple"><span class="header-section-number">3.11</span> Indexation multiple <code>[,</code></a></li>
+  <li><a href="#indexation-de-liste-versus" id="toc-indexation-de-liste-versus" class="nav-link" data-scroll-target="#indexation-de-liste-versus"><span class="header-section-number">3.12</span> Indexation de liste : <code>[</code> versus <code>[[</code></a></li>
+  <li><a href="#matrix" id="toc-matrix" class="nav-link" data-scroll-target="#matrix"><span class="header-section-number">3.13</span> <code>matrix</code></a></li>
+  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array"><span class="header-section-number">3.14</span> <code>array</code></a></li>
   <li>
-<a href="#fonctions-utiles" id="toc-fonctions-utiles" class="nav-link" data-scroll-target="#fonctions-utiles"><span class="header-section-number">3.14</span> Fonctions utiles</a>
+<a href="#fonctions-utiles" id="toc-fonctions-utiles" class="nav-link" data-scroll-target="#fonctions-utiles"><span class="header-section-number">3.15</span> Fonctions utiles</a>
   <ul class="collapse">
-<li><a href="#sur-numeric" id="toc-sur-numeric" class="nav-link" data-scroll-target="#sur-numeric"><span class="header-section-number">3.14.1</span> Sur <code>numeric</code></a></li>
-  <li><a href="#sur-factor" id="toc-sur-factor" class="nav-link" data-scroll-target="#sur-factor"><span class="header-section-number">3.14.2</span> Sur <code>factor</code></a></li>
-  <li><a href="#sur-character" id="toc-sur-character" class="nav-link" data-scroll-target="#sur-character"><span class="header-section-number">3.14.3</span> Sur <code>character</code></a></li>
-  <li><a href="#sur-data.frame" id="toc-sur-data.frame" class="nav-link" data-scroll-target="#sur-data.frame"><span class="header-section-number">3.14.4</span> Sur <code>data.frame</code></a></li>
+<li><a href="#sur-numeric" id="toc-sur-numeric" class="nav-link" data-scroll-target="#sur-numeric"><span class="header-section-number">3.15.1</span> Sur <code>numeric</code></a></li>
+  <li><a href="#sur-factor" id="toc-sur-factor" class="nav-link" data-scroll-target="#sur-factor"><span class="header-section-number">3.15.2</span> Sur <code>factor</code></a></li>
+  <li><a href="#sur-character" id="toc-sur-character" class="nav-link" data-scroll-target="#sur-character"><span class="header-section-number">3.15.3</span> Sur <code>character</code></a></li>
+  <li><a href="#sur-data.frame" id="toc-sur-data.frame" class="nav-link" data-scroll-target="#sur-data.frame"><span class="header-section-number">3.15.4</span> Sur <code>data.frame</code></a></li>
   </ul>
 </li>
   <li>
-<a href="#g%C3%A9n%C3%A9rer-des-nombres-al%C3%A9atoires" id="toc-générer-des-nombres-aléatoires" class="nav-link" data-scroll-target="#g%C3%A9n%C3%A9rer-des-nombres-al%C3%A9atoires"><span class="header-section-number">3.15</span> Générer des nombres aléatoires</a>
+<a href="#g%C3%A9n%C3%A9rer-des-nombres-al%C3%A9atoires" id="toc-générer-des-nombres-aléatoires" class="nav-link" data-scroll-target="#g%C3%A9n%C3%A9rer-des-nombres-al%C3%A9atoires"><span class="header-section-number">3.16</span> Générer des nombres aléatoires</a>
   <ul class="collapse">
-<li><a href="#au-sein-dune-s%C3%A9quence-existante" id="toc-au-sein-dune-séquence-existante" class="nav-link" data-scroll-target="#au-sein-dune-s%C3%A9quence-existante"><span class="header-section-number">3.15.1</span> Au sein d’une séquence existante</a></li>
-  <li><a href="#distributions-existantes" id="toc-distributions-existantes" class="nav-link" data-scroll-target="#distributions-existantes"><span class="header-section-number">3.15.2</span> Distributions existantes</a></li>
+<li><a href="#au-sein-dune-s%C3%A9quence-existante" id="toc-au-sein-dune-séquence-existante" class="nav-link" data-scroll-target="#au-sein-dune-s%C3%A9quence-existante"><span class="header-section-number">3.16.1</span> Au sein d’une séquence existante</a></li>
+  <li><a href="#distributions-existantes" id="toc-distributions-existantes" class="nav-link" data-scroll-target="#distributions-existantes"><span class="header-section-number">3.16.2</span> Distributions existantes</a></li>
   </ul>
 </li>
-  <li><a href="#premiers-graphes" id="toc-premiers-graphes" class="nav-link" data-scroll-target="#premiers-graphes"><span class="header-section-number">3.16</span> Premiers graphes</a></li>
-  <li><a href="#un-mot-sur-les-packages" id="toc-un-mot-sur-les-packages" class="nav-link" data-scroll-target="#un-mot-sur-les-packages"><span class="header-section-number">3.17</span> Un mot sur les packages</a></li>
-  <li><a href="#lop%C3%A9rateur-pipe" id="toc-lopérateur-pipe" class="nav-link" data-scroll-target="#lop%C3%A9rateur-pipe"><span class="header-section-number">3.18</span> L’opérateur <em>pipe</em> <code>%&gt;%</code></a></li>
-  <li><a href="#trucs-et-astuces-pour-r-et-rstudio" id="toc-trucs-et-astuces-pour-r-et-rstudio" class="nav-link" data-scroll-target="#trucs-et-astuces-pour-r-et-rstudio"><span class="header-section-number">3.19</span> Trucs et astuces pour R et RStudio</a></li>
-  <li><a href="#pour-la-suite" id="toc-pour-la-suite" class="nav-link" data-scroll-target="#pour-la-suite"><span class="header-section-number">3.20</span> Pour la suite</a></li>
+  <li><a href="#premiers-graphes" id="toc-premiers-graphes" class="nav-link" data-scroll-target="#premiers-graphes"><span class="header-section-number">3.17</span> Premiers graphes</a></li>
+  <li><a href="#un-mot-sur-les-packages" id="toc-un-mot-sur-les-packages" class="nav-link" data-scroll-target="#un-mot-sur-les-packages"><span class="header-section-number">3.18</span> Un mot sur les packages</a></li>
+  <li><a href="#lop%C3%A9rateur-pipe" id="toc-lopérateur-pipe" class="nav-link" data-scroll-target="#lop%C3%A9rateur-pipe"><span class="header-section-number">3.19</span> L’opérateur <em>pipe</em> <code>%&gt;%</code></a></li>
+  <li><a href="#trucs-et-astuces-pour-r-et-rstudio" id="toc-trucs-et-astuces-pour-r-et-rstudio" class="nav-link" data-scroll-target="#trucs-et-astuces-pour-r-et-rstudio"><span class="header-section-number">3.20</span> Trucs et astuces pour R et RStudio</a></li>
+  <li><a href="#pour-la-suite" id="toc-pour-la-suite" class="nav-link" data-scroll-target="#pour-la-suite"><span class="header-section-number">3.21</span> Pour la suite</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -444,15 +463,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>quand est-ce qu’on fait une pause ?</li>
 </ul>
 <p>Vous vous posez les bonnes questions et il est temps de faire un interlude, et non des moindres, l’interlude : <code>?</code></p>
-</section><section id="fonctions" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="fonctions">
-<span class="header-section-number">3.5</span> Fonctions</h2>
+</section><section id="interlude-clavier" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="interlude-clavier">
+<span class="header-section-number">3.5</span> Interlude clavier</h2>
+<ul>
+<li>Toutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez <code>&lt;Ctrl&gt; + &lt;L&gt;</code>. Vos objets sont conservés.</li>
+<li>Pour naviguer dans votre historique, côté console, pressez les flèches <code>&lt;Haut&gt;</code> et <code>&lt;Bas&gt;</code>.</li>
+<li>Pour compléter un nom de fonction ou d’argument, pressez <code>&lt;Tab&gt;</code>
+</li>
+<li>Une fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez <code>&lt;Tab&gt;</code> de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.</li>
+<li>Dans RStudio, allez à peu près tout tester dans le menu <code>Code</code>. Vous y trouverez des fonctions très utiles (“Reindent lines”, “Reformat code” par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !</li>
+</ul></section><section id="fonctions" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="fonctions">
+<span class="header-section-number">3.6</span> Fonctions</h2>
 <p>Les fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu’elles doivent être démystifiées précocément.</p>
-<section id="que-sont-les-fonctions" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="que-sont-les-fonctions">
-<span class="header-section-number">3.5.1</span> Que sont les fonctions ?</h3>
+<section id="que-sont-les-fonctions" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="que-sont-les-fonctions">
+<span class="header-section-number">3.6.1</span> Que sont les fonctions ?</h3>
 <p>Les fonctions sont des unités de code qui font quelque chose d’utile. Le plus souvent on envoie une valeur et on en récupère une autre. <code><a href="https://rdrr.io/r/base/MathFun.html">sqrt()</a></code> par exemple renvoie la racine carrée de la valeur <em>passée</em> en <em>argument</em>.</p>
 <p>Les arguments, séparés par des virgules, définissent les “options” de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d’argument.</p>
-</section><section id="écrire-ses-fonctions-function" class="level3" data-number="3.5.2"><h3 data-number="3.5.2" class="anchored" data-anchor-id="écrire-ses-fonctions-function">
-<span class="header-section-number">3.5.2</span> Écrire ses fonctions : <code>function</code>
+</section><section id="écrire-ses-fonctions-function" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="écrire-ses-fonctions-function">
+<span class="header-section-number">3.6.2</span> Écrire ses fonctions : <code>function</code>
 </h3>
 <p>Vous pouvez définir vos propres fonctions avec la fonction <code>function</code>. On va encapsuler une portion de code entre des accolades <code>{</code> et la nommer. Définissons une fonction qui ajoute <code>3</code> à un argument que l’on va appeller <code>x</code> (vous pouvez essayer avec <code>y</code> ou <code>toto</code> :</p>
 <div class="cell">
@@ -470,8 +498,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Les fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d’avoir du code non dupliqué, moins propice à des erreurs de frappes. Aussi, si vous changez d’avis, vous pourrez changer la définition de fonction et, chaque fois qu’elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.</p>
-</section><section id="notions-denvironnement" class="level3" data-number="3.5.3"><h3 data-number="3.5.3" class="anchored" data-anchor-id="notions-denvironnement">
-<span class="header-section-number">3.5.3</span> Notions d’environnement</h3>
+</section><section id="notions-denvironnement" class="level3" data-number="3.6.3"><h3 data-number="3.6.3" class="anchored" data-anchor-id="notions-denvironnement">
+<span class="header-section-number">3.6.3</span> Notions d’environnement</h3>
 <p>La valeur <code>x</code> ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l’<strong>environnement</strong> de la fonction <code>plus3</code>. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n’existe que durant l’exécution de la fonction.</p>
 <p>Autrement dit, si la variable <code>x</code> est déja assignée dans l’<strong>environnement global</strong>, c’est à dire en dehors de la fonction, dans la console si on veut, et bien ce <code>x</code> global ne sera ni modifié, ni même utilisé. Un exemple :</p>
 <div class="cell">
@@ -488,8 +516,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 48</code></pre>
 </div>
 </div>
-</section><section id="documentation-des-fonctions" class="level3" data-number="3.5.4"><h3 data-number="3.5.4" class="anchored" data-anchor-id="documentation-des-fonctions">
-<span class="header-section-number">3.5.4</span> Documentation des fonctions : <code>?</code>
+</section><section id="documentation-des-fonctions" class="level3" data-number="3.6.4"><h3 data-number="3.6.4" class="anchored" data-anchor-id="documentation-des-fonctions">
+<span class="header-section-number">3.6.4</span> Documentation des fonctions : <code>?</code>
 </h3>
 <p>Toute fonction déjà disponible en R ou un package a forcément une page d’aide dédiée à laquelle on accède avec : <code>?nom_de_la_fonction</code>. Revenons à notre fonction <code>seq</code> bien pratique pour créer des séquences régulières. En tapant <code><a href="https://rdrr.io/r/base/seq.html">?seq</a></code> on accède au contenu suivant :</p>
 <pre><code>Sequence Generation
@@ -544,8 +572,8 @@ Examples
 <p>Certaines pages d’aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple <code><a href="https://rdrr.io/r/base/Arithmetic.html">?Arithmetic</a></code>, <code><a href="https://rdrr.io/r/base/Special.html">?Special</a></code>, <code>Syntax</code>. D’autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (<code>`</code>), par exemple <code><a href="https://rdrr.io/r/base/Arithmetic.html">?`+`</a></code> ou la mise en abyme de <code><a href="https://rdrr.io/r/utils/Question.html">?`?`</a></code>. Enfin, il existe d’autres ressources comme les “vignettes”, plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.</p>
 <p>Les pages d’aide sont souvent compactes et obscures mais l’information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d’aide même si à première vue cette littérature n’est guère attrayante.</p>
 <p>Enfin, la variante <code>??(quoiquoiquoi)</code>, raccourci de <code>help.search("quoiquoiquoi")</code> permet de chercher toutes les occurences de <code>quoiquoiquoi</code> dans <em>toutes</em> les pages d’aide de R.</p>
-</section><section id="arguments-noms-positions-et-valeurs-par-défaut" class="level3" data-number="3.5.5"><h3 data-number="3.5.5" class="anchored" data-anchor-id="arguments-noms-positions-et-valeurs-par-défaut">
-<span class="header-section-number">3.5.5</span> Arguments : noms, positions et valeurs par défaut</h3>
+</section><section id="arguments-noms-positions-et-valeurs-par-défaut" class="level3" data-number="3.6.5"><h3 data-number="3.6.5" class="anchored" data-anchor-id="arguments-noms-positions-et-valeurs-par-défaut">
+<span class="header-section-number">3.6.5</span> Arguments : noms, positions et valeurs par défaut</h3>
 <p>Après avoir consulté <code><a href="https://rdrr.io/r/base/seq.html">?seq</a></code> on peut par exemple préciser le point de départ (<code>from</code>), le point d’arrivée (<code>to</code>), le pas (<code>by</code>) et la longueur totale du vecteur à créer (<code>length.out</code>).</p>
 <p>Vous constaterez que <code>from</code> est défini avec une valeur par défaut (<code>from=1</code>). Ainsi, si vous omettez sa valeur et ne spécifiez que <code>to</code>, <code>from</code> prendra sa valeur par défaut. Ces deux commandes sont donc équivalentes :</p>
 <div class="cell">
@@ -573,8 +601,8 @@ Examples
 <pre><code>[1] -3</code></pre>
 </div>
 </div>
-</section></section><section id="concept-de-recyclage" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="concept-de-recyclage">
-<span class="header-section-number">3.6</span> Concept de recyclage</h2>
+</section></section><section id="concept-de-recyclage" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="concept-de-recyclage">
+<span class="header-section-number">3.7</span> Concept de recyclage</h2>
 <div class="cell">
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">toto</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">toto</span><span class="op">*</span><span class="fl">3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -597,8 +625,8 @@ length</code></pre>
 </div>
 </div>
 <p>De nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n’y comprenez goutte, copiez-collez le message dans un moteur de recherche.</p>
-</section><section id="indexation-saisir-et-changer-des-valeurs" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="indexation-saisir-et-changer-des-valeurs">
-<span class="header-section-number">3.7</span> Indexation <code>[</code> : saisir et changer des valeurs</h2>
+</section><section id="indexation-saisir-et-changer-des-valeurs" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="indexation-saisir-et-changer-des-valeurs">
+<span class="header-section-number">3.8</span> Indexation <code>[</code> : saisir et changer des valeurs</h2>
 <p>Indexer une ou des valeurs c’est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.</p>
 <p>L’opérateur d’indexation est le crochet droit : <code>[</code>, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l’intérieur l’indice ou les indices.</p>
 <div class="cell">
@@ -669,8 +697,8 @@ length</code></pre>
 </div>
 <p>Le concept d’indexation est absolument central en R, et en programmation en général.</p>
 <p>L’indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (<code>iris[2, 3]</code>), voire même des doubles crochets (<code>[[</code>), mais le comportement présenté ici reste invariable. Youpi !</p>
-</section><section id="opérateurs-de-comparaison-et-logiques" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="opérateurs-de-comparaison-et-logiques">
-<span class="header-section-number">3.8</span> Opérateurs de comparaison et logiques</h2>
+</section><section id="opérateurs-de-comparaison-et-logiques" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="opérateurs-de-comparaison-et-logiques">
+<span class="header-section-number">3.9</span> Opérateurs de comparaison et logiques</h2>
 <p>L’indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L’idée est qu’on teste d’abord une condition dont on peut se servir pour indexer</p>
 <div class="cell">
 <div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">tonton</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">2</span>, <span class="fl">9</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">5</span><span class="op">)</span>
@@ -775,10 +803,10 @@ length</code></pre>
 </tbody>
 </table>
 <p>Parfois on peut également avoir besoin de <code>any</code>, <code>all</code><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
-</section><section id="classes-dobjets" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="classes-dobjets">
-<span class="header-section-number">3.9</span> Classes d’objets</h2>
-<section id="class" class="level3" data-number="3.9.1"><h3 data-number="3.9.1" class="anchored" data-anchor-id="class">
-<span class="header-section-number">3.9.1</span> <code>class</code>
+</section><section id="classes-dobjets" class="level2" data-number="3.10"><h2 data-number="3.10" class="anchored" data-anchor-id="classes-dobjets">
+<span class="header-section-number">3.10</span> Classes d’objets</h2>
+<section id="class" class="level3" data-number="3.10.1"><h3 data-number="3.10.1" class="anchored" data-anchor-id="class">
+<span class="header-section-number">3.10.1</span> <code>class</code>
 </h3>
 <p>Accrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu’ici nous n’avons manipulé que des nombres, avec ou sans assignation à une variable. D’autres <strong>classes</strong> d’objets existent en R.</p>
 <p>On peut accéder à la <strong>classe</strong> d’un vecteur avec la fonction <code>class</code>. On voit que les chaînes de caractères sont des <code>character</code> pour R:</p>
@@ -805,8 +833,8 @@ length</code></pre>
 Hildegarde    178       femme     TRUE
 Jean-Jacques  163       homme     FALSE
 Victor        184       autre     TRUE</code></pre>
-</section><section id="character" class="level3" data-number="3.9.2"><h3 data-number="3.9.2" class="anchored" data-anchor-id="character">
-<span class="header-section-number">3.9.2</span> <code>character</code>
+</section><section id="character" class="level3" data-number="3.10.2"><h3 data-number="3.10.2" class="anchored" data-anchor-id="character">
+<span class="header-section-number">3.10.2</span> <code>character</code>
 </h3>
 <p>Tentons de créer la première variable, c’est à dire la première colonne, à la main :</p>
 <div class="cell">
@@ -817,8 +845,8 @@ Victor        184       autre     TRUE</code></pre>
 </div>
 </div>
 <p>R ne fait pas d’histoires et nous a crée un vecteur de chaînes de caractères !</p>
-</section><section id="numeric" class="level3" data-number="3.9.3"><h3 data-number="3.9.3" class="anchored" data-anchor-id="numeric">
-<span class="header-section-number">3.9.3</span> <code>numeric</code>
+</section><section id="numeric" class="level3" data-number="3.10.3"><h3 data-number="3.10.3" class="anchored" data-anchor-id="numeric">
+<span class="header-section-number">3.10.3</span> <code>numeric</code>
 </h3>
 <p>Créons maintenant le vecteur <code>stature</code>, on sait faire :</p>
 <div class="cell">
@@ -833,8 +861,8 @@ Victor        184       autre     TRUE</code></pre>
 </div>
 </div>
 <p>Tous les vecteurs que nous avons crée jusqu’ici, <code>prenom</code> mis à part, était donc des <code>numeric</code>. Précisions que des variantes de <code>numeric</code> existent : <code>double</code>, <code>integer</code>, etc. mais vous n’aurez peut être jamais à vous en soucier.</p>
-</section><section id="factor" class="level3" data-number="3.9.4"><h3 data-number="3.9.4" class="anchored" data-anchor-id="factor">
-<span class="header-section-number">3.9.4</span> <code>factor</code>
+</section><section id="factor" class="level3" data-number="3.10.4"><h3 data-number="3.10.4" class="anchored" data-anchor-id="factor">
+<span class="header-section-number">3.10.4</span> <code>factor</code>
 </h3>
 <p>La colonne <code>genre</code> est un peu particulière puisque elle est une chaîne de caractères mais elle ne peut prendre que des valeurs définies, à savoir une et une seule valeur de l’ensemble : <code>{homme, femme, autre}</code>. La classe <code>factor</code> est là pour ça et la fonction <code>factor</code> permet de créer notre variable <code>sexe</code> :</p>
 <div class="cell">
@@ -863,8 +891,8 @@ Levels: autre femme homme</code></pre>
 </div>
 </div>
 <p>Malédiction (apparente)<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> que nous expliquerons plus tard.</p>
-</section><section id="logical" class="level3" data-number="3.9.5"><h3 data-number="3.9.5" class="anchored" data-anchor-id="logical">
-<span class="header-section-number">3.9.5</span> <code>logical</code>
+</section><section id="logical" class="level3" data-number="3.10.5"><h3 data-number="3.10.5" class="anchored" data-anchor-id="logical">
+<span class="header-section-number">3.10.5</span> <code>logical</code>
 </h3>
 <p>Laissons reposer les facteurs pour l’instant et continuons notre création de variable avec la colonne <code>formation</code>:</p>
 <div class="cell">
@@ -906,8 +934,8 @@ Levels: autre femme homme</code></pre>
 </div>
 </div>
 <p>Nous avons vu autant de classes différentes (<code>character</code>, <code>numeric</code>, <code>factor</code>, <code>logical</code> respectivement) et, bonne nouvelle, on a quasiment fait le tour des classes ! Il nous en reste deux, très voisines : <code>list</code> et <code>data.frame</code>.</p>
-</section><section id="list" class="level3" data-number="3.9.6"><h3 data-number="3.9.6" class="anchored" data-anchor-id="list">
-<span class="header-section-number">3.9.6</span> <code>list</code>
+</section><section id="list" class="level3" data-number="3.10.6"><h3 data-number="3.10.6" class="anchored" data-anchor-id="list">
+<span class="header-section-number">3.10.6</span> <code>list</code>
 </h3>
 <p>Une <code>list</code>e est un vecteur dont les éléments peuvent être de classes et de longueurs différentes, dont d’autres listes. Autrement dit, c’est la structure de données universelle en R :</p>
 <div class="cell">
@@ -929,8 +957,8 @@ $tata
 </div>
 </div>
 <p>Vous pouvez comparer le résultat à <code>c(prenom, stature)</code>. Observez aussi au passage les doubles crochets droits (<code>[[</code>), dont vous n’aurez bien plus peur.</p>
-</section><section id="data.frame" class="level3" data-number="3.9.7"><h3 data-number="3.9.7" class="anchored" data-anchor-id="data.frame">
-<span class="header-section-number">3.9.7</span> <code>data.frame</code>
+</section><section id="data.frame" class="level3" data-number="3.10.7"><h3 data-number="3.10.7" class="anchored" data-anchor-id="data.frame">
+<span class="header-section-number">3.10.7</span> <code>data.frame</code>
 </h3>
 <p>Un type de liste bien pratique, devenu archi central en R moderne, est le <code>data.frame</code> qui est une liste dont la double particularité est que tous ses éléments sont nommés et de même longueur. Une façon un peu alambiquée de dire qu’il nous aura fallu tout cela pour réinventer en R le tableau excel !<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Nous y reviendrons abondamment.</p>
 <p>Comme vous pouvez vous en douter, personne n’importe les données comme cela, on préférera lire directement une table <code>.csv</code> ou <code>.xlsx</code>. Minute papillon, on y vient.</p>
@@ -951,8 +979,8 @@ $tata
 <pre><code>[1] "data.frame"</code></pre>
 </div>
 </div>
-</section><section id="is.-et-as." class="level3" data-number="3.9.8"><h3 data-number="3.9.8" class="anchored" data-anchor-id="is.-et-as.">
-<span class="header-section-number">3.9.8</span> <code>is.*</code> et <code>as.*</code>
+</section><section id="is.-et-as." class="level3" data-number="3.10.8"><h3 data-number="3.10.8" class="anchored" data-anchor-id="is.-et-as.">
+<span class="header-section-number">3.10.8</span> <code>is.*</code> et <code>as.*</code>
 </h3>
 <p>Les fonctions <code>is.*</code> permettent de tester les classes :</p>
 <div class="cell">
@@ -981,8 +1009,8 @@ Levels: Hildegarde Jean-Jacques Victor</code></pre>
 <pre><code>[1] "femme" "homme" "autre"</code></pre>
 </div>
 </div>
-</section></section><section id="indexation-multiple" class="level2" data-number="3.10"><h2 data-number="3.10" class="anchored" data-anchor-id="indexation-multiple">
-<span class="header-section-number">3.10</span> Indexation multiple <code>[,</code>
+</section></section><section id="indexation-multiple" class="level2" data-number="3.11"><h2 data-number="3.11" class="anchored" data-anchor-id="indexation-multiple">
+<span class="header-section-number">3.11</span> Indexation multiple <code>[,</code>
 </h2>
 <p>Revenons à notre <code>data.frame</code> <code>data</code>, un objet en deux dimensions : il possède des lignes et des colonnes. L’indexation vue précédemment sur des vecteurs, des objets en une seule dimension, fonctionne dans le même esprit mais il nous faut renseigner les indices pour chaque dimension. Si l’un des indices n’est pas renseigné, toutes les positions concernées sont retournées mais il ne faut pas oublier pour autant la virgule !</p>
 <p>Par convention la première dimension est celle des lignes, la deuxième celle des colonnes. Quelques exemples ci-dessous qui ne font qu’extraire les données. Nous pourrions aussi les modifier avec l’opérateur d’assignation <code>&lt;-</code> comme vu précédemment.</p>
@@ -1039,8 +1067,8 @@ Levels: autre femme homme</code></pre>
 Levels: autre femme homme</code></pre>
 </div>
 </div>
-</section><section id="indexation-de-liste-versus" class="level2" data-number="3.11"><h2 data-number="3.11" class="anchored" data-anchor-id="indexation-de-liste-versus">
-<span class="header-section-number">3.11</span> Indexation de liste : <code>[</code> versus <code>[[</code>
+</section><section id="indexation-de-liste-versus" class="level2" data-number="3.12"><h2 data-number="3.12" class="anchored" data-anchor-id="indexation-de-liste-versus">
+<span class="header-section-number">3.12</span> Indexation de liste : <code>[</code> versus <code>[[</code>
 </h2>
 <p>L’indexation avec une simple ou une double paire de crochets est souvent source d’incompréhension d’autant que sur des vecteurs le résultat est le même :</p>
 <div class="cell">
@@ -1096,8 +1124,8 @@ Levels: autre femme homme</code></pre>
 <pre><code>[1] 1 2 3</code></pre>
 </div>
 </div>
-</section><section id="matrix" class="level2" data-number="3.12"><h2 data-number="3.12" class="anchored" data-anchor-id="matrix">
-<span class="header-section-number">3.12</span> <code>matrix</code>
+</section><section id="matrix" class="level2" data-number="3.13"><h2 data-number="3.13" class="anchored" data-anchor-id="matrix">
+<span class="header-section-number">3.13</span> <code>matrix</code>
 </h2>
 <p>Par souci de complétude, mentionnons les matrices qui sont des tableaux rectangulaires de nombres. Elles se créent avec la fonction <code>matrix</code> et en spécifiant les valeurs de remplissage et le nombre de lignes et/ou de colonnes :</p>
 <div class="cell">
@@ -1136,8 +1164,8 @@ Levels: autre femme homme</code></pre>
 <pre><code>[1]  4.0 15.2  7.0</code></pre>
 </div>
 </div>
-</section><section id="array" class="level2" data-number="3.13"><h2 data-number="3.13" class="anchored" data-anchor-id="array">
-<span class="header-section-number">3.13</span> <code>array</code>
+</section><section id="array" class="level2" data-number="3.14"><h2 data-number="3.14" class="anchored" data-anchor-id="array">
+<span class="header-section-number">3.14</span> <code>array</code>
 </h2>
 <p>Par souci de complétude, l’idée de matrice se généralise dans des dimensions supérieures à 2. Pour le dire autrement, une <code>matrix</code> est un <code>array</code> à deux dimensions.</p>
 <p>Les <code>array</code> se créent dans le même esprit : les valeurs de remplissage d’abord, puis on précise les dimensions. Ci-dessous, un array de deux tranches de matrices de <code>2x3</code>.</p>
@@ -1165,10 +1193,10 @@ Levels: autre femme homme</code></pre>
 <pre><code>[1] 11</code></pre>
 </div>
 </div>
-</section><section id="fonctions-utiles" class="level2" data-number="3.14"><h2 data-number="3.14" class="anchored" data-anchor-id="fonctions-utiles">
-<span class="header-section-number">3.14</span> Fonctions utiles</h2>
-<section id="sur-numeric" class="level3" data-number="3.14.1"><h3 data-number="3.14.1" class="anchored" data-anchor-id="sur-numeric">
-<span class="header-section-number">3.14.1</span> Sur <code>numeric</code>
+</section><section id="fonctions-utiles" class="level2" data-number="3.15"><h2 data-number="3.15" class="anchored" data-anchor-id="fonctions-utiles">
+<span class="header-section-number">3.15</span> Fonctions utiles</h2>
+<section id="sur-numeric" class="level3" data-number="3.15.1"><h3 data-number="3.15.1" class="anchored" data-anchor-id="sur-numeric">
+<span class="header-section-number">3.15.1</span> Sur <code>numeric</code>
 </h3>
 <p>Quelques fonctions utiles pour décrire des vecteurs numériques (<code>numeric</code>) :</p>
 <div class="cell">
@@ -1194,8 +1222,8 @@ Levels: autre femme homme</code></pre>
 [1] 2.5</code></pre>
 </div>
 </div>
-</section><section id="sur-factor" class="level3" data-number="3.14.2"><h3 data-number="3.14.2" class="anchored" data-anchor-id="sur-factor">
-<span class="header-section-number">3.14.2</span> Sur <code>factor</code>
+</section><section id="sur-factor" class="level3" data-number="3.15.2"><h3 data-number="3.15.2" class="anchored" data-anchor-id="sur-factor">
+<span class="header-section-number">3.15.2</span> Sur <code>factor</code>
 </h3>
 <div class="cell">
 <div class="sourceCode" id="cb192"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">f1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"banana"</span>, <span class="st">"pear"</span>, <span class="st">"grape"</span>, <span class="st">"grape"</span><span class="op">)</span><span class="op">)</span>
@@ -1221,8 +1249,8 @@ f1       green red yellow
   pear       1   0      0</code></pre>
 </div>
 </div>
-</section><section id="sur-character" class="level3" data-number="3.14.3"><h3 data-number="3.14.3" class="anchored" data-anchor-id="sur-character">
-<span class="header-section-number">3.14.3</span> Sur <code>character</code>
+</section><section id="sur-character" class="level3" data-number="3.15.3"><h3 data-number="3.15.3" class="anchored" data-anchor-id="sur-character">
+<span class="header-section-number">3.15.3</span> Sur <code>character</code>
 </h3>
 <div class="cell">
 <div class="sourceCode" id="cb194"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">bla1</span> <span class="op">&lt;-</span> <span class="st">"tonton"</span>
@@ -1245,8 +1273,8 @@ tonton
 </div>
 </div>
 <p>Les derniers exemples montrent des manipulations de chaînes de caractères. Le package <code>stringr</code> remplace avantageusement ces approches “historiques”. Nous y reviendrons.</p>
-</section><section id="sur-data.frame" class="level3" data-number="3.14.4"><h3 data-number="3.14.4" class="anchored" data-anchor-id="sur-data.frame">
-<span class="header-section-number">3.14.4</span> Sur <code>data.frame</code>
+</section><section id="sur-data.frame" class="level3" data-number="3.15.4"><h3 data-number="3.15.4" class="anchored" data-anchor-id="sur-data.frame">
+<span class="header-section-number">3.15.4</span> Sur <code>data.frame</code>
 </h3>
 <div class="cell">
 <div class="sourceCode" id="cb196"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
@@ -1292,10 +1320,10 @@ tonton
  [7]  0.09957463  0.27190793 -0.84168929  0.72023581</code></pre>
 </div>
 </div>
-</section></section><section id="générer-des-nombres-aléatoires" class="level2" data-number="3.15"><h2 data-number="3.15" class="anchored" data-anchor-id="générer-des-nombres-aléatoires">
-<span class="header-section-number">3.15</span> Générer des nombres aléatoires</h2>
-<section id="au-sein-dune-séquence-existante" class="level3" data-number="3.15.1"><h3 data-number="3.15.1" class="anchored" data-anchor-id="au-sein-dune-séquence-existante">
-<span class="header-section-number">3.15.1</span> Au sein d’une séquence existante</h3>
+</section></section><section id="générer-des-nombres-aléatoires" class="level2" data-number="3.16"><h2 data-number="3.16" class="anchored" data-anchor-id="générer-des-nombres-aléatoires">
+<span class="header-section-number">3.16</span> Générer des nombres aléatoires</h2>
+<section id="au-sein-dune-séquence-existante" class="level3" data-number="3.16.1"><h3 data-number="3.16.1" class="anchored" data-anchor-id="au-sein-dune-séquence-existante">
+<span class="header-section-number">3.16.1</span> Au sein d’une séquence existante</h3>
 <p>La fonction <code>sample</code> permet d’échantillonner au sein d’un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.</p>
 <p>Si vous n’avez pas de dé, en voilà un :</p>
 <div class="cell">
@@ -1312,8 +1340,8 @@ tonton
 </div>
 </div>
 <p>Chaque élément du vecteur a autant de chance de sortir qu’un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser <code>sample</code> mais en calibrant l’argument <code>probs</code> sur la fréquence des lettres dans la langue française. N’allez donc pas vous taper l’alphabet à la main, jeter un oeil à <code>letters</code> et <code>LETTERS</code>.</p>
-</section><section id="distributions-existantes" class="level3" data-number="3.15.2"><h3 data-number="3.15.2" class="anchored" data-anchor-id="distributions-existantes">
-<span class="header-section-number">3.15.2</span> Distributions existantes</h3>
+</section><section id="distributions-existantes" class="level3" data-number="3.16.2"><h3 data-number="3.16.2" class="anchored" data-anchor-id="distributions-existantes">
+<span class="header-section-number">3.16.2</span> Distributions existantes</h3>
 <p>Au delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d’une distribution. Toutes les distributions disponibles sont listées dans la bien nommée <code>?Distriutions</code>.</p>
 <p>Ces fonctions sont nommées de la façon suivante <code>{r, p, q, d}nom_abregé_distrib</code>. La première lettre désigne la variante désirée des différentes fonctions pour une distribution donnée, selon que l’on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.</p>
 <p>Pour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :</p>
@@ -1346,27 +1374,27 @@ tonton
 </div>
 </div>
 <p>Si vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d’une session à l’autre ou (c’est la même chose) sur l’ordinateur de votre collègue, c’est possible avec la fonction <code>set.seed</code>.</p>
-</section></section><section id="premiers-graphes" class="level2" data-number="3.16"><h2 data-number="3.16" class="anchored" data-anchor-id="premiers-graphes">
-<span class="header-section-number">3.16</span> Premiers graphes</h2>
+</section></section><section id="premiers-graphes" class="level2" data-number="3.17"><h2 data-number="3.17" class="anchored" data-anchor-id="premiers-graphes">
+<span class="header-section-number">3.17</span> Premiers graphes</h2>
 <p>Décrire un vecteur de nombres avec <code>mean</code> et <code>sd</code> mais faire des jolis graphes c’est mieux. La commande <code>plot</code> est la fonction de base pour ce faire :</p>
 <div class="cell">
 <div class="sourceCode" id="cb212"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>R a compris que chaque valeur du vecteur <code>x</code> devait être plottée sur l’axe de ordonnées et en a déduit que l’axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :</p>
 <div class="cell">
 <div class="sourceCode" id="cb213"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>On voit qu’il est bien centré sur <code>5</code>. Si l’on augmente le nombre de valeurs générées ainsi que le nombres d’intervalles (<code>breaks</code> en anglais), on retrouve une bien belle gaussienne :</p>
 <div class="cell">
 <div class="sourceCode" id="cb214"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">1e5</span>, <span class="fl">5</span>, <span class="fl">3</span><span class="op">)</span>, breaks<span class="op">=</span><span class="fl">50</span>, main<span class="op">=</span><span class="st">"Un histogramme"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Les graphiques de base de R sont un peu surannés depuis l’avènement de <code>gpplot2</code> que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s’il ne s’exprimeront pas longuement ici.</p>
@@ -1386,7 +1414,7 @@ tonton
      xlab<span class="op">=</span><span class="st">"Largeur de pétale (cm)"</span>, ylab<span class="op">=</span><span class="st">"Longueur de pétale (cm)"</span>,
      main<span class="op">=</span><span class="st">"Les fameux iris de Fisher (voire d'Anderson)"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>En petit aguichage <code>ggplot2</code> voilà ce qu’on peut obtenir dans le même temps :</p>
@@ -1402,13 +1430,13 @@ tonton
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Les fameux iris de Fisher (voire d'Anderson)"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_linedraw</a></span><span class="op">(</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-64-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="un-mot-sur-les-packages" class="level2" data-number="3.17"><h2 data-number="3.17" class="anchored" data-anchor-id="un-mot-sur-les-packages">
-<span class="header-section-number">3.17</span> Un mot sur les packages</h2>
-</section><section id="lopérateur-pipe" class="level2" data-number="3.18"><h2 data-number="3.18" class="anchored" data-anchor-id="lopérateur-pipe">
-<span class="header-section-number">3.18</span> L’opérateur <em>pipe</em> <code>%&gt;%</code>
+</section><section id="un-mot-sur-les-packages" class="level2" data-number="3.18"><h2 data-number="3.18" class="anchored" data-anchor-id="un-mot-sur-les-packages">
+<span class="header-section-number">3.18</span> Un mot sur les packages</h2>
+</section><section id="lopérateur-pipe" class="level2" data-number="3.19"><h2 data-number="3.19" class="anchored" data-anchor-id="lopérateur-pipe">
+<span class="header-section-number">3.19</span> L’opérateur <em>pipe</em> <code>%&gt;%</code>
 </h2>
 <p>Il est peu dire que cet opérateur<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> a révolutionné R, lorsqu’il y a été importé, d’abord dans le package <code>magrittr</code> sous sa forme <code>%&gt;%</code>. Il est désormais inclus dans le R de “base” sous sa forme <code>|&gt;</code> mais nous n’utiliserons que la version historique <code>%&gt;%</code>, que je trouve plus lisible, plus facile à taper (<code>&lt;Maj&gt; + &lt;Ctrl/Cmd&gt; + &lt;M&gt;</code> dans RStudio) et parce que les années aidant, je deviens conservateur.</p>
 <p>L’idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d’écrire :</p>
@@ -1418,16 +1446,16 @@ tonton
 <div class="cell">
 <div class="sourceCode" id="cb219"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span><span class="op">)</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>              <span class="co"># road to burnout</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode" id="cb220"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># let's breathe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="premiers-pas_files/figure-html/unnamed-chunk-66-2.png" class="img-fluid" width="672"></p>
+<p><img src="premiers-pas_files/figure-html/unnamed-chunk-65-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Les packages du R moderne, en premier lieu ceux du <code>tidyverse</code> en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours.</p>
-</section><section id="trucs-et-astuces-pour-r-et-rstudio" class="level2" data-number="3.19"><h2 data-number="3.19" class="anchored" data-anchor-id="trucs-et-astuces-pour-r-et-rstudio">
-<span class="header-section-number">3.19</span> Trucs et astuces pour R et RStudio</h2>
+</section><section id="trucs-et-astuces-pour-r-et-rstudio" class="level2" data-number="3.20"><h2 data-number="3.20" class="anchored" data-anchor-id="trucs-et-astuces-pour-r-et-rstudio">
+<span class="header-section-number">3.20</span> Trucs et astuces pour R et RStudio</h2>
 <ul>
 <li>Toutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez <code>&lt;Ctrl&gt; + &lt;L&gt;</code>. Vos objets sont conservés.</li>
 <li>Pour naviguer dans votre historique, côté console, pressez les flèches <code>&lt;Haut&gt;</code> et <code>&lt;Bas&gt;</code>.</li>
@@ -1449,8 +1477,8 @@ tonton
 <li>Vous pouvez également faire tourner un autre script depuis le script en cours avant <code>source</code>. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.</li>
 </ul>
 <p>RStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (<code>Code &gt; Reformat Code</code>) ou simplement pour réindenter proprement votre code. L’indentation est le décalage par rapport à la marge gauche du script. Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui est déconseillé.</p>
-</section><section id="pour-la-suite" class="level2" data-number="3.20"><h2 data-number="3.20" class="anchored" data-anchor-id="pour-la-suite">
-<span class="header-section-number">3.20</span> Pour la suite</h2>
+</section><section id="pour-la-suite" class="level2" data-number="3.21"><h2 data-number="3.21" class="anchored" data-anchor-id="pour-la-suite">
+<span class="header-section-number">3.21</span> Pour la suite</h2>
 <p>Si vous lisez ces lignes c’est que vous avez survécu jusqu’ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Bien sûr, votre vocabulaire va s’enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.</p>
 <p>Bien sûr, vous aurez envie de mettre le feu à l’ordinateur, votre bureau et l’intégralité du monde open-source. N’en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :</p>
 <blockquote class="blockquote">
@@ -1471,7 +1499,8 @@ tonton
 <li id="fn8"><p>voir <code><a href="https://rdrr.io/r/datasets/datasets-package.html">?datasets</a></code>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>À prononcer à l’anglaise hein : “payepeu”<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>Vous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/vbonhomme">❤ R pour les gens pressés</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a> est placé dans le domaine public sous licence <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a></p> 
+</ol></section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a></p> 
+ 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

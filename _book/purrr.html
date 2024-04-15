@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.433">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>R pour ma grand-mère - 8&nbsp; Manipulation de listes avec purrr</title>
+<title>R pour ma grand-mère - 11&nbsp; Manipulation de listes avec purrr</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -60,35 +89,25 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
+}</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./purrr.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec `purrr`</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./purrr.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec `purrr`</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">R pour ma grand-mère</a> 
     </div>
@@ -100,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Préface</span></a>
@@ -108,8 +127,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./toc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Préambule</span></span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,60 +151,86 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vocabulaire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Dans ce chapitre</h2>
+   
+  <ul>
+<li><a href="#les-listes-cest-la-vie" id="toc-les-listes-cest-la-vie" class="nav-link active" data-scroll-target="#les-listes-cest-la-vie"><span class="header-section-number">11.1</span> Les listes c’est la vie</a></li>
+  <li><a href="#map-%C3%A0-la-vanille" id="toc-map-à-la-vanille" class="nav-link" data-scroll-target="#map-%C3%A0-la-vanille"><span class="header-section-number">11.2</span> <code>map</code> à la vanille</a></li>
+  <li><a href="#map_-et-ses-autres-parfums" id="toc-map_-et-ses-autres-parfums" class="nav-link" data-scroll-target="#map_-et-ses-autres-parfums"><span class="header-section-number">11.3</span> <code>map_*</code> et ses autres parfums</a></li>
+  <li><a href="#et-x-les-fonctions-anonymes-sont-vos-amies" id="toc-et-x-les-fonctions-anonymes-sont-vos-amies" class="nav-link" data-scroll-target="#et-x-les-fonctions-anonymes-sont-vos-amies"><span class="header-section-number">11.4</span> <code>~</code> et <code>\(x)</code> : les fonctions anonymes sont vos amies</a></li>
+  <li><a href="#map2-et-g%C3%A9n%C3%A9ralisation-pmap" id="toc-map2-et-généralisation-pmap" class="nav-link" data-scroll-target="#map2-et-g%C3%A9n%C3%A9ralisation-pmap"><span class="header-section-number">11.5</span> <code>map2</code> et généralisation <code>pmap</code></a></li>
+  <li><a href="#op%C3%A9rations-sur-listes" id="toc-opérations-sur-listes" class="nav-link" data-scroll-target="#op%C3%A9rations-sur-listes"><span class="header-section-number">11.6</span> Opérations sur listes</a></li>
+  <li><a href="#cheat-sheet" id="toc-cheat-sheet" class="nav-link" data-scroll-target="#cheat-sheet"><span class="header-section-number">11.7</span> cheat sheet</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span>
+</h1>
 </div>
 
 
@@ -198,14 +243,210 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
+</header><p>Si vous n’avez besoin que de <code>purrr</code>, <code><a href="https://purrr.tidyverse.org/">library(purrr)</a></code> charge le package. Si vous utilisez tout le tidyverse, <code>purrr</code> sera chargée après :</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="les-listes-cest-la-vie" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="les-listes-cest-la-vie">
+<span class="header-section-number">11.1</span> Les listes c’est la vie</h2>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>wagon1<span class="op">=</span><span class="st">"pomme"</span>, wagon2<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, wagon3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "wagon1" "wagon2" "wagon3"</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span>    <span class="co"># structure of z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 3
+ $ wagon1: chr "pomme"
+ $ wagon2: int [1:3] 1 2 3
+ $ wagon3: logi [1:2] TRUE FALSE</code></pre>
+</div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># View(z) # RStudio Viewer</span>
+<span class="va">z</span>         <span class="co"># simple print method</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$wagon1
+[1] "pomme"
 
-<p>Plop</p>
+$wagon2
+[1] 1 2 3
+
+$wagon3
+[1]  TRUE FALSE</code></pre>
+</div>
+</div>
+<p>Ne soyez pas effrayé·e par les listes : elles sont simplement des conteneurs pouvant accueillir des objets de classes différentes (ou non) et de longueur différentes (ou non).</p>
+<p>On peut se figurer une liste comme un train dont les éléments seraient des wagons dont chacun contiendrait des conteneurs plus petits qui eux contiennent des éléments :</p>
+<pre><code>  --  wagon 1  --        --  wagon 2  --       --  wagon 3  --
+[    ["pomme"]    ] -- [    [ 1:3 ]     ] - [    [ c(TRUE, FALSE) ]    ]</code></pre>
+<p>Une liste s’indexe de plusieurs façons, positionnellement ou avec le nom de se(s) élément(s)-wagons s’ils sont nommés :</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>        <span class="co"># using positionnal index</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$wagon2
+[1] 1 2 3</code></pre>
+</div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span><span class="op">[</span><span class="st">"wagon2"</span><span class="op">]</span> <span class="co"># using ["name"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$wagon2
+[1] 1 2 3</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">z</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+</div>
+<p>Notons que la syntaxe <code>z$wagon2</code> fonctionne aussi.</p>
+<p>Si l’on utilise les doubles crochets, on accède directement au contenu des caisses dans les wagons. Ces derniers ont perdu leurs natures de “wagon”, ne sont plus des listes :</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>        <span class="co"># using positionnal index</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span><span class="op">[[</span><span class="st">"wagon2"</span><span class="op">]</span><span class="op">]</span> <span class="co"># using ["name"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">z</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "integer"</code></pre>
+</div>
+</div>
+<p>Les assignations <code>list[index] &lt;-</code> et <code>list[[index]] &lt;-</code> fonctionnent comme à l’acoutumée.</p>
+</section><section id="map-à-la-vanille" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="map-à-la-vanille">
+<span class="header-section-number">11.2</span> <code>map</code> à la vanille</h2>
+<p>Le package <code>purrr</code> s’articule autour de la famille <code>map</code> dont il existe plusieurs variantes dont la première à voir est <code>map</code> tout court.</p>
+<p>L’idée est simple : appliquer une fonction à tous les éléments d’une liste et retourner une liste. La liste sera le premier argument de <code>map</code>, la fonction le second. Le nom de fonction est passé sans parenthèses :</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">z</span>, <span class="va">class</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$wagon1
+[1] "character"
+
+$wagon2
+[1] "integer"
+
+$wagon3
+[1] "logical"</code></pre>
+</div>
+</div>
+</section><section id="map_-et-ses-autres-parfums" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="map_-et-ses-autres-parfums">
+<span class="header-section-number">11.3</span> <code>map_*</code> et ses autres parfums</h2>
+<p>Dans l’exemple ci-dessus, si l’on ne veut pas de liste mais un vecteur (quand cela est possible), on peut utiliser <code>unlist</code> :</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     wagon1      wagon2      wagon3 
+"character"   "integer"   "logical" </code></pre>
+</div>
+</div>
+<p>Mais quand la classe de sortie d’une fonction map est homogène et connue, on utilisera plutôt les variantes de map de la forme <code>map_*</code>. <code>*</code> pouvant prendre les valeurs <code>int</code> et <code>dbl</code> pour retourner des <code>numeric</code> sous forme d’entiers ou de doubles, <code>lgl</code> pour les vectuers logiques, <code>df</code>, <code>dfr</code> et <code>dfc</code> pour retourner des <code>data.frame</code>, éventuellement combinés par <code>r</code>ow ou <code>c</code>olonnes.</p>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     wagon1      wagon2      wagon3 
+"character"   "integer"   "logical" </code></pre>
+</div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dbl</a></span><span class="op">(</span><span class="va">length</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 6</code></pre>
+</div>
+</div>
+</section><section id="et-x-les-fonctions-anonymes-sont-vos-amies" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="et-x-les-fonctions-anonymes-sont-vos-amies">
+<span class="header-section-number">11.4</span> <code>~</code> et <code>\(x)</code> : les fonctions anonymes sont vos amies</h2>
+<p>Dans <code>purrr</code> et plus largement dans le tidyverse, on peut déclarer des fonctions anonymes, “à la volée” c’est à dire qu moment où l’on en a besoin. <code>purrr</code> mobilise l’opérateur <code>~</code> et la variable <code>.x</code>.</p>
+<p>R “de base” a repris l’idée dans une saveur un peu différente avec <code>\(x)</code>. Ces trois approches sont équivalentes :</p>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span> <span class="co"># create a vector</span>
+<span class="co"># option 1 : using a named function</span>
+<span class="va">square</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span><span class="op">^</span><span class="fl">2</span>
+<span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dbl</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">square</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  4  9 16 25</code></pre>
+</div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># option 2 : purrr style anonymous function</span>
+<span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">x</span>, <span class="op">~</span><span class="va">.x</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span>    </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 9
+
+[[4]]
+[1] 16
+
+[[5]]
+[1] 25</code></pre>
+</div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># option 3 : R base anonymous function</span>
+<span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">x</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span>  </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 9
+
+[[4]]
+[1] 16
+
+[[5]]
+[1] 25</code></pre>
+</div>
+</div>
+</section><section id="map2-et-généralisation-pmap" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="map2-et-généralisation-pmap">
+<span class="header-section-number">11.5</span> <code>map2</code> et généralisation <code>pmap</code>
+</h2>
+<p>Imaginons que vous ayez deux listes <code>z1</code> et <code>z2</code> et que chaque élément de <code>z1</code> doivent être élevé à la puissance de chaque élément de <code>z2</code>. <code>purrr</code> généralise <code>map</code> avec deux listes avec les fonctions <code>map2_*</code> :</p>
+<div class="cell">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">4</span><span class="op">:</span><span class="fl">5</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span>, <span class="fl">4.25</span><span class="op">)</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>
+<span class="va">z2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">map2</a></span><span class="op">(</span><span class="va">z1</span>, <span class="va">z2</span>, \<span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="va">x</span><span class="op">^</span><span class="va">y</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 16 25
+
+[[2]]
+[1] 3.00 2.00 4.25
+
+[[3]]
+[1]  1  8 27</code></pre>
+</div>
+</div>
+<p>Si vous avez plus de trois listes, vous pouvez utiliser <code>pmap_</code>, comme suit. Le premier argument sera une liste de toutes vos listes. Imaginons qu’après avoir élevé à la puissance de <code>z2</code> nous voulions ajouter une valeur dans <code>z3</code> :</p>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">z3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">10</span>, <span class="op">-</span><span class="fl">5</span>, <span class="fl">0</span><span class="op">)</span>
+<span class="fu"><a href="https://purrr.tidyverse.org/reference/pmap.html">pmap</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">z1</span>, <span class="va">z2</span>, <span class="va">z3</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">z</span><span class="op">)</span> <span class="va">x</span><span class="op">^</span><span class="va">y</span> <span class="op">+</span> <span class="va">z</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 26 35
+
+[[2]]
+[1] -2.00 -3.00 -0.75
+
+[[3]]
+[1]  1  8 27</code></pre>
+</div>
+</div>
+</section><section id="opérations-sur-listes" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="opérations-sur-listes">
+<span class="header-section-number">11.6</span> Opérations sur listes</h2>
+</section><section id="cheat-sheet" class="level2" data-number="11.7"><h2 data-number="11.7" class="anchored" data-anchor-id="cheat-sheet">
+<span class="header-section-number">11.7</span> cheat sheet</h2>
 
 
-
-</main> <!-- /main -->
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/vbonhomme">❤ R pour les gens pressés</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a><br> est placé dans le domaine public sous licence <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a></p> 
+</section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a></p> 
+ 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -438,16 +679,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./ggplot2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./tidyrest.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

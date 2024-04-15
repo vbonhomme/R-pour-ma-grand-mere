@@ -2,6 +2,28 @@
 
 blockquote {
   margin: 0 0 9rem;
-  padding: .625rem 1.25rem;
-  border-left: 1rem solid #ecf0f1;
+  font-family: Georgia, Garamond, serif;
+  font-size: ?graphic5rem;
+  font-style:italic;
+  padding: 1.5rem 1.25rem;
+  border-left: 0.5rem solid #ff0083;
+  background:#ff00831a;
+}
+
+code {
+  background:#ff00831a;
+}
+
+.cell-output.cell-output-stdout {
+  background: #fcf1c275;
+  border-left-style: solid;
+  border-left-width: thick;
+  border-left-color: #fcf1c2;
+  border-radius: .25rem;
+  margin-left: calc(calc(-0.6em + -3px) + 2px);
+}
+
+.sourceCode.R {
+  border-left-width: thick;
+  border-radius: .25rem;
 }

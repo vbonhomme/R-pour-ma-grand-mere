@@ -1,0 +1,33 @@
+# Installer un environnement R
+
+Je préconise l'installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.
+
+## R
+L'installation de R se passe généralement sans encombres, en quelques minutes.
+
+Le plus simple est de choisir votre système d'exploitation depuis la page officielle :
+
+> [https://cran.rstudio.com/](https://cran.rstudio.com/). 
+
+Pour Windows et Mac, il suffit de télécharger et d'installer l'archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré.
+
+## RStudio
+Pour installer RStudio, version bureau, récupérez l'installeur depuis sa page d'accueil et laissez vous porter : 
+
+> [https://posit.co/download/rstudio-desktop/]([https://posit.co/download/rstudio-desktop/])
+
+## Vérifier votre installation
+Une fois que vous avez installé R puis RStudio, ouvrez RStudio.
+
+Dans la fenêtre "console", là où vous voyez une invite de commande `>` tapez 1+1 puis `<Entrée>`. Voilà, vous avez une installation de R+RStudio qui fonctionne. 
+
+## Installer les packages
+
+Les besoins de ce document se limitent aux packages du [tidyverse](https://www.tidyverse.org/) que vous pouvez installer en tapant à la console la commande suivante :
+
+
+> ```install.packages("tidyverse")```
+
+
+
+

@@ -1,10 +1,5 @@
 # Premiers pas et concepts-clés
 
-```{r}
-#| output: asis
-```
-
-
 ## Arithmétique
 En premier lieu, R est une calculette. Vous pouvez copier-coller les blocs de code directement dans votre console R :
 
@@ -168,6 +163,14 @@ rep(tonton, each=3)
 * quand est-ce qu'on fait une pause ?
 
 Vous vous posez les bonnes questions et il est temps de faire un interlude, et non des moindres, l'interlude : `?`
+
+## Interlude clavier
+
+* Toutes les commandes tapées depuis l'ouverture de R/RStudio sont dans votre console. Pour l'effacer, pressez `<Ctrl> + <L>`. Vos objets sont conservés.
+* Pour naviguer dans votre historique, côté console, pressez les flèches `<Haut>` et `<Bas>`.
+* Pour compléter un nom de fonction ou d'argument, pressez `<Tab>`
+* Une fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez `<Tab>` de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.
+* Dans RStudio, allez à peu près tout tester dans le menu `Code`. Vous y trouverez des fonctions très utiles ("Reindent lines", "Reformat code" par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !
 
 ## Fonctions
 

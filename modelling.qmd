@@ -1,0 +1,28 @@
+# Modélisation statistique : `lm`
+
+Ce document introduit l'aspect le plus basique de modélisation mais qui inspire ou dont dérivent tous les autres : le modèle linéaire aka `lm`.
+
+Nous allons nous contenter du jeu de données `iris` et en particulier d'analyser la relation, si elle existe, entre la longueur et la largeur des pétales.
+
+> Avant de faire des modèles, faites des graphes !
+
+```{r}
+head(iris)
+plot(Petal.Width ~ Petal.Length, data=iris, 
+     main="is petal width ~ petal length ?")
+```
+
+
+
+```{r}
+mod <- lm(Petal.Width ~ Petal.Length, data=iris)
+mod
+```
+
+### formula
+```{r}
+
+plot(mod)
+#predict()
+```
+

@@ -7,18 +7,23 @@ book:
   date: "04/13/2024"
   chapters:
     - index.qmd
-    - toc.qmd
+    - install.qmd
     - 3min-tour.qmd
     - premiers-pas.qmd
     - programmation.qmd
+    - modelling.qmd
     - magrittr.qmd
+    - import.qmd
     - dplyr.qmd
+    - tidyr.qmd
     - ggplot2.qmd
     - purrr.qmd
     - tidyrest.qmd
     - vocabulaire.qmd
     - ressources.qmd
 
+
+    
 format:
   html:
     theme: flatly
@@ -26,8 +31,12 @@ format:
     toc: true
     toc-expand: 3
     include-after-body: footer.html
-    toc-title: "Au menu"
+    toc-title: "Dans ce chapitre"
+    highlight-style: github
     code-link: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+
   pdf:
     documentclass: scrreprt
 

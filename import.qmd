@@ -1,0 +1,21 @@
+# Importer ses données
+
+## Bonnes pratiques
+
+## Import
+### `read.table`
+### `Rstudio`
+### `readr`
+### `load`
+
+## Exports
+### write.table
+### write_csv, etc.
+### `save`
+
+## Autres I/Os
+* readlines
+* httr
+* yaml
+* xlsx
+

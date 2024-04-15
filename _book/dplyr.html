@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R pour ma grand-mère - 6&nbsp; Manipulation de données avec dplyr</title>
+<title>R pour ma grand-mère - 8&nbsp; Manipulation de données avec dplyr</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ggplot2.html" rel="next">
-<link href="./magrittr.html" rel="prev">
+<link href="./tidyr.html" rel="next">
+<link href="./import.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dplyr.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec `dplyr`</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dplyr.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec `dplyr`</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -108,8 +108,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./toc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Préambule</span></span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,44 +132,62 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vocabulaire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
   </div>
 </li>
     </ul>
@@ -178,14 +196,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Dans ce chapitre</h2>
+   
+  <ul>
+  <li><a href="#tibble" id="toc-tibble" class="nav-link active" data-scroll-target="#tibble"><span class="header-section-number">8.1</span> <code>tibble</code></a></li>
+  <li><a href="#rename" id="toc-rename" class="nav-link" data-scroll-target="#rename"><span class="header-section-number">8.2</span> <code>rename</code></a></li>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><span class="header-section-number">8.3</span> <code>select</code></a></li>
+  <li><a href="#tidyselect" id="toc-tidyselect" class="nav-link" data-scroll-target="#tidyselect"><span class="header-section-number">8.4</span> <code>tidyselect</code></a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><span class="header-section-number">8.5</span> <code>filter</code></a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="header-section-number">8.6</span> <code>mutate</code></a></li>
+  <li><a href="#transmute" id="toc-transmute" class="nav-link" data-scroll-target="#transmute"><span class="header-section-number">8.7</span> <code>transmute</code></a></li>
+  <li><a href="#summarise" id="toc-summarise" class="nav-link" data-scroll-target="#summarise"><span class="header-section-number">8.8</span> <code>summarise</code></a></li>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><span class="header-section-number">8.9</span> <code>group_by</code></a></li>
+  <li><a href="#rowwise" id="toc-rowwise" class="nav-link" data-scroll-target="#rowwise"><span class="header-section-number">8.10</span> <code>rowwise</code></a></li>
+  <li><a href="#join" id="toc-join" class="nav-link" data-scroll-target="#join"><span class="header-section-number">8.11</span> <code>join</code></a></li>
+  <li><a href="#nest" id="toc-nest" class="nav-link" data-scroll-target="#nest"><span class="header-section-number">8.12</span> <code>nest</code></a></li>
+  <li><a href="#cheat-sheet" id="toc-cheat-sheet" class="nav-link" data-scroll-target="#cheat-sheet"><span class="header-section-number">8.13</span> <code>cheat sheet</code></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></h1>
 </div>
 
 
@@ -200,12 +236,51 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Plop</p>
+<section id="tibble" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="tibble"><span class="header-section-number">8.1</span> <code>tibble</code></h2>
+</section>
+<section id="rename" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="rename"><span class="header-section-number">8.2</span> <code>rename</code></h2>
+</section>
+<section id="select" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="select"><span class="header-section-number">8.3</span> <code>select</code></h2>
+</section>
+<section id="tidyselect" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="tidyselect"><span class="header-section-number">8.4</span> <code>tidyselect</code></h2>
+</section>
+<section id="filter" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="filter"><span class="header-section-number">8.5</span> <code>filter</code></h2>
+</section>
+<section id="mutate" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="mutate"><span class="header-section-number">8.6</span> <code>mutate</code></h2>
+</section>
+<section id="transmute" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="transmute"><span class="header-section-number">8.7</span> <code>transmute</code></h2>
+</section>
+<section id="summarise" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="summarise"><span class="header-section-number">8.8</span> <code>summarise</code></h2>
+</section>
+<section id="group_by" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="group_by"><span class="header-section-number">8.9</span> <code>group_by</code></h2>
+</section>
+<section id="rowwise" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="rowwise"><span class="header-section-number">8.10</span> <code>rowwise</code></h2>
+</section>
+<section id="join" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="join"><span class="header-section-number">8.11</span> <code>join</code></h2>
+</section>
+<section id="nest" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="nest"><span class="header-section-number">8.12</span> <code>nest</code></h2>
+</section>
+<section id="cheat-sheet" class="level2" data-number="8.13">
+<h2 data-number="8.13" class="anchored" data-anchor-id="cheat-sheet"><span class="header-section-number">8.13</span> <code>cheat sheet</code></h2>
 
 
+</section>
 
 </main> <!-- /main -->
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/vbonhomme">❤ R pour les gens pressés</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a><br> est placé dans le domaine public sous licence <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a></p> 
+ <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a><br></p> 
+ 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -441,13 +516,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./magrittr.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span>
+      <a href="./import.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ggplot2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./tidyr.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

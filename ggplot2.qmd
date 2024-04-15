@@ -1,7 +1,9 @@
 # Graphiques avec `ggplot2`
 
 ## Rationale
-Il est peu dire que le package `ggplot2` a changé la face de la représentation graphique en R. Le package de base, `graphics` permet certes de tout faire mais laborieusement. D'autres packages (`lattice` par exemple) permettent une création plus proche de l'utilisateur·trice, moins proches des "primitives" (segments, points, etc.) graphiques.
+Il est peu dire que le package `ggplot2` a changé la face de la représentation graphique en R.
+
+Le package de base, `graphics`^[`?graphics`] permet certes de tout faire mais laborieusement. D'autres packages (`lattice` par exemple) permettent une création plus proche de l'utilisateur·trice, moins proches des "primitives" (segments, points, etc.) graphiques.
 
 La force de `ggplot2`, d'abord écrit par Hadley Wickham, est d'implémenter la _Grammar of Graphics_ de Leland Wilkinson qui dissocie les données de leurs représentations, de façon déclarative. Nous déclarerons ainsi à un jeu de données, des modes de représentation (des `geom_`) qui s'appuieront eux-mêmes sur des déclarations d'axes des abscisses, des ordonées, des couleurs, des tailles etc. (via `aes`), nous préciserons les axes (`coord_`), les paramètres de style `theme`. 
 
@@ -301,9 +303,7 @@ gg + scale_color_manual(values=sp_cols)
 
 ## `%+%` : une fabrique à graphes
 
-Plus haut, je vous ai promis que les graphes `ggplot2` étaient en soit des machines à faire des graphes[^funct]. Imaginons que nous disposions d'un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un `ggplot` que vous auriez construit avec amour et simplicité :
-
-[^funct]: on pourrait parler de fonctions, et même de _functionnals_.
+Plus haut, je vous ai promis que les graphes `ggplot2` étaient en soit des machines à faire des graphes^[on pourrait parler de fonctions, voire de fonction factories]. Imaginons que nous disposions d'un autre jeu de données se présentant de la même façon, typiquement avec les mêmes colonnes utilisées par un `ggplot` que vous auriez construit avec amour et simplicité :
 
 ```{r}
 gg <- ggplot(iris2) + aes(pl, pw, col=sp) + geom_point()

@@ -1,3 +1,27 @@
 # Manipulation de données avec `dplyr`
 
-Plop
+## `tibble`
+
+## `rename`
+
+## `select`
+
+## `tidyselect`
+
+## `filter`
+
+## `mutate`
+
+## `transmute`
+
+## `summarise`
+
+## `group_by`
+
+## `rowwise`
+
+## `join`
+
+## `nest`
+
+## `cheat sheet`
