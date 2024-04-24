@@ -11,7 +11,7 @@
     "href": "index.html#à-propos-de-louvrage",
     "title": "R pour ma grand-mère",
     "section": "À propos de l’ouvrage",
-    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées.\nIl sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.\nLe titre est un hommage à ma grand-mère, certes plus intarissable sur la sociologie provençale des années 1950 que sur la coercion de classe à la volée."
+    "text": "À propos de l’ouvrage\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wickham. Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d’internet vous permettra d’en trouver davantage.\nCe document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s."
   },
   {
     "objectID": "index.html#à-propos-de-lauteur",
@@ -39,7 +39,7 @@
     "href": "index.html#conventions",
     "title": "R pour ma grand-mère",
     "section": "Conventions",
-    "text": "Conventions\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci :\n\n# this is a comment\n3+4\n\n[1] 7\n\n\nGénéralement, le résultat s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
+    "text": "Conventions\nLes fonctions et packages seront mentionnées dans cette police, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : ggplot() et ggplot2.\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci :\n\n# this is a comment\n3+4\n\n[1] 7\n\n\nLe résultat, textuel ou graphique, s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel."
   },
   {
     "objectID": "install.html#r",
@@ -310,30 +310,30 @@
   {
     "objectID": "import.html#bonnes-pratiques",
     "href": "import.html#bonnes-pratiques",
-    "title": "7  Importer ses données",
-    "section": "7.1 Bonnes pratiques",
-    "text": "7.1 Bonnes pratiques"
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.1 Bonnes pratiques",
+    "text": "7.1 Bonnes pratiques\nDans une vaste majorité des cas, vous remplissez et gérez vos données à partir d’un tableur. Que vous utilisiez MS Excel, Open Office, Libre Office, Google Sheets ou même un bloc notes, je ne saurai trop vous conseiller de respecter les quelques règles ci-dessous qui vous faciliteront la vie ensuite.\n\nSoignez vos données sources\n\nJe liste ci-dessous les grands principes, issus de l’excellent article par Karl Broman et Kara Woo1. Je les amende à la marge mais allez de ce pas lire cet article !\n1. Bien nommer votre fichier\n\n\ndata_2024-04-23 est une excellente base. Un horodatage est utile si d’autres versions venaient à advenir, vous n’auriez que le nom du fichier source à changer côté R.\nfaites des sauvegardes, en plusieurs lieux, y compris de vos vieux fichiers.\n\n2. Bien nommer vos colonnes\n\nJe vous conseille l’anglais et les minuscules partout.\nUtilisez des noms concis (vous allez les taper souvent) mais informatifs (on ne peut pas se permettre de malentendu).\nPas d’espaces pour les noms de colonnes, utilisez _ à la place. Par exemple : arm_length, arm_width, leg_length, etc.\nVous pouvez utiliser un patron pour les “familles” de variables par exemple = geo_city, geo_country, geo_lat, geo_lon. Cela vous permettra de les sélectionner facilement avec dplyr et tidyselect.\n\n3. Soyez homogènes partout, tout le temps\n\nPour chaque colonne ayant un système de nommage, par exemple un facteur, soyez homogènes. Si vous sexez des mésanges, restez dans l’ensemble {F, M, NA}. Chaque mésange aura une (et une seule) valeur.\nIdem pour les colonnes décrivant des variables continues, choisissez une unité (du système international) et tenez vous-y ! Par exemple : 182.1 (cm); 174.2 (cm); etc.\nLa validation des données de votre tableur est utile, à la saisie comme après.\nCes recommandations valent particulièrement pour les “ID” partagés entre fichiers. Si vous avez opté pour un système, tenez vous en à ce système (ou changez tout).\nUtilisez le . comme séparateur décimal\n\n4. Une seule valeur par cellule\n\nLes commentaires doivent, éventuellement, être faits ailleurs que dans la cellule. Pas non plus de codage par le formatage (couleur de cellule ou de texte, graisse et italique, etc.)\nPas non plus de cellules vides. Si vous avez des données manquantes, il est préférable de l’expliciter, par exemple avec NA.\n\n5. Exporter en fichier texte\n\nExportez votre tableur en .txt ou .csv (qui est fondamentalement du texte) ou n’importe quel autre fichier pouvant s’ouvrir avec un simple bloc-notes.\nL’import direct de fichier xlsx (et variantes) est possible mais non souhaitable."
   },
   {
     "objectID": "import.html#import",
     "href": "import.html#import",
-    "title": "7  Importer ses données",
-    "section": "7.2 Import",
-    "text": "7.2 Import\n\n7.2.1 read.table\n\n\n7.2.2 Rstudio\n\n\n7.2.3 readr\n\n\n7.2.4 load"
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.2 Import",
+    "text": "7.2 Import\nCette section utilise le petit jeu de données “data.csv” que vous pouvez télécharger ici.\nN’hésitez pas à créer votre propre jeu de données ou bien à en utiliser un que vous auriez sous la main.\nJe commence par les fonctions de base de R mais sachez que RStudio fait très bien le job, alors ne restez pas trop bloqués sur la section read.table, surtout là pour la démystifier.\n\n7.2.1 read.table\n\nLa fonction “historique” pour l’import de données est read.table qui a provoqué des tonneaux de larmes et qui, pour une entrée en matière est, il est vrai, un peu aride. Et pourtant, il n’y a que quelques arguments à préciser si votre fichier tableur, devenu texte, suit les conseils de la section précédente.\nLe principal point d’achoppement est peut-être le premier argument (file) qui définit le chemin vers votre fichier. Un chemin peut être spécifié de façon relative ou absolue :\n\nun chemin absolu a comme référence la racine de votre système de fichiers (C:\\ ou ~ selon que vous soyiez respectivement sur Windows ou sur un OS plus décent)\nun chemin relatif a comme référence le dossier de travail actuel de R, accessible avec getwd() et modifiable par setwd().\n\nSi par exemple, j’ai récupéré mon fichier data.csv (voir plus haut) et qu’il gît sur mon Bureau (j’ai un Mac) le chemin absolu serait : \"~/Desktop/data0.csv\" ; Alors que mon chemin relatif serait relatif à : /Users/vbonhomme/Research/R-pour-ma-grand-mere.\nMon conseil est le suivant : utilisez les “Projets” RStudio. L’icône bleue en haut à droite ou “File &gt; New project”. Puis, dans ce dossier qui contiendra vos scripts, vos données, vos résultats, votre papier, etc. créez un dossier “data”. De cette façon, votre working directory sera votre dossier général et ils vous suffira d’utiliser ce type de chemin : data/data.csv.\nread.table accepte ensuite d’autres arguments, les plus souvent utilisés étant :\n\n\nsep pour définir le caractère qui définit le saut de champ (de colonne). Si vous utilisez des tabulations, ce que je ne conseille pas, vous pouvez le mentionner avec \\t ;\n\ndec : idem pour le marqueur de la décimale (idéalement ., la valeur par défaut, ou , que je vous déconseille)\n\nheader : TRUE/FALSE selon que vos colonnes aient des entêtes ou non ;\n\nskip : pour sauter, éventuellement, des lignes en début de fichier.\n\nAvec data.csv on peut donc importer son contenu via :\n\nx &lt;- read.table(\"data/data.csv\", sep=\";\", header=TRUE)\nx\n\n        prénom  sexe stature     R\n1   Hildegarde femme     168  TRUE\n2 Jean-Jacques homme     170 FALSE\n3       Victor autre     184 FALSE\n\n\n\n7.2.2 RStudio\n\nLa commande “Environment &gt; Import dataset” de RStudio vous simplifie grandement cette tâche avec un aperçu en temps réel de l’import via le package readr. Une fois que vous êtes satisfait·e, vous pouvez copier-coller le code qui vous sera retourné à l’issu de l’import. Royal !\n\n7.2.3 readr\n\nLe package readr du tidyverse fait la même chose mais vous donne plus de contrôle sur l’import. Le package est bien documenté ici."
   },
   {
     "objectID": "import.html#exports",
     "href": "import.html#exports",
-    "title": "7  Importer ses données",
-    "section": "7.3 Exports",
-    "text": "7.3 Exports\n\n7.3.1 write.table\n\n\n7.3.2 write_csv, etc.\n\n\n7.3.3 save"
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.3 Exports",
+    "text": "7.3 Exports\nVous pourriez aussi avoir besoin d’écrire des fichiers .csv, .txt, etc. Sachez qu’à côté de read.table, read_csv, etc. existent leur cousines destinées à l’écriture : write.table, write_csv qui fonctionnent de la même façon.\nPour avoir un fichier qui s’ouvre “facilement” dans un tableur je vous conseille :\n\nwrite.table(votre_objet, row.names=FALSE, col.names=TRUE)"
   },
   {
     "objectID": "import.html#autres-ios",
     "href": "import.html#autres-ios",
-    "title": "7  Importer ses données",
-    "section": "7.4 Autres I/Os",
-    "text": "7.4 Autres I/Os\n\nreadlines\nhttr\nyaml\nxlsx"
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.5 Autres I/Os",
+    "text": "7.5 Autres I/Os\nPour vous ouvrir les shakras, sachez qu’il existe quantité d’autres approches pour importer/exporter des données.\n\n\nreadlines lit des fichiers textes bruts\nle package feather utilise un format performant et interopérable de données avec Python\nle package xlsx permet de lire/écrire des fichiers xlsx (berk)\nle package httr permet de travailler avec l’http et notamment de faire des requêtes GET et POST\n\n\nyaml permet de parser des fichiers .yaml"
   },
   {
     "objectID": "dplyr.html#tibble",
@@ -824,5 +824,117 @@
     "title": "14  Ressources",
     "section": "14.10 Quotes",
     "text": "14.10 Quotes\n\nTout ici est délicieux mais on peut rajouter :\n\n\nFrustration is typical and temporary - Hadley Wickham\n\n\nIf the statistics are boring, then you’ve got the wrong numbers. - Edward Tufte\n\n\nAlways code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - John Wood\n\n\nAt their best, graphics are tools for reasonning about quantitative information. - Edward Tufte\n\n\nThere are three types of lies - lies, damn lies, and statistics. ― Benjamin Disraeli\n\n\nLes statistiques sont comme la dentelle des petites culottes : elles révèlent le superflu mais cachent l’essentiel - ?\n\n\nL’analyse statistique n’est vraiment utile qu’à des personnes qui n’en n’ont pas la maîtrise, et n’est maîtrisée que par des personnes qui n’en n’ont pas vraiment l’usage - Daniel Chessel"
+  },
+  {
+    "objectID": "import.html#footnotes",
+    "href": "import.html#footnotes",
+    "title": "\n7  Importer ses données\n",
+    "section": "",
+    "text": "https://doi.org/10.1080/00031305.2017.1375989↩︎"
+  },
+  {
+    "objectID": "import.html#rda",
+    "href": "import.html#rda",
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.4 .rda\n",
+    "text": "7.4 .rda\n\nSi vous voulez sauver/lire des fichiers R, dans le format natif de R, les commandes save/load sont vos amies. Le format rda (ou .RData, c’est la même chose) est compressé et optimisé. Vous pouvez ainsi sauver un jeu de données comme cela :\n\nsave(iris, file=\"iris.rda\")\nload(\"iris.rda\")\n\nCette approche est par exemple très utile dans le cas d’un calcul qui serait très long dans un script (qui se terminerait par un save) et serait rappelé à la vie par un autre script (qui commencerait par un load)."
+  },
+  {
+    "objectID": "import.html#export",
+    "href": "import.html#export",
+    "title": "\n7  Importer ses données\n",
+    "section": "\n7.3 Export",
+    "text": "7.3 Export\nVous pourriez aussi avoir besoin d’écrire des fichiers .csv, .txt, etc. Sachez qu’à côté de read.table, read_csv, etc. existent leur cousines destinées à l’écriture : write.table, write_csv qui fonctionnent de la même façon.\nPour avoir un fichier qui s’ouvre “facilement” dans un tableur je vous conseille :\n\nwrite.table(votre_objet, row.names=FALSE, col.names=TRUE)"
+  },
+  {
+    "objectID": "magrittr.html#et",
+    "href": "magrittr.html#et",
+    "title": "6  Ceci n’est pas qu’un opérateur : %>% et magrittr",
+    "section": "6.1 %>% et |>",
+    "text": "6.1 %&gt;% et |&gt;\nD’abord introduit par le package magrittr le forward pipe est désormais dans le R “de base” depuis la version 4.1.0.\nLe pipe |&gt; tend désormais à être préféré à %&gt;%1. Ce dernier mérite néanmoins, avec ses autres copains de magrittr, d’être détaillé."
+  },
+  {
+    "objectID": "magrittr.html#footnotes",
+    "href": "magrittr.html#footnotes",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "",
+    "text": "À prononcer à l’anglaise hein : “payepeu”↩︎\nVous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.↩︎"
+  },
+  {
+    "objectID": "magrittr.html#vs",
+    "href": "magrittr.html#vs",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.1 %>% vs |>\n",
+    "text": "6.1 %&gt;% vs |&gt;\n\nD’abord introduit par le package magrittr le forward pipe est désormais dans le R “de base” depuis la version 4.1.0.\nLe pipe |&gt; tend désormais à être préféré à %&gt;% comme on le lira sur le (blog du tidyverse)[, très complet)[https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/]. Ce dernier mérite néanmoins, avec ses autres copains de magrittr, d’être détaillé.\nSi la vignette de magrittr est très bien faite (vignette(\"magrittr\"), j’en livre ici une introduction rapide."
+  },
+  {
+    "objectID": "magrittr.html#section",
+    "href": "magrittr.html#section",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.2 %>%\n",
+    "text": "6.2 %&gt;%\n\nDans les grandes lignes, %&gt;% et |&gt; fonctionnent de la même façon. J’ai tendance à continuer d’utiliser %&gt;% qui est chargé automatiquement par le tidyverse. Pour les autres opérateurs, ou si vous n’utilisez pas le tidyverse vous pouvez en disposer avec :\n\nlibrary(magrittr)\n\nVenons en aux faits.\n\nrunif(100) %&gt;% mean()\n\n[1] 0.4985159"
+  },
+  {
+    "objectID": "magrittr.html#le-.-pour-customiser-le-forward",
+    "href": "magrittr.html#le-.-pour-customiser-le-forward",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.3 Le . pour customiser le forward",
+    "text": "6.3 Le . pour customiser le forward"
+  },
+  {
+    "objectID": "magrittr.html#t",
+    "href": "magrittr.html#t",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.4 %T>%\n",
+    "text": "6.4 %T&gt;%\n\nUtilisation ?magr"
+  },
+  {
+    "objectID": "magrittr.html#section-1",
+    "href": "magrittr.html#section-1",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.5 `%$%",
+    "text": "6.5 `%$%"
+  },
+  {
+    "objectID": "magrittr.html#section-2",
+    "href": "magrittr.html#section-2",
+    "title": "\n6  Ceci n’est pas qu’un opérateur : %>% et magrittr\n",
+    "section": "\n6.6 %<>%\n",
+    "text": "6.6 %&lt;&gt;%\n\nUtilisation Critiques"
+  },
+  {
+    "objectID": "tidyr.html",
+    "href": "tidyr.html",
+    "title": "9  Nettoyer ses données avec tidyr",
+    "section": "",
+    "text": "The goal of tidyr is to help you create tidy data. Tidy data is data where:\n\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nPlop"
+  },
+  {
+    "objectID": "tidyr.html#tibble",
+    "href": "tidyr.html#tibble",
+    "title": "9  Nettoyer ses données avec tidyr",
+    "section": "9.1 tibble",
+    "text": "9.1 tibble"
+  },
+  {
+    "objectID": "tidyr.html#pivot_longerpivot_wider",
+    "href": "tidyr.html#pivot_longerpivot_wider",
+    "title": "9  Nettoyer ses données avec tidyr",
+    "section": "9.2 pivot_longer/pivot_wider",
+    "text": "9.2 pivot_longer/pivot_wider"
+  },
+  {
+    "objectID": "tidyr.html#separateunite",
+    "href": "tidyr.html#separateunite",
+    "title": "9  Nettoyer ses données avec tidyr",
+    "section": "9.3 separate/unite",
+    "text": "9.3 separate/unite"
+  },
+  {
+    "objectID": "tidyr.html#expand",
+    "href": "tidyr.html#expand",
+    "title": "9  Nettoyer ses données avec tidyr",
+    "section": "9.4 expand",
+    "text": "9.4 expand\nbetter expand.grid"
   }
 ]

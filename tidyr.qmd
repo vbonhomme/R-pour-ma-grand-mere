@@ -1,2 +1,19 @@
 # Nettoyer ses données avec `tidyr`
 
+> The goal of tidyr is to help you create tidy data. Tidy data is data where:
+  
+  * Each variable is a column; each column is a variable.
+  * Each observation is a row; each row is an observation.
+  * Each value is a cell; each cell is a single value.
+
+## `tibble`
+
+## `pivot_longer`/`pivot_wider`
+
+## `separate`/`unite`
+
+## `expand`
+better expand.grid
+
+
+

@@ -1,3 +1,51 @@
 # Ceci n'est pas qu'un opérateur : `%>%` et `magrittr`
 
-Plop
+Il est peu dire que cet opérateur[^pipe] a révolutionné R, lorsqu'il y a été importé, d'abord dans le package `magrittr` sous sa forme `%>%`. Il est désormais inclus dans le R de "base" sous sa forme `|>` mais nous n'utiliserons que la version historique `%>%`, que je trouve plus lisible, plus facile à taper (`<Maj> + <Ctrl/Cmd> + <M>` dans RStudio) et parce que les années aidant, je deviens conservateur.
+
+[^pipe]: À prononcer à l'anglaise hein : "payepeu"
+
+L'idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d'écrire :
+
+`h(g(f(x)))` on peut déplier cet emboitement de fonctions et écrire `(h ∘ g ∘ f)(x)`
+
+En langage R, plutôt que d'écrire `h(g(f(x)))` on écrira : `x %>% f() %>% g() %>% h()`[^pipe2]. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.
+
+[^pipe2]: Vous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.
+
+
+## `%>%` vs `|>`
+
+D'abord introduit par le package `magrittr` le forward pipe est désormais dans le R "de base" depuis la [version 4.1.0](https://cran.r-project.org/doc/manuals/r-devel/NEWS.html).
+
+Le pipe `|>` tend désormais à être préféré à `%>%` comme on le lira sur le (blog du tidyverse)[, très complet)[https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/]. Ce dernier mérite néanmoins, avec ses autres copains de `magrittr`, d'être détaillé.
+
+Si la vignette de `magrittr` est très bien faite (`vignette("magrittr"`), j'en livre ici une introduction rapide.
+
+## `%>%` 
+Dans les grandes lignes, `%>%` et `|>` fonctionnent de la même façon. J'ai tendance à continuer d'utiliser `%>%` qui est chargé automatiquement par le tidyverse. Pour les autres opérateurs, ou si vous n'utilisez pas le tidyverse vous pouvez en disposer avec :
+
+```{r}
+library(magrittr)
+```
+
+Venons en aux faits.
+
+```{r}
+runif(100) %>% mean()
+```
+
+## Le `.` pour customiser le forward
+
+## `%T>%`
+Utilisation
+?magr
+
+## `%$% 
+
+## `%<>%`
+
+Utilisation
+Critiques
+
+
+

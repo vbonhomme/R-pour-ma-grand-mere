@@ -19,6 +19,11 @@ mod <- lm(Petal.Width ~ Petal.Length, data=iris)
 mod
 ```
 
+
+```{r}
+summary(mod)
+```
+
 ### formula
 ```{r}
 

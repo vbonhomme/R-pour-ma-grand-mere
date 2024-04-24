@@ -835,25 +835,9 @@ ggplot(iris) +
 ## Un mot sur les packages
 
 ## L'opérateur _pipe_ `%>%`
+L'opérateur pipe permet de passer, de gauche à droite, le résultat d'une fonction à une seconde fonction, puis à une troisième. Ce pipe est détaillé dans un chapitre mais sa compréhension devrait être intuitive.
 
-```{r, echo=FALSE}
-library(magrittr)
-```
-
-
-Il est peu dire que cet opérateur[^pipe] a révolutionné R, lorsqu'il y a été importé, d'abord dans le package `magrittr` sous sa forme `%>%`. Il est désormais inclus dans le R de "base" sous sa forme `|>` mais nous n'utiliserons que la version historique `%>%`, que je trouve plus lisible, plus facile à taper (`<Maj> + <Ctrl/Cmd> + <M>` dans RStudio) et parce que les années aidant, je deviens conservateur.
-
-[^pipe]: À prononcer à l'anglaise hein : "payepeu"
-
-L'idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d'écrire :
-
-`h(g(f(x)))` on peut déplier cet emboitement de fonctions et écrire `(h ∘ g ∘ f)(x)`
-
-En langage R, plutôt que d'écrire `h(g(f(x)))` on écrira : `x %>% f() %>% g() %>% h()`[^pipe2]. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.
-
-[^pipe2]: Vous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.
-
-Comparez ces deux lignes pourtant strictement équivalentes:
+Comparez par exemple ces deux lignes pourtant strictement équivalentes:
 ```{r}
 plot(sqrt(sample(seq(1:100), 6)))              # road to burnout
 seq(1:100) %>% sample(6) %>% sqrt() %>% plot() # let's breathe

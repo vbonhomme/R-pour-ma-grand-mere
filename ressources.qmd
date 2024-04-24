@@ -30,12 +30,12 @@
 * [*R packages*](http://r-pkgs.had.co.nz/) par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l'écriture de packages.
 
 ## Sites
+* [CRAN Views](http://cran.r-project.org/web/views/) : pour bien commencer avec les packages. Organisé par tâches (par exemple les Omics, l'inférence bayésienne, etc.) et "curationné" avec amour.
 * [*R-bloggers*](http://www.r-bloggers.com/) : aggrégation de blogs qui traitent de R, quelques posts par jour, éclectique, une excellente ressource pour être à la page. tl;dr: un best-of [ici](http://www.r-bloggers.com/?s=in+case+you+missed+it)
 * [*crantastic*](http://crantastic.org/) : un site qui récupère toute l'activité sur les dépôts de packages. Permet de reviewer des packages, de chercher par auteur, etc.
 * [RPubs](https://rpubs.com/) : sérendipité, me voilà !
 * [*R graph gallery*](http://rgraphgallery.blogspot.fr/search/label/map) : collection de graphiques, qui ne fera pas oublier la gallerie "addicted to R" qui est en maintenance ou abandonnée depuis un bail
 * [*R-Studio's blog*](http://blog.rstudio.org/) : par l'équipe de R Studio, dernières actualités du développement de R Studio et des packages par son équipe
-* [CRAN Views](http://cran.r-project.org/web/views/) : pour bien commencer avec les packages
 * [Portail Wikipédia des statistiques [en] ](https://en.wikipedia.org/wiki/Portal:Statistics) : en attendant le bus, le métro, le train, le dodo, une excellente et quasi infinie ressource.
 * [*The Data and Story Library*](http://lib.stat.cmu.edu/DASL/) : des jeux de données célèbres, accompagnés de leurs histoires.
 * [Karl Broman](http://kbroman.org/pages/tutorials.html) : tous ses tutoriels sont délicieux et en particulier : [préparation de données dans un tableur](https://github.com/kbroman/dataorg) et [rééducation R pour les gens qui l'ont appris avec qu'il ne deviennent cool](https://github.com/kbroman/hipsteR)

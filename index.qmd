@@ -3,11 +3,9 @@
 ## À propos de l'ouvrage
 La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l'analyse de données.
 
-L'auteur a tenté d'écrire la ressource qu'il aurait aimé avoir à ses débuts, dans l'esprit de ses deux références chéries : [_R pour les débutants_](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr) d'Emmanuel Paradis et [_R for data science_](https://r4ds.hadley.nz/) d'Hadley Wichkam. Une sélection de références plus complètes et/ou plus spécifiques, sont listées.
+L'auteur a tenté d'écrire la ressource qu'il aurait aimé avoir à ses débuts, dans l'esprit de ses deux références chéries : [_R pour les débutants_](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr) d'Emmanuel Paradis et [_R for data science_](https://r4ds.hadley.nz/) d'Hadley Wickham. Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d'internet vous permettra d'en trouver davantage.
 
-Il sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours (18h). Son intention est d'autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.
-
-Le titre est un hommage à ma grand-mère, certes plus intarissable sur la sociologie provençale des années 1950 que sur la coercion de classe à la volée.
+Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d'autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.
 
 ## À propos de l'auteur
 
@@ -32,6 +30,7 @@ Si vous avez envie de faire pipi ou si vous cherchez un formateur ou un consulta
 Ce document est placé par l'auteur sous licence CC0, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !
 
 ## Conventions
+Les fonctions et packages seront mentionnées dans cette `police`, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : `ggplot()` et `ggplot2`.
 
 Le code en ligne utilisera ```une police de ce type```; les blocs ressemblent à celui ci :
 
@@ -40,7 +39,7 @@ Le code en ligne utilisera ```une police de ce type```; les blocs ressemblent à
 3+4
 ```
 
-Généralement, le résultat s'affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine.
+Le résultat, textuel ou graphique, s'affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine.
 Tout ce qui suit un `#` est un commentaire - lisez-les ! - et est ignoré par R.
 
 Parfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.
