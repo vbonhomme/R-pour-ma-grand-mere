@@ -839,6 +839,7 @@ L'opérateur pipe permet de passer, de gauche à droite, le résultat d'une fonc
 
 Comparez par exemple ces deux lignes pourtant strictement équivalentes:
 ```{r}
+library(magrittr)
 plot(sqrt(sample(seq(1:100), 6)))              # road to burnout
 seq(1:100) %>% sample(6) %>% sqrt() %>% plot() # let's breathe
 ```

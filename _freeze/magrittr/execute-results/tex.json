@@ -1,0 +1,20 @@
+{
+  "hash": "0df5c4c71ff6116bcac09767dcc1b9d1",
+  "result": {
+    "markdown": "# Ceci n'est pas qu'un opérateur : `%>%` et `magrittr`\n\nIl est peu dire que cet opérateur[^pipe] a révolutionné R, lorsqu'il y a été importé, d'abord dans le package `magrittr` sous sa forme `%>%`. Il est désormais inclus dans le R de \"base\" sous sa forme `|>` mais nous n'utiliserons que la version historique `%>%`, que je trouve plus lisible, plus facile à taper (`<Maj> + <Ctrl/Cmd> + <M>` dans RStudio) et parce que les années aidant, je deviens conservateur.\n\n[^pipe]: À prononcer à l'anglaise hein : \"payepeu\"\n\nL'idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d'écrire :\n\n`h(g(f(x)))` on peut déplier cet emboitement de fonctions et écrire `(h ∘ g ∘ f)(x)`\n\nEn langage R, plutôt que d'écrire `h(g(f(x)))` on écrira : `x %>% f() %>% g() %>% h()`[^pipe2]. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.\n\n[^pipe2]: Vous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.\n\n\n## `%>%` vs `|>`\n\nD'abord introduit par le package `magrittr` le forward pipe est désormais dans le R \"de base\" depuis la [version 4.1.0](https://cran.r-project.org/doc/manuals/r-devel/NEWS.html).\n\nLe pipe `|>` tend désormais à être préféré à `%>%` comme on le lira sur le (blog du tidyverse)[, très complet)[https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/]. Ce dernier mérite néanmoins, avec ses autres copains de `magrittr`, d'être détaillé.\n\nSi la vignette de `magrittr` est très bien faite (`vignette(\"magrittr\"`), j'en livre ici une introduction rapide.\n\n## `%>%` \nDans les grandes lignes, `%>%` et `|>` fonctionnent de la même façon. J'ai tendance à continuer d'utiliser `%>%` qui est chargé automatiquement par le tidyverse. Pour les autres opérateurs, ou si vous n'utilisez pas le tidyverse vous pouvez en disposer avec :\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(magrittr)\n```\n:::\n\n\n\nVenons en aux faits.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrunif(100) %>% mean()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.4823802\n```\n:::\n:::\n\n\n\n## Le `.` pour customiser le forward\n\n## `%T>%`\nUtilisation\n?magr\n\n## `%$% \n\n## `%<>%`\n\nUtilisation\nCritiques\n\n\n\n",
+    "supporting": [
+      "magrittr_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
