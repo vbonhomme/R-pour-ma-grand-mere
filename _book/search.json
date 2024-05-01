@@ -875,6 +875,13 @@
     "text": "https://twitter.com/hadleywickham/status/940021008764846080↩︎"
   },
   {
+    "objectID": "ressources.html#manuels-de-référence",
+    "href": "ressources.html#manuels-de-référence",
+    "title": "14  Ressources",
+    "section": "14.1 Manuels de référence",
+    "text": "14.1 Manuels de référence\n\nEn format Quarto\nhtsur le CRAN"
+  },
+  {
     "objectID": "ressources.html#must-see",
     "href": "ressources.html#must-see",
     "title": "14  Ressources",
@@ -943,12 +950,5 @@
     "title": "14  Ressources",
     "section": "14.11 Quotes",
     "text": "14.11 Quotes\n\nTout ici est délicieux mais on peut rajouter :\n\n\nFrustration is typical and temporary - Hadley Wickham\n\n\nIf the statistics are boring, then you’ve got the wrong numbers. - Edward Tufte\n\n\nAlways code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - John Wood\n\n\nAt their best, graphics are tools for reasonning about quantitative information. - Edward Tufte\n\n\nThere are three types of lies - lies, damn lies, and statistics. ― Benjamin Disraeli\n\n\nLes statistiques sont comme la dentelle des petites culottes : elles révèlent le superflu mais cachent l’essentiel - ?\n\n\nL’analyse statistique n’est vraiment utile qu’à des personnes qui n’en n’ont pas la maîtrise, et n’est maîtrisée que par des personnes qui n’en n’ont pas vraiment l’usage - Daniel Chessel"
-  },
-  {
-    "objectID": "ressources.html#manuels-de-référence",
-    "href": "ressources.html#manuels-de-référence",
-    "title": "14  Ressources",
-    "section": "14.1 Manuels de référence",
-    "text": "14.1 Manuels de référence\n\nEn format Quarto\nhtsur le CRAN"
   }
 ]
