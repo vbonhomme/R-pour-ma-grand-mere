@@ -1,0 +1,18 @@
+{
+  "hash": "772c143c277acfe03c4afc0686c0474f",
+  "result": {
+    "markdown": "# Installer un environnement R\n\n## Pourquoi apprendre R?\n\nMettons les pieds dans le plat d'entrée : pourquoi apprendre R quand je peux faire la même chose avec Excel stats ?\n\nAprès un court exercice de relaxation respiratoire, voilà quelques raisons :\n\n* R est l'environnement leader des statistiques et de l'analyse de données\n* R est plus que gratuit, il est libre et le restera\n* Le temps passé à apprendre R est rapidement amorti. Et s'il ne l'est pas tout de suite, il le sera au centuple un jour.\n* R vous permet de faire de la science sérieuse, c'est à dire [reproductible](https://en.wikipedia.org/wiki/Reproducibility)\n* Vous pouvez écrires des articles, des présentations, des applications web, des blogs, des sites webs, des livres avec R\n* R dispose de ressources impressionnantes : [20000+ packages](https://cran.r-project.org/web/packages/) (à peu près 1000 de plus tous les ans) et des tutoriels, livres, forums d'entraide à gogo et sans doute des collègues qui pratiquent et peuvent catalyser votre apprentissage. On peut raisonnablement dire que si vous avez un problème auquel vous ne trouvez pas de réponse dans les 3 premières années d'usage quotidien, c'est que votre question est mal posée ($(P<0.01)$).\n* Apprendre R c'est apprendre les statistiques\n* Apprendre R c'est apprendre à programmer\n* R est devenu convivial (qui l'eût cru ?!)\n* R est interopérable avec à peu près tout\n* Enfin, l'enjeu d'être autonome pour vos analyses n'est pas juste celui de faire des trucs rigolos avec un ordinateur : il en va de votre liberté scientifique. Ni plus ni moins.\n\n## Installer R\nL'installation de R se passe généralement sans encombres, en quelques minutes.\n\nLe plus simple est de choisir votre système d'exploitation depuis la page officielle :\n\n> [https://cran.rstudio.com/](https://cran.rstudio.com/). \n\nPour Windows et Mac, il suffit de télécharger et d'installer l'archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré.\n\n## RStudio\nJe préconise l'installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.\n\nPour installer RStudio, version bureau, récupérez l'installeur depuis sa page d'accueil et laissez vous porter : \n\n> [https://posit.co/download/rstudio-desktop/]([https://posit.co/download/rstudio-desktop/])\n\n## Vérifier votre installation\nUne fois que vous avez installé R puis RStudio, ouvrez RStudio.\n\nDans la fenêtre \"console\", là où vous voyez une invite de commande `>` tapez 1+1 puis `<Entrée>`. \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1+1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n\nVoilà, vous avez une installation de R+RStudio qui fonctionne. \n\n\n## Installer les packages\n\nLes besoins de ce document se limitent essentiellement aux packages du [tidyverse](https://www.tidyverse.org/) que vous pouvez installer en tapant à la console la commande suivante :\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"tidyverse\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

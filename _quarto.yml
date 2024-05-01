@@ -1,27 +1,31 @@
+lang: fr
+  
 project:
   type: book
 
 book:
   title: "R pour ma grand-mère"
-  author: "Vincent Bonhomme"
+  author:
+    name: Vincent Bonhomme
+    gender: male
   date: "04/13/2024"
   chapters:
     - index.qmd
     - install.qmd
     - 3min-tour.qmd
     - premiers-pas.qmd
-    - programmation.qmd
-    - modelling.qmd
-    - magrittr.qmd
     - import.qmd
     - dplyr.qmd
     - tidyr.qmd
     - ggplot2.qmd
     - purrr.qmd
     - tidyrest.qmd
+    - programmation.qmd
+    - modelling.qmd
+    - magrittr.qmd
     - vocabulaire.qmd
     - ressources.qmd
-  repo-url: https://www.rstudio.com/   
+  repo-url: https://github.com/vbonhomme/R-pour-ma-grand-mere
   search: 
     location: sidebar
     type: textbox
@@ -43,6 +47,11 @@ format:
 
   pdf:
     documentclass: scrreprt
+    toc-title: Table des matières
+    number-depth: 3
+    highlight-style: github
+    header-includes: |
+      \titlehead{\includegraphics[width=6in]{images/Athena.png}}
 
 editor: source
 

@@ -1,11 +1,25 @@
-# Préface {.unnumbered}
+# À propos {.unnumbered}
+
+[![](images/Athena.png){width=150}](https://www.vincentbonhomme.fr)
+
+<center>**(work in progress)**</center>
+
+
+## Versions
+Ce document existe en pdf et en ligne :
+
+* Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere](https://vbonhomme.github.io/R-pour-ma-grand-mere).
+* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
 
 ## À propos de l'ouvrage
 La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l'analyse de données.
 
-L'auteur a tenté d'écrire la ressource qu'il aurait aimé avoir à ses débuts, dans l'esprit de ses deux références chéries : [_R pour les débutants_](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr) d'Emmanuel Paradis et [_R for data science_](https://r4ds.hadley.nz/) d'Hadley Wickham. Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d'internet vous permettra d'en trouver davantage.
-
 Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d'autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.
+
+L'auteur a tenté d'écrire la ressource qu'il aurait aimé avoir à ses débuts, dans l'esprit de ses deux références chéries : [_R pour les débutants_](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr) d'Emmanuel Paradis et [_R for data science_](https://r4ds.hadley.nz/) d'Hadley Wickham. 
+
+Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d'internet vous permettra d'en trouver davantage.
+
 
 ## À propos de l'auteur
 
@@ -21,13 +35,14 @@ Si vous avez envie de faire pipi ou si vous cherchez un formateur ou un consulta
 -   [bonhomme.vincent\@gmail.com](mailto:bonhomme.vincent\@gmail.com)
 
 ## Code source
-* Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere]().
-* Si vous le lisez en ligne, il est disponible en pdf [ici](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
+
 * Ce document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]
 * Si vous êtes à l'aise sur Github, vous pouvez directement modifier le contenu que j'approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un "ticket" dans l'onglet "Issues".
 
 ## Licence
-Ce document est placé par l'auteur sous licence CC0, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !
+Ce document est placé par l'auteur dans le domaine public, [sous licence CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.fr), ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !
+
+L'image de couverture a été trouvée [ici](https://pxhere.com/fr/photo/992185) et elle est également sous licence CC0. J'aurais été heureux de créditer le·a photographe mais je n'ai pas l'info. Ce n'est pas ma grand-mère et non, je n'ai pas son accord pour vous transmettre son téléphone. 
 
 ## Conventions
 Les fonctions et packages seront mentionnées dans cette `police`, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : `ggplot()` et `ggplot2`.

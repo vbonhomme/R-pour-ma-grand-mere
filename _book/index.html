@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.433">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Vincent Bonhomme">
-<meta name="dcterms.date" content="2024-04-13">
 <title>R pour ma grand-mère</title>
 <style>
 code{white-space: pre-wrap;}
@@ -79,16 +78,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script><link rel="stylesheet" href="styles.css">
 </head>
@@ -96,11 +95,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Préface</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">À propos</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -112,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="./">R pour ma grand-mère</a> 
         <div class="sidebar-tools-main">
-    <a href="https://www.rstudio.com/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
+    <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -135,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -143,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Préface</span></a>
+ <span class="menu-text">À propos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,56 +165,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./programmation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -239,9 +238,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#pr%C3%A9face" id="toc-préface" class="nav-link active" data-scroll-target="#pr%C3%A9face">Préface</a>
+<a href="#%C3%A0-propos" id="toc-à-propos" class="nav-link active" data-scroll-target="#%C3%A0-propos">À propos</a>
   <ul class="collapse">
-<li><a href="#%C3%A0-propos-de-louvrage" id="toc-à-propos-de-louvrage" class="nav-link" data-scroll-target="#%C3%A0-propos-de-louvrage">À propos de l’ouvrage</a></li>
+<li><a href="#versions" id="toc-versions" class="nav-link" data-scroll-target="#versions">Versions</a></li>
+  <li><a href="#%C3%A0-propos-de-louvrage" id="toc-à-propos-de-louvrage" class="nav-link" data-scroll-target="#%C3%A0-propos-de-louvrage">À propos de l’ouvrage</a></li>
   <li><a href="#%C3%A0-propos-de-lauteur" id="toc-à-propos-de-lauteur" class="nav-link" data-scroll-target="#%C3%A0-propos-de-lauteur">À propos de l’auteur</a></li>
   <li><a href="#code-source" id="toc-code-source" class="nav-link" data-scroll-target="#code-source">Code source</a></li>
   <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
@@ -260,16 +260,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
     <div class="quarto-title-meta-contents">
              <p>Vincent Bonhomme </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 13, 2024</p>
+      <p class="date">13 avril 2024</p>
     </div>
   </div>
   
@@ -277,11 +277,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-</header><section id="préface" class="level1 unnumbered"><h1 class="unnumbered">Préface</h1>
-<section id="à-propos-de-louvrage" class="level2"><h2 class="anchored" data-anchor-id="à-propos-de-louvrage">À propos de l’ouvrage</h2>
+</header><section id="à-propos" class="level1 unnumbered"><h1 class="unnumbered">À propos</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.vincentbonhomme.fr"><img src="images/Athena.png" class="img-fluid figure-img" width="150"></a></p>
+</figure>
+</div>
+<center>
+<strong>(work in progress)</strong>
+</center>
+<section id="versions" class="level2"><h2 class="anchored" data-anchor-id="versions">Versions</h2>
+<p>Ce document existe en pdf et en ligne :</p>
+<ul>
+<li>Si vous le lisez en pdf, il est disponible en ligne ici : <a href="https://vbonhomme.github.io/R-pour-ma-grand-mere">https://vbonhomme.github.io/R-pour-ma-grand-mere</a>.</li>
+<li>Si vous le lisez en ligne, il est disponible en pdf : <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf">https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-mère.pdf</a>
+</li>
+</ul></section><section id="à-propos-de-louvrage" class="level2"><h2 class="anchored" data-anchor-id="à-propos-de-louvrage">À propos de l’ouvrage</h2>
 <p>La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.</p>
-<p>L’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : <a href="https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr"><em>R pour les débutants</em></a> d’Emmanuel Paradis et <a href="https://r4ds.hadley.nz/"><em>R for data science</em></a> d’Hadley Wickham. Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d’internet vous permettra d’en trouver davantage.</p>
 <p>Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.</p>
+<p>L’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : <a href="https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr"><em>R pour les débutants</em></a> d’Emmanuel Paradis et <a href="https://r4ds.hadley.nz/"><em>R for data science</em></a> d’Hadley Wickham.</p>
+<p>Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d’internet vous permettra d’en trouver davantage.</p>
 </section><section id="à-propos-de-lauteur" class="level2"><h2 class="anchored" data-anchor-id="à-propos-de-lauteur">À propos de l’auteur</h2>
 <p>Je suis biologiste de l’évolution de formation et aujourd’hui consultant, formateur et chercheur associé à l’UMR ISEM à Montpellier. J’utilise R quotidiennement depuis 2006 et je suis l’auteur de nombreux packages dont <a href="https://github.com/MomX/Momocs">Momocs</a>, pour l’analyse de forme.</p>
 <p>Je suis disponible pour de la consultance et des formations sur à peu près tous les “niveaux” d’utilisation de R, depuis le tout début jusqu’au packaging et la contruction d’interface conviviales ala shiny.</p>
@@ -292,19 +306,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="mailto:bonhomme.vincent@gmail.com">bonhomme.vincent@gmail.com</a></li>
 </ul></section><section id="code-source" class="level2"><h2 class="anchored" data-anchor-id="code-source">Code source</h2>
 <ul>
-<li>Si vous le lisez en pdf, il est disponible en ligne ici : <a href="">https://vbonhomme.github.io/R-pour-ma-grand-mere</a>.</li>
-<li>Si vous le lisez en ligne, il est disponible en pdf <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf">ici</a>
-</li>
 <li>Ce document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]</li>
 <li>Si vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”.</li>
 </ul></section><section id="licence" class="level2"><h2 class="anchored" data-anchor-id="licence">Licence</h2>
-<p>Ce document est placé par l’auteur sous licence CC0, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !</p>
+<p>Ce document est placé par l’auteur dans le domaine public, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fr">sous licence CC0</a>, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !</p>
+<p>L’image de couverture a été trouvée <a href="https://pxhere.com/fr/photo/992185">ici</a> et elle est également sous licence CC0. J’aurais été heureux de créditer le·a photographe mais je n’ai pas l’info. Ce n’est pas ma grand-mère et non, je n’ai pas son accord pour vous transmettre son téléphone.</p>
 </section><section id="conventions" class="level2"><h2 class="anchored" data-anchor-id="conventions">Conventions</h2>
 <p>Les fonctions et packages seront mentionnées dans cette <code>police</code>, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : <code>ggplot()</code> et <code>ggplot2</code>.</p>
 <p>Le code en ligne utilisera <code>une police de ce type</code>; les blocs ressemblent à celui ci :</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># this is a comment</span>
-<span class="fl">3</span><span class="op">+</span><span class="fl">4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span class="fl">3</span><span class="op">+</span><span class="fl">4</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 7</code></pre>
 </div>
@@ -373,12 +385,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
