@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.433">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>R pour ma grand-mère - 1&nbsp; Installer un environnement R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -49,54 +78,44 @@ ul.task-list li input[type="checkbox"] {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./install.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">R pour ma grand-mère</a> 
         <div class="sidebar-tools-main">
-    <a href="https://www.rstudio.com/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
+    <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="./R-pour-ma-grand-mère.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
             Download PDF
@@ -109,21 +128,21 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Préface</span></a>
+ <span class="menu-text">À propos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,56 +165,56 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./programmation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./programmation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,28 +230,25 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
-    <h2 id="toc-title">Dans ce chapitre</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3"><h2 id="toc-title">Dans ce chapitre</h2>
    
   <ul>
-  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">1.1</span> R</a></li>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.2</span> RStudio</a></li>
-  <li><a href="#vérifier-votre-installation" id="toc-vérifier-votre-installation" class="nav-link" data-scroll-target="#vérifier-votre-installation"><span class="header-section-number">1.3</span> Vérifier votre installation</a></li>
-  <li><a href="#installer-les-packages" id="toc-installer-les-packages" class="nav-link" data-scroll-target="#installer-les-packages"><span class="header-section-number">1.4</span> Installer les packages</a></li>
-  </ul>
-</nav>
+<li><a href="#pourquoi-apprendre-r" id="toc-pourquoi-apprendre-r" class="nav-link active" data-scroll-target="#pourquoi-apprendre-r"><span class="header-section-number">1.1</span> Pourquoi apprendre R?</a></li>
+  <li><a href="#installer-r" id="toc-installer-r" class="nav-link" data-scroll-target="#installer-r"><span class="header-section-number">1.2</span> Installer R</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.3</span> RStudio</a></li>
+  <li><a href="#v%C3%A9rifier-votre-installation" id="toc-vérifier-votre-installation" class="nav-link" data-scroll-target="#v%C3%A9rifier-votre-installation"><span class="header-section-number">1.4</span> Vérifier votre installation</a></li>
+  <li><a href="#installer-les-packages" id="toc-installer-les-packages" class="nav-link" data-scroll-target="#installer-les-packages"><span class="header-section-number">1.5</span> Installer les packages</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span>
+</h1>
 </div>
 
 
@@ -245,42 +261,58 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
-
-<p>Je préconise l’installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.</p>
-<section id="r" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="r"><span class="header-section-number">1.1</span> R</h2>
+</header><section id="pourquoi-apprendre-r" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="pourquoi-apprendre-r">
+<span class="header-section-number">1.1</span> Pourquoi apprendre R?</h2>
+<p>Mettons les pieds dans le plat d’entrée : pourquoi apprendre R quand je peux faire la même chose avec Excel stats ?</p>
+<p>Après un court exercice de relaxation respiratoire, voilà quelques raisons :</p>
+<ul>
+<li>R est l’environnement leader des statistiques et de l’analyse de données</li>
+<li>R est plus que gratuit, il est libre et le restera</li>
+<li>Le temps passé à apprendre R est rapidement amorti. Et s’il ne l’est pas tout de suite, il le sera au centuple un jour.</li>
+<li>R vous permet de faire de la science sérieuse, c’est à dire <a href="https://en.wikipedia.org/wiki/Reproducibility">reproductible</a>
+</li>
+<li>Vous pouvez écrires des articles, des présentations, des applications web, des blogs, des sites webs, des livres avec R</li>
+<li>R dispose de ressources impressionnantes : <a href="https://cran.r-project.org/web/packages/">20000+ packages</a> (à peu près 1000 de plus tous les ans) et des tutoriels, livres, forums d’entraide à gogo et sans doute des collègues qui pratiquent et peuvent catalyser votre apprentissage. On peut raisonnablement dire que si vous avez un problème auquel vous ne trouvez pas de réponse dans les 3 premières années d’usage quotidien, c’est que votre question est mal posée (<span class="math inline">\((P&lt;0.01)\)</span>).</li>
+<li>Apprendre R c’est apprendre les statistiques</li>
+<li>Apprendre R c’est apprendre à programmer</li>
+<li>R est devenu convivial (qui l’eût cru ?!)</li>
+<li>R est interopérable avec à peu près tout</li>
+<li>Enfin, l’enjeu d’être autonome pour vos analyses n’est pas juste celui de faire des trucs rigolos avec un ordinateur : il en va de votre liberté scientifique. Ni plus ni moins.</li>
+</ul></section><section id="installer-r" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="installer-r">
+<span class="header-section-number">1.2</span> Installer R</h2>
 <p>L’installation de R se passe généralement sans encombres, en quelques minutes.</p>
 <p>Le plus simple est de choisir votre système d’exploitation depuis la page officielle :</p>
 <blockquote class="blockquote">
 <p><a href="https://cran.rstudio.com/">https://cran.rstudio.com/</a>.</p>
 </blockquote>
 <p>Pour Windows et Mac, il suffit de télécharger et d’installer l’archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré.</p>
-</section>
-<section id="rstudio" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.2</span> RStudio</h2>
+</section><section id="rstudio" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="rstudio">
+<span class="header-section-number">1.3</span> RStudio</h2>
+<p>Je préconise l’installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.</p>
 <p>Pour installer RStudio, version bureau, récupérez l’installeur depuis sa page d’accueil et laissez vous porter :</p>
 <blockquote class="blockquote">
 <p><a href="[https://posit.co/download/rstudio-desktop/]">https://posit.co/download/rstudio-desktop/</a></p>
 </blockquote>
-</section>
-<section id="vérifier-votre-installation" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="vérifier-votre-installation"><span class="header-section-number">1.3</span> Vérifier votre installation</h2>
+</section><section id="vérifier-votre-installation" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="vérifier-votre-installation">
+<span class="header-section-number">1.4</span> Vérifier votre installation</h2>
 <p>Une fois que vous avez installé R puis RStudio, ouvrez RStudio.</p>
-<p>Dans la fenêtre “console”, là où vous voyez une invite de commande <code>&gt;</code> tapez 1+1 puis <code>&lt;Entrée&gt;</code>. Voilà, vous avez une installation de R+RStudio qui fonctionne.</p>
-</section>
-<section id="installer-les-packages" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="installer-les-packages"><span class="header-section-number">1.4</span> Installer les packages</h2>
-<p>Les besoins de ce document se limitent aux packages du <a href="https://www.tidyverse.org/">tidyverse</a> que vous pouvez installer en tapant à la console la commande suivante :</p>
-<blockquote class="blockquote">
-<p><code>install.packages("tidyverse")</code></p>
-</blockquote>
+<p>Dans la fenêtre “console”, là où vous voyez une invite de commande <code>&gt;</code> tapez 1+1 puis <code>&lt;Entrée&gt;</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fl">1</span><span class="op">+</span><span class="fl">1</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>Voilà, vous avez une installation de R+RStudio qui fonctionne.</p>
+</section><section id="installer-les-packages" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="installer-les-packages">
+<span class="header-section-number">1.5</span> Installer les packages</h2>
+<p>Les besoins de ce document se limitent essentiellement aux packages du <a href="https://www.tidyverse.org/">tidyverse</a> que vous pouvez installer en tapant à la console la commande suivante :</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
-
-</main> <!-- /main -->
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a><br></p> 
+</section></main><!-- /main --><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">❤ Placé dans le <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">domaine public</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.vincentbonhomme.fr">Vincent Bonhomme</a></p> 
  
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -336,12 +368,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -514,11 +546,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Préface</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">À propos</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
