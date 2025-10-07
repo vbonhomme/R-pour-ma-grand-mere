@@ -36,7 +36,7 @@ jobs:
         run: Rscript -e 'install.packages("renv"); renv::restore()'
 
       - name: Render Quarto site
-        run: quarto render --no-browse --no-watch-inputs --render all
+        run: quarto render --render all
 
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
