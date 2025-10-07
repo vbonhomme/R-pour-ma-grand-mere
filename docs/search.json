@@ -48,5 +48,35 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
     ]
+  },
+  {
+    "objectID": "preliminaires.html",
+    "href": "preliminaires.html",
+    "title": "2  Préliminaires",
+    "section": "",
+    "text": "2.1 Pourquoi apprendre R?\nMettons les pieds dans le plat d’entrée : pourquoi apprendre R quand je peux faire la même chose avec Excel stats ?\nAprès un court exercice de relaxation respiratoire, voilà quelques raisons :\nL’enjeu d’être autonome pour vos analyses n’est pas juste celui de faire des trucs rigolos avec un ordinateur : il en va de votre liberté scientifique. Ni plus ni moins.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Préliminaires</span>"
+    ]
+  },
+  {
+    "objectID": "preliminaires.html#pourquoi-apprendre-r",
+    "href": "preliminaires.html#pourquoi-apprendre-r",
+    "title": "2  Préliminaires",
+    "section": "",
+    "text": "R est l’environnement leader des statistiques et de l’analyse de données ;\nR est plus que gratuit, il est libre et le restera ;\nApprendre R c’est apprendre les statistiques ;\nApprendre R c’est apprendre à programmer ;\nR est devenu convivial ;\nR est interopérable avec à peu près tout, notamment Python et Cpp ;\nLe temps passé à apprendre R est rapidement amorti. Et s’il ne l’est pas tout de suite, il le sera au centuple un jour ;\nR vous permet de faire de la science sérieuse, c’est à dire reproductible\nVous pouvez écrire des articles, des présentations, des applications web, des blogs, des sites webs, des livres avec R\nR dispose de ressources impressionnantes : 20000+ packages (à peu près 1000 de plus tous les ans) et des tutoriels, livres, forums d’entraide à gogo et sans doute des collègues qui pratiquent et peuvent catalyser votre apprentissage. On peut raisonnablement dire que si vous avez un problème auquel vous ne trouvez pas de réponse dans les 3 premières années d’usage quotidien, c’est que votre question est mal posée (\\((P&lt;0.01)\\)) ;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Préliminaires</span>"
+    ]
+  },
+  {
+    "objectID": "preliminaires.html#installer-un-environnement-r",
+    "href": "preliminaires.html#installer-un-environnement-r",
+    "title": "2  Préliminaires",
+    "section": "2.2 Installer un environnement R",
+    "text": "2.2 Installer un environnement R\n\n2.2.1 Installer R\nL’installation de R se passe généralement sans encombres, en quelques minutes.\nLe plus simple est de choisir votre système d’exploitation depuis la page officielle :\n\nhttps://cran.rstudio.com/.\n\nPour Windows et Mac, il suffit de télécharger et d’installer l’archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré.\n\n\n2.2.2 Installer RStudio\nJe préconise l’installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.\nPour installer RStudio, version bureau, récupérez l’installeur depuis sa page d’accueil et laissez vous porter :\n\nhttps://posit.co/download/rstudio-desktop/\n\nUne fois que vous avez installé R puis RStudio, ouvrez RStudio.\nDans la fenêtre “console”, là où vous voyez une invite de commande &gt; tapez 1+1 puis &lt;Entrée&gt;.\n\n1+1\n\n[1] 2\n\n\nVoilà, vous avez une installation de R+RStudio qui fonctionne.\n\n\n2.2.3 Installer les packages requis\nLes besoins de ce document se limitent essentiellement aux packages du tidyverse que vous pouvez installer en tapant à la console la commande suivante :\n\ninstall.packages(\"tidyverse\")\n\nLaissez mouliner, puis la commande ci-dessous devrait se passer sans encombres.\n\nlibrary(tidyverse)\n\nVoilà, vous êtes paré·e·s pour cette formation !",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Préliminaires</span>"
+    ]
   }
 ]
