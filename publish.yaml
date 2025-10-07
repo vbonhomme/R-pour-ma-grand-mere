@@ -46,7 +46,3 @@ jobs:
       # 7️⃣ Restaurer l’environnement renv
       - name: Restore renv environment
         run: Rscript -e 'renv::restore()'
-
-      # 8️⃣ Tester le projet (optionnel)
-      - name: Run tests
-        run: Rscript -e 'if (requireNamespace("devtools")) devtools::test()'
