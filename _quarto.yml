@@ -15,6 +15,7 @@ book:
     - 3min-tour.qmd
     - premiers-pas.qmd
     - fonctions.qmd
+    - un-peu-plus-loin.qmd
     - concepts-cles.qmd
     - import.qmd
     - dplyr.qmd

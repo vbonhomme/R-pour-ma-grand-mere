@@ -1774,7 +1774,7 @@
     "href": "fonctions.html#accéder-au-code-interne-des-fonctions",
     "title": "4  Fonctions",
     "section": "4.5 Accéder au code interne des fonctions",
-    "text": "4.5 Accéder au code interne des fonctions\nLe code des fonctions est toujours accessible, le plus souvent simplement en tapant le nom des fonctions, sans parenthèses.\n\nplus3\n\n&lt;srcref: file \"\" chars 1:10 to 3:1&gt;\n&lt;bytecode: 0x7ff7624f2470&gt;\n\nadd_this\n\n&lt;srcref: file \"\" chars 1:13 to 3:1&gt;\n&lt;bytecode: 0x7ff762423a88&gt;\n\n\nParfois le code est lové dans des Primitives (des fonctions non écrites en R) ou bien dans des méthodes (des fonctions qui changent de comportement suivant le type d’objet qu’on leur passe). Nous y reviendrons.\n\nc\n\nfunction (...)  .Primitive(\"c\")\n\nseq\n\nfunction (...) \nUseMethod(\"seq\")\n&lt;bytecode: 0x7ff75fe94ce8&gt;\n&lt;environment: namespace:base&gt;",
+    "text": "4.5 Accéder au code interne des fonctions\nLe code des fonctions est toujours accessible, le plus souvent simplement en tapant le nom des fonctions, sans parenthèses.\n\nplus3\n\n&lt;srcref: file \"\" chars 1:10 to 3:1&gt;\n&lt;bytecode: 0x7fe69f525a40&gt;\n\nadd_this\n\n&lt;srcref: file \"\" chars 1:13 to 3:1&gt;\n&lt;bytecode: 0x7fe6a1219d10&gt;\n\n\nParfois le code est lové dans des Primitives (des fonctions non écrites en R) ou bien dans des méthodes (des fonctions qui changent de comportement suivant le type d’objet qu’on leur passe). Nous y reviendrons.\n\nc\n\nfunction (...)  .Primitive(\"c\")\n\nseq\n\nfunction (...) \nUseMethod(\"seq\")\n&lt;bytecode: 0x7fe69aad9460&gt;\n&lt;environment: namespace:base&gt;",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
     ]

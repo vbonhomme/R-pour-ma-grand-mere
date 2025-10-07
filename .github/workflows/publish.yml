@@ -46,3 +46,12 @@ jobs:
       # 7️⃣ Restaurer l’environnement renv
       - name: Restore renv environment
         run: Rscript -e 'renv::restore()'
+
+      - name: Render site
+        run: quarto render
+
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          
