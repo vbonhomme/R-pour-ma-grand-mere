@@ -203,3 +203,37 @@ sw %>%
   summarise(mean_height=mean(height),
             sd_height=sd(height))
 ```
+
+`accross` est très utile ici pour résumer plusieurs colonnes, éventuellement avec plusieurs fonctions de résumé :
+
+```{r}
+starwars %>% 
+  select(species, height, mass) %>% 
+  na.omit() %>% 
+  filter(species %in% c("Human", "Droid")) %>% 
+  group_by(species) %>%
+  summarise(across(c(height, mass), list(mean=mean, sd=sd), .names = "{.col}_{fn}"))
+
+```
+## `join` : combiner des tables
+
+En analyse de données, nous avons souvent des tables à réunir via une colonne commune (par exemple un `id`). La famille de `join` est précieuse. 
+
+Nous allons utiliser deux petits jeux de données disponibles avec `dplyr`:
+
+```{r}
+band_members
+
+band_instruments
+
+
+```
+Nous pouvons combiner ces tables avec `left_join` et ses variantes.
+
+```{r}
+left_join(band_members, band_instruments, by="name")
+right_join(band_members, band_instruments, by="name")
+full_join(band_members, band_instruments, by="name")
+```
+
+
