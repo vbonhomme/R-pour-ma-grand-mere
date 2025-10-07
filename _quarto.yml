@@ -8,7 +8,7 @@ book:
   author:
     name: Vincent Bonhomme
     gender: male
-  date: "07/10/2025"
+  date: "10/07/2025"
   chapters:
     - index.qmd
     - preliminaires.qmd
@@ -31,7 +31,7 @@ book:
   search: 
     location: sidebar
     type: textbox
-  downloads: [pdf, epub]
+  downloads: [pdf]
 
     
 format:
