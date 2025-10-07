@@ -73,7 +73,7 @@ Tous les opérateurs arithmétiques courants sont disponibles :
 * `^` pour élever au carré et `sqrt` pour la racine carrée
 * `%%` pour le [modulo](https://fr.wikipedia.org/wiki/Modulo_(opération)), etc.
 
-Vous venez d'utiliser - peut-être sans le savoir -, votre première fonction : `sqrt`, pour _square root_. Les fonctions ont souvent des noms explicites et sont, généralement, suivies de parenthèses dans lesquelles glisser une ou des valeurs. 
+Vous venez d'utiliser - peut-être sans le savoir -, votre première _fonction_ : `sqrt`, pour _square root_. Les fonctions ont souvent des noms explicites et sont, généralement, suivies de parenthèses dans lesquelles glisser une ou des valeurs. 
 
 En réalité, toutes les opérations ci-dessus sont des fonctions, y compris un banal `+`[^fonctions]. Nous y reviendrons mais cela nous vaut la première maxime de sagesse populaire à garder dans un coin de la tête :
 
@@ -87,11 +87,11 @@ Vous pouvez également utiliser des parenthèses pour "emboiter" des opérations
 
 ## Variables et assignation
 
-Comme on pouvait s'en douter, R a une mémoire et c'est donc plus qu'une calculette, c'est une calculatrice.
+Comme on pouvait s'en douter, R a une mémoire et c'est donc plus qu'une _calculette_ : c'est une _calculatrice_.
 
 Pour stocker une valeur dans une **variable** nous utilisons l'opérateur d'**assignation** : `<-`[^fonctions2]
 
-[^fonctions2]: ``  `<-`(toto, 4); toto*2 `` puisqu'on te dit que tout est fonction !
+[^fonctions2]: ``  `<-`(toto, 4); toto*2 `` puisqu'on vous dit que tout est fonction !
 
 ```{r}
 plop <- 3
@@ -160,7 +160,9 @@ toto <- c(1, 2, 3, 4, 5)
 toto*2
 ```
 
-Jusqu'ici toutes les variables assignées étaient des scalaires, c'est à dire des variables ne comprenant qu'une valeur. `toto` n'est pas un scalaire mais un _vecteur_ de nombres, qui peut s'écrire en ligne, c'est à dire en une seule et unique _dimension_. Je pose ça là, nous y reviendrons bien vite.
+Jusqu'ici toutes les variables assignées étaient des _scalaires_, c'est à dire des variables ne comprenant qu'une valeur unique.
+
+`toto` n'est pas un scalaire mais un _vecteur_ de nombres, qui peut s'écrire en ligne, c'est à dire en une seule et unique _dimension_. Je pose ça là, nous y reviendrons bien vite.
 
 Quelques fonctions bien utiles pour visualiser et décrire des variables en R :
 
@@ -172,10 +174,9 @@ tail(toto, 3) # show the last 3 values
 
 Nous voyons que certaines fonctions acceptent plus d'une seule valeur au sein de leurs parenthèses : on parle d'**argument**. Quand plus d'un seul argument est **passé** à une fonction, on les sépare par des virgules. Certaines fonctions peuvent/doivent aussi être appelées à vide, comme on l'a vu avec `ls()`.
 
-
 ## Séquences régulières
 
-Vous m'avez vu (me) taper "à la main", des séries de nombres telles que `c(1, 2, 3, 4, 5)`. Même l'esprit le plus endormi constatera une certaine régularité dans cette séquence des premiers entiers naturels. Jusqu'à 5, on peut imaginer - et encore -, la taper à la main, mais imaginons que nous ayons besoin d'aller jusqu'à 100 ou même à 37427. Doit bien y avoir quelqu'un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.
+Vous m'avez vu (me) taper "à la main", des séries de nombres telles que `c(1, 2, 3, 4, 5)`. On constate une certaine régularité dans cette séquence des premiers entiers naturels. Jusqu'à 5, on peut imaginer la taper à la main, mais imaginons que nous ayons besoin d'aller jusqu'à 100 ou même à 37427. Doit bien y avoir quelqu'un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.
 
 > Si tu penses que tu es en train de faire quelque chose de répétitif et/ou stupide, il existe à coup sûr une façon plus intelligente de faire
 
