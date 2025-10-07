@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Vincent Bonhomme">
 
-<title>R pour ma grand-mère</title>
+<title>R pour ma grand-mère - 17&nbsp; Ceci n’est pas qu’un opérateur : %&gt;% et magrittr</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./preliminaires.html" rel="next">
+<link href="./vocabulaire.html" rel="next">
+<link href="./modelling.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">À propos de l’auteur</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./magrittr.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ceci n'est pas qu'un opérateur : `%&gt;%` et `magrittr`</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">À propos de l’auteur</span></span></a>
   </div>
 </li>
@@ -242,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
+  <a href="./magrittr.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ceci n'est pas qu'un opérateur : `%&gt;%` et `magrittr`</span></span></a>
   </div>
 </li>
@@ -268,10 +268,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Dans ce chapitre</h2>
    
   <ul>
-  <li><a href="#à-propos-de-lauteur" id="toc-à-propos-de-lauteur" class="nav-link active" data-scroll-target="#à-propos-de-lauteur"><span class="header-section-number">0.1</span> À propos de l’auteur</a></li>
-  <li><a href="#à-propos-de-ce-document" id="toc-à-propos-de-ce-document" class="nav-link" data-scroll-target="#à-propos-de-ce-document"><span class="header-section-number">0.2</span> À propos de ce document</a></li>
-  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence"><span class="header-section-number">0.3</span> Licence</a></li>
-  <li><a href="#conventions" id="toc-conventions" class="nav-link" data-scroll-target="#conventions"><span class="header-section-number">0.4</span> Conventions</a></li>
+  <li><a href="#vs" id="toc-vs" class="nav-link active" data-scroll-target="#vs"><span class="header-section-number">17.1</span> <code>%&gt;%</code> vs <code>|&gt;</code></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">17.2</span> <code>%&gt;%</code></a></li>
+  <li><a href="#le-.-pour-customiser-le-forward" id="toc-le-.-pour-customiser-le-forward" class="nav-link" data-scroll-target="#le-.-pour-customiser-le-forward"><span class="header-section-number">17.3</span> Le <code>.</code> pour customiser le forward</a></li>
+  <li><a href="#t" id="toc-t" class="nav-link" data-scroll-target="#t"><span class="header-section-number">17.4</span> <code>%T&gt;%</code></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">17.5</span> `%$%</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="header-section-number">17.6</span> <code>%&lt;&gt;%</code></a></li>
   </ul>
 </nav>
     </div>
@@ -280,26 +282,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R pour ma grand-mère</h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Auteur·rice</div>
-    <div class="quarto-title-meta-contents">
-             <p>Vincent Bonhomme </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Date de publication</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">7 octobre 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -309,59 +299,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="section" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="section"></h2>
-<p><img src="cover.jpg" class="img-fluid"></p>
-<p>La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.</p>
-<p>Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utile aux non-néophytes voire aux plus assidu·e·s, notamment autodidactes.</p>
-<p>L’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : <a href="https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr"><em>R pour les débutants</em></a> d’Emmanuel Paradis et <a href="https://r4ds.hadley.nz/"><em>R for data science</em></a> d’Hadley Wickham.</p>
+<p>Il est peu dire que cet opérateur<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> a révolutionné R, lorsqu’il y a été importé, d’abord dans le package <code>magrittr</code> sous sa forme <code>%&gt;%</code>. Il est désormais inclus dans le R de “base” sous sa forme <code>|&gt;</code> mais nous n’utiliserons que la version historique <code>%&gt;%</code>, que je trouve plus lisible, plus facile à taper (<code>&lt;Maj&gt; + &lt;Ctrl/Cmd&gt; + &lt;M&gt;</code> dans RStudio) et parce que les années aidant, je deviens conservateur.</p>
+<p>L’idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d’écrire :</p>
+<p><code>h(g(f(x)))</code> on peut déplier cet emboitement de fonctions et écrire <code>(h ∘ g ∘ f)(x)</code></p>
+<p>En langage R, plutôt que d’écrire <code>h(g(f(x)))</code> on écrira : <code>x %&gt;% f() %&gt;% g() %&gt;% h()</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Cette écriture est non seulement plus lisible mais elle se lit également de gauche à droite, dans le sens conventionnel de notre partie du monde.</p>
+<section id="vs" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="vs"><span class="header-section-number">17.1</span> <code>%&gt;%</code> vs <code>|&gt;</code></h2>
+<p>D’abord introduit par le package <code>magrittr</code> le forward pipe est désormais dans le R “de base” depuis la <a href="https://cran.r-project.org/doc/manuals/r-devel/NEWS.html">version 4.1.0</a>.</p>
+<p>Le pipe <code>|&gt;</code> tend désormais à être préféré à <code>%&gt;%</code> comme on le lira sur le (blog du tidyverse)[, très complet)[https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/]. Ce dernier mérite néanmoins, avec ses autres copains de <code>magrittr</code>, d’être détaillé.</p>
+<p>Si la vignette de <code>magrittr</code> est très bien faite (<code>vignette("magrittr"</code>), j’en livre ici une introduction rapide.</p>
 </section>
-<section id="à-propos-de-lauteur" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="à-propos-de-lauteur"><span class="header-section-number">0.1</span> À propos de l’auteur</h2>
-<ul>
-<li><a href="https://www.vincentbonhomme.fr">www.vincentbonhomme.fr</a></li>
-<li><a href="mailto:bonhomme.vincent@gmail.com">bonhomme.vincent@gmail.com</a></li>
-</ul>
-<p>Je suis biologiste de l’évolution de formation et aujourd’hui consultant, formateur et chercheur associé à l’UMR ISEM à Montpellier. J’utilise R quotidiennement depuis 2006 et je suis l’auteur de nombreux packages dont <a href="https://github.com/MomX/Momocs">Momocs</a>, pour l’analyse de forme.</p>
-<p>Je suis disponible pour de la consultance et des formations sur à peu près tous les “niveaux” d’utilisation de R, depuis le tout début jusqu’au packaging et la contruction d’interface conviviales ala shiny.</p>
-<p>En <em>side project</em>, j’ai confondé <a href="https://www.cevennette.fr">Cévennette</a> et <a href="https://www.potocopo.fr">Potocopo</a>.</p>
-</section>
-<section id="à-propos-de-ce-document" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="à-propos-de-ce-document"><span class="header-section-number">0.2</span> À propos de ce document</h2>
-<!--Ce document existe en pdf et en ligne :
-
-* Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere](https://vbonhomme.github.io/R-pour-ma-grand-mere).
-* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
--->
-<ul>
-<li>Ce document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]</li>
-<li>Si vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”.</li>
-</ul>
-</section>
-<section id="licence" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="licence"><span class="header-section-number">0.3</span> Licence</h2>
-<p>Ce document est placé par l’auteur dans le domaine public, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fr">sous licence CC0</a>, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !</p>
-<p>L’image de couverture a été trouvée <a href="https://pxhere.com/fr/photo/992185">ici</a> et elle est également sous licence CC0. J’aurais été heureux de créditer le·a photographe mais je n’ai pas l’info. Ce n’est pas ma grand-mère (mais il y a un air) et non, je n’ai pas son accord pour vous transmettre son téléphone.</p>
-</section>
-<section id="conventions" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="conventions"><span class="header-section-number">0.4</span> Conventions</h2>
-<p>Les fonctions et packages seront mentionnées dans cette <code>police</code>, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : <code>ggplot()</code> et <code>ggplot2</code>.</p>
-<p>Le code en ligne utilisera <code>une police de ce type</code>; les blocs ressemblent à celui ci :</p>
+<section id="section" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="section"><span class="header-section-number">17.2</span> <code>%&gt;%</code></h2>
+<p>Dans les grandes lignes, <code>%&gt;%</code> et <code>|&gt;</code> fonctionnent de la même façon. J’ai tendance à continuer d’utiliser <code>%&gt;%</code> qui est chargé automatiquement par le tidyverse. Pour les autres opérateurs, ou si vous n’utilisez pas le tidyverse vous pouvez en disposer avec :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a comment</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Venons en aux faits.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7</code></pre>
+<pre><code>[1] 0.4917281</code></pre>
 </div>
 </div>
-<p>Le résultat, textuel ou graphique, s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un <code>#</code> est un commentaire - lisez-les ! - et est ignoré par R.</p>
-<p>Parfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.</p>
-<blockquote class="blockquote">
-<p>Les statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel.</p>
-</blockquote>
+</section>
+<section id="le-.-pour-customiser-le-forward" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="le-.-pour-customiser-le-forward"><span class="header-section-number">17.3</span> Le <code>.</code> pour customiser le forward</h2>
+</section>
+<section id="t" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="t"><span class="header-section-number">17.4</span> <code>%T&gt;%</code></h2>
+<p>Utilisation ?magr</p>
+</section>
+<section id="section-1" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="section-1"><span class="header-section-number">17.5</span> `%$%</h2>
+</section>
+<section id="section-2" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="section-2"><span class="header-section-number">17.6</span> <code>%&lt;&gt;%</code></h2>
+<p>Utilisation Critiques</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
-
-
+<ol>
+<li id="fn1"><p>À prononcer à l’anglaise hein : “payepeu”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Vous pouvez également omettre les parenthèses si vos fonctions sont passées sans argument.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -778,10 +761,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./modelling.html" class="pagination-link" aria-label="Modélisation statistique : `lm`">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./preliminaires.html" class="pagination-link" aria-label="Préliminaires">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Préliminaires</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./vocabulaire.html" class="pagination-link" aria-label="Dictionnaire">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
