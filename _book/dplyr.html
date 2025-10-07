@@ -277,6 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#arrange-trier-les-lignes" id="toc-arrange-trier-les-lignes" class="nav-link" data-scroll-target="#arrange-trier-les-lignes"><span class="header-section-number">9.7</span> <code>arrange</code> : trier les lignes</a></li>
   <li><a href="#count-compter-des-lignes-sur-des-critères-en-colonnes" id="toc-count-compter-des-lignes-sur-des-critères-en-colonnes" class="nav-link" data-scroll-target="#count-compter-des-lignes-sur-des-critères-en-colonnes"><span class="header-section-number">9.8</span> <code>count</code> : compter des lignes sur des critères en colonnes</a></li>
   <li><a href="#summarise-résumés-et-résumés-groupés" id="toc-summarise-résumés-et-résumés-groupés" class="nav-link" data-scroll-target="#summarise-résumés-et-résumés-groupés"><span class="header-section-number">9.9</span> <code>summarise</code> : résumés et résumés groupés</a></li>
+  <li><a href="#join-combiner-des-tables" id="toc-join-combiner-des-tables" class="nav-link" data-scroll-target="#join-combiner-des-tables"><span class="header-section-number">9.10</span> <code>join</code> : combiner des tables</a></li>
   </ul>
 </nav>
     </div>
@@ -794,6 +795,78 @@ Attaching package: 'dplyr'</code></pre>
 1 Droid   none          131.     49.1 
 2 Human   female        164.     11.9 
 3 Human   male          182.      8.16</code></pre>
+</div>
+</div>
+<p><code>accross</code> est très utile ici pour résumer plusieurs colonnes, éventuellement avec plusieurs fonctions de résumé :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(species, height, mass) <span class="sc">%&gt;%</span> </span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Human"</span>, <span class="st">"Droid"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(height, mass), <span class="fu">list</span>(<span class="at">mean=</span>mean, <span class="at">sd=</span>sd), <span class="at">.names =</span> <span class="st">"{.col}_{fn}"</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  species height_mean height_sd mass_mean mass_sd
+  &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 Droid          140       52.0      69.8    51.0
+2 Human          180.      11.5      81.3    19.3</code></pre>
+</div>
+</div>
+</section>
+<section id="join-combiner-des-tables" class="level2" data-number="9.10">
+<h2 data-number="9.10" class="anchored" data-anchor-id="join-combiner-des-tables"><span class="header-section-number">9.10</span> <code>join</code> : combiner des tables</h2>
+<p>En analyse de données, nous avons souvent des tables à réunir via une colonne commune (par exemple un <code>id</code>). La famille de <code>join</code> est précieuse.</p>
+<p>Nous allons utiliser deux petits jeux de données disponibles avec <code>dplyr</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>band_members</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  name  band   
+  &lt;chr&gt; &lt;chr&gt;  
+1 Mick  Stones 
+2 John  Beatles
+3 Paul  Beatles</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>band_instruments</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  name  plays 
+  &lt;chr&gt; &lt;chr&gt; 
+1 John  guitar
+2 Paul  bass  
+3 Keith guitar</code></pre>
+</div>
+</div>
+<p>Nous pouvons combiner ces tables avec <code>left_join</code> et ses variantes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">left_join</span>(band_members, band_instruments, <span class="at">by=</span><span class="st">"name"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  name  band    plays 
+  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; 
+1 Mick  Stones  &lt;NA&gt;  
+2 John  Beatles guitar
+3 Paul  Beatles bass  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">right_join</span>(band_members, band_instruments, <span class="at">by=</span><span class="st">"name"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  name  band    plays 
+  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; 
+1 John  Beatles guitar
+2 Paul  Beatles bass  
+3 Keith &lt;NA&gt;    guitar</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">full_join</span>(band_members, band_instruments, <span class="at">by=</span><span class="st">"name"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  name  band    plays 
+  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; 
+1 Mick  Stones  &lt;NA&gt;  
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+4 Keith &lt;NA&gt;    guitar</code></pre>
 </div>
 </div>
 
