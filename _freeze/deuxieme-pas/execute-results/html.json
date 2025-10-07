@@ -1,0 +1,15 @@
+{
+  "hash": "68119c7320ab52ec2a689a271073207d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Deuxièmes pas\n\n## Reproductibilité\n\nLe _workflow_ typique, ou flux de travail en bon français, est le suivant : \n\n1. vous tapez des commandes dans la console, vous essayez, vous tâtonnez jusqu'à ce que vous en soyez satisfait·e de chaque résultat intermédiaire ;\n2. vous sauvez ces commandes dans un script que vous pouvez commenter, organiser, etc. ;\n3. Vous pouvez ensuite reproduire toutes vos analyses grâce à ce script, les recycler, les amender que ce soit demain, dans six mois ou sur une autre machine.\n\nUn concept central est que R **n'a pas de mémoire** d'un jour à l'autre si vous le fermez. Alors oui, vous pouvez toujours \"sauver votre espace de travail\" mais je vous le déconseille fortement. La reproductibilité de vos analyses est en jeu. Nous allons apprendre à faire sans et nous verrons pourquoi c'est une force.\n\nReprenons. Un script est donc une collection de commandes qui permettent de reproduire vos analyses. Excel peut déjà aller se rhabiller.\n\nVous pouvez exécuter les commandes depuis votre script vers la console. Dans RStudio, cliquer sur \"Run\" et regardez les différents options avec les raccourcis attachés.\n\nPour le moment, nous allons utiliser la console, sans rassembler nos commandes en un script, mais nous y viendrons vite.\n\n## Commentaires\n\nTout ce qui suit un `#` est ignoré par R, ce qui permet de commenter vos scripts comme ci-après. Faites un usage massif de commentaires. Votre vous-même de dans six mois, les reviewers ou pire encore vos collègues, vous en seront reconnaissants. \n\n\n::: {.cell}\n\n```{.r .cell-code}\n# this is a comment. R ignores you, you should not!\n# add two numbers\n1+1 # comments can also live after a command\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n\n```{.r .cell-code}\n# but not before (on the same line): 3+3\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

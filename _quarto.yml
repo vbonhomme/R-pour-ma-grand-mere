@@ -14,6 +14,7 @@ book:
     - preliminaires.qmd
     - 3min-tour.qmd
     - premiers-pas.qmd
+    - deuxieme-pas.qmd
     - concepts-cles.qmd
     - import.qmd
     - dplyr.qmd
