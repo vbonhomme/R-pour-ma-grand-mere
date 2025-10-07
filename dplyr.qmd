@@ -2,10 +2,177 @@
 
 `dplyr`, un package du `tidyverse` simplifie grandement la manipulation de tableaux de données. Il permet de renommer, ordonner, sélectionner et crééer de nouvelles colonnes, filtrer des lignes, faire facilement des résumés groupés et des sous-jeux de données.
 
+Celles et ceux familiers avec SQL, et plus largement les bases de données, seront en terrain connu.
+
 ## `tibble`
 `dplyr` comme le reste du `tidyverse` s'appuie massivement sur les `data.frame`, dont la méthode d'affichage n'était pas optimale. Le package `tibble` introduit une classe légèrement modifiée de `data.frame`s dont la conséquence la plus visibles est la méthode d'affichage : à la fois plus compacte _et_ plus informative.
 
-```{r}
+```{r, echo=FALSE}
 library(dplyr)
-iris %>% as_tibble()
 ```
+
+```{r}
+iris # berk
+iris %>% as_tibble() # <3
+```
+Les fonctions de `dplyr` sont toutes des _verbes_, qui traduisent bien l'action à mener. 
+
+Le premier argument est toujours un tibble et la sortie est aussi un tibble. Ce qui se marie à merveille avec le pipe de maggritr `%>%` ou le pipe désormais embarqué dans R `|>`.
+
+La plupart des commandes présentées ci-dessous sont tellement explicites qu'elles se passent de commentaires.
+
+## `select` pour sélectionner des colonnes
+
+Indexer par les noms de colonnes. Ici on ne _retient_ que celles passées à `select` :
+```{r}
+starwars %>% 
+  select(name, height, sex, species)
+```
+
+Mais on peut aussi utiliser une indexation positionnelle
+```{r}
+starwars %>% 
+  select(1:5)
+```
+Et négative :
+
+```{r}
+starwars %>% 
+  select(-name, -height, -mass, -hair_color)
+```
+
+Ou encore des _helpers_ fournis par `tidyselect` (allez donc jeter un oeil à `?tidyselect::language`) :
+
+```{r}
+
+starwars %>% 
+  select(name, species, ends_with("color"))
+```
+
+## `rename` : pour renommer des colonnes
+
+`rename` est bien pratique pour renommer des colonnes
+```{r}
+starwars %>% 
+  rename(id=name, sp=species) %>% 
+  select(id, sp)
+```
+
+Sachez que vous pouvez aussi combiner `select` et `rename` comme suit :
+```{r}
+starwars %>% 
+  select(id=name, sp=species)
+```
+
+## `slice` : selection positionnelle des lignes
+
+Vous pouvez passer un ou plusieurs ids de colonnes :
+```{r}
+keep_these <- c(1, 5, 8)
+starwars %>% slice(keep_these)
+```
+
+C'est plus lisible que `starwars[keep_these]` et ça reste _pipable_ : que demande le peuple ?
+
+Naturellement vous pouvez slicer négativement.
+
+## `filter` : selection conditionnelle des lignes
+
+Parfait pour inspecter, analyser des sous-jeux de données :
+
+```{r}
+starwars %>% 
+  filter(species=="Human")
+```
+On peut combiner les conditions, y compris sur les `numeric`. Ici, on ne retient que les petites brunes (humaines) aux yeux non bleus :
+
+```{r}
+starwars %>% 
+  filter(species=="Human", sex=="female", height <= 170, eye_color != "blue")
+```
+C'est peut-être le moment de réviser les opérateurs logiques que nous avons vu à l'apéritif.
+
+Si vous optez, positivement ou négativement, pour plus d'un critère concernant une colonne, vous pouvez utiliser `%in%`:
+
+```{r}
+starwars %>% 
+  filter(species %in% c("Human", "Droid"), # humans and droids
+         !(hair_color %in% c("brown", "blond"))) # NO brown or blond hair
+```
+## `mutate` : pour créer de nouvelles colonnes
+
+Bien utile pour calculer l'indice de masse corporelle de ce beau monde par exemple :
+
+```{r}
+starwars %>% 
+  select(name, height, mass, species) %>% 
+  mutate(bmi=mass/((height/100)^2))
+
+```
+Vous pouvez utiliser "immédiatement" une colonne créé par `mutate`. C'est tellement beau :
+
+```{r}
+sw <- starwars %>% 
+  select(name, height, mass, species) %>% 
+  mutate(height=height/100, bmi=mass/height^2) 
+sw
+```
+`mutate` est un outil très puissant pour mettre de l'ordre et nettoyer vos jeux de données. Pour les facteurs et les chaînes de caractères, il se marie à merveille avec les fonctions de `forcats` et `stringr` respectivement. Minute papillon, nous les verrons un peu plus tard. 
+
+Avant de quitter `mutate`, sa variante `transmute` crée de nouvelles colonnes et omet toutes les autres :
+
+```{r}
+starwars %>% 
+  transmute(name, sex, height=height/100)
+```
+
+
+## `arrange` : trier les lignes
+
+Un verbe très pratique pour trier les données :
+```{r}
+sw %>% 
+  arrange(bmi)
+```
+Ici, par d'ex aequo sur la colonne `bmi` mais on aurait pu ajouter une autre colonne dans `arrange` en cas d'égalité.
+
+Pour trier par ordre descendant, il nous faut ajouter `desc` pour que les plus voluptueux passe en premier. Notez Yoda en troisième position. Ça c'est de la science, pas de la fiction. En vrai, cela questionne aussi (sans doute) le _domaine de validité_ du BMI.
+
+```{r}
+sw %>% arrange(desc(bmi))
+```
+
+Vous pourriez être tentée de combiner `arrange` puis `slice` pour ne retenir que les `n` plus (ou moins) quelque chose :
+
+```{r}
+sw %>% 
+  arrange(desc(bmi)) %>% 
+  slice(1:5)
+```
+
+Mais peut-être préférerez vous l'alternative compacte de `slice_*` et pièces rattachées :
+
+```{r}
+sw %>% slice_max(bmi, n=5)
+```
+## `count` : compter des lignes sur des critères en colonnes
+
+Pour obtenir des résumés, vous pouvez utiliser `count` qui rajouter une colonne qui peut se révéler fort utile :
+
+```{r}
+starwars %>% 
+  count(species, name="N") %>% # if you omit `name`, count create `n` by default
+  arrange(desc(N)) %>% 
+  slice_head(n=5)
+```
+Et si vous voulez garder les autres colonnes, `add_count` est votre nouveau copain :
+```{r}
+starwars %>% 
+  select(name, sex, species) %>% 
+  add_count(species) %>% 
+  filter(n >= 3)
+```
+
+
+
+
