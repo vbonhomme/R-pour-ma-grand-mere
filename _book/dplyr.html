@@ -269,6 +269,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#tibble" id="toc-tibble" class="nav-link active" data-scroll-target="#tibble"><span class="header-section-number">9.1</span> <code>tibble</code></a></li>
+  <li><a href="#select-pour-sélectionner-des-colonnes" id="toc-select-pour-sélectionner-des-colonnes" class="nav-link" data-scroll-target="#select-pour-sélectionner-des-colonnes"><span class="header-section-number">9.2</span> <code>select</code> pour sélectionner des colonnes</a></li>
+  <li><a href="#rename-pour-renommer-des-colonnes" id="toc-rename-pour-renommer-des-colonnes" class="nav-link" data-scroll-target="#rename-pour-renommer-des-colonnes"><span class="header-section-number">9.3</span> <code>rename</code> : pour renommer des colonnes</a></li>
+  <li><a href="#slice-selection-positionnelle-des-lignes" id="toc-slice-selection-positionnelle-des-lignes" class="nav-link" data-scroll-target="#slice-selection-positionnelle-des-lignes"><span class="header-section-number">9.4</span> <code>slice</code> : selection positionnelle des lignes</a></li>
+  <li><a href="#filter-selection-conditionnelle-des-lignes" id="toc-filter-selection-conditionnelle-des-lignes" class="nav-link" data-scroll-target="#filter-selection-conditionnelle-des-lignes"><span class="header-section-number">9.5</span> <code>filter</code> : selection conditionnelle des lignes</a></li>
+  <li><a href="#mutate-pour-créer-de-nouvelles-colonnes" id="toc-mutate-pour-créer-de-nouvelles-colonnes" class="nav-link" data-scroll-target="#mutate-pour-créer-de-nouvelles-colonnes"><span class="header-section-number">9.6</span> <code>mutate</code> : pour créer de nouvelles colonnes</a></li>
+  <li><a href="#arrange-trier-les-lignes" id="toc-arrange-trier-les-lignes" class="nav-link" data-scroll-target="#arrange-trier-les-lignes"><span class="header-section-number">9.7</span> <code>arrange</code> : trier les lignes</a></li>
+  <li><a href="#count-compter-des-lignes-sur-des-critères-en-colonnes" id="toc-count-compter-des-lignes-sur-des-critères-en-colonnes" class="nav-link" data-scroll-target="#count-compter-des-lignes-sur-des-critères-en-colonnes"><span class="header-section-number">9.8</span> <code>count</code> : compter des lignes sur des critères en colonnes</a></li>
   </ul>
 </nav>
     </div>
@@ -295,11 +302,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><code>dplyr</code>, un package du <code>tidyverse</code> simplifie grandement la manipulation de tableaux de données. Il permet de renommer, ordonner, sélectionner et crééer de nouvelles colonnes, filtrer des lignes, faire facilement des résumés groupés et des sous-jeux de données.</p>
+<p>Celles et ceux familiers avec SQL, et plus largement les bases de données, seront en terrain connu.</p>
 <section id="tibble" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="tibble"><span class="header-section-number">9.1</span> <code>tibble</code></h2>
 <p><code>dplyr</code> comme le reste du <code>tidyverse</code> s’appuie massivement sur les <code>data.frame</code>, dont la méthode d’affichage n’était pas optimale. Le package <code>tibble</code> introduit une classe légèrement modifiée de <code>data.frame</code>s dont la conséquence la plus visibles est la méthode d’affichage : à la fois plus compacte <em>et</em> plus informative.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -314,7 +321,163 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>iris <span class="co"># berk</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+1            5.1         3.5          1.4         0.2     setosa
+2            4.9         3.0          1.4         0.2     setosa
+3            4.7         3.2          1.3         0.2     setosa
+4            4.6         3.1          1.5         0.2     setosa
+5            5.0         3.6          1.4         0.2     setosa
+6            5.4         3.9          1.7         0.4     setosa
+7            4.6         3.4          1.4         0.3     setosa
+8            5.0         3.4          1.5         0.2     setosa
+9            4.4         2.9          1.4         0.2     setosa
+10           4.9         3.1          1.5         0.1     setosa
+11           5.4         3.7          1.5         0.2     setosa
+12           4.8         3.4          1.6         0.2     setosa
+13           4.8         3.0          1.4         0.1     setosa
+14           4.3         3.0          1.1         0.1     setosa
+15           5.8         4.0          1.2         0.2     setosa
+16           5.7         4.4          1.5         0.4     setosa
+17           5.4         3.9          1.3         0.4     setosa
+18           5.1         3.5          1.4         0.3     setosa
+19           5.7         3.8          1.7         0.3     setosa
+20           5.1         3.8          1.5         0.3     setosa
+21           5.4         3.4          1.7         0.2     setosa
+22           5.1         3.7          1.5         0.4     setosa
+23           4.6         3.6          1.0         0.2     setosa
+24           5.1         3.3          1.7         0.5     setosa
+25           4.8         3.4          1.9         0.2     setosa
+26           5.0         3.0          1.6         0.2     setosa
+27           5.0         3.4          1.6         0.4     setosa
+28           5.2         3.5          1.5         0.2     setosa
+29           5.2         3.4          1.4         0.2     setosa
+30           4.7         3.2          1.6         0.2     setosa
+31           4.8         3.1          1.6         0.2     setosa
+32           5.4         3.4          1.5         0.4     setosa
+33           5.2         4.1          1.5         0.1     setosa
+34           5.5         4.2          1.4         0.2     setosa
+35           4.9         3.1          1.5         0.2     setosa
+36           5.0         3.2          1.2         0.2     setosa
+37           5.5         3.5          1.3         0.2     setosa
+38           4.9         3.6          1.4         0.1     setosa
+39           4.4         3.0          1.3         0.2     setosa
+40           5.1         3.4          1.5         0.2     setosa
+41           5.0         3.5          1.3         0.3     setosa
+42           4.5         2.3          1.3         0.3     setosa
+43           4.4         3.2          1.3         0.2     setosa
+44           5.0         3.5          1.6         0.6     setosa
+45           5.1         3.8          1.9         0.4     setosa
+46           4.8         3.0          1.4         0.3     setosa
+47           5.1         3.8          1.6         0.2     setosa
+48           4.6         3.2          1.4         0.2     setosa
+49           5.3         3.7          1.5         0.2     setosa
+50           5.0         3.3          1.4         0.2     setosa
+51           7.0         3.2          4.7         1.4 versicolor
+52           6.4         3.2          4.5         1.5 versicolor
+53           6.9         3.1          4.9         1.5 versicolor
+54           5.5         2.3          4.0         1.3 versicolor
+55           6.5         2.8          4.6         1.5 versicolor
+56           5.7         2.8          4.5         1.3 versicolor
+57           6.3         3.3          4.7         1.6 versicolor
+58           4.9         2.4          3.3         1.0 versicolor
+59           6.6         2.9          4.6         1.3 versicolor
+60           5.2         2.7          3.9         1.4 versicolor
+61           5.0         2.0          3.5         1.0 versicolor
+62           5.9         3.0          4.2         1.5 versicolor
+63           6.0         2.2          4.0         1.0 versicolor
+64           6.1         2.9          4.7         1.4 versicolor
+65           5.6         2.9          3.6         1.3 versicolor
+66           6.7         3.1          4.4         1.4 versicolor
+67           5.6         3.0          4.5         1.5 versicolor
+68           5.8         2.7          4.1         1.0 versicolor
+69           6.2         2.2          4.5         1.5 versicolor
+70           5.6         2.5          3.9         1.1 versicolor
+71           5.9         3.2          4.8         1.8 versicolor
+72           6.1         2.8          4.0         1.3 versicolor
+73           6.3         2.5          4.9         1.5 versicolor
+74           6.1         2.8          4.7         1.2 versicolor
+75           6.4         2.9          4.3         1.3 versicolor
+76           6.6         3.0          4.4         1.4 versicolor
+77           6.8         2.8          4.8         1.4 versicolor
+78           6.7         3.0          5.0         1.7 versicolor
+79           6.0         2.9          4.5         1.5 versicolor
+80           5.7         2.6          3.5         1.0 versicolor
+81           5.5         2.4          3.8         1.1 versicolor
+82           5.5         2.4          3.7         1.0 versicolor
+83           5.8         2.7          3.9         1.2 versicolor
+84           6.0         2.7          5.1         1.6 versicolor
+85           5.4         3.0          4.5         1.5 versicolor
+86           6.0         3.4          4.5         1.6 versicolor
+87           6.7         3.1          4.7         1.5 versicolor
+88           6.3         2.3          4.4         1.3 versicolor
+89           5.6         3.0          4.1         1.3 versicolor
+90           5.5         2.5          4.0         1.3 versicolor
+91           5.5         2.6          4.4         1.2 versicolor
+92           6.1         3.0          4.6         1.4 versicolor
+93           5.8         2.6          4.0         1.2 versicolor
+94           5.0         2.3          3.3         1.0 versicolor
+95           5.6         2.7          4.2         1.3 versicolor
+96           5.7         3.0          4.2         1.2 versicolor
+97           5.7         2.9          4.2         1.3 versicolor
+98           6.2         2.9          4.3         1.3 versicolor
+99           5.1         2.5          3.0         1.1 versicolor
+100          5.7         2.8          4.1         1.3 versicolor
+101          6.3         3.3          6.0         2.5  virginica
+102          5.8         2.7          5.1         1.9  virginica
+103          7.1         3.0          5.9         2.1  virginica
+104          6.3         2.9          5.6         1.8  virginica
+105          6.5         3.0          5.8         2.2  virginica
+106          7.6         3.0          6.6         2.1  virginica
+107          4.9         2.5          4.5         1.7  virginica
+108          7.3         2.9          6.3         1.8  virginica
+109          6.7         2.5          5.8         1.8  virginica
+110          7.2         3.6          6.1         2.5  virginica
+111          6.5         3.2          5.1         2.0  virginica
+112          6.4         2.7          5.3         1.9  virginica
+113          6.8         3.0          5.5         2.1  virginica
+114          5.7         2.5          5.0         2.0  virginica
+115          5.8         2.8          5.1         2.4  virginica
+116          6.4         3.2          5.3         2.3  virginica
+117          6.5         3.0          5.5         1.8  virginica
+118          7.7         3.8          6.7         2.2  virginica
+119          7.7         2.6          6.9         2.3  virginica
+120          6.0         2.2          5.0         1.5  virginica
+121          6.9         3.2          5.7         2.3  virginica
+122          5.6         2.8          4.9         2.0  virginica
+123          7.7         2.8          6.7         2.0  virginica
+124          6.3         2.7          4.9         1.8  virginica
+125          6.7         3.3          5.7         2.1  virginica
+126          7.2         3.2          6.0         1.8  virginica
+127          6.2         2.8          4.8         1.8  virginica
+128          6.1         3.0          4.9         1.8  virginica
+129          6.4         2.8          5.6         2.1  virginica
+130          7.2         3.0          5.8         1.6  virginica
+131          7.4         2.8          6.1         1.9  virginica
+132          7.9         3.8          6.4         2.0  virginica
+133          6.4         2.8          5.6         2.2  virginica
+134          6.3         2.8          5.1         1.5  virginica
+135          6.1         2.6          5.6         1.4  virginica
+136          7.7         3.0          6.1         2.3  virginica
+137          6.3         3.4          5.6         2.4  virginica
+138          6.4         3.1          5.5         1.8  virginica
+139          6.0         3.0          4.8         1.8  virginica
+140          6.9         3.1          5.4         2.1  virginica
+141          6.7         3.1          5.6         2.4  virginica
+142          6.9         3.1          5.1         2.3  virginica
+143          5.8         2.7          5.1         1.9  virginica
+144          6.8         3.2          5.9         2.3  virginica
+145          6.7         3.3          5.7         2.5  virginica
+146          6.7         3.0          5.2         2.3  virginica
+147          6.3         2.5          5.0         1.9  virginica
+148          6.5         3.0          5.2         2.0  virginica
+149          6.2         3.4          5.4         2.3  virginica
+150          5.9         3.0          5.1         1.8  virginica</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>() <span class="co"># &lt;3</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 5
    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -330,6 +493,417 @@ Attaching package: 'dplyr'</code></pre>
  9          4.4         2.9          1.4         0.2 setosa 
 10          4.9         3.1          1.5         0.1 setosa 
 # ℹ 140 more rows</code></pre>
+</div>
+</div>
+<p>Les fonctions de <code>dplyr</code> sont toutes des <em>verbes</em>, qui traduisent bien l’action à mener.</p>
+<p>Le premier argument est toujours un tibble et la sortie est aussi un tibble. Ce qui se marie à merveille avec le pipe de maggritr <code>%&gt;%</code> ou le pipe désormais embarqué dans R <code>|&gt;</code>.</p>
+<p>La plupart des commandes présentées ci-dessous sont tellement explicites qu’elles se passent de commentaires.</p>
+</section>
+<section id="select-pour-sélectionner-des-colonnes" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="select-pour-sélectionner-des-colonnes"><span class="header-section-number">9.2</span> <code>select</code> pour sélectionner des colonnes</h2>
+<p>Indexer par les noms de colonnes. Ici on ne <em>retient</em> que celles passées à <code>select</code> :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, height, sex, species)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 4
+   name               height sex    species
+   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;  
+ 1 Luke Skywalker        172 male   Human  
+ 2 C-3PO                 167 none   Droid  
+ 3 R2-D2                  96 none   Droid  
+ 4 Darth Vader           202 male   Human  
+ 5 Leia Organa           150 female Human  
+ 6 Owen Lars             178 male   Human  
+ 7 Beru Whitesun Lars    165 female Human  
+ 8 R5-D4                  97 none   Droid  
+ 9 Biggs Darklighter     183 male   Human  
+10 Obi-Wan Kenobi        182 male   Human  
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Mais on peut aussi utiliser une indexation positionnelle</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name               height  mass hair_color    skin_color 
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;      
+ 1 Luke Skywalker        172    77 blond         fair       
+ 2 C-3PO                 167    75 &lt;NA&gt;          gold       
+ 3 R2-D2                  96    32 &lt;NA&gt;          white, blue
+ 4 Darth Vader           202   136 none          white      
+ 5 Leia Organa           150    49 brown         light      
+ 6 Owen Lars             178   120 brown, grey   light      
+ 7 Beru Whitesun Lars    165    75 brown         light      
+ 8 R5-D4                  97    32 &lt;NA&gt;          white, red 
+ 9 Biggs Darklighter     183    84 black         light      
+10 Obi-Wan Kenobi        182    77 auburn, white fair       
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Et négative :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name, <span class="sc">-</span>height, <span class="sc">-</span>mass, <span class="sc">-</span>hair_color)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 10
+   skin_color eye_color birth_year sex   gender homeworld species films vehicles
+   &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;   &lt;lis&gt; &lt;list&gt;  
+ 1 fair       blue            19   male  mascu… Tatooine  Human   &lt;chr&gt; &lt;chr&gt;   
+ 2 gold       yellow         112   none  mascu… Tatooine  Droid   &lt;chr&gt; &lt;chr&gt;   
+ 3 white, bl… red             33   none  mascu… Naboo     Droid   &lt;chr&gt; &lt;chr&gt;   
+ 4 white      yellow          41.9 male  mascu… Tatooine  Human   &lt;chr&gt; &lt;chr&gt;   
+ 5 light      brown           19   fema… femin… Alderaan  Human   &lt;chr&gt; &lt;chr&gt;   
+ 6 light      blue            52   male  mascu… Tatooine  Human   &lt;chr&gt; &lt;chr&gt;   
+ 7 light      blue            47   fema… femin… Tatooine  Human   &lt;chr&gt; &lt;chr&gt;   
+ 8 white, red red             NA   none  mascu… Tatooine  Droid   &lt;chr&gt; &lt;chr&gt;   
+ 9 light      brown           24   male  mascu… Tatooine  Human   &lt;chr&gt; &lt;chr&gt;   
+10 fair       blue-gray       57   male  mascu… Stewjon   Human   &lt;chr&gt; &lt;chr&gt;   
+# ℹ 77 more rows
+# ℹ 1 more variable: starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p>Ou encore des <em>helpers</em> fournis par <code>tidyselect</code> (allez donc jeter un oeil à <code>?tidyselect::language</code>) :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, species, <span class="fu">ends_with</span>(<span class="st">"color"</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name               species hair_color    skin_color  eye_color
+   &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    
+ 1 Luke Skywalker     Human   blond         fair        blue     
+ 2 C-3PO              Droid   &lt;NA&gt;          gold        yellow   
+ 3 R2-D2              Droid   &lt;NA&gt;          white, blue red      
+ 4 Darth Vader        Human   none          white       yellow   
+ 5 Leia Organa        Human   brown         light       brown    
+ 6 Owen Lars          Human   brown, grey   light       blue     
+ 7 Beru Whitesun Lars Human   brown         light       blue     
+ 8 R5-D4              Droid   &lt;NA&gt;          white, red  red      
+ 9 Biggs Darklighter  Human   black         light       brown    
+10 Obi-Wan Kenobi     Human   auburn, white fair        blue-gray
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="rename-pour-renommer-des-colonnes" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="rename-pour-renommer-des-colonnes"><span class="header-section-number">9.3</span> <code>rename</code> : pour renommer des colonnes</h2>
+<p><code>rename</code> est bien pratique pour renommer des colonnes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">id=</span>name, <span class="at">sp=</span>species) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, sp)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 2
+   id                 sp   
+   &lt;chr&gt;              &lt;chr&gt;
+ 1 Luke Skywalker     Human
+ 2 C-3PO              Droid
+ 3 R2-D2              Droid
+ 4 Darth Vader        Human
+ 5 Leia Organa        Human
+ 6 Owen Lars          Human
+ 7 Beru Whitesun Lars Human
+ 8 R5-D4              Droid
+ 9 Biggs Darklighter  Human
+10 Obi-Wan Kenobi     Human
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Sachez que vous pouvez aussi combiner <code>select</code> et <code>rename</code> comme suit :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">id=</span>name, <span class="at">sp=</span>species)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 2
+   id                 sp   
+   &lt;chr&gt;              &lt;chr&gt;
+ 1 Luke Skywalker     Human
+ 2 C-3PO              Droid
+ 3 R2-D2              Droid
+ 4 Darth Vader        Human
+ 5 Leia Organa        Human
+ 6 Owen Lars          Human
+ 7 Beru Whitesun Lars Human
+ 8 R5-D4              Droid
+ 9 Biggs Darklighter  Human
+10 Obi-Wan Kenobi     Human
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="slice-selection-positionnelle-des-lignes" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="slice-selection-positionnelle-des-lignes"><span class="header-section-number">9.4</span> <code>slice</code> : selection positionnelle des lignes</h2>
+<p>Vous pouvez passer un ou plusieurs ids de colonnes :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>keep_these <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(keep_these)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Luke Sky…    172    77 blond      fair       blue              19 male  mascu…
+2 Leia Org…    150    49 brown      light      brown             19 fema… femin…
+3 R5-D4         97    32 &lt;NA&gt;       white, red red               NA none  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p>C’est plus lisible que <code>starwars[keep_these]</code> et ça reste <em>pipable</em> : que demande le peuple ?</p>
+<p>Naturellement vous pouvez slicer négativement.</p>
+</section>
+<section id="filter-selection-conditionnelle-des-lignes" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="filter-selection-conditionnelle-des-lignes"><span class="header-section-number">9.5</span> <code>filter</code> : selection conditionnelle des lignes</h2>
+<p>Parfait pour inspecter, analyser des sous-jeux de données :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">"Human"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 3 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 4 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 5 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 6 Biggs D…    183    84 black      light      brown           24   male  mascu…
+ 7 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+ 8 Anakin …    188    84 blond      fair       blue            41.9 male  mascu…
+ 9 Wilhuff…    180    NA auburn, g… fair       blue            64   male  mascu…
+10 Han Solo    180    80 brown      fair       brown           29   male  mascu…
+# ℹ 25 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p>On peut combiner les conditions, y compris sur les <code>numeric</code>. Ici, on ne retient que les petites brunes (humaines) aux yeux non bleus :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">"Human"</span>, sex<span class="sc">==</span><span class="st">"female"</span>, height <span class="sc">&lt;=</span> <span class="dv">170</span>, eye_color <span class="sc">!=</span> <span class="st">"blue"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Leia Org…    150    49 brown      light      brown             19 fema… femin…
+2 Shmi Sky…    163    NA black      fair       brown             72 fema… femin…
+3 Dormé        165    NA brown      light      brown             NA fema… femin…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p>C’est peut-être le moment de réviser les opérateurs logiques que nous avons vu à l’apéritif.</p>
+<p>Si vous optez, positivement ou négativement, pour plus d’un critère concernant une colonne, vous pouvez utiliser <code>%in%</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Human"</span>, <span class="st">"Droid"</span>), <span class="co"># humans and droids</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span>(hair_color <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"brown"</span>, <span class="st">"blond"</span>))) <span class="co"># NO brown or blond hair</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 25 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 C-3PO       167  75   &lt;NA&gt;       gold       yellow         112   none  mascu…
+ 2 R2-D2        96  32   &lt;NA&gt;       white, bl… red             33   none  mascu…
+ 3 Darth V…    202 136   none       white      yellow          41.9 male  mascu…
+ 4 Owen La…    178 120   brown, gr… light      blue            52   male  mascu…
+ 5 R5-D4        97  32   &lt;NA&gt;       white, red red             NA   none  mascu…
+ 6 Biggs D…    183  84   black      light      brown           24   male  mascu…
+ 7 Obi-Wan…    182  77   auburn, w… fair       blue-gray       57   male  mascu…
+ 8 Wilhuff…    180  NA   auburn, g… fair       blue            64   male  mascu…
+ 9 Palpati…    170  75   grey       pale       yellow          82   male  mascu…
+10 Boba Fe…    183  78.2 black      fair       brown           31.5 male  mascu…
+# ℹ 15 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-pour-créer-de-nouvelles-colonnes" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="mutate-pour-créer-de-nouvelles-colonnes"><span class="header-section-number">9.6</span> <code>mutate</code> : pour créer de nouvelles colonnes</h2>
+<p>Bien utile pour calculer l’indice de masse corporelle de ce beau monde par exemple :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, height, mass, species) <span class="sc">%&gt;%</span> </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bmi=</span>mass<span class="sc">/</span>((height<span class="sc">/</span><span class="dv">100</span>)<span class="sc">^</span><span class="dv">2</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name               height  mass species   bmi
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+ 1 Luke Skywalker        172    77 Human    26.0
+ 2 C-3PO                 167    75 Droid    26.9
+ 3 R2-D2                  96    32 Droid    34.7
+ 4 Darth Vader           202   136 Human    33.3
+ 5 Leia Organa           150    49 Human    21.8
+ 6 Owen Lars             178   120 Human    37.9
+ 7 Beru Whitesun Lars    165    75 Human    27.5
+ 8 R5-D4                  97    32 Droid    34.0
+ 9 Biggs Darklighter     183    84 Human    25.1
+10 Obi-Wan Kenobi        182    77 Human    23.2
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Vous pouvez utiliser “immédiatement” une colonne créé par <code>mutate</code>. C’est tellement beau :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sw <span class="ot">&lt;-</span> starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, height, mass, species) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">height=</span>height<span class="sc">/</span><span class="dv">100</span>, <span class="at">bmi=</span>mass<span class="sc">/</span>height<span class="sc">^</span><span class="dv">2</span>) </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>sw</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name               height  mass species   bmi
+   &lt;chr&gt;               &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+ 1 Luke Skywalker       1.72    77 Human    26.0
+ 2 C-3PO                1.67    75 Droid    26.9
+ 3 R2-D2                0.96    32 Droid    34.7
+ 4 Darth Vader          2.02   136 Human    33.3
+ 5 Leia Organa          1.5     49 Human    21.8
+ 6 Owen Lars            1.78   120 Human    37.9
+ 7 Beru Whitesun Lars   1.65    75 Human    27.5
+ 8 R5-D4                0.97    32 Droid    34.0
+ 9 Biggs Darklighter    1.83    84 Human    25.1
+10 Obi-Wan Kenobi       1.82    77 Human    23.2
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p><code>mutate</code> est un outil très puissant pour mettre de l’ordre et nettoyer vos jeux de données. Pour les facteurs et les chaînes de caractères, il se marie à merveille avec les fonctions de <code>forcats</code> et <code>stringr</code> respectivement. Minute papillon, nous les verrons un peu plus tard.</p>
+<p>Avant de quitter <code>mutate</code>, sa variante <code>transmute</code> crée de nouvelles colonnes et omet toutes les autres :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(name, sex, <span class="at">height=</span>height<span class="sc">/</span><span class="dv">100</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   name               sex    height
+   &lt;chr&gt;              &lt;chr&gt;   &lt;dbl&gt;
+ 1 Luke Skywalker     male     1.72
+ 2 C-3PO              none     1.67
+ 3 R2-D2              none     0.96
+ 4 Darth Vader        male     2.02
+ 5 Leia Organa        female   1.5 
+ 6 Owen Lars          male     1.78
+ 7 Beru Whitesun Lars female   1.65
+ 8 R5-D4              none     0.97
+ 9 Biggs Darklighter  male     1.83
+10 Obi-Wan Kenobi     male     1.82
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="arrange-trier-les-lignes" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="arrange-trier-les-lignes"><span class="header-section-number">9.7</span> <code>arrange</code> : trier les lignes</h2>
+<p>Un verbe très pratique pour trier les données :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(bmi)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name          height  mass species      bmi
+   &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+ 1 Wat Tambor      1.93    48 Skakoan     12.9
+ 2 Padmé Amidala   1.85    45 Human       13.1
+ 3 Adi Gallia      1.84    50 Tholothian  14.8
+ 4 Sly Moore       1.78    48 &lt;NA&gt;        15.1
+ 5 Roos Tarpals    2.24    82 Gungan      16.3
+ 6 Lama Su         2.29    88 Kaminoan    16.8
+ 7 Jar Jar Binks   1.96    66 Gungan      17.2
+ 8 Ayla Secura     1.78    55 Twi'lek     17.4
+ 9 Shaak Ti        1.78    57 Togruta     18.0
+10 Barriss Offee   1.66    50 Mirialan    18.1
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Ici, par d’ex aequo sur la colonne <code>bmi</code> mais on aurait pu ajouter une autre colonne dans <code>arrange</code> en cas d’égalité.</p>
+<p>Pour trier par ordre descendant, il nous faut ajouter <code>desc</code> pour que les plus voluptueux passe en premier. Notez Yoda en troisième position. Ça c’est de la science, pas de la fiction. En vrai, cela questionne aussi (sans doute) le <em>domaine de validité</em> du BMI.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(bmi))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 5
+   name                  height  mass species          bmi
+   &lt;chr&gt;                  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+ 1 Jabba Desilijic Tiure   1.75  1358 Hutt           443. 
+ 2 Dud Bolt                0.94    45 Vulptereen      50.9
+ 3 Yoda                    0.66    17 Yoda's species  39.0
+ 4 Owen Lars               1.78   120 Human           37.9
+ 5 IG-88                   2      140 Droid           35  
+ 6 R2-D2                   0.96    32 Droid           34.7
+ 7 Grievous                2.16   159 Kaleesh         34.1
+ 8 R5-D4                   0.97    32 Droid           34.0
+ 9 Jek Tono Porkins        1.8    110 &lt;NA&gt;            34.0
+10 Darth Vader             2.02   136 Human           33.3
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>Vous pourriez être tentée de combiner <code>arrange</code> puis <code>slice</code> pour ne retenir que les <code>n</code> plus (ou moins) quelque chose :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(bmi)) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  name                  height  mass species          bmi
+  &lt;chr&gt;                  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+1 Jabba Desilijic Tiure   1.75  1358 Hutt           443. 
+2 Dud Bolt                0.94    45 Vulptereen      50.9
+3 Yoda                    0.66    17 Yoda's species  39.0
+4 Owen Lars               1.78   120 Human           37.9
+5 IG-88                   2      140 Droid           35  </code></pre>
+</div>
+</div>
+<p>Mais peut-être préférerez vous l’alternative compacte de <code>slice_*</code> et pièces rattachées :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> <span class="fu">slice_max</span>(bmi, <span class="at">n=</span><span class="dv">5</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  name                  height  mass species          bmi
+  &lt;chr&gt;                  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+1 Jabba Desilijic Tiure   1.75  1358 Hutt           443. 
+2 Dud Bolt                0.94    45 Vulptereen      50.9
+3 Yoda                    0.66    17 Yoda's species  39.0
+4 Owen Lars               1.78   120 Human           37.9
+5 IG-88                   2      140 Droid           35  </code></pre>
+</div>
+</div>
+</section>
+<section id="count-compter-des-lignes-sur-des-critères-en-colonnes" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="count-compter-des-lignes-sur-des-critères-en-colonnes"><span class="header-section-number">9.8</span> <code>count</code> : compter des lignes sur des critères en colonnes</h2>
+<p>Pour obtenir des résumés, vous pouvez utiliser <code>count</code> qui rajouter une colonne qui peut se révéler fort utile :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species, <span class="at">name=</span><span class="st">"N"</span>) <span class="sc">%&gt;%</span> <span class="co"># if you omit `name`, count create `n` by default</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(N)) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n=</span><span class="dv">5</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  species      N
+  &lt;chr&gt;    &lt;int&gt;
+1 Human       35
+2 Droid        6
+3 &lt;NA&gt;         4
+4 Gungan       3
+5 Kaminoan     2</code></pre>
+</div>
+</div>
+<p>Et si vous voulez garder les autres colonnes, <code>add_count</code> est votre nouveau copain :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, sex, species) <span class="sc">%&gt;%</span> </span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_count</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;=</span> <span class="dv">3</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 48 × 4
+   name               sex    species     n
+   &lt;chr&gt;              &lt;chr&gt;  &lt;chr&gt;   &lt;int&gt;
+ 1 Luke Skywalker     male   Human      35
+ 2 C-3PO              none   Droid       6
+ 3 R2-D2              none   Droid       6
+ 4 Darth Vader        male   Human      35
+ 5 Leia Organa        female Human      35
+ 6 Owen Lars          male   Human      35
+ 7 Beru Whitesun Lars female Human      35
+ 8 R5-D4              none   Droid       6
+ 9 Biggs Darklighter  male   Human      35
+10 Obi-Wan Kenobi     male   Human      35
+# ℹ 38 more rows</code></pre>
 </div>
 </div>
 
