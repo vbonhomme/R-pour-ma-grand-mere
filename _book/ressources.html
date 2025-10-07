@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R pour ma grand-mère - 14&nbsp; Ressources</title>
+<title>R pour ma grand-mère - 15&nbsp; Ressources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -46,7 +46,12 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -55,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "correspondance de plus dans ce document",
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Annuler",
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
@@ -71,12 +77,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ressources.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ressources.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ressources</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -86,12 +92,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">R pour ma grand-mère</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/vbonhomme/R-pour-ma-grand-mere" title="Code source" class="quarto-navigation-tool px-1" aria-label="Code source"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -127,8 +133,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./install.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installer un environnement R</span></span></a>
+  <a href="./preliminaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Préliminaires</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -140,96 +146,102 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./premiers-pas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Premiers pas et concepts-clés</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Premiers pas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concepts-cles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Concepts-clés</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importer ses données</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dplyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulation de données avec <code>dplyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Nettoyer ses données avec <code>tidyr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Graphiques avec <code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./purrr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Manipulation de listes avec <code>purrr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyrest.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le reste du tidyverse au pas de course : <code>forcats</code>, <code>stringr</code>, <code>lubridate</code> et <code>readr</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./programmation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Éléments de programmation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modelling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modélisation statistique : <code>lm</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./magrittr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ceci n’est pas qu’un opérateur : <code>%&gt;%</code> et <code>magrittr</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Ceci n'est pas qu'un opérateur : `%&gt;%` et `magrittr`</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vocabulaire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ressources</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
     <h2 id="toc-title">Dans ce chapitre</h2>
    
   <ul>
-  <li><a href="#manuels-de-référence" id="toc-manuels-de-référence" class="nav-link active" data-scroll-target="#manuels-de-référence"><span class="header-section-number">14.1</span> Manuels de référence</a></li>
-  <li><a href="#must-see" id="toc-must-see" class="nav-link" data-scroll-target="#must-see"><span class="header-section-number">14.2</span> Must see</a></li>
-  <li><a href="#moteur-de-recherche" id="toc-moteur-de-recherche" class="nav-link" data-scroll-target="#moteur-de-recherche"><span class="header-section-number">14.3</span> Moteur de recherche</a></li>
-  <li><a href="#journaux" id="toc-journaux" class="nav-link" data-scroll-target="#journaux"><span class="header-section-number">14.4</span> Journaux</a></li>
-  <li><a href="#manuels" id="toc-manuels" class="nav-link" data-scroll-target="#manuels"><span class="header-section-number">14.5</span> Manuels</a></li>
-  <li><a href="#ouvrages" id="toc-ouvrages" class="nav-link" data-scroll-target="#ouvrages"><span class="header-section-number">14.6</span> Ouvrages</a></li>
-  <li><a href="#sites" id="toc-sites" class="nav-link" data-scroll-target="#sites"><span class="header-section-number">14.7</span> Sites</a></li>
-  <li><a href="#cheatsheets" id="toc-cheatsheets" class="nav-link" data-scroll-target="#cheatsheets"><span class="header-section-number">14.8</span> Cheatsheets</a></li>
-  <li><a href="#style-guides" id="toc-style-guides" class="nav-link" data-scroll-target="#style-guides"><span class="header-section-number">14.9</span> Style guides</a></li>
-  <li><a href="#miscellanées" id="toc-miscellanées" class="nav-link" data-scroll-target="#miscellanées"><span class="header-section-number">14.10</span> Miscellanées</a></li>
-  <li><a href="#quotes" id="toc-quotes" class="nav-link" data-scroll-target="#quotes"><span class="header-section-number">14.11</span> Quotes</a></li>
+  <li><a href="#manuels-de-référence" id="toc-manuels-de-référence" class="nav-link active" data-scroll-target="#manuels-de-référence"><span class="header-section-number">15.1</span> Manuels de référence</a></li>
+  <li><a href="#must-see" id="toc-must-see" class="nav-link" data-scroll-target="#must-see"><span class="header-section-number">15.2</span> Must see</a></li>
+  <li><a href="#moteur-de-recherche" id="toc-moteur-de-recherche" class="nav-link" data-scroll-target="#moteur-de-recherche"><span class="header-section-number">15.3</span> Moteur de recherche</a></li>
+  <li><a href="#journaux" id="toc-journaux" class="nav-link" data-scroll-target="#journaux"><span class="header-section-number">15.4</span> Journaux</a></li>
+  <li><a href="#manuels" id="toc-manuels" class="nav-link" data-scroll-target="#manuels"><span class="header-section-number">15.5</span> Manuels</a></li>
+  <li><a href="#ouvrages" id="toc-ouvrages" class="nav-link" data-scroll-target="#ouvrages"><span class="header-section-number">15.6</span> Ouvrages</a></li>
+  <li><a href="#sites" id="toc-sites" class="nav-link" data-scroll-target="#sites"><span class="header-section-number">15.7</span> Sites</a></li>
+  <li><a href="#cheatsheets" id="toc-cheatsheets" class="nav-link" data-scroll-target="#cheatsheets"><span class="header-section-number">15.8</span> Cheatsheets</a></li>
+  <li><a href="#style-guides" id="toc-style-guides" class="nav-link" data-scroll-target="#style-guides"><span class="header-section-number">15.9</span> Style guides</a></li>
+  <li><a href="#miscellanées" id="toc-miscellanées" class="nav-link" data-scroll-target="#miscellanées"><span class="header-section-number">15.10</span> Miscellanées</a></li>
+  <li><a href="#quotes" id="toc-quotes" class="nav-link" data-scroll-target="#quotes"><span class="header-section-number">15.11</span> Quotes</a></li>
   </ul>
 </nav>
     </div>
@@ -238,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ressources</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ressources</span></h1>
 </div>
 
 
@@ -251,36 +263,38 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<section id="manuels-de-référence" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="manuels-de-référence"><span class="header-section-number">14.1</span> Manuels de référence</h2>
+
+<section id="manuels-de-référence" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="manuels-de-référence"><span class="header-section-number">15.1</span> Manuels de référence</h2>
 <ul>
 <li><a href="https://rstudio.github.io/r-manuals">En format Quarto</a></li>
 <li><a href="https://cran.r-project.org/manuals.html">htsur le CRAN</a></li>
 </ul>
 </section>
-<section id="must-see" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="must-see"><span class="header-section-number">14.2</span> Must see</h2>
+<section id="must-see" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="must-see"><span class="header-section-number">15.2</span> Must see</h2>
 <ul>
 <li><a href="http://stackoverflow.com/tags/r/info"><code>[R]</code> chez Stack Overflow</a></li>
 </ul>
 </section>
-<section id="moteur-de-recherche" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="moteur-de-recherche"><span class="header-section-number">14.3</span> Moteur de recherche</h2>
+<section id="moteur-de-recherche" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="moteur-de-recherche"><span class="header-section-number">15.3</span> Moteur de recherche</h2>
 <ul>
 <li><a href="http://rseek.org/">Rseek</a> dédié à R</li>
 </ul>
 </section>
-<section id="journaux" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="journaux"><span class="header-section-number">14.4</span> Journaux</h2>
+<section id="journaux" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="journaux"><span class="header-section-number">15.4</span> Journaux</h2>
 <ul>
 <li><a href="http://journal.r-project.org/"><em>R-Journal</em></a> : la gazette de R avec les nouveaux packages, des astuces, des articles techniques. <em>Open access</em>.</li>
 <li><a href="http://www.jstatsoft.org/"><em>Journal of Statistical Software</em></a> : officiellement multilangages, en pratique, beaucoup de nouveaux packages R. <em>Open access</em>.</li>
 </ul>
 </section>
-<section id="manuels" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="manuels"><span class="header-section-number">14.5</span> Manuels</h2>
+<section id="manuels" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="manuels"><span class="header-section-number">15.5</span> Manuels</h2>
 <ul>
 <li>D’excellents tutoriels sont regroupés sur le <a href="http://cran.r-project.org/other-docs.html">site du CRAN</a>, en anglais et d’autres langues.</li>
 <li><a href="http://cran.r-project.org/manuals.html"><em>Documentation officielle</em></a>, éditée par la <em>R Development Core Team</em> : introduction à R, définition du langage <em>per se</em>, package authoring, etc. : assez aride et souvent très technique (et pas uniquement pour les novices) mais reste la référence absolue.</li>
@@ -289,8 +303,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="http://cran.r-project.org/doc/contrib/Herve-Aide-memoire-statistique.pdf"><em>Aide mémoire de statistique appliquée à la biologie</em></a> : un document très concis et très utile par Maxime Hervé. Malgré non nom, sa portée est au delà de la biologie et globalement une bon résumé pour l’analyse statistique depuis la préparation jusqu’à l’analyse.</li>
 </ul>
 </section>
-<section id="ouvrages" class="level2" data-number="14.6">
-<h2 data-number="14.6" class="anchored" data-anchor-id="ouvrages"><span class="header-section-number">14.6</span> Ouvrages</h2>
+<section id="ouvrages" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="ouvrages"><span class="header-section-number">15.6</span> Ouvrages</h2>
 <ul>
 <li><a href="http://www.sagepub.com/dsur/main.htm"><em>Discover statistics using R</em></a> (2012) par Andy Field, Jeremy Miles et Zoë Field (992pp.) chez <em>Sage</em>. Une excellente ressource très complète et vivante.</li>
 <li><a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0470973927.html"><em>The R Book</em></a> (2012) Seconde édition par Michael J. Crawley. Une autre bonne ressource, complète, sur R.</li>
@@ -304,8 +318,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="http://r-pkgs.had.co.nz/"><em>R packages</em></a> par Hadley Wickham. En ligne et en version imprimée. Une excellente et concise introduction à l’écriture de packages.</li>
 </ul>
 </section>
-<section id="sites" class="level2" data-number="14.7">
-<h2 data-number="14.7" class="anchored" data-anchor-id="sites"><span class="header-section-number">14.7</span> Sites</h2>
+<section id="sites" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="sites"><span class="header-section-number">15.7</span> Sites</h2>
 <ul>
 <li><a href="http://cran.r-project.org/web/views/">CRAN Views</a> : pour bien commencer avec les packages. Organisé par tâches (par exemple les Omics, l’inférence bayésienne, etc.) et “curationné” avec amour.</li>
 <li><a href="http://www.r-bloggers.com/"><em>R-bloggers</em></a> : aggrégation de blogs qui traitent de R, quelques posts par jour, éclectique, une excellente ressource pour être à la page. tl;dr: un best-of <a href="http://www.r-bloggers.com/?s=in+case+you+missed+it">ici</a></li>
@@ -320,8 +334,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="http://wikistat.fr/">WikiStats</a> : ressources statistiques par l’INSA et le département de maths de l’université de Toulouse.</li>
 </ul>
 </section>
-<section id="cheatsheets" class="level2" data-number="14.8">
-<h2 data-number="14.8" class="anchored" data-anchor-id="cheatsheets"><span class="header-section-number">14.8</span> Cheatsheets</h2>
+<section id="cheatsheets" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="cheatsheets"><span class="header-section-number">15.8</span> Cheatsheets</h2>
 <ul>
 <li><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio’s, dplyr, shiny, rmarkdown, etc. cheatsheets</a> : génial</li>
 <li><a href="http://adv-r.had.co.nz/Vocabulary.html">R Vocabulary</a> : back to basics</li>
@@ -331,15 +345,15 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">Colors cheatsheet</a></li>
 </ul>
 </section>
-<section id="style-guides" class="level2" data-number="14.9">
-<h2 data-number="14.9" class="anchored" data-anchor-id="style-guides"><span class="header-section-number">14.9</span> Style guides</h2>
+<section id="style-guides" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="style-guides"><span class="header-section-number">15.9</span> Style guides</h2>
 <ul>
 <li><a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a> : longtemps la référence</li>
 <li><a href="http://adv-r.had.co.nz/Style.html">Hadley Wickham’s style guide</a> : plus courte, meilleure à l’usage et dans l’usage</li>
 </ul>
 </section>
-<section id="miscellanées" class="level2" data-number="14.10">
-<h2 data-number="14.10" class="anchored" data-anchor-id="miscellanées"><span class="header-section-number">14.10</span> Miscellanées</h2>
+<section id="miscellanées" class="level2" data-number="15.10">
+<h2 data-number="15.10" class="anchored" data-anchor-id="miscellanées"><span class="header-section-number">15.10</span> Miscellanées</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Débug et canard en plastique</a></li>
 <li><a href="http://www.sumsar.net/blog/2014/07/estimate-your-bac-using-drinkr/">Calculer son alcoolémie avec R</a></li>
@@ -347,8 +361,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="http://kh-tps.osu.edu/read.pdf">Une autre liste de ressources</a></li>
 </ul>
 </section>
-<section id="quotes" class="level2" data-number="14.11">
-<h2 data-number="14.11" class="anchored" data-anchor-id="quotes"><span class="header-section-number">14.11</span> Quotes</h2>
+<section id="quotes" class="level2" data-number="15.11">
+<h2 data-number="15.11" class="anchored" data-anchor-id="quotes"><span class="header-section-number">15.11</span> Quotes</h2>
 <ul>
 <li>Tout <a href="https://github.com/kbroman/datasciquotes">ici</a> est délicieux mais on peut rajouter :</li>
 </ul>
@@ -459,10 +473,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -472,8 +503,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -485,7 +525,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -529,6 +692,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -554,6 +718,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -615,14 +805,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./vocabulaire.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span>
+      <a href="./vocabulaire.html" class="pagination-link" aria-label="Dictionnaire">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Dictionnaire</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

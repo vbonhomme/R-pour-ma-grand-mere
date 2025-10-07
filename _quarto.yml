@@ -8,12 +8,13 @@ book:
   author:
     name: Vincent Bonhomme
     gender: male
-  date: "04/13/2024"
+  date: "07/10/2025"
   chapters:
     - index.qmd
-    - install.qmd
+    - preliminaires.qmd
     - 3min-tour.qmd
     - premiers-pas.qmd
+    - concepts-cles.qmd
     - import.qmd
     - dplyr.qmd
     - tidyr.qmd
@@ -51,7 +52,8 @@ format:
     number-depth: 3
     highlight-style: github
     header-includes: |
-      \titlehead{\includegraphics[width=6in]{images/Athena.png}}
+      \titlehead{\includegraphics[width=8in]{cover.pdf}}
+
 
 editor: source
 

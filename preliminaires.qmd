@@ -1,4 +1,4 @@
-# Installer un environnement R
+# Préliminaires
 
 ## Pourquoi apprendre R?
 
@@ -6,19 +6,22 @@ Mettons les pieds dans le plat d'entrée : pourquoi apprendre R quand je peux fa
 
 Après un court exercice de relaxation respiratoire, voilà quelques raisons :
 
-* R est l'environnement leader des statistiques et de l'analyse de données
-* R est plus que gratuit, il est libre et le restera
-* Le temps passé à apprendre R est rapidement amorti. Et s'il ne l'est pas tout de suite, il le sera au centuple un jour.
+* R est l'environnement leader des statistiques et de l'analyse de données ;
+* R est plus que gratuit, il est libre et le restera ;
+* Apprendre R c'est apprendre les statistiques ;
+* Apprendre R c'est apprendre à programmer ;
+* R est devenu convivial ;
+* R est interopérable avec à peu près tout, notamment Python et Cpp ;
+* Le temps passé à apprendre R est rapidement amorti. Et s'il ne l'est pas tout de suite, il le sera au centuple un jour ;
 * R vous permet de faire de la science sérieuse, c'est à dire [reproductible](https://en.wikipedia.org/wiki/Reproducibility)
-* Vous pouvez écrires des articles, des présentations, des applications web, des blogs, des sites webs, des livres avec R
-* R dispose de ressources impressionnantes : [20000+ packages](https://cran.r-project.org/web/packages/) (à peu près 1000 de plus tous les ans) et des tutoriels, livres, forums d'entraide à gogo et sans doute des collègues qui pratiquent et peuvent catalyser votre apprentissage. On peut raisonnablement dire que si vous avez un problème auquel vous ne trouvez pas de réponse dans les 3 premières années d'usage quotidien, c'est que votre question est mal posée ($(P<0.01)$).
-* Apprendre R c'est apprendre les statistiques
-* Apprendre R c'est apprendre à programmer
-* R est devenu convivial (qui l'eût cru ?!)
-* R est interopérable avec à peu près tout
-* Enfin, l'enjeu d'être autonome pour vos analyses n'est pas juste celui de faire des trucs rigolos avec un ordinateur : il en va de votre liberté scientifique. Ni plus ni moins.
+* Vous pouvez écrire des articles, des présentations, des applications web, des blogs, des sites webs, des livres avec R
+* R dispose de ressources impressionnantes : [20000+ packages](https://cran.r-project.org/web/packages/) (à peu près 1000 de plus tous les ans) et des tutoriels, livres, forums d'entraide à gogo et sans doute des collègues qui pratiquent et peuvent catalyser votre apprentissage. On peut raisonnablement dire que si vous avez un problème auquel vous ne trouvez pas de réponse dans les 3 premières années d'usage quotidien, c'est que votre question est mal posée ($(P<0.01)$) ;
 
-## Installer R
+L'enjeu d'être autonome pour vos analyses n'est pas juste celui de faire des trucs rigolos avec un ordinateur : il en va de votre **liberté scientifique**. Ni plus ni moins.
+
+## Installer un environnement R
+
+### Installer R 
 L'installation de R se passe généralement sans encombres, en quelques minutes.
 
 Le plus simple est de choisir votre système d'exploitation depuis la page officielle :
@@ -27,14 +30,13 @@ Le plus simple est de choisir votre système d'exploitation depuis la page offic
 
 Pour Windows et Mac, il suffit de télécharger et d'installer l'archive. Pour Mac, comme indiqué sur la page en lien, il vous faudra probablement également installer XQuartz. Sous Linux, vous serez guidés pour utiliser votre gestionnaire de paquets préféré.
 
-## RStudio
+### Installer RStudio
 Je préconise l'installation conjoint de R et de RStudio son IDE (environnement de travail intégré). Vous pouvez faire sans RStudio mais je vous le déconseille.
 
 Pour installer RStudio, version bureau, récupérez l'installeur depuis sa page d'accueil et laissez vous porter : 
 
 > [https://posit.co/download/rstudio-desktop/]([https://posit.co/download/rstudio-desktop/])
 
-## Vérifier votre installation
 Une fois que vous avez installé R puis RStudio, ouvrez RStudio.
 
 Dans la fenêtre "console", là où vous voyez une invite de commande `>` tapez 1+1 puis `<Entrée>`. 
@@ -46,7 +48,7 @@ Dans la fenêtre "console", là où vous voyez une invite de commande `>` tapez 
 Voilà, vous avez une installation de R+RStudio qui fonctionne. 
 
 
-## Installer les packages
+### Installer les packages requis
 
 Les besoins de ce document se limitent essentiellement aux packages du [tidyverse](https://www.tidyverse.org/) que vous pouvez installer en tapant à la console la commande suivante :
 
@@ -55,6 +57,13 @@ Les besoins de ce document se limitent essentiellement aux packages du [tidyvers
 install.packages("tidyverse")
 ```
 
+Laissez mouliner, puis la commande ci-dessous devrait se passer sans encombres.
+
+```{r, eval=FALSE}
+library(tidyverse)
+```
+
+Voilà, vous êtes paré·e·s pour cette formation !
 
 
 

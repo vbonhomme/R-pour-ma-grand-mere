@@ -1,0 +1,947 @@
+# Concepts-clés
+
+## La console de R : R GUI
+Quand vous ouvrez R ou RStudio, vous êtes nez à nez avec un "invite de commande" et un curseur :
+
+```
+> 
+```
+
+![R, canal historique](images/Rterminal.png)
+
+R attend que vous tapiez des commandes avec vos jolis doigts et que vous pressiez `<Entrée>` pour exécuter la commande. Le résultat s'affiche alors :
+
+```{r}
+1+1
+```
+
+Une commande peut se dérouler sur plusieurs lignes comme on le verra plus tard (typiquement lors de la définition d'une fonction ou d'un _pipe_ de fonctions) mais quand vous pressez `<Entrée>` l'ensemble de ces commandes doit être syntaxiquement correct, sinon une erreur vous sera retournée.
+
+Vous pouvez également taper plusieurs commandes sur la même ligne, séparées par  `;` mais je vous le déconseille.
+
+Vous pouvez **naviguer dans votre historique** de commandes avec les touches `<Haut>` et `<Bas>` de votre clavier. Vous pouvez aussi **effacer** votre console (sans effacer l'historique) avec `<Ctrl>+L` ou `<Cmd>+L` sous Mac.
+
+## Scripts
+Si vous êtes dans RStudio, vous aurez remarqué plusieurs fenêtres dont l'une est la **Console** de R (en bas à gauche sur la capture d'écran) que nous venons de voir, ainsi qu'une autre, généralement au dessus, dans laquelle vous pouvez ouvrir des **Scripts** au format `.R`, c'est à dire en fichier texte.
+
+Vous aurez remarqué que dans le panneau "Console", le même texte de "bienvenue" apparaît et c'est normal : après tout, RStudio n'est ni plus ni moins qu'une console avec des outils autour. 
+
+Vous pouvez parfaitement tout faire dans le panneau "Console" et ne pas utiliser le reste si vous chérissez l'ambiance des années 1990s. Mais à ce compte là, utilisez plutôt RGui, c'est à dire ce que nous avons vu précédemment. RGui tout seul n'a plus vraiment de sens dans la vie quotidienne actuelle de l'analyse de données.
+
+Vous pouvez aller faire un tour dans les **Préférences** de RStudio et en paramétrer l'aspect, notamment pour avoir un fond sombre et ne pas abimer vos jolis yeux.
+
+![L'interface de RStudio](images/Rstudio.png)
+
+Le _workflow_ typique est le suivant : 
+
+1. vous tapez des commandes dans la console, vous essayez, vous tâtonnez jusqu'à ce que vous en soyez satisfait·e de chaque résultat intermédiaire ;
+2. vous sauvez ces commandes dans un script que vous pouvez commenter, organiser, etc. ;
+3. Vous pouvez ensuite reproduire toutes vos analyses grâce à ce script, les recycler, les amender que ce soit demain, dans six mois ou sur une autre machine.
+
+Un concept central est que R **n'a pas de mémoire** d'un jour à l'autre si vous le fermez. Alors oui, vous pouvez toujours "sauver votre espace de travail" mais je vous le déconseille fortement. La reproductibilité de vos analyses est en jeu. Nous allons apprendre à faire sans et nous verrons pourquoi c'est une force.
+
+Reprenons. Un script est donc une collection de commandes qui permettent de reproduire vos analyses. Excel peut déjà aller se rhabiller.
+
+Pour le moment, nous allons bidouiller dans la console, sans rassembler nos commandes en un script, mais nous y viendrons vite.
+
+## Commentaires
+
+Tout ce qui suit un `#` est ignoré par R, ce qui permet de commenter vos scripts comme ci-après. Faites un usage massif de commentaires. Votre vous-même de dans six mois, les reviewers ou pire encore vos collègues, vous en seront reconnaissants. 
+
+
+## Arithmétique
+En premier lieu, R est une calculette. Vous pouvez copier-coller les blocs de code directement dans votre console R :
+
+```{r, results='hold'}
+# back to school
+1+2
+3-4
+2/3
+2*2
+
+# beyond +, -, /, *
+2^4 
+sqrt(9) # equivalent to 9^(1/2)
+7%%3
+
+# precedence rules apply
+(1.5-2)*4
+1.5-2*4
+```
+
+Tous les opérateurs arithmétiques courants sont disponibles :
+
+* `+`, `-`, `*`, `/` pour l'arithmétique de base
+* `^` pour élever au carré et `sqrt` pour la racine carrée
+* `%%` pour le [modulo](https://fr.wikipedia.org/wiki/Modulo_(opération)), etc.
+
+Vous venez d'utiliser - peut-être sans le savoir -, votre première _fonction_ : `sqrt`, pour _square root_. Les fonctions ont souvent des noms explicites et sont, généralement, suivies de parenthèses dans lesquelles glisser une ou des valeurs. 
+
+En réalité, toutes les opérations ci-dessus sont des fonctions, y compris un banal `+`[^fonctions]. Nous y reviendrons mais cela nous vaut la première maxime de sagesse populaire à garder dans un coin de la tête :
+
+> En R, tout est fonction.
+
+[^fonctions]: essayez donc  `` `+`(1, 2) ``
+
+Vous pouvez également utiliser des parenthèses pour "emboiter" des opérations dans le bon ordre. Sans parenthèses, les règles de précédence[^precedence] classiques s'appliquent comme dans l'exemple ci-dessus : une multiplication sera calculée avant une addition.
+
+[^precedence]: voir `?Syntax`
+
+## Variables et assignation
+
+Comme on pouvait s'en douter, R a une mémoire et c'est donc plus qu'une _calculette_ : c'est une _calculatrice_.
+
+Pour stocker une valeur dans une **variable** nous utilisons l'opérateur d'**assignation** : `<-`[^fonctions2]
+
+[^fonctions2]: ``  `<-`(toto, 4); toto*2 `` puisqu'on vous dit que tout est fonction !
+
+```{r}
+plop <- 3
+plop^2
+```
+
+D'autres opérateurs d'assignation existent (`->`, `=`, `<<-`, etc.) mais je vous conseille - calmement mais fermement - de vous en tenir au bon vieux `<-`[^assignation].
+
+[^assignation]: L'assignation `->` est acceptable dans certains contextes, notamment en combinaison avec un pipe `%>%`. `=` est plutôt réservés aux arguments de fonctions ou, éventuellement, à des méta-paramètres en début de script. `<<-` est en revanche proscrit car il assigne dans l'environnement global. Utilisé dans une fonction, il remplacera dans l'environnement global la valeur de cette variable, si elle existe. Si vous pensez en avoir besoin, c'est généralement (>99.9%) que votre script/fonction est mal fichue.
+
+Naturellement, si vous assignez une nouvelle valeur à une variable, celle-ci est remplacée :
+
+```{r}
+plop <- 2
+plop+3
+```
+
+Et bien entendu vous pouvez combiner les variables :
+
+```{r}
+plip <- 7
+plop*plip
+```
+
+Vous pouvez lister les variables existantes avec la fonction `ls()`. L'onglet "Environnement" dans RStudio permet aussi de les visualiser, plus convivialement et de façon plus détaillée.
+
+Pour afficher la valeur d'une variable, et plus généralement d'un objet, il suffit de taper son nom dans la console et d'appuyer sur `<Entrée>`. En coulisses, R appelle alors automatiquement la fonction `print`. 
+
+R a tendance à faire beaucoup de choses en coulisses. Dans l'ensemble, cela se traduit par un caractère raisonnablement intuitif pour vous. Sachez simplement qu'une opération aussi naturelle qu'une assignation à la volée comme on vient de le faire est une hérésie pour un esprit informaticien orthodoxe, habitué à déclarer une variable et son type _avant_ d'y assigner une valeur.
+
+## Bien nommer ses variables
+
+> Mal nommer les choses c'est ajouter au malheur du monde -- Albert Camus
+
+À propos du nommage de vos variables, soyez explicites mais compacts et évitez : les caractères spéciaux, les majuscules, les points (utilisez `_`) et les noms réservés comme `pi`.
+
+Je vous conseille l'anglais, même approximatif, partout et tout le temps (commentaires, noms de variables, etc.).
+
+```{r, eval=FALSE, echo=TRUE}
+# good names
+mod1
+mod1_spain
+N_perm
+
+# bad names
+my.model # . is for methods
+MY_MODEL # calm down
+My_Model # Camel Case works but not favoured
+my_model_after_lda_a_and_data_subset2_flavourB # headaches and typos garanteed
+
+# invalid or error-prone names
+34_data 
+pi <- 4    # works but very bad idea
+print <- 2 # same
+&italy
+```
+
+Ce qui nous amène à une deuxième maxime populaire:
+
+> There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
+
+Pour assigner plus d'une valeur à une variable, la fonction `c`, pour _concatenate_, est votre amie : 
+
+```{r}
+toto <- c(1, 2, 3, 4, 5)
+toto*2
+```
+
+Jusqu'ici toutes les variables assignées étaient des _scalaires_, c'est à dire des variables ne comprenant qu'une valeur unique.
+
+`toto` n'est pas un scalaire mais un _vecteur_ de nombres, qui peut s'écrire en ligne, c'est à dire en une seule et unique _dimension_. Je pose ça là, nous y reviendrons bien vite.
+
+Quelques fonctions bien utiles pour visualiser et décrire des variables en R :
+
+```{r}
+length(toto) 
+head(toto, 2) # show the first 2 values
+tail(toto, 3) # show the last 3 values
+```
+
+Nous voyons que certaines fonctions acceptent plus d'une seule valeur au sein de leurs parenthèses : on parle d'**argument**. Quand plus d'un seul argument est **passé** à une fonction, on les sépare par des virgules. Certaines fonctions peuvent/doivent aussi être appelées à vide, comme on l'a vu avec `ls()`.
+
+## Séquences régulières
+
+Vous m'avez vu (me) taper "à la main", des séries de nombres telles que `c(1, 2, 3, 4, 5)`. On constate une certaine régularité dans cette séquence des premiers entiers naturels. Jusqu'à 5, on peut imaginer la taper à la main, mais imaginons que nous ayons besoin d'aller jusqu'à 100 ou même à 37427. Doit bien y avoir quelqu'un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.
+
+> Si tu penses que tu es en train de faire quelque chose de répétitif et/ou stupide, il existe à coup sûr une façon plus intelligente de faire
+
+De façon plus compacte :
+
+> Un·e bon·ne programmeur·se est une grosse feignasse
+
+R possède toutes les fonctions dont on peut rêver pour générer séquences régulières et nombres aléatoires. Commençons par les séquences régulières et la versatile fonction `seq` qui prend au minimum deux arguments pour le point de départ et le point d'arrivée :
+
+```{r}
+seq(1, 10)
+```
+
+Générér une séquence d'entiers naturels est une opération si banale en programmation que l'on peut faire encore pus court avec l'opérateur `:`
+
+```{r}
+1:5
+-1:4
+```
+
+De la même façon, vous pouvez répéter une ou des valeurs avec `rep` :
+
+```{r}
+tonton <- 1:5
+rep(tonton, 2)
+rep(tonton, each=3)
+```
+
+À ce point de votre existence, vous devriez vous poser les questions suivantes :
+
+* faut-il se rappeler de tout ça ?
+* ces histoires de paramètres de fonction, attends... ah oui, le Monsieur a dit d'apeller ça des _arguments_, c'est bien joli mais on les trouve où ?
+* et d'ailleurs il doit bien y avoir une documentation quelque part pour tout ce bazar ?
+* quand est-ce qu'on fait une pause ?
+
+R, comme tout langage de programmation, possède sa documentation. Tout est documenté et en premier lieu les fonctions. Nous y arrivons bientôt mais parlons d'abord plus en détail des _fonctions_.
+
+## Interlude clavier
+
+* Toutes les commandes tapées depuis l'ouverture de R/RStudio sont dans votre console. Pour l'effacer, pressez `<Ctrl> + <L>`. Vos objets sont conservés.
+* Pour naviguer dans votre historique, côté console, pressez les flèches `<Haut>` et `<Bas>`.
+* Pour compléter un nom de fonction ou d'argument, pressez `<Tab>`
+* Une fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez `<Tab>` de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.
+* Dans RStudio, allez à peu près tout tester dans le menu `Code`. Vous y trouverez des fonctions très utiles ("Reindent lines", "Reformat code" par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !
+
+
+## Fonctions
+
+Les fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu'elles doivent être démystifiées précocément.
+
+### Que sont les fonctions ?
+Les fonctions sont des unités de code qui font quelque chose d'utile. Le plus souvent on envoie une valeur et on en récupère une autre. `sqrt()` par exemple renvoie la racine carrée de la valeur _passée_ en _argument_.
+
+Les arguments, séparés par des virgules, définissent les "options" de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d'argument.
+
+### Écrire ses fonctions : `function`
+
+Vous pouvez définir vos propres fonctions avec la fonction `function`. On va encapsuler une portion de code entre des accolades `{` et la nommer. Définissons une fonction qui ajoute `3`  à un argument que l'on va appeller `x` (vous pouvez essayer avec `y` ou `toto` :
+
+```{r}
+plus3 <- function(x) {
+  x+3
+}
+
+plus3(5)
+plus3(1:3)
+```
+
+Les fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d'avoir du code non dupliqué, moins propice à des erreurs de frappes. Aussi, si vous changez d'avis, vous pourrez changer la définition de fonction et, chaque fois qu'elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.
+
+### Notions d'environnement
+La valeur `x` ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l'**environnement** de la fonction `plus3`. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n'existe que durant l'exécution de la fonction.
+
+Autrement dit, si la variable `x` est déja assignée dans l'**environnement global**, c'est à dire en dehors de la fonction, dans la console si on veut, et bien ce `x` global ne sera ni modifié, ni même utilisé. Un exemple :
+
+```{r}
+x <- 45
+plus3(5)
+```
+
+Naturellement vous pouvez tout de même utiliser votre `x` global comme argument de la fonction `plus3`. Ce `x` global va être utilisé localement par la fonction puis vous être retourné :
+
+```{r}
+plus3(x)
+```
+
+### Documentation des fonctions : `?`
+
+Toute fonction déjà disponible en R ou un package a forcément une page d'aide dédiée à laquelle on accède avec : `?nom_de_la_fonction`. 
+
+Revenons à notre fonction `seq` bien pratique pour créer des `seq`uences régulières. En tapant `?seq` on accède au contenu suivant :
+
+```
+Sequence Generation
+
+Description
+Generate regular sequences. seq is a standard generic with a default method. seq.int is a primitive which can be much faster but has a few restrictions. seq_along and seq_len are very fast primitives for two common cases.
+
+## Default S3 method:
+seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
+    length.out = NULL, along.with = NULL, ...)
+
+seq.int(from, to, by, length.out, along.with, ...)
+
+seq_along(along.with)
+seq_len(length.out)
+
+Arguments
+[...]
+
+Details
+[...]
+
+Value
+[...]
+
+See also
+[...]
+
+Examples
+[...]
+
+```
+
+Toutes les pages d'aides ont la même structure et possèdent les mêmes sections. Regardons-les de plus près :
+
+* **Description** : ce que la fonction fait
+* **Usage** : la fonction "déployée" c'est à dire avec tous ses arguments. Parfois plusieurs fonctions sont regroupées dans une même age d'aide, comme c'est le cas pour `seq`. Ces fonctions peuvent être des variantes avec des noms différents ou des **méthodes** c'est à dire des fonctions au comportement différent selon le type d'objet sur lequel elles opèrent.
+* **Arguments** : un descriptif de tous les arguments disponibles. La classe et le format de chacun d'eux est mentionnée.
+* **Details** : souvent un remède à l'insomnie mais les subtilités d'implémentation sont là, souvent cachées au détour d'une phrase.
+* **Value** : ce que la fonction retourne.
+* **References** : où s'en référer si vous n'en avez pas assez
+* **See Also** : fonctions connexes, très pratique pour enrichir son vocabulaire et trouver son bonheur.
+* **Examples** : peut être la plus utile de toutes avec ses exemples d'utilisation que vous pouvez copier-coller ou même appeller directement depuis la console avec `example("nom_de_la_fonction")`. Vous pouvez essayer `example("plot")` par exemple.
+* En pied de page, vous avez également une information qui sera utile plus tard : le package et sa version dans lequel se trouve être cette fonction. Pour `seq`, on est dans le package `base` dont toutes les autres fonctions sont indexées dans le lien "Index".
+
+Certaines pages d'aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple `?Arithmetic`, `?Special`, `Syntax`. D'autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`` ` ``), par exemple `` ?`+` `` ou la mise en abyme de `` ?`?` ``. Enfin, il existe d'autres ressources comme les "vignettes", plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.
+
+Les pages d'aide sont souvent compactes et obscures mais l'information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d'aide même si à première vue cette littérature n'est guère attrayante.
+
+Enfin, la variante `??(quoiquoiquoi)`, raccourci de `help.search("quoiquoiquoi")` permet de chercher toutes les occurences de `quoiquoiquoi` dans _toutes_ les pages d'aide de R.
+
+### Arguments : noms, positions et valeurs par défaut
+
+Après avoir consulté `?seq` on peut par exemple préciser le point de départ (`from`), le point d'arrivée (`to`), le pas (`by`) et la longueur totale du vecteur à créer (`length.out`).
+
+Vous constaterez que `from` est défini avec une valeur par défaut (`from=1`). Ainsi, si vous omettez sa valeur et ne spécifiez que `to`, `from` prendra sa valeur par défaut. Ces deux commandes sont donc équivalentes :
+
+```{r}
+seq(from=1, to=5)
+seq(to=5)
+```
+
+Vous pouvez également abréger le nom des arguments, moyennant que l'abbréviation soit univoque, c'est à dire que le nom de l'argument que vous abrégez ne soit pas identique à celui d'un autre argument. Ainsi `from` et `length.out` peuvent être abrégés en `fr` et `length`:
+
+```{r}
+seq(fr=0, to=2, length=5)
+```
+
+Ce n'est jamais une bonne idée mais si vous utilisez le nom complet ou une abbréviation des arguments vous pouvez changer leur ordre. Ainsi `seq(length=5, to=2, fr=0)` sera équivalent à la commande précédente.
+
+Vous pouvez même omettre le nom des arguments comme on l'a fait dans les sections précédentes sans le mentionner. Dans ce cas, les arguments sont passés positionnellement et doivent être renseignés dans l'ordre tel que défini dans la section 'Usage' de leur documentation:
+
+```{r}
+seq(-3, 4, 12)
+```
+
+## Concept de recyclage
+
+```{r}
+toto <- 1:5
+toto*3
+```
+
+Il n'aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplicatio est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié _chaque_ élément de `toto` par 3.
+
+C'est l'idée, omniprésente, de **recyclage**. Ça ne parait pas grand chose mais c'est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c'est à dire ni de même longueur, ni multiples l'un de l'autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés. 
+
+```{r}
+toto <- c(1, 2, 3, 4)
+tata <- c(5, 4, 3)
+toto*tata
+```
+
+De nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n'y comprenez goutte, copiez-collez le message dans un moteur de recherche.
+
+## Indexation `[` : saisir et changer des valeurs
+
+Indexer une ou des valeurs c'est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.
+
+L'opérateur d'indexation est le crochet droit : `[`, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l'intérieur l'indice ou les indices.
+
+
+```{r}
+tutu <- c(7, 12, 2, 5, 4)
+tutu[1]
+tutu[3]
+tutu[length(tutu)] # take the last value of tutu, no matter tutu' length
+tutu[c(2, 4)]
+```
+
+L'indexation peut se combiner avec l'assignation si on ne veut pas seulement saisir les données mais en faire quelque chose :
+
+```{r}
+tutu
+tutu[c(2, 3)] <- c(-1, -3)
+tutu
+
+tutu[c(2, 3)] <- 0.5  # indexing, assignation and recycling combined!
+tutu
+
+```
+
+Ce type d'indexation est dit "positive" : l'indice réfère aux positions que l'on _veut_. 
+
+Bien pratique, l'opération d'indexation "négative" sélectionne ce que l'on ne veut _pas_.
+
+```{r}
+tutu
+tutu[-1]
+tutu[-c(1, 3)] <- pi
+tutu
+```
+
+Et comme vous vous en doutiez, on peut également utiliser une variable pour indexer :
+
+```{r}
+toto <- c(6, 5, 4, 3)
+tata <- c(2, 3)
+toto[tata]
+toto[-tata]
+```
+
+Le concept d'indexation est absolument central en R, et en programmation en général. 
+
+L'indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (`iris[2, 3]`), voire même des doubles crochets (`[[`), mais le comportement présenté ici reste invariable. Youpi !
+
+## Opérateurs de comparaison et logiques
+L'indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L'idée est qu'on teste d'abord une condition dont on peut se servir pour indexer
+
+```{r}
+tonton <- c(4, 8, 2, 9, 1, 3, 5)
+test <- tonton < 5  # tests a condition
+test
+which(test) # returns indices of TRUE
+
+# this can be used to index
+tonton[which(test)]
+# or more directly
+tonton[test] # filter elements of tonton lower than 5
+
+# conditions can be combined
+tonton[tonton < 5 & tonton >=2] # same with lower than 5 AND higher or equal to 2
+tata <- c(7:1)
+tonton[tata %in% c(3, 4, 5)] # takes the elements of tonton for which those of that are in 3:5
+
+```
+
+Voilà une liste de tous les opérateurs de comparaison (`?Comparison`) :
+
+opérateur | signification
+--------- | -------------
+`<`       | strictement inférieur
+`<=`      | inférieur ou égal
+`>`       | strictement supérieur
+`>=`      | supérieur ou égal
+`==`      | égal 
+`!=`      | différent
+`%in%`    | dans l'ensemble
+
+Et à y être celle pour les opérateurs logiques (`?Logic`) sur lesquels nous reviendrons :
+
+opérateur | signification
+--------- | -------------
+`!`       | NOT
+`&`       | AND (élément par élément)
+`&&`      | AND
+`|`       | OR (élément par élément)
+`||`      | OR
+`xor(x, y)`  | OR (exclusif)
+
+Parfois on peut également avoir besoin de `any`, `all`[^notin]. 
+
+[^notin]: `%notin%` et `none` n'existent pas en R mais on peut facilement les composer avec `!(a %in% b)` et `!(all(...))`. Et si vous y tenez vraiment : ```%notin%` <- function(x, y) !(x %in% y) ``
+
+
+
+## Classes d'objets
+
+### `class`
+Accrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu'ici nous n'avons manipulé que des nombres, avec ou sans assignation à une variable. D'autres **classes** d'objets existent en R. 
+
+On peut accéder à la **classe** d'un vecteur avec la fonction `class`. On voit que les chaînes de caractères sont des `character` pour R:
+```{r}
+class(toto)
+```
+
+Imaginons que nous mesurions des individus et que nous enregistrions leurs prénoms, sexe, stature et si, oui ou non, ils ont subi une formation à R. Ces quatres variables auront des natures différents :
+
+* `prenom` : sera plutôt des lettres
+* `stature` : sera un nombre décrivant leur taille
+* `sexe` : sera une étiquette pouvant prendre une et une seule des valeurs suivantes `{femme/homme/autre}`
+* `formation` : sera un descripteur de type `vrai/faux` que l'on traduira en `TRUE/FALSE`.
+
+Nous avons déja enregistré trois individus :
+
+```
+prenom        stature   genre     formation
+Hildegarde    178       femme     TRUE
+Jean-Jacques  163       homme     FALSE
+Victor        184       autre     TRUE
+```
+
+### `character`
+Tentons de créer la première variable, c'est à dire la première colonne, à la main :
+
+```{r}
+prenom <- c("Hildegarde", "Jean-Jacques", "Victor")
+prenom
+```
+
+R ne fait pas d'histoires et nous a crée un vecteur de chaînes de caractères !
+
+### `numeric`
+Créons maintenant le vecteur `stature`, on sait faire :
+```{r}
+stature <- c(178, 163, 184)
+stature
+class(stature)
+```
+
+Tous les vecteurs que nous avons crée jusqu'ici, `prenom` mis à part, était donc des `numeric`. Précisions que des variantes de `numeric` existent : `double`, `integer`, etc. mais vous n'aurez peut être jamais à vous en soucier.
+
+### `factor`
+
+La colonne `genre` est un peu particulière puisque elle est une chaîne de caractères mais elle ne peut prendre que des valeurs définies, à savoir une et une seule valeur de l'ensemble : `{homme, femme, autre}`. La classe `factor` est là pour ça et la fonction `factor` permet de créer notre variable `sexe` :
+
+```{r}
+genre <- factor(c("femme", "homme", "autre"))
+class(genre)
+genre
+```
+
+Votre œil aiguisé aura détecté deux différences par rapport à `prenom` : l'absence de guillemets autour de chaque valeur et une ligne supplémentaire qui indique les valeurs possibles, les `levels` de ce vecteur.
+
+Petite digression : les facteurs en R sont très pratiques mais assez piégeux. Nous aurons l'occasion d'y revenir mais avant ça, évacuons les dernier·e·s informaticien·ne·s pur sang de la salle. Imaginons qu'un nouveau `level`, une nouvelle catégorie, doive être créée pour la variable genre, disons `licorne`. Tentons l'opération candidement :
+
+```{r}
+genre2 <- c(genre, "licorne")
+genre2
+class(genre2)
+```
+
+Malédiction (apparente)[^factor] que nous expliquerons plus tard.
+
+[^factor]: Il y a encore plus "drôle": `c(genre, 0)*2`
+
+
+### `logical`
+Laissons reposer les facteurs pour l'instant et continuons notre création de variable avec la colonne `formation`:
+
+```{r}
+formation <- c(TRUE, FALSE, TRUE)
+class(formation)
+formation
+```
+
+Voici une classe très utile, les `logical`, souvent issus de tests et de comparaisons logiques, comme survolé précédemmet par exemple :
+
+```{r}
+stature > 180
+```
+
+Nous avons donc crée nos quatre colonnes :
+
+```{r}
+prenom
+stature
+genre
+formation
+```
+Nous avons vu autant de classes différentes (`character`, `numeric`, `factor`, `logical` respectivement) et, bonne nouvelle, on a quasiment fait le tour des classes ! Il nous en reste deux, très voisines : `list` et `data.frame`.
+
+### `list`
+Une `list`e est un vecteur dont les éléments peuvent être de classes et de longueurs différentes, dont d'autres listes. Autrement dit, c'est la structure de données universelle en R :
+
+```{r}
+list(toto="A", tata=c(1, 3))
+list(prenom, stature)
+```
+Vous pouvez comparer le résultat à `c(prenom, stature)`. Observez aussi au passage les doubles crochets droits (`[[`), dont vous n'aurez bien plus peur.
+
+### `data.frame`
+Un type de liste bien pratique, devenu archi central en R moderne, est le `data.frame` qui est une liste dont la double particularité est que tous ses éléments sont nommés et de même longueur. Une façon un peu alambiquée de dire qu'il nous aura fallu tout cela pour réinventer en R le tableau excel ![^excel]. Nous y reviendrons abondamment.
+
+[^excel]: Ne dites à personne que j'ai écrit ça !
+
+Comme vous pouvez vous en douter, personne n'importe les données comme cela, on préférera lire directement une table `.csv` ou `.xlsx`. Minute papillon, on y vient.
+
+```{r}
+data <- data.frame(prenom=prenom,
+                   stature=stature,
+                   genre=genre,
+                   formation=formation)
+data
+class(data)
+
+```
+### `is.*` et `as.*`
+Les fonctions `is.*` permettent de tester les classes :
+
+```{r}
+is.logical(formation)
+is.factor(prenom)
+is.data.frame(data)
+```
+
+Et les fonctions `as.*` permettent de convertir les classes, lorsque la conversion est pertinente :
+
+```{r}
+as.factor(prenom)
+as.character(genre)
+```
+
+## Indexation multiple `[,`
+
+Revenons à notre `data.frame` `data`, un objet en deux dimensions : il possède des lignes et des colonnes. L'indexation vue précédemment sur des vecteurs, des objets en une seule dimension, fonctionne dans le même esprit mais il nous faut renseigner les indices pour chaque dimension. Si l'un des indices n'est pas renseigné, toutes les positions concernées sont retournées mais il ne faut pas oublier pour autant la virgule !
+
+Par convention la première dimension est celle des lignes, la deuxième celle des colonnes.  Quelques exemples ci-dessous qui ne font qu'extraire les données. Nous pourrions aussi les modifier avec l'opérateur d'assignation `<-` comme vu précédemment.
+
+```{r}
+data[1, ] # first row
+data[, 1] # first column
+data[-2, ] # everything but the second row
+data[c(1, 3), -3] # first and third row, all columns but the third
+```
+Vous aurez noté qu'en ne sélectionnant qu'une colonne, par exemple `data[, 1]` ci-dessus, on perd la nature de `data.frame` pour revenir à la classe d'origine de la colonne. Souvent pratique, parfois glissant. Pour ne pas perdre la classe d'origine, il suffit d'ajouter `drop=FALSE` à votre opération d'indexation, après tous les indices :
+
+```{r}
+data[, 2, drop=FALSE]
+```
+
+Les colonnes uniques peuvent aussi se sélectionner avec l'opérateur `$` qui permet d'accéder à un élément de liste, pourvu qu'il soit nommé. Les `data.frame`s étant des listes nommées, cela fonctionne :
+
+```{r}
+data$stature
+```
+
+Les doubles crochets droits `[[` permettent eux aussi de sélectionner positionnellement, ou nominativement, l'élément de liste concerné. Les deux commandes ci-dessous seront équivalentes :
+
+```{r}
+data[[3]]
+data[["genre"]]
+```
+
+## Indexation de liste : `[` versus `[[`
+
+L'indexation avec une simple ou une double paire de crochets est souvent source d'incompréhension d'autant que sur des vecteurs le résultat est le même :
+
+```{r}
+toto <- 5:3
+toto
+toto[2]
+toto[[2]]
+```
+
+Gardez à l'esprit que la double paire de crochets droits (`[[`) ne s'utilise que sur des listes (`data.frame` y compris donc).
+
+Pour expliquer simplement la différence entre `[` et `[[`, disons qu'une liste est un train de marchandise sans locomotive avec un ou plusieurs wagons.
+
+* `[` permet de sélectionner un wagon, le résultat est toujours un train, certes minima**liste**
+* `[[` permet de sélectionner le **contenu** du wagon qui n'est donc plus un train mais une vache, une palette ou des voyageurs :
+
+
+```{r}
+tata <- list(wagon1="a", wagon2=1:3)
+# [ picks a list element
+tata[2]
+class(tata[2])
+
+# [[ picks a list element AND drops the list
+tata[[2]]
+class(tata[[2]])
+```
+Notons que `$` est équivalent à `[[`:
+```{r}
+tata$wagon2
+```
+
+
+
+
+
+
+
+
+## `matrix`
+
+Par souci de complétude, mentionnons les matrices qui sont des tableaux rectangulaires de nombres. Elles se créent avec la fonction `matrix` et en spécifiant les valeurs de remplissage et le nombre de lignes et/ou de colonnes :
+
+```{r}
+m <- matrix(c(3, 1, 9.2, 6, 7, 0), nrow=2)
+m
+```
+
+Les `matrix` et les `data.frame` possèdent de nombreux points communs. On peut notamment accéder à leurs dimensions, noms de lignes et colonnes avec les mêmes fonctions :
+
+```{r}
+dim(m)
+nrow(m)
+ncol(m)
+rownames(m) <- c("plop", "plip")
+rownames(m) # idem for colnames
+```
+
+Une opération courante sur des matrices consiste à faire des calculs marginaux, par exemple calculer la somme par colonnes. La famille `apply` permet ce type de calcul. On va renseigner trois arguments (voir `?apply` et ses exemples) : l'objet sur lequel travailler; la dimension sur laquelle calculer (`1` pour les lignes, `2` pour les colonnes); et enfin la fonction à appliquer, sans parenthèses :
+
+```{r}
+apply(m, 2, sum)
+```
+
+## `array`
+
+Par souci de complétude, l'idée de matrice se généralise dans des dimensions supérieures à 2. Pour le dire autrement, une `matrix` est un `array` à deux dimensions.
+
+Les `array` se créent dans le même esprit : les valeurs de remplissage d'abord, puis on précise les dimensions. Ci-dessous, un array de deux tranches de matrices de `2x3`.
+```{r}
+a <- array(data=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), dim=c(2, 3, 2))
+a
+```
+L'indexation fonctionne ici aussi. Par exemple si l'on veut la valeur de la première ligne, troisième colonne, deuxième tranche :
+
+```{r}
+a[1, 3, 2]
+```
+
+
+
+## Fonctions utiles
+
+### Sur `numeric`
+Quelques fonctions utiles pour décrire des vecteurs numériques (`numeric`) :
+
+```{r, results='hold'}
+x <- c(5, 4, 3, 2, 1)
+length(x) 
+min(x)
+max(x)
+range(x)  # shortcut for c(min(x), max(x))
+median(x) # shortcut for quantile(x, probs=0.5)
+sum(x)
+mean(x)   # average
+sd(x)     # standard deviation
+var(x)    # variance
+```
+
+### Sur `factor`
+
+```{r, results='hold'}
+f1 <- factor(c("apple", "banana", "banana", "pear", "grape", "grape"))
+f2 <- factor(c("yellow", "yellow", "yellow", "green", "red", "green"))
+
+length(f1)  # length
+levels(f1)  # levels, as character
+nlevels(f1) # number of levels, shortcut for length(level(f1))
+table(f1)   # count occurences
+table(f1, f2) # cross-tabulate factors
+```
+### Sur `character`
+
+```{r, results='hold'}
+bla1 <- "tonton"
+bla2 <- "tata"
+
+nchar(bla1) # count characters
+paste(bla1, bla2, sep=" et ") # see also paste0
+toupper(bla1) # convert to upper case. see also tolower()
+gsub("o", "i", bla1) # replace all 'o' with 'i' in bla1. see ?grep
+substr(bla1, 2, 4) # character from positions 2 to 4
+abbreviate(bla1) # abbreviate
+```
+
+Les derniers exemples montrent des manipulations de chaînes de caractères. Le package `stringr` remplace avantageusement ces approches "historiques". Nous y reviendrons.
+
+### Sur `data.frame`
+
+```{r, results='hold'}
+dim(data)
+nrow(data)
+ncol(data) # equivalent to length(data)
+summary(data) # a summary, column-wise
+head(data) # show only the first rows
+tail(data) # show only the last rows
+# View(data) # show an interactive viewer for your data.frame
+str(data)  # show the structure of your data.frame
+```
+
+graphics:::plot.data.frame
+
+
+```{r}
+set.seed(2329)
+runif(10, -1, 1)
+```
+
+
+
+## Générer des nombres aléatoires
+
+### Au sein d'une séquence existante
+
+La fonction `sample` permet d'échantillonner au sein d'un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.
+
+Si vous n'avez pas de dé, en voilà un :
+```{r, echo=FALSE}
+set.seed(2329) # ensure reproducibility
+```
+
+```{r}
+sample(1:6, size=1)
+```
+
+Avec `size=3, replace=TRUE` vous pouvez même jouer au 421. Ou encore générer un tirage de loto sans les boules qui s'agitent :
+
+```{r}
+sample(1:49, size=6, replace=FALSE)
+```
+
+Chaque élément du vecteur a autant de chance de sortir qu'un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser `sample` mais en calibrant l'argument `probs` sur la fréquence des lettres dans la langue française. N'allez donc pas vous taper l'alphabet à la main, jeter un oeil à `letters` et `LETTERS`.
+
+### Distributions existantes
+Au delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d'une distribution. Toutes les distributions disponibles sont listées dans la bien nommée `?Distriutions`.
+
+Ces fonctions sont nommées de la façon suivante `{r, p, q, d}nom_abregé_distrib`. La première lettre désigne la variante désirée  des différentes fonctions pour une distribution donnée, selon que l'on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.
+
+Pour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :
+
+```{r}
+runif(10, 0, 1) # see ?runif
+```
+
+Dans le même esprit on peut tirer 1000 nombres issus d'une distribution normale de moyenne 5 et d'écart-type 3 avec la commande suivante :
+
+```{r}
+x <- rnorm(1e3, 5, 3)
+mean(x)
+sd(x)
+```
+
+`1e3` est la notation dite "ingénieur" parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit `10^3` soit `1000`. Vous constaterez également que la moyenne est à peu près de 5 et l'écart type à peu près égal à 3. 
+
+Si vous réexécutez cette commande, vous aurez un autre vecteur avec des valeurs différentes mais également à peu près centré sur 5.
+
+```{r}
+y <- rnorm(1e3, 5, 3)
+mean(x) - mean(y)
+```
+
+Si vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d'une session à l'autre ou (c'est la même chose) sur l'ordinateur de votre collègue, c'est possible avec la fonction `set.seed`.
+
+## Premiers graphes
+
+Décrire un vecteur de nombres avec `mean` et `sd` mais faire des jolis graphes c'est mieux. La commande `plot` est la fonction de base pour ce faire :
+
+```{r}
+plot(x)
+```
+R a compris que chaque valeur du vecteur `x` devait être plottée sur l'axe de ordonnées et en a déduit que l'axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :
+
+```{r}
+hist(y)
+```
+
+On voit qu'il est bien centré sur `5`. Si l'on augmente le nombre de valeurs générées ainsi que le nombres d'intervalles (`breaks` en anglais), on retrouve une bien belle gaussienne :
+
+```{r}
+hist(rnorm(1e5, 5, 3), breaks=50, main="Un histogramme")
+
+```
+
+Les graphiques de base de R sont un peu surannés depuis l’avènement de `gpplot2` que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s'il ne s'exprimeront pas longuement ici.
+
+Voyons tout de même ce que l'on peut faire avec `iris`, l'un des nombreux jeux de données livrés avec R[^datasets].
+
+[^datasets]: voir `?datasets`.
+
+```{r}
+head(iris)
+plot(Petal.Length~Petal.Width, data=iris, col=Species,
+     xlab="Largeur de pétale (cm)", ylab="Longueur de pétale (cm)",
+     main="Les fameux iris de Fisher (voire d'Anderson)")
+```
+
+En petit aguichage `ggplot2` voilà ce qu'on peut obtenir dans le même temps :
+
+```{r}
+library(ggplot2)
+ggplot(iris) + 
+  aes(x=Petal.Width, y=Petal.Length, col=Species) + 
+  geom_jitter(alpha=0.5) +
+  geom_smooth(method="lm", formula="y~x") +
+  facet_grid(~Species) +
+  xlab("Largeur de pétale (cm)") + 
+  ylab("Longueur de pétale (cm)") +
+  ggtitle("Les fameux iris de Fisher (voire d'Anderson)") +
+  theme_linedraw()
+```
+
+## Un mot sur les packages
+
+## L'opérateur pipe `%>%`
+L'opérateur pipe permet de passer, de gauche à droite, le résultat d'une fonction à une seconde fonction, puis à une troisième. Ce pipe est détaillé dans un chapitre mais sa compréhension devrait être intuitive.
+
+Comparez par exemple ces deux lignes pourtant strictement équivalentes:
+```{r}
+library(magrittr)
+plot(sqrt(sample(seq(1:100), 6)))              # road to burnout
+seq(1:100) %>% sample(6) %>% sqrt() %>% plot() # let's breathe
+```
+
+Les packages du R moderne, en premier lieu ceux du `tidyverse` en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours.
+
+## Trucs et astuces pour R et RStudio
+
+* Toutes les commandes tapées depuis l'ouverture de R/RStudio sont dans votre console. Pour l'effacer, pressez `<Ctrl> + <L>`. Vos objets sont conservés.
+* Pour naviguer dans votre historique, côté console, pressez les flèches `<Haut>` et `<Bas>`.
+* Pour compléter un nom de fonction ou d'argument, pressez `<Tab>`
+
+ Le flux classique de travail est le suivant :
+
+1. Vous voulez faire quelque chose
+2. Vous bidouillez dans la console
+3. Vous êtes satisfait·e de votre commande
+4. Vous la sauvez dans un script
+5. Repartez à 1.
+
+Au fur et à mesure de votre avancée, votre script va se remplir. Demain, dans 6 mois, ou sur un autre ordinateur, vous pourrez refaire "tourner" vos analyses et avoir strictement les mêmes résultats. On parle de **reproductibilité**. Gage de science sérieuse et, pour vous, de sérénité. Pour ces raisons, je vous conseille de ne pas enregistrer votre environnement de travail quand vous fermez R ou RStudio. 
+
+Un script peut être un fichier texte ou `.R`. RStudio gère bien les différents scripts en affichant dans la même fenêtre votre console, vos scripts, vos graphes, etc.
+
+* De temps à autre, faites tout "retourner". RStudio a un raccourci pour cela : `Run > Restart R and run all`. 
+* Vous pouvez également faire tourner un autre script depuis le script en cours avant `source`. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.
+
+RStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (`Code > Reformat Code`) ou simplement pour réindenter proprement votre code. L'indentation est le décalage par rapport à la marge gauche du script. Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui est déconseillé.
+
+## Pour la suite
+
+Si vous lisez ces lignes c'est que vous avez survécu jusqu'ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Votre vocabulaire va s'enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.
+
+Bien sûr, vous aurez envie de mettre le feu à l'ordinateur, votre bureau et l'intégralité du monde open-source. N'en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :
+
+> Frustration is typical and temporary
+
+L'échec, l'incompréhension, la frustration sont la matérialisation de l'apprentissage. Restez calmes, gardez votre sang-froid, tapez votre problème dans Google, lisez Stack Overflow et faites vous confiance. Persévérez. Je crois en vous.
+
+
+
+
+
+
+
+
+
+
+
+

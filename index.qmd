@@ -1,38 +1,27 @@
 # À propos {.unnumbered}
 
-[![](images/Athena.png){width=150}](https://www.vincentbonhomme.fr)
-
-<center>**(work in progress)**</center>
-
-
-## Versions
-Ce document existe en pdf et en ligne :
-
-* Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere](https://vbonhomme.github.io/R-pour-ma-grand-mere).
-* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
-
-## À propos de l'ouvrage
 La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l'analyse de données.
 
-Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d'autonomiser ces utilisateur·trice·s tout en espérant être utiles aux non-néophytes voire aux plus assidu·e·s.
+Ce document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d'autonomiser ces utilisateur·trice·s tout en espérant être utile aux non-néophytes voire aux plus assidu·e·s, notamment autodidactes.
 
 L'auteur a tenté d'écrire la ressource qu'il aurait aimé avoir à ses débuts, dans l'esprit de ses deux références chéries : [_R pour les débutants_](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr) d'Emmanuel Paradis et [_R for data science_](https://r4ds.hadley.nz/) d'Hadley Wickham. 
 
-Une sélection de références plus complètes et/ou plus spécifiques, sont listées. Un rapide tour d'internet vous permettra d'en trouver davantage.
-
-
 ## À propos de l'auteur
+
+-   [www.vincentbonhomme.fr](https://www.vincentbonhomme.fr)
+-   [bonhomme.vincent\@gmail.com](mailto:bonhomme.vincent\@gmail.com)
 
 Je suis biologiste de l'évolution de formation et aujourd'hui consultant, formateur et chercheur associé à l'UMR ISEM à Montpellier. J'utilise R quotidiennement depuis 2006 et je suis l'auteur de nombreux packages dont [Momocs](https://github.com/MomX/Momocs), pour l'analyse de forme.
 
 Je suis disponible pour de la consultance et des formations sur à peu près tous les "niveaux" d'utilisation de R, depuis le tout début jusqu'au packaging et la contruction d'interface conviviales ala shiny.
 
-En *side project*, j'ai confondé [Cévennette](https://www.cevennette.fr) qui conçoit et fabrique des toilettes sèches à séparation, sans odeur et sans copeaux, pour les particuliers, les événements et les collectivités.
+En *side project*, j'ai confondé [Cévennette](https://www.cevennette.fr) et [Potocopo](https://www.potocopo.fr).
 
-Si vous avez envie de faire pipi ou si vous cherchez un formateur ou un consultant en R, voici mes contacts :
+## À propos de ce document
+Ce document existe en pdf et en ligne :
 
--   [www.vincentbonhomme.fr](https://www.vincentbonhomme.fr)
--   [bonhomme.vincent\@gmail.com](mailto:bonhomme.vincent\@gmail.com)
+* Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere](https://vbonhomme.github.io/R-pour-ma-grand-mere).
+* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
 
 ## Code source
 
@@ -60,6 +49,7 @@ Tout ce qui suit un `#` est un commentaire - lisez-les ! - et est ignoré par R.
 Parfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.
 
 > Les statistiques sont comme les petites culottes : elles montrent le superflu et cachent l'essentiel.
+
 
 ----
 
