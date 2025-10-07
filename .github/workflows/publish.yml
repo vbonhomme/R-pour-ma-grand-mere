@@ -1,44 +1,25 @@
-name: Render and Deploy (Rocker)
-
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+  push:
+    branches: main
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+name: Quarto Publish
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-    container: rocker/r-ver:4.3.3
-
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install Quarto
-        run: |
-          apt-get update && apt-get install -y wget
-          wget https://quarto.org/download/latest/quarto-linux-amd64.deb
-          dpkg -i quarto-linux-amd64.deb
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install system dependencies for R packages
-        run: |
-          apt-get update && apt-get install -y \
-            libfontconfig1-dev libfreetype6-dev libpng-dev \
-            libjpeg-dev libtiff5-dev libxml2-dev libcurl4-openssl-dev \
-            pandoc
-
-      - name: Restore R dependencies
-        run: Rscript -e 'install.packages("renv"); renv::restore()'
-
-      - name: Render Quarto site
-        run: quarto render
-
-      - name: Publish to GitHub Pages
+      - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
