@@ -1,7 +1,9 @@
 # Premiers pas
 
-## R GUI : la console de R
-Quand vous ouvrez R ou RStudio, vous êtes nez à nez avec un "invite de commande" et un curseur :
+Nous allons plonger progressivement dans la découverte de R en combinant des éléments du langage _et_ les bonnes pratiques à adopter dès le départ.
+
+## La console
+Quand vous ouvrez R (ou RStudio), vous êtes nez à nez avec un "invite de commande" et un curseur :
 
 ```
 > 
@@ -15,13 +17,13 @@ R attend que vous tapiez des commandes avec vos jolis doigts et que vous pressie
 1+1
 ```
 
-Une commande peut se dérouler sur plusieurs lignes comme on le verra plus tard (typiquement lors de la définition d'une fonction ou d'un _pipe_ de fonctions) mais quand vous pressez `<Entrée>` l'ensemble de ces commandes doit être syntaxiquement correct, sinon une erreur vous sera retournée.
+Une commande _combinée_ peut se dérouler sur plusieurs lignes comme on le verra plus tard (typiquement lors de la définition d'une fonction ou d'un _pipe_ de fonctions) mais quand vous pressez `<Entrée>` l'ensemble de ces commandes doit être syntaxiquement correct, sinon une erreur vous sera retournée.
 
-Vous pouvez également taper plusieurs commandes sur la même ligne, séparées par  `;` mais je vous le déconseille.
+Vous pouvez également taper plusieurs commandes _indépendantes_ sur la même ligne, séparées par  `;` mais je vous le déconseille.
 
 Vous pouvez **naviguer dans votre historique** de commandes avec les touches `<Haut>` et `<Bas>` de votre clavier. Vous pouvez aussi **effacer** votre console (sans effacer l'historique) avec `<Ctrl>+L` ou `<Cmd>+L` sous Mac.
 
-## RStudio : un environnement de travail confortable et pratique
+## RStudio
 Si vous êtes dans RStudio, vous aurez remarqué plusieurs fenêtres dont l'une est la **Console** de R (en bas à gauche sur la capture d'écran) que nous venons de voir, ainsi qu'une autre, généralement au dessus, dans laquelle vous pouvez ouvrir des **Scripts** au format `.R`, c'est à dire en fichier texte.
 
 Vous aurez remarqué que dans le panneau "Console", le même texte de "bienvenue" apparaît et c'est normal : après tout, RStudio n'est ni plus ni moins qu'une console avec des outils autour. 
@@ -32,7 +34,9 @@ Vous pouvez aller faire un tour dans les **Préférences** de RStudio et en para
 
 ![L'interface de RStudio](images/Rstudio.png)
 
-Le _workflow_ typique est le suivant : 
+## Reproductibilité
+
+Le _workflow_ typique, ou flux de travail en bon français, est le suivant : 
 
 1. vous tapez des commandes dans la console, vous essayez, vous tâtonnez jusqu'à ce que vous en soyez satisfait·e de chaque résultat intermédiaire ;
 2. vous sauvez ces commandes dans un script que vous pouvez commenter, organiser, etc. ;
@@ -42,11 +46,20 @@ Un concept central est que R **n'a pas de mémoire** d'un jour à l'autre si vou
 
 Reprenons. Un script est donc une collection de commandes qui permettent de reproduire vos analyses. Excel peut déjà aller se rhabiller.
 
-Pour le moment, nous allons bidouiller dans la console, sans rassembler nos commandes en un script, mais nous y viendrons vite.
+Vous pouvez exécuter les commandes depuis votre script vers la console. Dans RStudio, cliquer sur "Run" et regardez les différents options avec les raccourcis attachés.
+
+Pour le moment, nous allons utiliser la console, sans rassembler nos commandes en un script, mais nous y viendrons vite.
 
 ## Commentaires
 
 Tout ce qui suit un `#` est ignoré par R, ce qui permet de commenter vos scripts comme ci-après. Faites un usage massif de commentaires. Votre vous-même de dans six mois, les reviewers ou pire encore vos collègues, vous en seront reconnaissants. 
+
+```{r}
+# this is a comment. R ignores you, you should not!
+# add two numbers
+1+1 # comments can also live after a command
+# but not before (on the same line): 3+3
+```
 
 
 ## Arithmétique
@@ -74,6 +87,8 @@ Tous les opérateurs arithmétiques courants sont disponibles :
 * `+`, `-`, `*`, `/` pour l'arithmétique de base
 * `^` pour élever au carré et `sqrt` pour la racine carrée
 * `%%` pour le [modulo](https://fr.wikipedia.org/wiki/Modulo_(opération)), etc.
+
+## Fonctions : découverte
 
 Vous venez d'utiliser - peut-être sans le savoir -, votre première _fonction_ : `sqrt`, pour _square root_. Les fonctions ont souvent des noms explicites et sont, généralement, suivies de parenthèses dans lesquelles glisser une ou des valeurs. 
 
@@ -178,7 +193,9 @@ Nous voyons que certaines fonctions acceptent plus d'une seule valeur au sein de
 
 ## Séquences régulières
 
-Vous m'avez vu (me) taper "à la main", des séries de nombres telles que `c(1, 2, 3, 4, 5)`. On constate une certaine régularité dans cette séquence des premiers entiers naturels. Jusqu'à 5, on peut imaginer la taper à la main, mais imaginons que nous ayons besoin d'aller jusqu'à 100 ou même à 37427. Doit bien y avoir quelqu'un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.
+Vous m'avez vu (me) taper "à la main", des séries de nombres telles que `c(1, 2, 3, 4, 5)`. On constate une certaine régularité dans cette séquence des premiers entiers naturels.
+
+Jusqu'à 5, on peut imaginer la taper à la main, mais imaginons que nous ayons besoin d'aller jusqu'à 100 ou même à 37427. Doit bien y avoir quelqu'un·e qui a pensé à une fonction pour faire ça non ? Ceci nous amène à une double maxime, peut-être les deux plus importantes de toute cette formation.
 
 > Si tu penses que tu es en train de faire quelque chose de répétitif et/ou stupide, il existe à coup sûr une façon plus intelligente de faire
 
@@ -186,7 +203,9 @@ De façon plus compacte :
 
 > Un·e bon·ne programmeur·se est une grosse feignasse
 
-R possède toutes les fonctions dont on peut rêver pour générer séquences régulières et nombres aléatoires. Commençons par les séquences régulières et la versatile fonction `seq` qui prend au minimum deux arguments pour le point de départ et le point d'arrivée :
+R possède toutes les fonctions dont on peut rêver pour générer séquences régulières et nombres aléatoires.
+
+Commençons par les séquences régulières et la versatile fonction `seq` qui prend au minimum deux arguments, deux options, pour le point de départ et le point d'arrivée :
 
 ```{r}
 seq(1, 10)
@@ -216,7 +235,7 @@ rep(tonton, each=3)
 
 R, comme tout langage de programmation, possède sa documentation. Tout est documenté et en premier lieu les fonctions. Nous y arrivons bientôt mais parlons d'abord plus en détail des _fonctions_.
 
-## Interlude clavier
+## Interlude clavier et RStudio
 
 * Toutes les commandes tapées depuis l'ouverture de R/RStudio sont dans votre console. Pour l'effacer, pressez `<Ctrl> + <L>`. Vos objets sont conservés.
 * Pour naviguer dans votre historique, côté console, pressez les flèches `<Haut>` et `<Bas>`.
@@ -224,48 +243,13 @@ R, comme tout langage de programmation, possède sa documentation. Tout est docu
 * Une fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez `<Tab>` de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.
 * Dans RStudio, allez à peu près tout tester dans le menu `Code`. Vous y trouverez des fonctions très utiles ("Reindent lines", "Reformat code" par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !
 
+## Documentation des fonctions
 
-## Fonctions
+Les fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu'elles peuvent et doivent être démystifiées précocément.
 
-Les fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu'elles doivent être démystifiées précocément.
-
-### Que sont les fonctions ?
-Les fonctions sont des unités de code qui font quelque chose d'utile. Le plus souvent on envoie une valeur et on en récupère une autre. `sqrt()` par exemple renvoie la racine carrée de la valeur _passée_ en _argument_.
+Les fonctions sont des unités de code qui font quelque chose d'utile. Le plus souvent on envoie une valeur, un objet, et on en récupère une autre mais certaines produisent quelque chose "ex nihilo" `sqrt()` par exemple renvoie la racine carrée de la valeur _passée_ en _argument_.
 
 Les arguments, séparés par des virgules, définissent les "options" de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d'argument.
-
-### Écrire ses fonctions : `function`
-
-Vous pouvez définir vos propres fonctions avec la fonction `function`. On va encapsuler une portion de code entre des accolades `{` et la nommer. Définissons une fonction qui ajoute `3`  à un argument que l'on va appeller `x` (vous pouvez essayer avec `y` ou `toto` :
-
-```{r}
-plus3 <- function(x) {
-  x+3
-}
-
-plus3(5)
-plus3(1:3)
-```
-
-Les fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d'avoir du code non dupliqué, moins propice à des erreurs de frappes. Aussi, si vous changez d'avis, vous pourrez changer la définition de fonction et, chaque fois qu'elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.
-
-### Notions d'environnement
-La valeur `x` ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l'**environnement** de la fonction `plus3`. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n'existe que durant l'exécution de la fonction.
-
-Autrement dit, si la variable `x` est déja assignée dans l'**environnement global**, c'est à dire en dehors de la fonction, dans la console si on veut, et bien ce `x` global ne sera ni modifié, ni même utilisé. Un exemple :
-
-```{r}
-x <- 45
-plus3(5)
-```
-
-Naturellement vous pouvez tout de même utiliser votre `x` global comme argument de la fonction `plus3`. Ce `x` global va être utilisé localement par la fonction puis vous être retourné :
-
-```{r}
-plus3(x)
-```
-
-### Documentation des fonctions : `?`
 
 Toute fonction déjà disponible en R ou un package a forcément une page d'aide dédiée à laquelle on accède avec : `?nom_de_la_fonction`. 
 
@@ -315,13 +299,15 @@ Toutes les pages d'aides ont la même structure et possèdent les mêmes section
 * **Examples** : peut être la plus utile de toutes avec ses exemples d'utilisation que vous pouvez copier-coller ou même appeller directement depuis la console avec `example("nom_de_la_fonction")`. Vous pouvez essayer `example("plot")` par exemple.
 * En pied de page, vous avez également une information qui sera utile plus tard : le package et sa version dans lequel se trouve être cette fonction. Pour `seq`, on est dans le package `base` dont toutes les autres fonctions sont indexées dans le lien "Index".
 
-Certaines pages d'aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple `?Arithmetic`, `?Special`, `Syntax`. D'autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`` ` ``), par exemple `` ?`+` `` ou la mise en abyme de `` ?`?` ``. Enfin, il existe d'autres ressources comme les "vignettes", plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.
+Certaines pages d'aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple `?Arithmetic`, `?Special`, `Syntax`.
+
+D'autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`` ` ``), par exemple `` ?`+` `` ou la mise en abyme de `` ?`?` ``. Enfin, il existe d'autres ressources comme les "vignettes", plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.
 
 Les pages d'aide sont souvent compactes et obscures mais l'information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d'aide même si à première vue cette littérature n'est guère attrayante.
 
 Enfin, la variante `??(quoiquoiquoi)`, raccourci de `help.search("quoiquoiquoi")` permet de chercher toutes les occurences de `quoiquoiquoi` dans _toutes_ les pages d'aide de R.
 
-### Arguments : noms, positions et valeurs par défaut
+## Arguments : paramétrer le comportement des fonctions
 
 Après avoir consulté `?seq` on peut par exemple préciser le point de départ (`from`), le point d'arrivée (`to`), le pas (`by`) et la longueur totale du vecteur à créer (`length.out`).
 
@@ -346,14 +332,37 @@ Vous pouvez même omettre le nom des arguments comme on l'a fait dans les sectio
 seq(-3, 4, 12)
 ```
 
-## Concept de recyclage
 
+
+
+## Définir ses propres fonctions
+
+Pour que la fête soit totale, nous pouvons créér nos propres fonctions !
+
+Pour ce faire, nous allons utiliser la fonction `function` et encapsuler une portion de code entre des accolades `{` et la nommer. Définissons une fonction qui ajoute `3`  à un argument que l'on va appeller `x` (vous pouvez essayer avec `y` ou `toto` :
+
+```{r}
+plus3 <- function(x) {
+  x+3
+}
+
+plus3(5)
+plus3(1:3)
+```
+
+Les fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. À terme, cela vous permettra d'avoir du code non dupliqué, moins propice à des erreurs de frappes.
+
+Aussi, si vous changez d'avis, vous pourrez changer la définition de fonction et, chaque fois qu'elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.
+
+## Recyclage
+
+Le recyclage est un concept très utile mais souvent mal compris et potentiellement glissant. Voyons un exemple parlant :
 ```{r}
 toto <- 1:5
 toto*3
 ```
 
-Il n'aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplicatio est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié _chaque_ élément de `toto` par 3.
+Il n'aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplication est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié _chaque_ élément de `toto` par 3.
 
 C'est l'idée, omniprésente, de **recyclage**. Ça ne parait pas grand chose mais c'est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c'est à dire ni de même longueur, ni multiples l'un de l'autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés. 
 
@@ -417,6 +426,7 @@ Le concept d'indexation est absolument central en R, et en programmation en gén
 L'indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (`iris[2, 3]`), voire même des doubles crochets (`[[`), mais le comportement présenté ici reste invariable. Youpi !
 
 ## Opérateurs de comparaison et logiques
+
 L'indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L'idée est qu'on teste d'abord une condition dont on peut se servir pour indexer
 
 ```{r}
@@ -936,7 +946,21 @@ L'échec, l'incompréhension, la frustration sont la matérialisation de l'appre
 
 
 
+### Notions d'environnement
+La valeur `x` ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l'**environnement** de la fonction `plus3`. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n'existe que durant l'exécution de la fonction.
 
+Autrement dit, si la variable `x` est déja assignée dans l'**environnement global**, c'est à dire en dehors de la fonction, dans la console si on veut, et bien ce `x` global ne sera ni modifié, ni même utilisé. Un exemple :
+
+```{r}
+x <- 45
+plus3(5)
+```
+
+Naturellement vous pouvez tout de même utiliser votre `x` global comme argument de la fonction `plus3`. Ce `x` global va être utilisé localement par la fonction puis vous être retourné :
+
+```{r}
+plus3(x)
+```
 
 
 
