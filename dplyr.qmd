@@ -1,27 +1,11 @@
 # Manipulation de données avec `dplyr`
 
+`dplyr`, un package du `tidyverse` simplifie grandement la manipulation de tableaux de données. Il permet de renommer, ordonner, sélectionner et crééer de nouvelles colonnes, filtrer des lignes, faire facilement des résumés groupés et des sous-jeux de données.
+
 ## `tibble`
+`dplyr` comme le reste du `tidyverse` s'appuie massivement sur les `data.frame`, dont la méthode d'affichage n'était pas optimale. Le package `tibble` introduit une classe légèrement modifiée de `data.frame`s dont la conséquence la plus visibles est la méthode d'affichage : à la fois plus compacte _et_ plus informative.
 
-## `rename`
-
-## `select`
-
-## `tidyselect`
-
-## `filter`
-
-## `mutate`
-
-## `transmute`
-
-## `summarise`
-
-## `group_by`
-
-## `rowwise`
-
-## `join`
-
-## `nest`
-
-## `cheat sheet`
+```{r}
+library(dplyr)
+iris %>% as_tibble()
+```

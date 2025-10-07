@@ -1,4 +1,4 @@
-name: Render and Deploy
+name: Render and Deploy (Rocker)
 
 on:
   push:
@@ -13,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: rocker/r-ver:4.3.3
 
     steps:
       - name: Checkout repo
