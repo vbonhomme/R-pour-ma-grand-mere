@@ -16,6 +16,7 @@ book:
     - premiers-pas.qmd
     - fonctions.qmd
     - un-peu-plus-loin.qmd
+    - graphes.qmd
     - concepts-cles.qmd
     - import.qmd
     - dplyr.qmd
