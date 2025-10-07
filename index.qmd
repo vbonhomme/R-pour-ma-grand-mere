@@ -1,4 +1,6 @@
-![mamie-koo](cover.jpg)
+## R pour ma grand-mère 
+
+![R pour ma grand mère](cover.jpg)
 
 La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l'analyse de données.
 
