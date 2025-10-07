@@ -24,7 +24,7 @@ En *side project*, j'ai confondé [Cévennette](https://www.cevennette.fr) et [P
 Ce document existe en pdf et en ligne :
 
 * Si vous le lisez en pdf, il est disponible en ligne ici : [https://vbonhomme.github.io/R-pour-ma-grand-mere](https://vbonhomme.github.io/R-pour-ma-grand-mere).
-* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/docs/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/blob/main/_book/R-pour-ma-grand-m%C3%A8re.pdf)
+* Si vous le lisez en ligne, il est disponible en pdf : [https://github.com/vbonhomme/R-pour-ma-grand-mere/docs/R-pour-ma-grand-mère.pdf](https://github.com/vbonhomme/R-pour-ma-grand-mere/docs/R-pour-ma-grand-mère.pdf)
 
 
 -   Ce document Quarto est écrit en Rmarkdown et hébergé par Github: \[https://github.com/vbonhomme/R-pour-ma-grand-mere\]
