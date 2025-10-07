@@ -2,6 +2,7 @@ lang: fr
   
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "R pour ma grand-mère"

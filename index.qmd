@@ -1,6 +1,8 @@
-## R pour ma grand-mère {.unnumbered .unlisted}
+##  {.unnumbered .unlisted}
 
-![R pour ma grand mère](cover.jpg)
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+rmard
+![](cover.jpg)
 
 La vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l'analyse de données.
 
