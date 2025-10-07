@@ -146,8 +146,6 @@ c
 seq
 ```
 
-
-
 ## Opérateurs de comparaison et logiques
 
 L'indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L'idée est qu'on teste d'abord une condition dont on peut se servir pour indexer
@@ -206,6 +204,8 @@ Accrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu'ici nous
 
 On peut accéder à la **classe** d'un vecteur avec la fonction `class`. On voit que les chaînes de caractères sont des `character` pour R:
 ```{r}
+
+toto <- "a"
 class(toto)
 ```
 

@@ -193,8 +193,8 @@
     "objectID": "premiers-pas.html#interlude-clavier-et-rstudio",
     "href": "premiers-pas.html#interlude-clavier-et-rstudio",
     "title": "3  Premiers pas",
-    "section": "3.9 Interlude clavier et RStudio",
-    "text": "3.9 Interlude clavier et RStudio\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\nUne fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez &lt;Tab&gt; de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.\nDans RStudio, allez à peu près tout tester dans le menu Code. Vous y trouverez des fonctions très utiles (“Reindent lines”, “Reformat code” par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !",
+    "section": "3.11 Interlude clavier et RStudio",
+    "text": "3.11 Interlude clavier et RStudio\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\nUne fois que vous avez la fonction qui vous intéresse, positionnez-vous au sein de ses parenthèses et pressez &lt;Tab&gt; de nouveau : la liste des arguments apparaît avec la portion de doc consacrée.\nDans RStudio, allez à peu près tout tester dans le menu Code. Vous y trouverez des fonctions très utiles (“Reindent lines”, “Reformat code” par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Premiers pas</span>"
     ]
@@ -203,8 +203,8 @@
     "objectID": "premiers-pas.html#résumé",
     "href": "premiers-pas.html#résumé",
     "title": "3  Premiers pas",
-    "section": "3.10 Résumé",
-    "text": "3.10 Résumé\nBravo : vous venez de mettre le premier orteil dans le monde merveilleux de R !\nVous savez désormais :\n\nutiliser la console de R(Studio) ;\nfaire des calculs de base ;\nles assigner dans des variables, bien nommées ;\ncréer des séquences régulières de nombres.\n\nNous allons continuer sur notre lancée combinant découvertes et bonnes pratiques, en parlant de reproductibilité et de scripts, de documentation des fonctions, d’écriture de vos propres fonctions et nous allons enrichir votre vocabulaire.",
+    "section": "3.12 Résumé",
+    "text": "3.12 Résumé\nBravo : vous venez de mettre le premier orteil dans le monde merveilleux de R !\nVous savez désormais :\n\nutiliser la console de R(Studio) ;\nfaire des calculs de base ;\nles assigner dans des variables, bien nommées ;\naccéder et modifier des éléments de ces variables ;\ncréer des séquences régulières de nombres.\n\nNous allons continuer sur notre lancée combinant découvertes et bonnes pratiques, en parlant de reproductibilité et de scripts, de documentation des fonctions, d’écriture de vos propres fonctions et nous allons enrichir votre vocabulaire.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Premiers pas</span>"
     ]
@@ -1727,6 +1727,236 @@
     "text": "16.11 Quotes\n\nTout ici est délicieux mais on peut rajouter :\n\n\nFrustration is typical and temporary - Hadley Wickham\n\n\nIf the statistics are boring, then you’ve got the wrong numbers. - Edward Tufte\n\n\nAlways code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - John Wood\n\n\nAt their best, graphics are tools for reasonning about quantitative information. - Edward Tufte\n\n\nThere are three types of lies - lies, damn lies, and statistics. ― Benjamin Disraeli\n\n\nLes statistiques sont comme la dentelle des petites culottes : elles révèlent le superflu mais cachent l’essentiel - ?\n\n\nL’analyse statistique n’est vraiment utile qu’à des personnes qui n’en n’ont pas la maîtrise, et n’est maîtrisée que par des personnes qui n’en n’ont pas vraiment l’usage - Daniel Chessel",
     "crumbs": [
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Ressources</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html",
+    "href": "fonctions.html",
+    "title": "4  Fonctions",
+    "section": "",
+    "text": "4.1 Une première fonction\nNous pouvons définir nos propres fonctions en utilisant la fonction function.\nNous allons ensuite encapsuler une portion de code entre des accolades { et l’assigner comme tout autre objet R.\nDéfinissons une fonction qui ajoute 3 à un argument que l’on va appeller x (vous pouvez essayer avec y ou toto :\nplus3 &lt;- function(x) {\n  x+3\n}\n\nplus3(5)\n\n[1] 8\n\nplus3(1:3)\n\n[1] 4 5 6\nLes fonctions permettent de ne pas copier-coller bêtement du code, de dupliquer des lignes. Dès que vous répétez un bout de code, vous pouvez profitablement en faire une fonction.\nÀ terme, cela vous permettra d’avoir du code non dupliqué, moins propice à des erreurs de frappes.\nAussi, si vous changez d’avis, vous pourrez changer la définition de fonction et, chaque fois qu’elle sera appelée en aval, le nouveau comportement sera appliqué. Nous reviendrons sur ces bonnes pratiques à la toute fin de cette formation.\nL’expérience vous guidera sur quand et comment créér des fonctions à la bonne granularité, c’est à dire les plus génériques possibles mais dans les limites du bon sens.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#documentation-des-fonctions",
+    "href": "fonctions.html#documentation-des-fonctions",
+    "title": "4  Fonctions",
+    "section": "4.2 Documentation des fonctions",
+    "text": "4.2 Documentation des fonctions\nLes fonctions sont des unités de code qui font quelque chose d’utile. Le plus souvent on envoie une valeur, un objet, et on en récupère une autre mais certaines produisent quelque chose “ex nihilo” sqrt() par exemple renvoie la racine carrée de la valeur passée en argument.\nLes arguments, séparés par des virgules, définissent les “options” de la fonction concernée. Une fonction peut avoir zéro, un, plusieurs et même un nombre indéfini d’argument.\nToute fonction déjà disponible en R ou un package a forcément une page d’aide dédiée à laquelle on accède avec : ?nom_de_la_fonction.\nRevenons à notre fonction seq bien pratique pour créer des sequences régulières. En tapant ?seq on accède au contenu suivant :\nSequence Generation\n\nDescription\nGenerate regular sequences. seq is a standard generic with a default method. seq.int is a primitive which can be much faster but has a few restrictions. seq_along and seq_len are very fast primitives for two common cases.\n\n## Default S3 method:\nseq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),\n    length.out = NULL, along.with = NULL, ...)\n\nseq.int(from, to, by, length.out, along.with, ...)\n\nseq_along(along.with)\nseq_len(length.out)\n\nArguments\n[...]\n\nDetails\n[...]\n\nValue\n[...]\n\nSee also\n[...]\n\nExamples\n[...]\n\nToutes les pages d’aides ont la même structure et possèdent les mêmes sections. Regardons-les de plus près :\n\nDescription : ce que la fonction fait\nUsage : la fonction “déployée” c’est à dire avec tous ses arguments. Parfois plusieurs fonctions sont regroupées dans une même age d’aide, comme c’est le cas pour seq. Ces fonctions peuvent être des variantes avec des noms différents ou des méthodes c’est à dire des fonctions au comportement différent selon le type d’objet sur lequel elles opèrent.\nArguments : un descriptif de tous les arguments disponibles. La classe et le format de chacun d’eux est mentionnée.\nDetails : souvent un remède à l’insomnie mais les subtilités d’implémentation sont là, souvent cachées au détour d’une phrase.\nValue : ce que la fonction retourne.\nReferences : où s’en référer si vous n’en avez pas assez\nSee Also : fonctions connexes, très pratique pour enrichir son vocabulaire et trouver son bonheur.\nExamples : peut être la plus utile de toutes avec ses exemples d’utilisation que vous pouvez copier-coller ou même appeller directement depuis la console avec example(\"nom_de_la_fonction\"). Vous pouvez essayer example(\"plot\") par exemple.\nEn pied de page, vous avez également une information qui sera utile plus tard : le package et sa version dans lequel se trouve être cette fonction. Pour seq, on est dans le package base dont toutes les autres fonctions sont indexées dans le lien “Index”.\n\nCertaines pages d’aide, surtout pour le langage lui-même, sont plutôt des résumés du fonctionnement et sont un peu moins intuitives à trouver, par exemple ?Arithmetic, ?Special, Syntax.\nD’autres fonctions, par exemple pour les opérateurs, doivent être encadrées de guillemets arrières (`), par exemple ?`+` ou la mise en abyme de ?`?`. Enfin, il existe d’autres ressources comme les “vignettes”, plus conviviales, surtout pour les packages les plus récents. Nous y reviendrons.\nLes pages d’aide sont souvent compactes et obscures mais l’information que vous cherchez est probablement là. On apprend beaucoup à lire ces pages d’aide même si à première vue cette littérature n’est guère attrayante.\nEnfin, la variante ??(quoiquoiquoi), raccourci de help.search(\"quoiquoiquoi\") permet de chercher toutes les occurences de quoiquoiquoi dans toutes les pages d’aide de R.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#arguments-paramétrer-le-comportement-des-fonctions",
+    "href": "fonctions.html#arguments-paramétrer-le-comportement-des-fonctions",
+    "title": "4  Fonctions",
+    "section": "4.3 Arguments : paramétrer le comportement des fonctions",
+    "text": "4.3 Arguments : paramétrer le comportement des fonctions\nAprès avoir consulté ?seq on peut par exemple préciser le point de départ (from), le point d’arrivée (to), le pas (by) et la longueur totale du vecteur à créer (length.out).\nVous constaterez que from est défini avec une valeur par défaut (from=1). Ainsi, si vous omettez sa valeur et ne spécifiez que to, from prendra sa valeur par défaut. Ces deux commandes sont donc équivalentes :\n\nseq(from=1, to=5)\n\n[1] 1 2 3 4 5\n\nseq(to=5)\n\n[1] 1 2 3 4 5\n\n\nVous pouvez également abréger le nom des arguments, moyennant que l’abbréviation soit univoque, c’est à dire que le nom de l’argument que vous abrégez ne soit pas identique à celui d’un autre argument. Ainsi from et length.out peuvent être abrégés en fr et length:\n\nseq(fr=0, to=2, length=5)\n\n[1] 0.0 0.5 1.0 1.5 2.0\n\n\nCe n’est jamais une bonne idée mais si vous utilisez le nom complet ou une abbréviation des arguments vous pouvez changer leur ordre. Ainsi seq(length=5, to=2, fr=0) sera équivalent à la commande précédente.\nVous pouvez même omettre le nom des arguments comme on l’a fait dans les sections précédentes sans le mentionner. Dans ce cas, les arguments sont passés positionnellement et doivent être renseignés dans l’ordre tel que défini dans la section ‘Usage’ de leur documentation:\n\nseq(-3, 4, 12)\n\n[1] -3",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#une-deuxième-fonction",
+    "href": "fonctions.html#une-deuxième-fonction",
+    "title": "4  Fonctions",
+    "section": "4.4 Une deuxième fonction",
+    "text": "4.4 Une deuxième fonction\nSi vous avez bien compris la section précédent, alors le deuxième exemple avec deux arguments, et des valeurs par défaut, devrait vous paraître limpide :\n\nadd_this &lt;- function(x=1, y=0){\n  x+y\n}\n\nadd_this()\n\n[1] 1\n\nadd_this(5)\n\n[1] 5\n\nadd_this(y=7)\n\n[1] 8\n\nadd_this(2, 10)\n\n[1] 12",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#accéder-au-code-interne-des-fonctions",
+    "href": "fonctions.html#accéder-au-code-interne-des-fonctions",
+    "title": "4  Fonctions",
+    "section": "4.5 Accéder au code interne des fonctions",
+    "text": "4.5 Accéder au code interne des fonctions\nLe code des fonctions est toujours accessible, le plus souvent simplement en tapant le nom des fonctions, sans parenthèses.\n\nplus3\n\n&lt;srcref: file \"\" chars 1:10 to 3:1&gt;\n&lt;bytecode: 0x7ff7624f2470&gt;\n\nadd_this\n\n&lt;srcref: file \"\" chars 1:13 to 3:1&gt;\n&lt;bytecode: 0x7ff762423a88&gt;\n\n\nParfois le code est lové dans des Primitives (des fonctions non écrites en R) ou bien dans des méthodes (des fonctions qui changent de comportement suivant le type d’objet qu’on leur passe). Nous y reviendrons.\n\nc\n\nfunction (...)  .Primitive(\"c\")\n\nseq\n\nfunction (...) \nUseMethod(\"seq\")\n&lt;bytecode: 0x7ff75fe94ce8&gt;\n&lt;environment: namespace:base&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#opérateurs-de-comparaison-et-logiques",
+    "href": "fonctions.html#opérateurs-de-comparaison-et-logiques",
+    "title": "4  Fonctions",
+    "section": "4.6 Opérateurs de comparaison et logiques",
+    "text": "4.6 Opérateurs de comparaison et logiques\nL’indexation est une belle occasion de parler des opérateurs de comparaison, très utiles pour filter vos données. L’idée est qu’on teste d’abord une condition dont on peut se servir pour indexer\n\ntonton &lt;- c(4, 8, 2, 9, 1, 3, 5)\ntest &lt;- tonton &lt; 5  # tests a condition\ntest\n\n[1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE\n\nwhich(test) # returns indices of TRUE\n\n[1] 1 3 5 6\n\n# this can be used to index\ntonton[which(test)]\n\n[1] 4 2 1 3\n\n# or more directly\ntonton[test] # filter elements of tonton lower than 5\n\n[1] 4 2 1 3\n\n# conditions can be combined\ntonton[tonton &lt; 5 & tonton &gt;=2] # same with lower than 5 AND higher or equal to 2\n\n[1] 4 2 3\n\ntata &lt;- c(7:1)\ntonton[tata %in% c(3, 4, 5)] # takes the elements of tonton for which those of that are in 3:5\n\n[1] 2 9 1\n\n\nVoilà une liste de tous les opérateurs de comparaison (?Comparison) :\n\n\n\nopérateur\nsignification\n\n\n\n\n&lt;\nstrictement inférieur\n\n\n&lt;=\ninférieur ou égal\n\n\n&gt;\nstrictement supérieur\n\n\n&gt;=\nsupérieur ou égal\n\n\n==\négal\n\n\n!=\ndifférent\n\n\n%in%\ndans l’ensemble\n\n\n\nEt à y être celle pour les opérateurs logiques (?Logic) sur lesquels nous reviendrons :\n\n\n\nopérateur\nsignification\n\n\n\n\n!\nNOT\n\n\n&\nAND (élément par élément)\n\n\n&&\nAND\n\n\n|\nOR (élément par élément)\n\n\n||\nOR\n\n\nxor(x, y)\nOR (exclusif)\n\n\n\nParfois on peut également avoir besoin de any, all1.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#classes-dobjets",
+    "href": "fonctions.html#classes-dobjets",
+    "title": "4  Fonctions",
+    "section": "4.7 Classes d’objets",
+    "text": "4.7 Classes d’objets\n\n4.7.1 class\nAccrochez-vous à votre voisin·e, nous abordons un concept clé. Jusqu’ici nous n’avons manipulé que des nombres, avec ou sans assignation à une variable. D’autres classes d’objets existent en R.\nOn peut accéder à la classe d’un vecteur avec la fonction class. On voit que les chaînes de caractères sont des character pour R:\n\ntoto &lt;- \"a\"\nclass(toto)\n\n[1] \"character\"\n\n\nImaginons que nous mesurions des individus et que nous enregistrions leurs prénoms, sexe, stature et si, oui ou non, ils ont subi une formation à R. Ces quatres variables auront des natures différents :\n\nprenom : sera plutôt des lettres\nstature : sera un nombre décrivant leur taille\nsexe : sera une étiquette pouvant prendre une et une seule des valeurs suivantes {femme/homme/autre}\nformation : sera un descripteur de type vrai/faux que l’on traduira en TRUE/FALSE.\n\nNous avons déja enregistré trois individus :\nprenom        stature   genre     formation\nHildegarde    178       femme     TRUE\nJean-Jacques  163       homme     FALSE\nVictor        184       autre     TRUE\n\n\n4.7.2 character\nTentons de créer la première variable, c’est à dire la première colonne, à la main :\n\nprenom &lt;- c(\"Hildegarde\", \"Jean-Jacques\", \"Victor\")\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n\nR ne fait pas d’histoires et nous a crée un vecteur de chaînes de caractères !\n\n\n4.7.3 numeric\nCréons maintenant le vecteur stature, on sait faire :\n\nstature &lt;- c(178, 163, 184)\nstature\n\n[1] 178 163 184\n\nclass(stature)\n\n[1] \"numeric\"\n\n\nTous les vecteurs que nous avons crée jusqu’ici, prenom mis à part, était donc des numeric. Précisions que des variantes de numeric existent : double, integer, etc. mais vous n’aurez peut être jamais à vous en soucier.\n\n\n4.7.4 factor\nLa colonne genre est un peu particulière puisque elle est une chaîne de caractères mais elle ne peut prendre que des valeurs définies, à savoir une et une seule valeur de l’ensemble : {homme, femme, autre}. La classe factor est là pour ça et la fonction factor permet de créer notre variable sexe :\n\ngenre &lt;- factor(c(\"femme\", \"homme\", \"autre\"))\nclass(genre)\n\n[1] \"factor\"\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\n\nVotre œil aiguisé aura détecté deux différences par rapport à prenom : l’absence de guillemets autour de chaque valeur et une ligne supplémentaire qui indique les valeurs possibles, les levels de ce vecteur.\nPetite digression : les facteurs en R sont très pratiques mais assez piégeux. Nous aurons l’occasion d’y revenir mais avant ça, évacuons les dernier·e·s informaticien·ne·s pur sang de la salle. Imaginons qu’un nouveau level, une nouvelle catégorie, doive être créée pour la variable genre, disons licorne. Tentons l’opération candidement :\n\ngenre2 &lt;- c(genre, \"licorne\")\ngenre2\n\n[1] \"2\"       \"3\"       \"1\"       \"licorne\"\n\nclass(genre2)\n\n[1] \"character\"\n\n\nMalédiction (apparente)2 que nous expliquerons plus tard.\n\n\n4.7.5 logical\nLaissons reposer les facteurs pour l’instant et continuons notre création de variable avec la colonne formation:\n\nformation &lt;- c(TRUE, FALSE, TRUE)\nclass(formation)\n\n[1] \"logical\"\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nVoici une classe très utile, les logical, souvent issus de tests et de comparaisons logiques, comme survolé précédemmet par exemple :\n\nstature &gt; 180\n\n[1] FALSE FALSE  TRUE\n\n\nNous avons donc crée nos quatre colonnes :\n\nprenom\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\nstature\n\n[1] 178 163 184\n\ngenre\n\n[1] femme homme autre\nLevels: autre femme homme\n\nformation\n\n[1]  TRUE FALSE  TRUE\n\n\nNous avons vu autant de classes différentes (character, numeric, factor, logical respectivement) et, bonne nouvelle, on a quasiment fait le tour des classes ! Il nous en reste deux, très voisines : list et data.frame.\n\n\n4.7.6 list\nUne liste est un vecteur dont les éléments peuvent être de classes et de longueurs différentes, dont d’autres listes. Autrement dit, c’est la structure de données universelle en R :\n\nlist(toto=\"A\", tata=c(1, 3))\n\n$toto\n[1] \"A\"\n\n$tata\n[1] 1 3\n\nlist(prenom, stature)\n\n[[1]]\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\n[[2]]\n[1] 178 163 184\n\n\nVous pouvez comparer le résultat à c(prenom, stature). Observez aussi au passage les doubles crochets droits ([[), dont vous n’aurez bien plus peur.\n\n\n4.7.7 data.frame\nUn type de liste bien pratique, devenu archi central en R moderne, est le data.frame qui est une liste dont la double particularité est que tous ses éléments sont nommés et de même longueur. Une façon un peu alambiquée de dire qu’il nous aura fallu tout cela pour réinventer en R le tableau excel !3. Nous y reviendrons abondamment.\nComme vous pouvez vous en douter, personne n’importe les données comme cela, on préférera lire directement une table .csv ou .xlsx. Minute papillon, on y vient.\n\ndata &lt;- data.frame(prenom=prenom,\n                   stature=stature,\n                   genre=genre,\n                   formation=formation)\ndata\n\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n\nclass(data)\n\n[1] \"data.frame\"\n\n\n\n\n4.7.8 is.* et as.*\nLes fonctions is.* permettent de tester les classes :\n\nis.logical(formation)\n\n[1] TRUE\n\nis.factor(prenom)\n\n[1] FALSE\n\nis.data.frame(data)\n\n[1] TRUE\n\n\nEt les fonctions as.* permettent de convertir les classes, lorsque la conversion est pertinente :\n\nas.factor(prenom)\n\n[1] Hildegarde   Jean-Jacques Victor      \nLevels: Hildegarde Jean-Jacques Victor\n\nas.character(genre)\n\n[1] \"femme\" \"homme\" \"autre\"",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#indexation-multiple",
+    "href": "fonctions.html#indexation-multiple",
+    "title": "4  Fonctions",
+    "section": "4.8 Indexation multiple [,",
+    "text": "4.8 Indexation multiple [,\nRevenons à notre data.frame data, un objet en deux dimensions : il possède des lignes et des colonnes. L’indexation vue précédemment sur des vecteurs, des objets en une seule dimension, fonctionne dans le même esprit mais il nous faut renseigner les indices pour chaque dimension. Si l’un des indices n’est pas renseigné, toutes les positions concernées sont retournées mais il ne faut pas oublier pour autant la virgule !\nPar convention la première dimension est celle des lignes, la deuxième celle des colonnes. Quelques exemples ci-dessous qui ne font qu’extraire les données. Nous pourrions aussi les modifier avec l’opérateur d’assignation &lt;- comme vu précédemment.\n\ndata[1, ] # first row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n\ndata[, 1] # first column\n\n[1] \"Hildegarde\"   \"Jean-Jacques\" \"Victor\"      \n\ndata[-2, ] # everything but the second row\n\n      prenom stature genre formation\n1 Hildegarde     178 femme      TRUE\n3     Victor     184 autre      TRUE\n\ndata[c(1, 3), -3] # first and third row, all columns but the third\n\n      prenom stature formation\n1 Hildegarde     178      TRUE\n3     Victor     184      TRUE\n\n\nVous aurez noté qu’en ne sélectionnant qu’une colonne, par exemple data[, 1] ci-dessus, on perd la nature de data.frame pour revenir à la classe d’origine de la colonne. Souvent pratique, parfois glissant. Pour ne pas perdre la classe d’origine, il suffit d’ajouter drop=FALSE à votre opération d’indexation, après tous les indices :\n\ndata[, 2, drop=FALSE]\n\n  stature\n1     178\n2     163\n3     184\n\n\nLes colonnes uniques peuvent aussi se sélectionner avec l’opérateur $ qui permet d’accéder à un élément de liste, pourvu qu’il soit nommé. Les data.frames étant des listes nommées, cela fonctionne :\n\ndata$stature\n\n[1] 178 163 184\n\n\nLes doubles crochets droits [[ permettent eux aussi de sélectionner positionnellement, ou nominativement, l’élément de liste concerné. Les deux commandes ci-dessous seront équivalentes :\n\ndata[[3]]\n\n[1] femme homme autre\nLevels: autre femme homme\n\ndata[[\"genre\"]]\n\n[1] femme homme autre\nLevels: autre femme homme",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#indexation-de-liste-versus",
+    "href": "fonctions.html#indexation-de-liste-versus",
+    "title": "4  Fonctions",
+    "section": "4.9 Indexation de liste : [ versus [[",
+    "text": "4.9 Indexation de liste : [ versus [[\nL’indexation avec une simple ou une double paire de crochets est souvent source d’incompréhension d’autant que sur des vecteurs le résultat est le même :\n\ntoto &lt;- 5:3\ntoto\n\n[1] 5 4 3\n\ntoto[2]\n\n[1] 4\n\ntoto[[2]]\n\n[1] 4\n\n\nGardez à l’esprit que la double paire de crochets droits ([[) ne s’utilise que sur des listes (data.frame y compris donc).\nPour expliquer simplement la différence entre [ et [[, disons qu’une liste est un train de marchandise sans locomotive avec un ou plusieurs wagons.\n\n[ permet de sélectionner un wagon, le résultat est toujours un train, certes minimaliste\n[[ permet de sélectionner le contenu du wagon qui n’est donc plus un train mais une vache, une palette ou des voyageurs :\n\n\ntata &lt;- list(wagon1=\"a\", wagon2=1:3)\n# [ picks a list element\ntata[2]\n\n$wagon2\n[1] 1 2 3\n\nclass(tata[2])\n\n[1] \"list\"\n\n# [[ picks a list element AND drops the list\ntata[[2]]\n\n[1] 1 2 3\n\nclass(tata[[2]])\n\n[1] \"integer\"\n\n\nNotons que $ est équivalent à [[:\n\ntata$wagon2\n\n[1] 1 2 3",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#matrix",
+    "href": "fonctions.html#matrix",
+    "title": "4  Fonctions",
+    "section": "4.10 matrix",
+    "text": "4.10 matrix\nPar souci de complétude, mentionnons les matrices qui sont des tableaux rectangulaires de nombres. Elles se créent avec la fonction matrix et en spécifiant les valeurs de remplissage et le nombre de lignes et/ou de colonnes :\n\nm &lt;- matrix(c(3, 1, 9.2, 6, 7, 0), nrow=2)\nm\n\n     [,1] [,2] [,3]\n[1,]    3  9.2    7\n[2,]    1  6.0    0\n\n\nLes matrix et les data.frame possèdent de nombreux points communs. On peut notamment accéder à leurs dimensions, noms de lignes et colonnes avec les mêmes fonctions :\n\ndim(m)\n\n[1] 2 3\n\nnrow(m)\n\n[1] 2\n\nncol(m)\n\n[1] 3\n\nrownames(m) &lt;- c(\"plop\", \"plip\")\nrownames(m) # idem for colnames\n\n[1] \"plop\" \"plip\"\n\n\nUne opération courante sur des matrices consiste à faire des calculs marginaux, par exemple calculer la somme par colonnes. La famille apply permet ce type de calcul. On va renseigner trois arguments (voir ?apply et ses exemples) : l’objet sur lequel travailler; la dimension sur laquelle calculer (1 pour les lignes, 2 pour les colonnes); et enfin la fonction à appliquer, sans parenthèses :\n\napply(m, 2, sum)\n\n[1]  4.0 15.2  7.0",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#array",
+    "href": "fonctions.html#array",
+    "title": "4  Fonctions",
+    "section": "4.11 array",
+    "text": "4.11 array\nPar souci de complétude, l’idée de matrice se généralise dans des dimensions supérieures à 2. Pour le dire autrement, une matrix est un array à deux dimensions.\nLes array se créent dans le même esprit : les valeurs de remplissage d’abord, puis on précise les dimensions. Ci-dessous, un array de deux tranches de matrices de 2x3.\n\na &lt;- array(data=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), dim=c(2, 3, 2))\na\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]    7    9   11\n[2,]    8   10   12\n\n\nL’indexation fonctionne ici aussi. Par exemple si l’on veut la valeur de la première ligne, troisième colonne, deuxième tranche :\n\na[1, 3, 2]\n\n[1] 11",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#fonctions-utiles",
+    "href": "fonctions.html#fonctions-utiles",
+    "title": "4  Fonctions",
+    "section": "4.12 Fonctions utiles",
+    "text": "4.12 Fonctions utiles\n\n4.12.1 Sur numeric\nQuelques fonctions utiles pour décrire des vecteurs numériques (numeric) :\n\nx &lt;- c(5, 4, 3, 2, 1)\nlength(x) \nmin(x)\nmax(x)\nrange(x)  # shortcut for c(min(x), max(x))\nmedian(x) # shortcut for quantile(x, probs=0.5)\nsum(x)\nmean(x)   # average\nsd(x)     # standard deviation\nvar(x)    # variance\n\n[1] 5\n[1] 1\n[1] 5\n[1] 1 5\n[1] 3\n[1] 15\n[1] 3\n[1] 1.581139\n[1] 2.5\n\n\n\n\n4.12.2 Sur factor\n\nf1 &lt;- factor(c(\"apple\", \"banana\", \"banana\", \"pear\", \"grape\", \"grape\"))\nf2 &lt;- factor(c(\"yellow\", \"yellow\", \"yellow\", \"green\", \"red\", \"green\"))\n\nlength(f1)  # length\nlevels(f1)  # levels, as character\nnlevels(f1) # number of levels, shortcut for length(level(f1))\ntable(f1)   # count occurences\ntable(f1, f2) # cross-tabulate factors\n\n[1] 6\n[1] \"apple\"  \"banana\" \"grape\"  \"pear\"  \n[1] 4\nf1\n apple banana  grape   pear \n     1      2      2      1 \n        f2\nf1       green red yellow\n  apple      0   0      1\n  banana     0   0      2\n  grape      1   1      0\n  pear       1   0      0\n\n\n\n\n4.12.3 Sur character\n\nbla1 &lt;- \"tonton\"\nbla2 &lt;- \"tata\"\n\nnchar(bla1) # count characters\npaste(bla1, bla2, sep=\" et \") # see also paste0\ntoupper(bla1) # convert to upper case. see also tolower()\ngsub(\"o\", \"i\", bla1) # replace all 'o' with 'i' in bla1. see ?grep\nsubstr(bla1, 2, 4) # character from positions 2 to 4\nabbreviate(bla1) # abbreviate\n\n[1] 6\n[1] \"tonton et tata\"\n[1] \"TONTON\"\n[1] \"tintin\"\n[1] \"ont\"\ntonton \n\"tntn\" \n\n\nLes derniers exemples montrent des manipulations de chaînes de caractères. Le package stringr remplace avantageusement ces approches “historiques”. Nous y reviendrons.\n\n\n4.12.4 Sur data.frame\n\ndim(data)\nnrow(data)\nncol(data) # equivalent to length(data)\nsummary(data) # a summary, column-wise\nhead(data) # show only the first rows\ntail(data) # show only the last rows\n# View(data) # show an interactive viewer for your data.frame\nstr(data)  # show the structure of your data.frame\n\n[1] 3 4\n[1] 3\n[1] 4\n    prenom             stature        genre   formation      \n Length:3           Min.   :163.0   autre:1   Mode :logical  \n Class :character   1st Qu.:170.5   femme:1   FALSE:1        \n Mode  :character   Median :178.0   homme:1   TRUE :2        \n                    Mean   :175.0                            \n                    3rd Qu.:181.0                            \n                    Max.   :184.0                            \n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n        prenom stature genre formation\n1   Hildegarde     178 femme      TRUE\n2 Jean-Jacques     163 homme     FALSE\n3       Victor     184 autre      TRUE\n'data.frame':   3 obs. of  4 variables:\n $ prenom   : chr  \"Hildegarde\" \"Jean-Jacques\" \"Victor\"\n $ stature  : num  178 163 184\n $ genre    : Factor w/ 3 levels \"autre\",\"femme\",..: 2 3 1\n $ formation: logi  TRUE FALSE TRUE\n\n\ngraphics:::plot.data.frame\n\nset.seed(2329)\nrunif(10, -1, 1)\n\n [1]  0.34341687 -0.89818619  0.86519883  0.05414381 -0.95204424  0.42169961\n [7]  0.09957463  0.27190793 -0.84168929  0.72023581",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#générer-des-nombres-aléatoires",
+    "href": "fonctions.html#générer-des-nombres-aléatoires",
+    "title": "4  Fonctions",
+    "section": "4.13 Générer des nombres aléatoires",
+    "text": "4.13 Générer des nombres aléatoires\n\n4.13.1 Au sein d’une séquence existante\nLa fonction sample permet d’échantillonner au sein d’un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.\nSi vous n’avez pas de dé, en voilà un :\n\nsample(1:6, size=1)\n\n[1] 6\n\n\nAvec size=3, replace=TRUE vous pouvez même jouer au 421. Ou encore générer un tirage de loto sans les boules qui s’agitent :\n\nsample(1:49, size=6, replace=FALSE)\n\n[1]  9 47 36 14  4 34\n\n\nChaque élément du vecteur a autant de chance de sortir qu’un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser sample mais en calibrant l’argument probs sur la fréquence des lettres dans la langue française. N’allez donc pas vous taper l’alphabet à la main, jeter un oeil à letters et LETTERS.\n\n\n4.13.2 Distributions existantes\nAu delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d’une distribution. Toutes les distributions disponibles sont listées dans la bien nommée ?Distriutions.\nCes fonctions sont nommées de la façon suivante {r, p, q, d}nom_abregé_distrib. La première lettre désigne la variante désirée des différentes fonctions pour une distribution donnée, selon que l’on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.\nPour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :\n\nrunif(10, 0, 1) # see ?runif\n\n [1] 0.1193610 0.4918118 0.7741212 0.3069952 0.7218488 0.4027434 0.4372506\n [8] 0.8760479 0.8498670 0.4134920\n\n\nDans le même esprit on peut tirer 1000 nombres issus d’une distribution normale de moyenne 5 et d’écart-type 3 avec la commande suivante :\n\nx &lt;- rnorm(1e3, 5, 3)\nmean(x)\n\n[1] 5.028203\n\nsd(x)\n\n[1] 3.014893\n\n\n1e3 est la notation dite “ingénieur” parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit 10^3 soit 1000. Vous constaterez également que la moyenne est à peu près de 5 et l’écart type à peu près égal à 3.\nSi vous réexécutez cette commande, vous aurez un autre vecteur avec des valeurs différentes mais également à peu près centré sur 5.\n\ny &lt;- rnorm(1e3, 5, 3)\nmean(x) - mean(y)\n\n[1] -0.01312834\n\n\nSi vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d’une session à l’autre ou (c’est la même chose) sur l’ordinateur de votre collègue, c’est possible avec la fonction set.seed.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#premiers-graphes",
+    "href": "fonctions.html#premiers-graphes",
+    "title": "4  Fonctions",
+    "section": "4.14 Premiers graphes",
+    "text": "4.14 Premiers graphes\nDécrire un vecteur de nombres avec mean et sd mais faire des jolis graphes c’est mieux. La commande plot est la fonction de base pour ce faire :\n\nplot(x)\n\n\n\n\n\n\n\n\nR a compris que chaque valeur du vecteur x devait être plottée sur l’axe de ordonnées et en a déduit que l’axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :\n\nhist(y)\n\n\n\n\n\n\n\n\nOn voit qu’il est bien centré sur 5. Si l’on augmente le nombre de valeurs générées ainsi que le nombres d’intervalles (breaks en anglais), on retrouve une bien belle gaussienne :\n\nhist(rnorm(1e5, 5, 3), breaks=50, main=\"Un histogramme\")\n\n\n\n\n\n\n\n\nLes graphiques de base de R sont un peu surannés depuis l’avènement de gpplot2 que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s’il ne s’exprimeront pas longuement ici.\nVoyons tout de même ce que l’on peut faire avec iris, l’un des nombreux jeux de données livrés avec R4.\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nplot(Petal.Length~Petal.Width, data=iris, col=Species,\n     xlab=\"Largeur de pétale (cm)\", ylab=\"Longueur de pétale (cm)\",\n     main=\"Les fameux iris de Fisher (voire d'Anderson)\")\n\n\n\n\n\n\n\n\nEn petit aguichage ggplot2 voilà ce qu’on peut obtenir dans le même temps :\n\nlibrary(ggplot2)\nggplot(iris) + \n  aes(x=Petal.Width, y=Petal.Length, col=Species) + \n  geom_jitter(alpha=0.5) +\n  geom_smooth(method=\"lm\", formula=\"y~x\") +\n  facet_grid(~Species) +\n  xlab(\"Largeur de pétale (cm)\") + \n  ylab(\"Longueur de pétale (cm)\") +\n  ggtitle(\"Les fameux iris de Fisher (voire d'Anderson)\") +\n  theme_linedraw()",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#un-mot-sur-les-packages",
+    "href": "fonctions.html#un-mot-sur-les-packages",
+    "title": "4  Fonctions",
+    "section": "4.15 Un mot sur les packages",
+    "text": "4.15 Un mot sur les packages",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#lopérateur-pipe",
+    "href": "fonctions.html#lopérateur-pipe",
+    "title": "4  Fonctions",
+    "section": "4.16 L’opérateur pipe %>%",
+    "text": "4.16 L’opérateur pipe %&gt;%\nL’opérateur pipe permet de passer, de gauche à droite, le résultat d’une fonction à une seconde fonction, puis à une troisième. Ce pipe est détaillé dans un chapitre mais sa compréhension devrait être intuitive.\nComparez par exemple ces deux lignes pourtant strictement équivalentes:\n\nlibrary(magrittr)\nplot(sqrt(sample(seq(1:100), 6)))              # road to burnout\n\n\n\n\n\n\n\nseq(1:100) %&gt;% sample(6) %&gt;% sqrt() %&gt;% plot() # let's breathe\n\n\n\n\n\n\n\n\nLes packages du R moderne, en premier lieu ceux du tidyverse en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#trucs-et-astuces-pour-r-et-rstudio",
+    "href": "fonctions.html#trucs-et-astuces-pour-r-et-rstudio",
+    "title": "4  Fonctions",
+    "section": "4.17 Trucs et astuces pour R et RStudio",
+    "text": "4.17 Trucs et astuces pour R et RStudio\n\nToutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez &lt;Ctrl&gt; + &lt;L&gt;. Vos objets sont conservés.\nPour naviguer dans votre historique, côté console, pressez les flèches &lt;Haut&gt; et &lt;Bas&gt;.\nPour compléter un nom de fonction ou d’argument, pressez &lt;Tab&gt;\n\nLe flux classique de travail est le suivant :\n\nVous voulez faire quelque chose\nVous bidouillez dans la console\nVous êtes satisfait·e de votre commande\nVous la sauvez dans un script\nRepartez à 1.\n\nAu fur et à mesure de votre avancée, votre script va se remplir. Demain, dans 6 mois, ou sur un autre ordinateur, vous pourrez refaire “tourner” vos analyses et avoir strictement les mêmes résultats. On parle de reproductibilité. Gage de science sérieuse et, pour vous, de sérénité. Pour ces raisons, je vous conseille de ne pas enregistrer votre environnement de travail quand vous fermez R ou RStudio.\nUn script peut être un fichier texte ou .R. RStudio gère bien les différents scripts en affichant dans la même fenêtre votre console, vos scripts, vos graphes, etc.\n\nDe temps à autre, faites tout “retourner”. RStudio a un raccourci pour cela : Run &gt; Restart R and run all.\nVous pouvez également faire tourner un autre script depuis le script en cours avant source. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.\n\nRStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (Code &gt; Reformat Code) ou simplement pour réindenter proprement votre code. L’indentation est le décalage par rapport à la marge gauche du script. Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui est déconseillé.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#pour-la-suite",
+    "href": "fonctions.html#pour-la-suite",
+    "title": "4  Fonctions",
+    "section": "4.18 Pour la suite",
+    "text": "4.18 Pour la suite\nSi vous lisez ces lignes c’est que vous avez survécu jusqu’ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Votre vocabulaire va s’enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.\nBien sûr, vous aurez envie de mettre le feu à l’ordinateur, votre bureau et l’intégralité du monde open-source. N’en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :\n\nFrustration is typical and temporary\n\nL’échec, l’incompréhension, la frustration sont la matérialisation de l’apprentissage. Restez calmes, gardez votre sang-froid, tapez votre problème dans Google, lisez Stack Overflow et faites vous confiance. Persévérez. Je crois en vous.\n\n4.18.1 Notions d’environnement\nLa valeur x ci-dessus, dans la définition de fonction, est une variable utilisée uniquement dans l’environnement de la fonction plus3. Un environnement est un espace de travail mémoire isolé du reste du monde et qui n’existe que durant l’exécution de la fonction.\nAutrement dit, si la variable x est déja assignée dans l’environnement global, c’est à dire en dehors de la fonction, dans la console si on veut, et bien ce x global ne sera ni modifié, ni même utilisé. Un exemple :\n\nx &lt;- 45\nplus3(5)\n\n[1] 8\n\n\nNaturellement vous pouvez tout de même utiliser votre x global comme argument de la fonction plus3. Ce x global va être utilisé localement par la fonction puis vous être retourné :\n\nplus3(x)\n\n[1] 48",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#reproductibilité",
+    "href": "fonctions.html#reproductibilité",
+    "title": "4  Fonctions",
+    "section": "4.19 Reproductibilité",
+    "text": "4.19 Reproductibilité\nLe workflow typique, ou flux de travail en bon français, est le suivant :\n\nvous tapez des commandes dans la console, vous essayez, vous tâtonnez jusqu’à ce que vous en soyez satisfait·e de chaque résultat intermédiaire ;\nvous sauvez ces commandes dans un script que vous pouvez commenter, organiser, etc. ;\nVous pouvez ensuite reproduire toutes vos analyses grâce à ce script, les recycler, les amender que ce soit demain, dans six mois ou sur une autre machine.\n\nUn concept central est que R n’a pas de mémoire d’un jour à l’autre si vous le fermez. Alors oui, vous pouvez toujours “sauver votre espace de travail” mais je vous le déconseille fortement. La reproductibilité de vos analyses est en jeu. Nous allons apprendre à faire sans et nous verrons pourquoi c’est une force.\nReprenons. Un script est donc une collection de commandes qui permettent de reproduire vos analyses. Excel peut déjà aller se rhabiller.\nVous pouvez exécuter les commandes depuis votre script vers la console. Dans RStudio, cliquer sur “Run” et regardez les différents options avec les raccourcis attachés.\nPour le moment, nous allons utiliser la console, sans rassembler nos commandes en un script, mais nous y viendrons vite.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#commentaires",
+    "href": "fonctions.html#commentaires",
+    "title": "4  Fonctions",
+    "section": "4.20 Commentaires",
+    "text": "4.20 Commentaires\nTout ce qui suit un # est ignoré par R, ce qui permet de commenter vos scripts comme ci-après. Faites un usage massif de commentaires. Votre vous-même de dans six mois, les reviewers ou pire encore vos collègues, vous en seront reconnaissants.\n\n# this is a comment. R ignores you, you should not!\n# add two numbers\n1+1 # comments can also live after a command\n\n[1] 2\n\n# but not before (on the same line): 3+3",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "fonctions.html#footnotes",
+    "href": "fonctions.html#footnotes",
+    "title": "4  Fonctions",
+    "section": "",
+    "text": "%notin% et none n’existent pas en R mais on peut facilement les composer avec !(a %in% b) et !(all(...)). Et si vous y tenez vraiment : `%notin%` &lt;- function(x, y) !(x %in% y)↩︎\nIl y a encore plus “drôle”: c(genre, 0)*2↩︎\nNe dites à personne que j’ai écrit ça !↩︎\nvoir ?datasets.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "premiers-pas.html#recyclage",
+    "href": "premiers-pas.html#recyclage",
+    "title": "3  Premiers pas",
+    "section": "3.9 Recyclage",
+    "text": "3.9 Recyclage\nLe recyclage est un concept très utile mais souvent mal compris et potentiellement glissant. Voyons un exemple parlant :\n\ntoto &lt;- 1:5\ntoto*3\n\n[1]  3  6  9 12 15\n\n\nIl n’aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplication est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié chaque élément de toto par 3.\nC’est l’idée, omniprésente, de recyclage. Ça ne parait pas grand chose mais c’est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c’est à dire ni de même longueur, ni multiples l’un de l’autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés.\n\ntoto &lt;- c(1, 2, 3, 4)\ntata &lt;- c(5, 4, 3)\ntoto*tata\n\nWarning in toto * tata: longer object length is not a multiple of shorter\nobject length\n\n\n[1]  5  8  9 20\n\n\nDe nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n’y comprenez goutte, copiez-collez le message dans un moteur de recherche.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Premiers pas</span>"
+    ]
+  },
+  {
+    "objectID": "premiers-pas.html#indexation-saisir-et-changer-des-valeurs",
+    "href": "premiers-pas.html#indexation-saisir-et-changer-des-valeurs",
+    "title": "3  Premiers pas",
+    "section": "3.10 Indexation [ : saisir et changer des valeurs",
+    "text": "3.10 Indexation [ : saisir et changer des valeurs\nIndexer une ou des valeurs c’est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.\nL’opérateur d’indexation est le crochet droit : [, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l’intérieur l’indice ou les indices.\n\ntutu &lt;- c(7, 12, 2, 5, 4)\ntutu[1]\n\n[1] 7\n\ntutu[3]\n\n[1] 2\n\ntutu[length(tutu)] # take the last value of tutu, no matter tutu' length\n\n[1] 4\n\ntutu[c(2, 4)]\n\n[1] 12  5\n\n\nL’indexation peut se combiner avec l’assignation si on ne veut pas seulement saisir les données mais en faire quelque chose :\n\ntutu\n\n[1]  7 12  2  5  4\n\ntutu[c(2, 3)] &lt;- c(-1, -3)\ntutu\n\n[1]  7 -1 -3  5  4\n\ntutu[c(2, 3)] &lt;- 0.5  # indexing, assignation and recycling combined!\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\n\nCe type d’indexation est dit “positive” : l’indice réfère aux positions que l’on veut.\nBien pratique, l’opération d’indexation “négative” sélectionne ce que l’on ne veut pas.\n\ntutu\n\n[1] 7.0 0.5 0.5 5.0 4.0\n\ntutu[-1]\n\n[1] 0.5 0.5 5.0 4.0\n\ntutu[-c(1, 3)] &lt;- pi\ntutu\n\n[1] 7.000000 3.141593 0.500000 3.141593 3.141593\n\n\nEt comme vous vous en doutiez, on peut également utiliser une variable pour indexer :\n\ntoto &lt;- c(6, 5, 4, 3)\ntata &lt;- c(2, 3)\ntoto[tata]\n\n[1] 5 4\n\ntoto[-tata]\n\n[1] 6 3\n\n\nLe concept d’indexation est absolument central en R, et en programmation en général.\nL’indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (iris[2, 3]), voire même des doubles crochets ([[), mais le comportement présenté ici reste invariable. Youpi !",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Premiers pas</span>"
     ]
   }
 ]

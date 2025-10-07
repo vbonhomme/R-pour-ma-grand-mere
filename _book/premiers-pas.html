@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./deuxieme-pas.html" rel="next">
+<link href="./fonctions.html" rel="next">
 <link href="./3min-tour.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -170,8 +170,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deuxieme-pas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Deuxièmes pas</span></span></a>
+  <a href="./fonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fonctions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -264,8 +264,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#bien-nommer-ses-variables" id="toc-bien-nommer-ses-variables" class="nav-link" data-scroll-target="#bien-nommer-ses-variables"><span class="header-section-number">3.6</span> Bien nommer ses variables</a></li>
   <li><a href="#variables-et-assignation-2" id="toc-variables-et-assignation-2" class="nav-link" data-scroll-target="#variables-et-assignation-2"><span class="header-section-number">3.7</span> Variables et assignation (2)</a></li>
   <li><a href="#séquences-régulières" id="toc-séquences-régulières" class="nav-link" data-scroll-target="#séquences-régulières"><span class="header-section-number">3.8</span> Séquences régulières</a></li>
-  <li><a href="#interlude-clavier-et-rstudio" id="toc-interlude-clavier-et-rstudio" class="nav-link" data-scroll-target="#interlude-clavier-et-rstudio"><span class="header-section-number">3.9</span> Interlude clavier et RStudio</a></li>
-  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="header-section-number">3.10</span> Résumé</a></li>
+  <li><a href="#recyclage" id="toc-recyclage" class="nav-link" data-scroll-target="#recyclage"><span class="header-section-number">3.9</span> Recyclage</a></li>
+  <li><a href="#indexation-saisir-et-changer-des-valeurs" id="toc-indexation-saisir-et-changer-des-valeurs" class="nav-link" data-scroll-target="#indexation-saisir-et-changer-des-valeurs"><span class="header-section-number">3.10</span> Indexation <code>[</code> : saisir et changer des valeurs</a></li>
+  <li><a href="#interlude-clavier-et-rstudio" id="toc-interlude-clavier-et-rstudio" class="nav-link" data-scroll-target="#interlude-clavier-et-rstudio"><span class="header-section-number">3.11</span> Interlude clavier et RStudio</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="header-section-number">3.12</span> Résumé</a></li>
   </ul>
 </nav>
     </div>
@@ -508,8 +510,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>R, comme tout langage de programmation, possède sa documentation. Tout est documenté et en premier lieu les fonctions. Nous y arrivons bientôt mais parlons d’abord plus en détail des <em>fonctions</em>.</p>
 </section>
-<section id="interlude-clavier-et-rstudio" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="interlude-clavier-et-rstudio"><span class="header-section-number">3.9</span> Interlude clavier et RStudio</h2>
+<section id="recyclage" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="recyclage"><span class="header-section-number">3.9</span> Recyclage</h2>
+<p>Le recyclage est un concept très utile mais souvent mal compris et potentiellement glissant. Voyons un exemple parlant :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>toto <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>toto<span class="sc">*</span><span class="dv">3</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3  6  9 12 15</code></pre>
+</div>
+</div>
+<p>Il n’aura pas échappé à votre sagacité que dans le précédent exemple, ou une multiplication est opérée entre deux objets de tailles différentes (cinq valeurs et une seule), R vous a compris et a multiplié <em>chaque</em> élément de <code>toto</code> par 3.</p>
+<p>C’est l’idée, omniprésente, de <strong>recyclage</strong>. Ça ne parait pas grand chose mais c’est souvent bien pratique et, hélas, quelques fois glissant. Par exemple, si vous multipliez deux vecteurs non-conformes, c’est à dire ni de même longueur, ni multiples l’un de l’autre, des effets indésirables peuvent se manifester. Ou pire encore, rester cachés.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>toto <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>tata <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>toto<span class="sc">*</span>tata</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in toto * tata: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  5  8  9 20</code></pre>
+</div>
+</div>
+<p>De nos jours, R a tendance à émettre des Warnings quand un recyclage exotique est impliqué. Lisez les messages et autres warnings ! Celui-ci est plutôt explicite mais si vous n’y comprenez goutte, copiez-collez le message dans un moteur de recherche.</p>
+</section>
+<section id="indexation-saisir-et-changer-des-valeurs" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="indexation-saisir-et-changer-des-valeurs"><span class="header-section-number">3.10</span> Indexation <code>[</code> : saisir et changer des valeurs</h2>
+<p>Indexer une ou des valeurs c’est sélectionner un sous-ensemble de valeurs dans une variable pour en faire quelque chose.</p>
+<p>L’opérateur d’indexation est le crochet droit : <code>[</code>, qui tel Dupont et Dupond vont par paires. À gauche du crochet, la variable; à l’intérieur l’indice ou les indices.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>tutu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>tutu[<span class="dv">1</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="dv">3</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="fu">length</span>(tutu)] <span class="co"># take the last value of tutu, no matter tutu' length</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>)]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12  5</code></pre>
+</div>
+</div>
+<p>L’indexation peut se combiner avec l’assignation si on ne veut pas seulement saisir les données mais en faire quelque chose :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>tutu</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  7 12  2  5  4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">3</span>)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>tutu</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  7 -1 -3  5  4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="fl">0.5</span>  <span class="co"># indexing, assignation and recycling combined!</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>tutu</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.0 0.5 0.5 5.0 4.0</code></pre>
+</div>
+</div>
+<p>Ce type d’indexation est dit “positive” : l’indice réfère aux positions que l’on <em>veut</em>.</p>
+<p>Bien pratique, l’opération d’indexation “négative” sélectionne ce que l’on ne veut <em>pas</em>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>tutu</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.0 0.5 0.5 5.0 4.0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="sc">-</span><span class="dv">1</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5 0.5 5.0 4.0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>tutu[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)] <span class="ot">&lt;-</span> pi</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>tutu</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.000000 3.141593 0.500000 3.141593 3.141593</code></pre>
+</div>
+</div>
+<p>Et comme vous vous en doutiez, on peut également utiliser une variable pour indexer :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>toto <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>tata <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>toto[tata]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>toto[<span class="sc">-</span>tata]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6 3</code></pre>
+</div>
+</div>
+<p>Le concept d’indexation est absolument central en R, et en programmation en général.</p>
+<p>L’indexation peut varier à la marge avec des indices dans plusieurs dimensions comme nous le verrons plus loin (<code>iris[2, 3]</code>), voire même des doubles crochets (<code>[[</code>), mais le comportement présenté ici reste invariable. Youpi !</p>
+</section>
+<section id="interlude-clavier-et-rstudio" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="interlude-clavier-et-rstudio"><span class="header-section-number">3.11</span> Interlude clavier et RStudio</h2>
 <ul>
 <li>Toutes les commandes tapées depuis l’ouverture de R/RStudio sont dans votre console. Pour l’effacer, pressez <code>&lt;Ctrl&gt; + &lt;L&gt;</code>. Vos objets sont conservés.</li>
 <li>Pour naviguer dans votre historique, côté console, pressez les flèches <code>&lt;Haut&gt;</code> et <code>&lt;Bas&gt;</code>.</li>
@@ -518,14 +619,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Dans RStudio, allez à peu près tout tester dans le menu <code>Code</code>. Vous y trouverez des fonctions très utiles (“Reindent lines”, “Reformat code” par exemple). À droite de la commande se trouve aussi les raccourcis clavier. Utilisez-les !</li>
 </ul>
 </section>
-<section id="résumé" class="level2" data-number="3.10">
-<h2 data-number="3.10" class="anchored" data-anchor-id="résumé"><span class="header-section-number">3.10</span> Résumé</h2>
+<section id="résumé" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="résumé"><span class="header-section-number">3.12</span> Résumé</h2>
 <p>Bravo : vous venez de mettre le premier orteil dans le monde merveilleux de R !</p>
 <p>Vous savez désormais :</p>
 <ul>
 <li>utiliser la console de R(Studio) ;</li>
 <li>faire des calculs de base ;</li>
 <li>les assigner dans des variables, bien nommées ;</li>
+<li>accéder et modifier des éléments de ces variables ;</li>
 <li>créer des séquences régulières de nombres.</li>
 </ul>
 <p>Nous allons continuer sur notre lancée combinant découvertes et bonnes pratiques, en parlant de reproductibilité et de scripts, de documentation des fonctions, d’écriture de vos propres fonctions et nous allons enrichir votre vocabulaire.</p>
@@ -961,8 +1063,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./deuxieme-pas.html" class="pagination-link" aria-label="Deuxièmes pas">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Deuxièmes pas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./fonctions.html" class="pagination-link" aria-label="Fonctions">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fonctions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
