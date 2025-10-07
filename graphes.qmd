@@ -9,6 +9,7 @@ Et on a tous envie de dire, enfin ! Et vue la promesse, on peut faire durer le p
 La fonction `sample` permet d'échantillonner au sein d'un vecteur existant. Vous devenz préciser ce vecteur, puis le nombre de tirages à effectuer, avec ou sans remise.
 
 Si vous n'avez pas de dé, en voilà un :
+
 ```{r, echo=FALSE}
 set.seed(2329) # ensure reproducibility
 ```
@@ -23,12 +24,15 @@ Avec `size=3, replace=TRUE` vous pouvez même jouer au 421. Ou encore générer 
 sample(1:49, size=6, replace=FALSE)
 ```
 
-Chaque élément du vecteur a autant de chance de sortir qu'un autre. Si vous préférez le scrabble, vous pouvez aussi utiliser `sample` mais en calibrant l'argument `probs` sur la fréquence des lettres dans la langue française. N'allez donc pas vous taper l'alphabet à la main, jeter un oeil à `letters` et `LETTERS`.
+Chaque élément du vecteur a autant de chance de sortir qu'un autre.
+
+Si vous préférez le scrabble, vous pouvez aussi utiliser `sample` mais en calibrant l'argument `probs` sur la fréquence des lettres dans la langue française. N'allez donc pas vous taper l'alphabet à la main, jetez un oeil à `letters` et `LETTERS`.
 
 ### Distributions existantes
-Au delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d'une distribution. Toutes les distributions disponibles sont listées dans la bien nommée `?Distriutions`.
 
-Ces fonctions sont nommées de la façon suivante `{r, p, q, d}nom_abregé_distrib`. La première lettre désigne la variante désirée  des différentes fonctions pour une distribution donnée, selon que l'on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.
+Au delà des vecteurs existants, vous pouvez générer des nombres aléatoires issus d'une distribution. Toutes les distributions disponibles sont listées dans la bien nommée page `?Distributions`.
+
+Ces fonctions sont nommées de la façon suivante `{r, p, q, d}nom_abregé_distrib`. La première lettre désigne la variante désirée des différentes fonctions pour une distribution donnée, selon que l'on veuille générer des nombres, la densité de probabilité, les quantiles associés, etc.
 
 Pour générer 10 nombres aléatoires compris entre -1 et 1 on peut par exemple :
 
@@ -44,7 +48,7 @@ mean(x)
 sd(x)
 ```
 
-`1e3` est la notation dite "ingénieur" parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit `10^3` soit `1000`. Vous constaterez également que la moyenne est à peu près de 5 et l'écart type à peu près égal à 3. 
+`1e3` est la notation dite "ingénieur" parfaitement comprise par R. Ici, on a 1 suivi de 3 zéros, soit `10^3` soit `1000`. Vous constaterez également que la moyenne est à peu près de 5 et l'écart type à peu près égal à 3.
 
 Si vous réexécutez cette commande, vous aurez un autre vecteur avec des valeurs différentes mais également à peu près centré sur 5.
 
@@ -53,15 +57,25 @@ y <- rnorm(1e3, 5, 3)
 mean(x) - mean(y)
 ```
 
-Si vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d'une session à l'autre ou (c'est la même chose) sur l'ordinateur de votre collègue, c'est possible avec la fonction `set.seed`.
+Si vous désirez générer des nombres aléatoires certes, mais les mêmes, par exemple d'une session à l'autre ou (c'est la même chose) sur l'ordinateur de votre collègue, c'est possible avec la fonction `set.seed`. Du hasard sous contrôle : beauté sans nom !
+
+Tapez ceci et comparez avec votre voisin·e.
+```{r}
+set.seed(2329)
+rnorm(10)
+```
+
 
 ## Premiers graphes
+
+Allez, on y vient. 
 
 Décrire un vecteur de nombres avec `mean` et `sd` mais faire des jolis graphes c'est mieux. La commande `plot` est la fonction de base pour ce faire :
 
 ```{r}
 plot(x)
 ```
+
 R a compris que chaque valeur du vecteur `x` devait être plottée sur l'axe de ordonnées et en a déduit que l'axe des abscisses devait être la série de 1 à 1000. Ici un histogramme serait plus approprié pour décrire la distribution de notre vecteur de nombres aléatoires :
 
 ```{r}
@@ -77,9 +91,9 @@ hist(rnorm(1e5, 5, 3), breaks=50, main="Un histogramme")
 
 Les graphiques de base de R sont un peu surannés depuis l’avènement de `gpplot2` que nous verrons en détail plus loin mais ils ont encore leur mot à dire, même s'il ne s'exprimeront pas longuement ici.
 
-Voyons tout de même ce que l'on peut faire avec `iris`, l'un des nombreux jeux de données livrés avec R[^datasets].
+Voyons tout de même ce que l'on peut faire avec `iris`, l'un des nombreux jeux de données livrés avec R[^graphes-1].
 
-[^datasets]: voir `?datasets`.
+[^graphes-1]: voir `?datasets`.
 
 ```{r}
 head(iris)
