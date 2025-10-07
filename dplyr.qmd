@@ -1,4 +1,7 @@
 # Manipulation de données avec `dplyr`
+```{r}
+
+```
 
 `dplyr`, un package du `tidyverse` simplifie grandement la manipulation de tableaux de données. Il permet de renommer, ordonner, sélectionner et crééer de nouvelles colonnes, filtrer des lignes, faire facilement des résumés groupés et des sous-jeux de données.
 
@@ -11,8 +14,13 @@ Celles et ceux familiers avec SQL, et plus largement les bases de données, sero
 library(dplyr)
 ```
 
-```{r}
+Comparez l'affichage par défaut de ça : (je ne l'affiche pas ici par empathie envers vos molettes de souris) :
+```{r, eval=FALSE}
 iris # berk
+```
+
+à ça :
+```{r}
 iris %>% as_tibble() # <3
 ```
 Les fonctions de `dplyr` sont toutes des _verbes_, qui traduisent bien l'action à mener. 
@@ -173,6 +181,25 @@ starwars %>%
   filter(n >= 3)
 ```
 
+## `summarise` : résumés et résumés groupés
 
+Créeons d'abord un mini starwars, sur lequel nous allons supprimer les lignes avec des données manquantes pour la colonne `ehight` puis illustrons les vertus de `summary` :
 
+```{r}
+sw <- starwars %>% 
+  select(species, sex, height) %>% 
+  filter(species %in% c("Human", "Droid"), !is.na(height))
+```
 
+```{r}
+sw %>% summarise(height=mean(height))
+```
+
+Pas dingue hein. Peut être qu'un résumé par espèce et par sexe serait plus intéressant ? `group_by` est votre allié. On peut rajouter d'autres fonctions de résumé au passage :
+
+```{r}
+sw %>% 
+  group_by(species, sex) %>% 
+  summarise(mean_height=mean(height),
+            sd_height=sd(height))
+```
