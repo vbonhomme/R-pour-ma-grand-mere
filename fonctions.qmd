@@ -3,7 +3,7 @@
 
 Les fonctions sont généralement abordées plus tard mais je crois non seulement en vous mais aussi qu'elles peuvent et doivent être démystifiées précocément. Nous allons commencer par la partie créative et écrire notre première fonction.
 
-## Définir ses propres fonctions
+## Une première fonction
 
 Nous pouvons définir nos propres fonctions en utilisant la fonction `function`.
 
@@ -115,13 +115,37 @@ Vous pouvez même omettre le nom des arguments comme on l'a fait dans les sectio
 seq(-3, 4, 12)
 ```
 
+## Une deuxième fonction
+
+Si vous avez bien compris la section précédent, alors le deuxième exemple avec deux arguments, et des valeurs par défaut, devrait vous paraître limpide :
+
+```{r}
+add_this <- function(x=1, y=0){
+  x+y
+}
+
+add_this()
+add_this(5)
+add_this(y=7)
+add_this(2, 10)
+```
+
 ## Accéder au code interne des fonctions
 
 Le code des fonctions est toujours accessible, le plus souvent simplement en tapant le nom des fonctions, sans parenthèses.
 
 ```{r}
 plus3
+add_this
 ```
+
+Parfois le code est lové dans des Primitives (des fonctions non écrites en R) ou bien dans des méthodes (des fonctions qui changent de comportement suivant le type d'objet qu'on leur passe). Nous y reviendrons.
+
+```{r}
+c
+seq
+```
+
 
 
 ## Opérateurs de comparaison et logiques
