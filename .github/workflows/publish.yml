@@ -28,6 +28,7 @@ jobs:
         with:
           packages:
             any::tidyverse
+            any::rmarkdown
       
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
