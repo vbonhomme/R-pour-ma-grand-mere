@@ -4,49 +4,59 @@
     "href": "index.html",
     "title": "R pour ma grand-mère",
     "section": "",
-    "text": "0.1 À propos de l’auteur\nJe suis biologiste de l’évolution de formation et aujourd’hui consultant, formateur et chercheur associé à l’UMR ISEM à Montpellier. J’utilise R quotidiennement depuis 2006 et je suis l’auteur de nombreux packages dont Momocs, pour l’analyse de forme.\nJe suis disponible pour de la consultance et des formations sur à peu près tous les “niveaux” d’utilisation de R, depuis le tout début jusqu’au packaging et la contruction d’interface conviviales ala shiny.\nEn side project, j’ai confondé Cévennette et Potocopo.",
+    "text": "0.1 R pour ma grand-mère\nLa vocation de cet ouvrage est de fournir un point de départ rapide mais solide aux principaux usages de R, un environnement complet et open-source pour l’analyse de données.\nCe document sert de compagnon à une formation pour des absolu·e·s débutant·e·s sur une durée présentielle de 3 jours. Son intention est d’autonomiser ces utilisateur·trice·s tout en espérant être utile aux non-néophytes voire aux plus assidu·e·s, notamment autodidactes.\nL’auteur a tenté d’écrire la ressource qu’il aurait aimé avoir à ses débuts, dans l’esprit de ses deux références chéries : R pour les débutants d’Emmanuel Paradis et R for data science d’Hadley Wickham.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#r-pour-ma-grand-mère",
+    "href": "index.html#r-pour-ma-grand-mère",
+    "title": "R pour ma grand-mère",
+    "section": "",
+    "text": "R pour ma grand mère",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
     ]
   },
   {
     "objectID": "index.html#à-propos-de-lauteur",
     "href": "index.html#à-propos-de-lauteur",
     "title": "R pour ma grand-mère",
-    "section": "",
-    "text": "www.vincentbonhomme.fr\nbonhomme.vincent@gmail.com",
+    "section": "0.2 À propos de l’auteur",
+    "text": "0.2 À propos de l’auteur\n\nwww.vincentbonhomme.fr\nbonhomme.vincent@gmail.com\n\nJe suis biologiste de l’évolution de formation et aujourd’hui consultant, formateur et chercheur associé à l’UMR ISEM à Montpellier. J’utilise R quotidiennement depuis 2006 et je suis l’auteur de nombreux packages dont Momocs, pour l’analyse de forme.\nJe suis disponible pour de la consultance et des formations sur à peu près tous les “niveaux” d’utilisation de R, depuis le tout début jusqu’au packaging et la contruction d’interface conviviales ala shiny.\nEn side project, j’ai confondé Cévennette et Potocopo.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
     ]
   },
   {
     "objectID": "index.html#à-propos-de-ce-document",
     "href": "index.html#à-propos-de-ce-document",
     "title": "R pour ma grand-mère",
-    "section": "0.2 À propos de ce document",
-    "text": "0.2 À propos de ce document\n\n\nCe document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”.",
+    "section": "0.3 À propos de ce document",
+    "text": "0.3 À propos de ce document\n\n\nCe document Quarto est écrit en Rmarkdown et hébergé par Github: [https://github.com/vbonhomme/R-pour-ma-grand-mere]\nSi vous êtes à l’aise sur Github, vous pouvez directement modifier le contenu que j’approuverai (ou non), pour corriger une erreur, une coquille, etc. Si vous souhaitez simplement suggérer une modification ou signaler un problème, vous pouvez très simplement ouvrir un “ticket” dans l’onglet “Issues”.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
     ]
   },
   {
     "objectID": "index.html#licence",
     "href": "index.html#licence",
     "title": "R pour ma grand-mère",
-    "section": "0.3 Licence",
-    "text": "0.3 Licence\nCe document est placé par l’auteur dans le domaine public, sous licence CC0, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !\nL’image de couverture a été trouvée ici et elle est également sous licence CC0. J’aurais été heureux de créditer le·a photographe mais je n’ai pas l’info. Ce n’est pas ma grand-mère (mais il y a un air) et non, je n’ai pas son accord pour vous transmettre son téléphone.",
+    "section": "0.4 Licence",
+    "text": "0.4 Licence\nCe document est placé par l’auteur dans le domaine public, sous licence CC0, ce qui signifie que vous pouvez en faire absolument ce que vous voulez, sans me demander quoique ce soit. Naturellement, me citer est néanmoins bon pour votre karma !\nL’image de couverture a été trouvée ici et elle est également sous licence CC0. J’aurais été heureux de créditer le·a photographe mais je n’ai pas l’info. Ce n’est pas ma grand-mère (mais il y a un air) et non, je n’ai pas son accord pour vous transmettre son téléphone.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
     ]
   },
   {
     "objectID": "index.html#conventions",
     "href": "index.html#conventions",
     "title": "R pour ma grand-mère",
-    "section": "0.4 Conventions",
-    "text": "0.4 Conventions\nLes fonctions et packages seront mentionnées dans cette police, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : ggplot() et ggplot2.\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci :\n\n# this is a comment\n3+4\n\n[1] 7\n\n\nLe résultat, textuel ou graphique, s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel.",
+    "section": "0.5 Conventions",
+    "text": "0.5 Conventions\nLes fonctions et packages seront mentionnées dans cette police, avec des parenthèses pour les noms de fonctions, sans parenthèses pour les packages : ggplot() et ggplot2.\nLe code en ligne utilisera une police de ce type; les blocs ressemblent à celui ci :\n\n# this is a comment\n3+4\n\n[1] 7\n\n\nLe résultat, textuel ou graphique, s’affiche à proximité et vous pouvez copier-coller ce code dans R (ou cliquer sur le bouton en haut à droite du cadre) et obtenir le même résultat sur votre machine. Tout ce qui suit un # est un commentaire - lisez-les ! - et est ignoré par R.\nParfois, une maxime de sagesse populaiRe est insérée dans un bloc comme ci-dessous. Promis, elles ne réfèrent pas toutes au sous-vêtements.\n\nLes statistiques sont comme les petites culottes : elles montrent le superflu et cachent l’essentiel.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>À propos de l'auteur</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R pour ma grand-mère</span>"
     ]
   },
   {

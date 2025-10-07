@@ -1,4 +1,4 @@
-## R pour ma grand-mère 
+## R pour ma grand-mère {.unnumbered .unlisted}
 
 ![R pour ma grand mère](cover.jpg)
 
