@@ -1,0 +1,81 @@
+# Et après ?
+
+## Bravo !
+
+Si vous lisez ces lignes c'est que vous avez survécu jusqu'ici, bravo. Vous avez fait le plus dur, vous parlez déjà R. Le reste est une longue promenade en faux plat qui tourne autour de ces idées. Votre vocabulaire va s'enrichir, votre syntaxe sera de plus en plus concise et vous passerez ainsi de plus en plus de temps à la plage.
+
+Bien sûr, vous aurez envie de mettre le feu à l'ordinateur, votre bureau et l'intégralité du monde open-source. N'en faites rien, asseyez vous en tailleur et méditez la sentence de notre maitre à tou·te·s, Hadley Wickham :
+
+> Frustration is typical and temporary
+
+L'échec, l'incompréhension, la frustration sont la matérialisation de l'apprentissage. Restez calmes, gardez votre sang-froid, tapez votre problème dans Google, lisez Stack Overflow et faites vous confiance. Persévérez. Je crois en vous.
+
+Je glisse quelques ultimes douceurs ici pour ouvrir quelques pistes majeures que vous n'explorerez peut-être jamais mais qui peuvent potentiellement vous rendre la vie plus belle.
+
+## Packages
+
+Le CRAN, dépôt officiel de R, comporte plus de [20000 packages](https://cran.r-project.org/web/packages/). Il y a tout de même fort à parier que si vous cherchez une fonctionnalité supplémentaire, elle soit là dedans...
+
+Sur GitHub (et BioConductor, et autres dépôts hors CRAN) vivent encore davantage de packages... ce qui donne un peu le vertige oui.
+
+Pour vous y retrouver, n'hésitez pas à consulter soit les listes des packages les plus téléchargés / utiles (par exemple [ici](https://support.posit.co/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)) ou, mieux encore, les [*Views*](https://cran.r-project.org/web/views/)qui sont des listes curationnées par thème.
+
+Quand vous vous sentirez prêt·e·s, n'hésitez pas à écrire votre propre package, que vous vouliez le garder pour vous, sur GitHub ou sur le CRAN, selon votre degré de pudeur et l'intérêt que vous pensez qu'il peut avoir. Ne soyez pas trop timides ! Mon article le plus cité, et de trèèès loin, est l'article compagnon d'un de mes packages : [Momocs](https://www.jstatsoft.org/article/view/v056i13).
+
+D'excellentes ressources existent pour vous guider :
+
+* RStudio peut vous créer un squelette (`New package` > `Package`)
+* [_R packages_](https://r-pkgs.org/) par l'inévitable H. Wickham dans un ouvrage librement disponible et on en peut plus didactique et précis
+* les [tables de la loi du CRAN](https://cran.r-project.org/web/packages/policies.html) sont, comparativement, un peu plus arides mais il vous faudra, peut-être, vous y pencher aussi un peu. _Dura lex, sed lex_.
+
+
+## Maîtriser RStudio
+
+Si RStudio devient votre environnement de travail privilégié, autant investir du temps à le maîtriser à fond, ou a minima, raisonnablement bien. Prenez du temps pour farfouiner dans les menus.
+
+Toutes les commandes tapées depuis l'ouverture de R/RStudio sont dans votre console. Pour l'effacer, pressez `<Ctrl> + <L>`. Vos objets sont conservés.
+
+-   Pour naviguer dans votre historique, côté console, pressez les flèches `<Haut>` et `<Bas>`.
+-   Pour compléter un nom de fonction ou d'argument, pressez `<Tab>`
+
+Le flux classique de travail clasique est le suivant :
+
+1.  Vous voulez faire quelque chose
+2.  Vous bidouillez dans la console
+3.  Vous êtes satisfait·e de votre commande
+4.  Vous la sauvez dans un script
+5.  Repartez à 1.
+
+Au fur et à mesure de votre avancée, votre script va se remplir. Demain, dans 6 mois, ou sur un autre ordinateur, vous pourrez refaire "tourner" vos analyses et avoir strictement les mêmes résultats. On parle de **reproductibilité**.
+
+Gage de science sérieuse et, pour vous, de sérénité. Pour ces raisons, je vous conseille de ne pas enregistrer votre environnement de travail quand vous fermez R ou RStudio.
+
+Un script peut être un fichier texte ou `.R`. RStudio gère bien les différents scripts en affichant dans la même fenêtre votre console, vos scripts, vos graphes, etc.
+
+-   De temps à autre, faites tout "retourner" avec un session toute frâiche, toute. RStudio a un raccourci pour cela : `Run > Restart R and run all`.
+-   Vous pouvez également faire tourner un autre script depuis le script en cours avant `source`. Bien pratique par exemple pour mettre toutes vos fonctions dans un script et les analyses à proprement parler dans un autre.
+
+RStudio a pléthore raccourcis et fonctionnalités bien pratiques par exemple pour formater votre code selon les standards en cours (`Code > Reformat Code`) ou simplement pour réindenter proprement votre code. L'indentation est le décalage par rapport à la marge gauche du script.
+
+Cette indentation est purement esthétique en R, contrairement à Python par exemple. Elle est bien pratique pour sauter une ligne qui serait trop longue, ce qui nuit à la lisibilité.
+
+## Quarto
+
+[https://quarto.org/](Quarto), successeur de Rmarkdown, permet d'écrire des documents (rapports, présentations, etc.) combinant textes, images et analyses en R (ou Python).
+
+Une fois que vous avez un code qui tourne, les possibilités sont époustouflantes et combinent reproductibilité, esthétisme et professionalisme.
+
+C'est, par exemple, mon format préféré pour mes livrables et des collègues produisent leurs articles entiers en Quarto.
+
+Même si vous ne l'adoptez pas tout de suite, allez y jeter un oeil appuyé pour approcher ce qu'il est possible d'envisager. Nous vivons une époque formidable.
+
+## shiny
+
+`shiny` propose une surcouche sur du R (ou du Python) pour créer une application web interactive.
+
+Le [site officiel](https://shiny.posit.co/) présente des exemples et de la documentation.
+
+Une fois que vous avez un code fonctionnel, c'est une excellente façon, avec un peu d'effort supplémentaire, de permettre à des personnes de maîtrisant pas R, de jouer et d'explorer tout de même des données/méthodes intéressantes.
+
+
+

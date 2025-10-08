@@ -1,4 +1,5 @@
-prénom;sexe;stature;R
-Hildegarde;femme;168;TRUE
-Jean-Jacques;homme;170;FALSE
-Victor;autre;184;FALSE
+prénom;sexe;stature;poids;R
+Hildegarde;femme;168;56;TRUE
+Jean-Jacques;homme;170;70;FALSE
+Victor;autre;184;88;FALSE
+Monique;femme;153;63;TRUE

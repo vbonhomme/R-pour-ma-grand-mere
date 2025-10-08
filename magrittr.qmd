@@ -1,8 +1,21 @@
 # Ceci n'est pas qu'un opérateur : `%>%` et `magrittr`
 
+## L'opérateur pipe %>%
+
+L'opérateur pipe permet de passer, de gauche à droite, le résultat d'une fonction à une seconde fonction, puis à une troisième. Ce pipe est détaillé dans un chapitre mais sa compréhension devrait être intuitive.
+
+Comparez par exemple ces deux lignes pourtant strictement équivalentes :
+
+{r}
+library(magrittr)
+plot(sqrt(sample(seq(1:100), 6)))              # road to burnout
+seq(1:100) %>% sample(6) %>% sqrt() %>% plot() # let's breathe
+
+Les packages du R moderne, en premier lieu ceux du tidyverse en ont fait une idée centrale de leur design et il est peu dire que nous autres mortel·le·s en profitons tous les jours.
+
 Il est peu dire que cet opérateur[^pipe] a révolutionné R, lorsqu'il y a été importé, d'abord dans le package `magrittr` sous sa forme `%>%`. Il est désormais inclus dans le R de "base" sous sa forme `|>` mais nous n'utiliserons que la version historique `%>%`, que je trouve plus lisible, plus facile à taper (`<Maj> + <Ctrl/Cmd> + <M>` dans RStudio) et parce que les années aidant, je deviens conservateur.
 
-[^pipe]: À prononcer à l'anglaise hein : "payepeu"
+[^pipe]: À prononcer à l'anglaise hein : "payeupeu"
 
 L'idée du pipe est issue de la composition de fonctions en mathématiques. Plutôt que d'écrire :
 
@@ -24,7 +37,8 @@ Si la vignette de `magrittr` est très bien faite (`vignette("magrittr"`), j'en 
 ## `%>%` 
 Dans les grandes lignes, `%>%` et `|>` fonctionnent de la même façon. J'ai tendance à continuer d'utiliser `%>%` qui est chargé automatiquement par le tidyverse. Pour les autres opérateurs, ou si vous n'utilisez pas le tidyverse vous pouvez en disposer avec :
 
-```{r}
+```{r, echo=FALSE}
+library(tidyverse)
 library(magrittr)
 ```
 
@@ -36,16 +50,69 @@ runif(100) %>% mean()
 
 ## Le `.` pour customiser le forward
 
+Par défaut, `%>%` injecte ce qui sort de la fonction à sa gauche comme premier argument de la fonction à sa droite.
+
+La plupart du temps, notamment avec le tidyverse, cela fonctionne à merveille. Mais pensez à `plot` ou à `lm`, l'argument `data` est le second, pas le premier (qui est une `formula`).
+
+`maggrittr` prévoir ce cas et vous pouvez spécifier un atterrissage alternatif avec `.`:
+
+```{r}
+iris %>% 
+  as_tibble() %>% 
+  select(pl=Petal.Length, pw=Petal.Width) %>% 
+  lm(pw~pl, data=.)
+```
 ## `%T>%`
-Utilisation
-?magr
+Le "tee" pipe est lui utile quand l'une des fonctions est un cul de sac, typiquement un `print` ou un `plot`.
+
+L'idée est, dans un seul pipe, de plotter (ou printer) _mais_ de continuer avec l'objet de départ. En d'autres termes de créer en un point du pipe, une bifurcation dont l'une des branche est un cul de sac, et l'autre continue.
+
+Un exemple vaut mille mots :
+
+```{r}
+iris %>% 
+  as_tibble() %>% 
+  select(pl=Petal.Length, pw=Petal.Width) %T>% 
+  print() %>% # here we print
+  plot(pw~pl, data=.) # and we come back to the object returned by `select`
+```
+
 
 ## `%$% 
 
+Cette variante a pour but d'"exposer" le nom des éléments d'une liste, souvent à des fins d'extraction :
+
+```{r}
+iris %>% 
+  as_tibble() %>% 
+  slice(1:5) %>% 
+  select(pl=Petal.Length, pw=Petal.Width) %$% pl
+```
+
+Vous pouvez remplacer avantageusement ce pipe par `dplyr::pull` qui est quelque part encore plus conforme à l'esprit "dplyr/tidyverse" :
+
+```{r}
+iris %>% 
+  as_tibble() %>% 
+  slice(1:5) %>% 
+  select(pl=Petal.Length, pw=Petal.Width) %>% 
+  pull(pw)
+```
+
+
 ## `%<>%`
 
-Utilisation
-Critiques
+Dernier opérateur de cette liste, un peu passé de mode mais que je mentionne ici par souci de complétude. Cet opérateur `pipe` part d'un objet, lui fait faire tout le chemin au sein d'un pipe et réassigne l'objet de départ avec l'objet retourné par le pipe :
+
+```{r}
+x <- iris %>% as_tibble()
+x
+x %<>% select(1:2)
+x
+```
+
+Cet opérateur est critique pour un motif recevable : l'assignation est une opération tellement importante qu'elle devrait être plus visible qu'un seul caractère (`%>%` versus `%<>%`).
+
 
 
 

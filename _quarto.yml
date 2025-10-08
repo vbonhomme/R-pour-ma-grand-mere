@@ -28,6 +28,7 @@ book:
     - programmation.qmd
     - modelling.qmd
     - magrittr.qmd
+    - et-apres.qmd
     - vocabulaire.qmd
     - ressources.qmd
   repo-url: https://github.com/vbonhomme/R-pour-ma-grand-mere
