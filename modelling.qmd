@@ -17,6 +17,9 @@ plot(Petal.Width ~ Petal.Length, data=iris,
 ```{r}
 mod <- lm(Petal.Width ~ Petal.Length, data=iris)
 mod
+plot(Petal.Width ~ Petal.Length, data=iris, 
+     main="is petal width ~ petal length ?")
+abline(mod)
 ```
 
 
